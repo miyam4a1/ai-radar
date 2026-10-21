@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 雷达</title>
+<script>
+(function(){try{var t=localStorage.getItem('radar-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light';}})();
+</script>
+<style>
+:root{
+  --bg:#f7f5f0;--surface:#fffefb;--surface-2:#f1eee7;--text:#2b2a27;--text-2:#6f6b63;--text-3:#9a958b;
+  --line:#e9e5dc;--line-2:#dcd7cc;--accent:#4f7a6f;--accent-bg:#e7efec;--hot:#b4643c;--hot-bg:#f6e9df;
+  --shadow:0 1px 2px rgba(40,35,25,.04),0 6px 20px -12px rgba(40,35,25,.18);
+}
+[data-theme=dark]{
+  --bg:#1b1b19;--surface:#232321;--surface-2:#2c2c29;--text:#e8e5de;--text-2:#a8a399;--text-3:#7d796f;
+  --line:#33322e;--line-2:#423f39;--accent:#8fbcae;--accent-bg:#29352f;--hot:#e0a07a;--hot-bg:#3a2d24;
+  --shadow:0 1px 2px rgba(0,0,0,.25),0 8px 24px -14px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 28px 72px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:36px}
+.brand{font-size:15px;font-weight:600;letter-spacing:.2px;color:var(--text-2)}
+.brand b{color:var(--text);font-weight:650}
+.seg{display:inline-flex;background:var(--surface-2);border-radius:10px;padding:3px}
+.seg button{padding:7px 18px;border-radius:8px;font-size:14.5px;color:var(--text-2);transition:all .2s}
+.seg button[aria-selected=true]{background:var(--surface);color:var(--text);box-shadow:var(--shadow);font-weight:560}
+.theme{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--text-2);border:1px solid var(--line)}
+.theme:hover{color:var(--text);border-color:var(--line-2)}
+.theme svg{width:17px;height:17px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:5px 13px;border-radius:999px;font-size:13.5px;color:var(--text-2);border:1px solid transparent;transition:all .15s}
+.chip:hover{color:var(--text)}
+.chip[aria-pressed=true]{background:var(--surface);border-color:var(--line-2);color:var(--text);font-weight:560}
+.chip .ct{color:var(--text-3);font-size:12px;margin-left:4px;font-weight:400}
+.sort{font-size:13px;color:var(--text-3)}
+.sort button{color:var(--text-3);padding:2px 6px;border-radius:6px}
+.sort button[aria-pressed=true]{color:var(--text);background:var(--surface-2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 20px 16px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.card:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+.k-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.owner{font-size:12.5px;color:var(--text-3);line-height:1.3}
+.name{font-size:16px;font-weight:620;line-height:1.35;word-break:break-word;display:inline-flex;align-items:center;gap:6px}
+.name:hover{color:var(--accent)}
+.name .arr{opacity:0;transition:opacity .15s;font-size:13px;color:var(--text-3)}
+.card:hover .name .arr{opacity:1}
+.star{font-size:12px;color:var(--text-3);white-space:nowrap;font-variant-numeric:tabular-nums;padding-top:2px}
+.line{margin-top:10px;font-size:14.5px;color:var(--text-2);line-height:1.6}
+.foot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:8px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;padding:2px 9px;border-radius:6px;background:var(--surface-2);color:var(--text-2)}
+.tag.hot{background:var(--hot-bg);color:var(--hot)}
+.tag.new{background:var(--accent-bg);color:var(--accent)}
+.more{font-size:12.5px;color:var(--text-3);display:inline-flex;align-items:center;gap:4px;padding:2px 4px;border-radius:6px}
+.more:hover{color:var(--text)}
+.more svg{width:12px;height:12px;transition:transform .2s}
+.card.open .more svg{transform:rotate(180deg)}
+.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+.card.open .detail{grid-template-rows:1fr}
+.detail>div{overflow:hidden}
+.detail .in{padding-top:14px;margin-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-2);display:grid;gap:8px}
+.detail b{color:var(--text);font-weight:560;margin-right:6px}
+/* trends */
+.media{position:relative;margin:-20px -20px 16px;border-radius:13px 13px 0 0;overflow:hidden;aspect-ratio:16/9;background:var(--surface-2);cursor:pointer}
+.media img{width:100%;height:100%;object-fit:cover;display:block}
+.media .ph{position:absolute;inset:0;background:radial-gradient(120% 90% at 20% 10%,var(--accent-bg),transparent 60%),linear-gradient(135deg,var(--surface-2),var(--line))}
+.media .play{position:absolute;inset:0;display:grid;place-items:center}
+.media .play span{width:52px;height:52px;border-radius:50%;background:rgba(20,20,18,.55);backdrop-filter:blur(6px);display:grid;place-items:center;transition:transform .2s}
+.media:hover .play span{transform:scale(1.07)}
+.media .play svg{width:20px;height:20px;fill:#fff;margin-left:3px}
+.media .src-l{position:absolute;left:10px;bottom:9px;font-size:11.5px;color:#fff;background:rgba(20,20,18,.5);padding:2px 8px;border-radius:6px}
+.media.tall.playing{aspect-ratio:9/16;max-height:560px}
+.media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.plat{font-size:12.5px;color:var(--text-3);margin-bottom:4px}
+.t-name{font-size:16px;font-weight:620;line-height:1.4;display:flex;align-items:center;gap:8px}
+.tbd{font-size:11px;font-weight:500;color:var(--hot);border:1px solid var(--hot-bg);background:var(--hot-bg);padding:0 6px;border-radius:5px;cursor:help;white-space:nowrap;position:relative}
+.tbd:hover::after,.tbd:focus::after{content:attr(data-tip);position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);width:220px;background:var(--text);color:var(--bg);font-size:12px;line-height:1.5;padding:7px 10px;border-radius:8px;z-index:5;white-space:normal;font-weight:400}
+.t-row{margin-top:8px;font-size:14.5px;color:var(--text-2);line-height:1.6}
+.t-row i{font-style:normal;color:var(--text-3);font-size:12.5px;margin-right:6px}
+.links{display:flex;gap:14px;font-size:12.5px;color:var(--text-3)}
+.links a:hover{color:var(--accent)}
+.hidden{display:none!important}
+footer{margin-top:56px;font-size:12.5px;color:var(--text-3);text-align:center}
+@media(max-width:600px){.wrap{padding:24px 16px 56px}.top{flex-wrap:wrap}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><b>AI 雷达</b> · 2026.10</div>
+    <div class="seg" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="skills">Skills</button>
+      <button role="tab" aria-selected="false" data-tab="trends">世界在 hi 什么</button>
+    </div>
+    <button class="theme" id="theme" aria-label="切换深浅色"></button>
+  </div>
+
+  <section id="p-skills">
+    <div class="bar">
+      <div class="chips" id="sk-chips"></div>
+      <div class="sort" id="sk-sort">排序 <button data-s="mom" aria-pressed="true">势头</button><button data-s="tot" aria-pressed="false">总星</button></div>
+    </div>
+    <div class="grid" id="sk-grid"></div>
+  </section>
+
+  <section id="p-trends" class="hidden">
+    <div class="bar"><div class="chips" id="tr-chips"></div></div>
+    <div class="grid" id="tr-grid"></div>
+  </section>
+
+  <footer>数据更新于 2026-10-21</footer>
+</div>
+
+<script>
+const SKILLS=[{"n": "morluto/rea", "u": "https://github.com/morluto/rea", "s": 349369, "cr": "2026-04-14", "c": "工程/Agent", "l": "让 Agent 逆向任意 App，看懂功能再复刻", "w": "MCP 服务 + Agent Skill，调用 Ghidra、JADX 等逆向工具，从界面行为一路追到二进制，给出证据链。", "use": "拆竞品功能「到底怎么实现的」；理解 AI 正在削弱软件护城河。", "f": "hot"}, {"n": "obra/superpowers", "u": "https://github.com/obra/superpowers", "s": 302659, "cr": "2025-10-09", "c": "工程/Agent", "l": "先头脑风暴、写计划，再执行自测", "w": "一套 Agent 技能框架与开发方法论，把「想清楚再动手」固化成流程。", "use": "理解 Agent 工作流设计；面试谈 AI 产品可靠性。", "f": ""}, {"n": "Graphify-Labs/graphify", "u": "https://github.com/Graphify-Labs/graphify", "s": 130423, "cr": "2026-04-03", "c": "工程/Agent", "l": "把代码库和文档变成可查询的知识图谱", "w": "本地解析代码、文档、SQL、PDF，生成每条关系都有解释的图谱，不依赖向量库。", "use": "快速读懂一个陌生系统；和工程师对齐架构。", "f": ""}, {"n": "JuliusBrussee/caveman", "u": "https://github.com/JuliusBrussee/caveman", "s": 113886, "cr": "2026-04-04", "c": "工程/Agent", "l": "让 Agent 说「原始人话」，大幅省 token", "w": "用极简表达风格压缩 Agent 输出，仓库称可省约 65% token。", "use": "成本意识：AI 产品的单位经济模型。", "f": ""}, {"n": "Jakeschincariol/replica-skill", "u": "https://github.com/Jakeschincariol/replica-skill", "s": 3768, "cr": "2026-10-03", "c": "工程/Agent", "l": "拆解、重建、测试、修复任意 App", "w": "11 个免费 skill：逆向一个 App、重建、测 bug，再修掉用户最讨厌的点。", "use": "竞品分析 → 原型的一条龙练习。", "f": "new"}, {"n": "nextlevelbuilder/ui-ux-pro-max-skill", "u": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill", "s": 138052, "cr": "2025-11-30", "c": "设计", "l": "给 Agent 内置一整套 UI/UX 设计知识", "w": "跨平台的设计规则库：配色、排版、组件、交互模式，让 Agent 做出专业界面。", "use": "做产品原型时直接提升界面质量。", "f": ""}, {"n": "emilkowalski/skills", "u": "https://github.com/emilkowalski/skills", "s": 48081, "cr": "2026-03-16", "c": "设计", "l": "设计工程师 Emil Kowalski 的界面手艺", "w": "知名设计工程师公开的 skill，面向设计师和工程师，偏交互细节与质感。", "use": "学顶级产品的「手感」从哪来。", "f": ""}, {"n": "Nutlope/hallmark", "u": "https://github.com/Nutlope/hallmark", "s": 30469, "cr": "2026-04-27", "c": "设计", "l": "反「AI 味」设计，告别千篇一律的界面", "w": "专门对抗 AI 生成页面的套路感，给 Claude Code / Cursor / Codex 用。", "use": "让作品集原型不像 AI 模板。", "f": ""}, {"n": "oil-oil/oil-ui", "u": "https://github.com/oil-oil/oil-ui", "s": 1933, "cr": "2026-09-30", "c": "设计", "l": "并排探索多个 UI 方向，再对照截图打磨", "w": "先发散出多个设计方向并排比较，再用真实截图迭代。", "use": "练「多方案对比」的产品决策方式。", "f": "new"}, {"n": "kaankiziltug/logo-design-skill", "u": "https://github.com/kaankiziltug/logo-design-skill", "s": 3857, "cr": "2026-09-26", "c": "设计", "l": "Logo 设计全流程，附 1,400+ 参考库", "w": "设计原则、流程、SVG 制作、测试工具和大型 Logo 参考库。", "use": "给个人品牌或小项目做标识。", "f": "new"}, {"n": "Leonxlnx/taste-skill", "u": "https://github.com/Leonxlnx/taste-skill", "s": 99941, "cr": "2026-02-19", "c": "美学", "l": "给 Agent 审美：定方向、找参考、自检", "w": "先定美术方向和参考图，再用浏览器检查效果，避免通用 AI 页面。", "use": "提升任何 AI 产出的视觉品味。", "f": ""}, {"n": "wheresryan22/anatomy", "u": "https://github.com/wheresryan22/anatomy", "s": 17702, "cr": "2026-10-08", "c": "美学", "l": "生成可交互的等距机械剖面插画", "w": "为真实机器和复杂系统生成精致 SVG 等距插画，可加 WebGL 着色器和 3D 效果。", "use": "把产品架构讲成一张好看的图。", "f": "new"}, {"n": "yang0/handraw-style", "u": "https://github.com/yang0/handraw-style", "s": 5881, "cr": "2026-09-05", "c": "美学", "l": "手绘风格画廊 + 双语提示词", "w": "编号的手绘风格样例库，每种风格配中英提示词。", "use": "给内容和礼物素材找风格参考。", "f": "new"}, {"n": "yanliudesign/mono-color-skill", "u": "https://github.com/yanliudesign/mono-color-skill", "s": 3458, "cr": "2026-08-19", "c": "美学", "l": "单色印刷风：暖纸、网点、留白", "w": "单墨色编辑印刷风图像：暖色纸张、网点照片、克制排版。", "use": "做有质感的封面和海报。", "f": ""}, {"n": "s1dashu/ip-as-logo-skill", "u": "https://github.com/s1dashu/ip-as-logo-skill", "s": 6073, "cr": "2026-08-18", "c": "美学", "l": "极简圆润的 IP 吉祥物 Logo", "w": "生成高度简化、圆润、轻拟物的 IP 吉祥物形象。", "use": "直播礼物 / 虚拟形象的 IP 草图。", "f": ""}, {"n": "camilleroux/genart-skill", "u": "https://github.com/camilleroux/genart-skill", "s": 154, "cr": "2026-08-28", "c": "美学", "l": "种子驱动、可复现的生成艺术", "w": "确定性、哈希种子驱动的生成艺术，同一种子总能得到同一幅作品。", "use": "理解「每个用户独一份」的生成式礼物。", "f": "new"}, {"n": "calesthio/OpenMontage", "u": "https://github.com/calesthio/OpenMontage", "s": 70363, "cr": "2026-03-29", "c": "动效·视频", "l": "开源 Agent 视频生产系统", "w": "仓库称有 12 条生产流水线和 700+ 视频知识文件，把编程助手变成视频工作室。", "use": "你学 AI 剪辑时，看完整的视频生产拆法。", "f": ""}, {"n": "Vincentwei1021/video-shotcraft", "u": "https://github.com/Vincentwei1021/video-shotcraft", "s": 12685, "cr": "2026-07-19", "c": "动效·视频", "l": "用 Remotion 做电影感产品视频", "w": "152 张镜头配方卡、209 个动效预览，加一个可直接用的模板。", "use": "做产品演示 / 作品集视频。", "f": ""}, {"n": "alchaincyf/huashu-art-motion", "u": "https://github.com/alchaincyf/huashu-art-motion", "s": 4658, "cr": "2026-10-06", "c": "动效·视频", "l": "35 种艺术风格，用代码让画动起来", "w": "艺术动画 skill：35 种风格、9 种解说语法。", "use": "给静态素材加动效，做内容短片。", "f": "new"}, {"n": "lemomo-ai/lemo-opuscar", "u": "https://github.com/lemomo-ai/lemo-opuscar", "s": 4418, "cr": "2026-09-26", "c": "动效·视频", "l": "不用视频模型，纯代码拍 51 种风格短片", "w": "每种影片风格配提示词和纯代码样片，附导演与技术指南。", "use": "看「代码即视频」的新创作方式。", "f": "new"}, {"n": "Jakubantalik/transitions.dev", "u": "https://github.com/Jakubantalik/transitions.dev", "s": 5442, "cr": "2026-04-21", "c": "动效·视频", "l": "43+ 精制 UI 转场动效库", "w": "UI 动效 Agent + 转场库，可接入日常工作流。", "use": "学「好转场」的节奏，迁移到短视频剪辑。", "f": ""}, {"n": "CloudAI-X/threejs-skills", "u": "https://github.com/CloudAI-X/threejs-skills", "s": 3662, "cr": "2026-01-19", "c": "动效·视频", "l": "让 Agent 写对最新版 Three.js 3D", "w": "给 Claude Code 最新的 three.js API、示例和常见错误清单。", "use": "做可交互 3D 演示 / 礼物效果原型。", "f": ""}, {"n": "Donchitos/Claude-Code-Game-Studios", "u": "https://github.com/Donchitos/Claude-Code-Game-Studios", "s": 26997, "cr": "2026-02-12", "c": "玩法", "l": "49 个 Agent 组成的游戏工作室", "w": "72 个工作流 skill，模拟真实游戏工作室的分工与协作。", "use": "理解玩法设计流程，做小游戏原型。", "f": ""}, {"n": "rehan-remade/universal-modder", "u": "https://github.com/rehan-remade/universal-modder", "s": 8555, "cr": "2026-09-30", "c": "玩法", "l": "让 Claude 给你拥有的 PC 游戏做 Mod", "w": "侦察、逆向、AI 生成美术/3D/音频、游戏内测试、生成展示视频。", "use": "看 UGC 和 Mod 文化如何被 AI 放大。", "f": "new"}, {"n": "majidmanzarpour/threejs-game-skills", "u": "https://github.com/majidmanzarpour/threejs-game-skills", "s": 2554, "cr": "2026-06-14", "c": "玩法", "l": "做可玩、精致的 Three.js 网页游戏", "w": "玩法、画面、UI、QA 全套，可选 AI 生成 3D/图像/音频资产。", "use": "直播间小游戏玩法的快速原型。", "f": ""}, {"n": "oso95/scroll-world", "u": "https://github.com/oso95/scroll-world", "s": 10307, "cr": "2026-07-06", "c": "玩法", "l": "把品牌变成可滚动的 3D 世界落地页", "w": "一个 skill 把任意品牌生成为沉浸式滚动 3D 世界。", "use": "做「惊艳」级别的个人作品页。", "f": ""}, {"n": "Oldcircle/geo-sleuth", "u": "https://github.com/Oldcircle/geo-sleuth", "s": 3650, "cr": "2026-09-18", "c": "玩法", "l": "看图找地点，并展示推理过程", "w": "结合地图几何、地形天际线、卫星图和街景推断照片拍摄地。", "use": "「AI 侦探」类互动玩法灵感。", "f": "new"}, {"n": "bitwize-music-studio/claude-ai-music-skills", "u": "https://github.com/bitwize-music-studio/claude-ai-music-skills", "s": 576, "cr": "2026-01-14", "c": "玩法", "l": "人机协作的 Suno 音乐制作流程", "w": "围绕 Suno 的作词、风格、模板与工具链。", "use": "给视频和直播配原创音乐。", "f": ""}, {"n": "alchaincyf/nuwa-skill", "u": "https://github.com/alchaincyf/nuwa-skill", "s": 35292, "cr": "2026-04-05", "c": "效率", "l": "蒸馏任何人的思维方式与表达 DNA", "w": "提炼一个人的心智模型、决策启发式和表达风格，生成可调用的「思维分身」。", "use": "蒸馏优秀 PM 的思考方式，做面试陪练。", "f": ""}, {"n": "mvanhorn/last30days-skill", "u": "https://github.com/mvanhorn/last30days-skill", "s": 64890, "cr": "2026-01-23", "c": "效率", "l": "调研近 30 天全网讨论，带出处汇总", "w": "跨 Reddit、X、YouTube、HN 等检索某话题，输出有来源的摘要。", "use": "趋势周报；面试前调研公司。", "f": ""}, {"n": "QingYunA/answer-me-with-html", "u": "https://github.com/QingYunA/answer-me-with-html", "s": 4125, "cr": "2026-10-02", "c": "效率", "l": "用一页 HTML 回答复杂问题", "w": "让 Agent 把难题的答案做成一页可读的 HTML，而不是长文本。", "use": "就是这个页面的形式，可复用到你的各个 bot。", "f": "new"}, {"n": "nicobailon/visual-explainer", "u": "https://github.com/nicobailon/visual-explainer", "s": 10562, "cr": "2026-02-16", "c": "效率", "l": "把方案、数据、复盘生成可视化页面", "w": "为图表、方案审阅、数据表、项目复盘生成富 HTML 页面或幻灯片。", "use": "周复盘、PRD 可视化。", "f": ""}, {"n": "zarazhangrui/frontend-slides", "u": "https://github.com/zarazhangrui/frontend-slides", "s": 30997, "cr": "2026-01-28", "c": "效率", "l": "用前端能力做漂亮的网页幻灯片", "w": "借编程 Agent 的前端能力生成网页版演示稿。", "use": "面试作品集演示。", "f": ""}, {"n": "blader/humanizer", "u": "https://github.com/blader/humanizer", "s": 58958, "cr": "2026-01-18", "c": "效率", "l": "去掉文字里的 AI 味", "w": "识别并改写典型 AI 写作痕迹；中文版见 op7418/Humanizer-zh。", "use": "改英文求职信、LinkedIn 帖子。", "f": ""}];
+const TRENDS=[{"n": "闪身步", "p": ["抖音"], "what": "8 年前的北舞花鼓灯教学片段被翻出，全网接力模仿", "why": "几秒能学、自带喜感，明星接力放大", "pm": "「老素材 + 极低模仿门槛」可复制；可做送礼触发主播做指定动作的挑战型礼物", "m": {"t": "dy", "id": "7689422539222715686", "o": "https://jingxuan.douyin.com/m/video/7689422539222715686"}, "src": "https://m.huanqiu.com/article/4TLp3LTDidV", "v": "各报道播放量 4–7.5 亿不等；最先发布片段的账号未知"}, {"n": "风扇转场换装", "p": ["TikTok", "Instagram"], "what": "俯拍躺地，吊扇叶片每扫过一次就换一套衣服", "why": "叶片天然遮住剪辑点；AI 模板一张照片即可复刻", "pm": "换装天然带货：可做「虚拟换装礼物」，与电商试穿联动", "m": {"t": "tt", "id": "7694617702882725138", "o": "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138"}, "src": "https://thetab.com/2026/09/28/how-to-do-the-vibey-ai-ceiling-fan-trend-from-tiktok-where-your-outfit-changes", "v": "首发者不明"}, {"n": "Hotel Lobby AI 换脸说唱", "p": ["TikTok", "X"], "what": "把 Quavo 和 Takeoff 的 COLORS 表演换成猫、名人、影视角色", "why": "橙色舞台辨识度极高，两张照片就能做；Quavo 亲自转发原版", "pm": "双人位天然适合合拍 / PK；同时暴露「用谁的脸」的肖像权风控", "m": {"t": "yt", "id": "x9yop0nYR9g", "o": "https://www.youtube.com/watch?v=x9yop0nYR9g", "label": "原版表演"}, "extra": ["AI 猫咪版", "https://x.com/Zkxxeth/status/2108740428602511374"], "src": "https://www.complex.com/music/a/markelibert/quavo-takeoff-hotel-lobby-ai-trend-tiktok", "v": "起点猫咪视频的首发者未确认"}, {"n": "REA「逆向一切」", "p": ["GitHub", "X"], "what": "让 AI Agent 逆向任意软件的开源工具，一周从不到 1 万星涨到 10 万+", "why": "新模型反编译能力跃升 + AI 移植老游戏浪潮 + 一行命令安装", "pm": "功能能被 Agent 快速看懂并复刻，护城河要转向网络效应、数据和内容生态", "src": "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software", "v": "涨速有刷星质疑；少数派抽查 fork 后认为大部分热度为真"}, {"n": "AI 僧人 Yang Mun", "p": ["Instagram"], "what": "完全由 AI 生成的冥想僧人，约 250 万粉丝", "why": "情绪价值 + 日更 + 高度一致的人设", "pm": "虚拟人做情绪价值已能变现；平台侧机会是 AI 标识与真实性信号", "src": "https://spotlight.ebu.ch/p/yang-mun-ai-influencer-scam", "o": "https://www.instagram.com/yangmunus/", "v": "收入数据（30 万美元+）来自记者调查，非官方披露"}, {"n": "AI 富豪流浪汉 Charles Robinson", "p": ["Instagram"], "what": "赤脚邋遢的 AI 男人走下豪车，一周近百万粉丝", "why": "落魄外表 × 极致财富的反差，叠加好奇心", "pm": "本质是 AI 工具 Higgsfield 的增长营销；角色一致性是虚拟主播的底层能力", "src": "https://thejarrus.com/en/news/charles-robinson/", "v": "实际运营者不明"}, {"n": "雪山救狐狸 · 酱板鸭复仇", "p": ["抖音", "B站", "小红书"], "what": "AI 邵氏武侠短片：「我是那只被你抛弃的酱板鸭」", "why": "反转 + 无厘头 + 开放式剧情，品牌和官方号纷纷接梗", "pm": "开放式「梗宇宙」：让观众用礼物推动剧情分支", "m": {"t": "bili", "id": "BV1qLNczfEuP", "o": "https://www.bilibili.com/video/BV1qLNczfEuP/"}, "src": "https://www.yunyingpai.com/product-operation/1059416.html", "v": "「近 50 亿播放」为媒体估算；B站视频为网友合集"}, {"n": "SBTI 恶搞人格测试", "p": ["B站"], "what": "UP 主用 AI 几天做出的恶搞测试，服务器多次被挤崩", "why": "结果标签就是社交货币；品牌 24 小时内跟进", "pm": "「测一测」类礼物：结果卡可分享，带回流量", "src": "https://m.huxiu.com/article/4891746.html", "v": "仅单一媒体来源"}, {"n": "平台集体押注 AI 互动空间", "p": ["抖音", "B站", "小红书"], "what": "上线 AI 角色对话、分支剧情、即点即玩的互动内容入口", "why": "短视频时长见顶，Vibe Coding 让人人能做互动作品", "pm": "图文、视频、直播之后的「第四类内容形态」，面试好素材", "src": "https://m.huxiu.com/article/4891746.html", "v": "各平台数据来自媒体转述"}, {"n": "「我要验牌」", "p": ["抖音", "B站"], "what": "1991 年电影台词翻红，相关作品播放量破 50 亿", "why": "魔性口音不需要懂意思；春节打牌场景天然适配", "pm": "「暗号」即社群身份：口令触发特效的礼物", "src": "https://finance.sina.com.cn/wm/2026-03-01/doc-inhpmqry9427018.shtml", "v": "起源说法（游戏乌龙）未证实"}, {"n": "「胆子真是肥嘟嘟的」", "p": ["B站"], "what": "十秒台词 9 天内长出素材、二创、循环歌单、官方收编四层", "why": "零成本素材 + 时长激励套利", "pm": "用「官方收编」判断热点进入后段，决定礼物上下线时机", "src": "https://suenews.com/blog/bilibili-meme-dudu-attention-economics/", "v": "数字为媒体自行统计"}, {"n": "MrBeast 吃光超市赢 100 万", "p": ["YouTube"], "what": "4 人在超市住了 202 天，首日播放 7,000 万+", "why": "极端设定 + 长周期真人挑战 + 持续加码", "pm": "AI 内容泛滥时，真人和真实时间成本更稀缺，这是直播的天然优势", "m": {"t": "yt", "id": "plN7JMbadRg", "o": "https://www.youtube.com/watch?v=plN7JMbadRg"}, "src": "https://www.dexerto.com/youtube/mrbeast-breaks-his-youtube-views-record-with-1-million-grocery-store-challenge-3415556/"}, {"n": "AI 人体叠塔", "p": ["Facebook"], "what": "违反物理的杂技人塔视频，19 小时 7,700 万播放", "why": "奇观 + 「是真的吗」的争论推高互动", "pm": "打了 AI 标签也不影响传播，透明标识与增长并不冲突", "src": "https://eurweb.com/ai-human-tower/", "v": "原视频链接未找到"}, {"n": "让 AI 用你的生活填满空房间", "p": ["X", "TikTok"], "what": "上传空房间照片，让 ChatGPT / Grok 按聊天记忆布置", "why": "「AI 有多懂我」的自我投射 + 惊喜", "pm": "记忆 → 个性化视觉 → 分享：可做成专属纪念礼物", "src": "https://x.com/i/trending/2109694090983907651", "v": "来源为 X 自动生成的趋势摘要"}, {"n": "两个 AI 面试官无限说再见", "p": ["X"], "what": "求职 Agent 对 AI 面试官，谈完后陷入礼貌告别的死循环", "why": "荒诞，又戳中「AI 招聘取代人」的焦虑", "pm": "Agent 缺终止条件：evals 与对话设计的现成面试案例", "src": "https://x.com/i/trending/2110738082899316868", "v": "来源为 X 自动摘要，原视频未核实"}, {"n": "Seedance 2.5 写实短片", "p": ["X"], "what": "创作者晒真人感极强的 AI 短片，也是风扇转场的主力工具", "why": "情绪化的真人镜头 + 「这是 AI？」的钩子", "pm": "多模态视频生成的竞争格局，也是 AIGC 礼物的上游能力", "m": {"t": "x", "thumb": "https://pbs.twimg.com/amplify_video_thumb/2108060140574560256/img/tQOHztLi8LK-Vwy9.jpg", "o": "https://x.com/Zoyavelle/status/2108060187840180394"}, "src": "https://x.com/i/trending/2111725344315015515", "v": "模型参数来自 X 自动摘要"}];
+const NOW=new Date('2026-10-21');
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const kfmt=n=>n>=1000?(n/1000).toFixed(n>=100000?0:1).replace(/\.0$/,'')+'k':String(n);
+const chev='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>';
+SKILLS.forEach(s=>{const d=Math.max(1,(NOW-new Date(s.cr))/864e5);s.days=Math.round(d);s.mom=s.s/d;});
+
+let skCat='全部',skSort='mom',trCat='全部';
+function skillCard(s){
+  const [o,r]=s.n.split('/');
+  const tags=[`<span class="tag">${s.c}</span>`];
+  if(s.f==='hot')tags.unshift('<span class="tag hot">本月爆火</span>');
+  else if(s.days<=60)tags.unshift('<span class="tag new">新</span>');
+  return `<article class="card">
+    <div class="k-top"><div><div class="owner">${esc(o)}</div>
+      <a class="name" href="${s.u}" target="_blank" rel="noopener">${esc(r)}<span class="arr">↗</span></a></div>
+      <span class="star">★ ${kfmt(s.s)}</span></div>
+    <p class="line">${esc(s.l)}</p>
+    <div class="foot"><div class="tags">${tags.slice(0,2).join('')}</div>
+      <button class="more" aria-expanded="false">详情 ${chev}</button></div>
+    <div class="detail"><div><div class="in">
+      <div><b>能做什么</b>${esc(s.w)}</div>
+      <div><b>可以用在</b>${esc(s.use)}</div>
+      <div><b>热度</b>★ ${s.s.toLocaleString('en-US')} · 创建 ${s.cr} · 日均 ${Math.round(s.mom).toLocaleString('en-US')} 星</div>
+    </div></div></div>
+  </article>`;
+}
+function renderSkills(){
+  let list=SKILLS.filter(s=>skCat==='全部'||s.c===skCat);
+  list.sort((a,b)=>skSort==='mom'?b.mom-a.mom:b.s-a.s);
+  $('#sk-grid').innerHTML=list.map(skillCard).join('');
+}
+const PLAY='<span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>';
+const PNAME={yt:'YouTube',tt:'TikTok',dy:'抖音',bili:'B站',x:'X'};
+function mediaHTML(m){
+  if(!m)return '';
+  if(m.t==='x')return `<a class="media" href="${m.o}" target="_blank" rel="noopener"><img loading="lazy" src="${m.thumb}" alt=""><div class="play">${PLAY}</div><span class="src-l">在 X 观看 ↗</span></a>`;
+  const thumb=m.t==='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${m.id}/hqdefault.jpg" alt="">`:'<div class="ph"></div>';
+  const tall=(m.t==='tt'||m.t==='dy')?' tall':'';
+  return `<div class="media${tall}" data-t="${m.t}" data-id="${m.id}" role="button" tabindex="0" aria-label="播放">${thumb}<div class="play">${PLAY}</div><span class="src-l">${PNAME[m.t]}${m.label?' · '+esc(m.label):''}</span></div>`;
+}
+function embedURL(t,id){
+  return {yt:`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`,
+    tt:`https://www.tiktok.com/player/v1/${id}?autoplay=1&description=0&music_info=0`,
+    dy:`https://open.douyin.com/player/video?vid=${id}&autoplay=1`,
+    bili:`https://player.bilibili.com/player.html?bvid=${id}&autoplay=1&high_quality=1`}[t];
+}
+function trendCard(x){
+  const links=[];
+  if(x.m&&x.m.o&&x.m.t!=='x')links.push(`<a href="${x.m.o}" target="_blank" rel="noopener">原视频 ↗</a>`);
+  if(x.o)links.push(`<a href="${x.o}" target="_blank" rel="noopener">主页 ↗</a>`);
+  if(x.extra)links.push(`<a href="${x.extra[1]}" target="_blank" rel="noopener">${esc(x.extra[0])} ↗</a>`);
+  links.push(`<a href="${x.src}" target="_blank" rel="noopener">来源 ↗</a>`);
+  return `<article class="card">${mediaHTML(x.m)}
+    <div class="plat">${x.p.join(' · ')}</div>
+    <div class="t-name">${esc(x.n)}${x.v?`<span class="tbd" tabindex="0" data-tip="${esc(x.v)}">待核实</span>`:''}</div>
+    <p class="t-row">${esc(x.what)}</p>
+    <p class="t-row"><i>为何传开</i>${esc(x.why)}</p>
+    <div class="foot"><div class="links">${links.join('')}</div>
+      <button class="more" aria-expanded="false">PM 启发 ${chev}</button></div>
+    <div class="detail"><div><div class="in">${esc(x.pm)}</div></div></div>
+  </article>`;
+}
+function renderTrends(){
+  $('#tr-grid').innerHTML=TRENDS.filter(x=>trCat==='全部'||x.p.includes(trCat)||(trCat==='有视频'&&x.m)).map(trendCard).join('');
+}
+function chips(el,cats,counts,get,set,render){
+  el.innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===get()}" data-c="${c}">${c}${counts?`<span class="ct">${counts(c)}</span>`:''}</button>`).join('');
+  el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;set(b.dataset.c);el.querySelectorAll('.chip').forEach(z=>z.setAttribute('aria-pressed',z===b));render();};
+}
+const SKC=['全部','工程/Agent','设计','美学','动效·视频','玩法','效率'];
+chips($('#sk-chips'),SKC,c=>c==='全部'?SKILLS.length:SKILLS.filter(s=>s.c===c).length,()=>skCat,v=>skCat=v,renderSkills);
+const TRC=['全部','有视频','抖音','B站','小红书','TikTok','YouTube','Instagram','X','Facebook'];
+chips($('#tr-chips'),TRC,null,()=>trCat,v=>trCat=v,renderTrends);
+$('#sk-sort').onclick=e=>{const b=e.target.closest('button');if(!b)return;skSort=b.dataset.s;$('#sk-sort').querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));renderSkills();};
+document.addEventListener('click',e=>{
+  const m=e.target.closest('.more');
+  if(m){const c=m.closest('.card');const o=c.classList.toggle('open');m.setAttribute('aria-expanded',o);return;}
+  const md=e.target.closest('.media[data-t]');
+  if(md&&!md.classList.contains('playing')){
+    if(md.dataset.t==='yt'&&location.protocol==='file:'){window.open('https://www.youtube.com/watch?v='+md.dataset.id,'_blank','noopener');return;}
+    md.classList.add('playing');
+    md.innerHTML=`<iframe src="${embedURL(md.dataset.t,md.dataset.id)}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+  }
+});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.media[data-t]')){e.preventDefault();e.target.click();}});
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.seg button').forEach(z=>z.setAttribute('aria-selected',z===b));
+  $('#p-skills').classList.toggle('hidden',b.dataset.tab!=='skills');
+  $('#p-trends').classList.toggle('hidden',b.dataset.tab!=='trends');
+  try{history.replaceState(null,'','#'+b.dataset.tab)}catch(e){}
+});
+const SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+const MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+function syncTheme(){$('#theme').innerHTML=document.documentElement.dataset.theme==='dark'?SUN:MOON;}
+$('#theme').onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('radar-theme',t)}catch(e){}syncTheme();};
+syncTheme();renderSkills();renderTrends();
+if(location.hash==='#trends')document.querySelector('.seg [data-tab=trends]').click();
+</script>
+</body>
+</html>
