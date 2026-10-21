@@ -373,8 +373,9 @@ const MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wi
 function syncTheme(){$('#theme').innerHTML=document.documentElement.dataset.theme==='dark'?SUN:MOON;}
 $('#theme').onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('radar-theme',t)}catch(e){}syncTheme();};
 syncTheme();renderSkills();initTrends();
-if(location.hash.startsWith('#trends'))document.querySelector('.top .seg [data-tab=trends]').click();
-if(location.hash==='#trends/week')setSub('week');
+const H0=location.hash;if(H0==='#trends/week')SUB='week';
+if(H0.startsWith('#trends'))document.querySelector('.top .seg [data-tab=trends]').click();
+if(H0==='#trends/week')setSub('week');
 </script>
 </body>
 </html>
