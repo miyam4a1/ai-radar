@@ -1,0 +1,170 @@
+{
+ "id": "2026-W43",
+ "range": "2026-10-19 ~ 10-23",
+ "start": "2026-10-19",
+ "end": "2026-10-23",
+ "status": "本周更新中",
+ "patterns": [
+  {
+   "t": "AI 萌宠做人类动作",
+   "d": "猫狗直立唱跳、持剑、走秀；可爱 × 拟人，一眼看懂，不需要语言",
+   "ex": [
+    "odie",
+    "iwly",
+    "ramalama",
+    "knight"
+   ]
+  },
+  {
+   "t": "一张照片换主角",
+   "d": "照片 + 参考视频 = 你的版本；Higgsfield、CapCut 模板把复刻成本压到几分钟",
+   "ex": [
+    "smalltown",
+    "road",
+    "fan"
+   ]
+  },
+  {
+   "t": "名场面变成固定舞台",
+   "d": "明星舞台或老视频的构图、音乐、动作不变，只换主角",
+   "ex": [
+    "sawadika",
+    "hotel",
+    "tour"
+   ]
+  },
+  {
+   "t": "卡点转场与换装",
+   "d": "遮挡物或节拍做剪辑点，一秒换一套；看完就想照着拍",
+   "ex": [
+    "taoagou",
+    "fan",
+    "ramalama"
+   ]
+  },
+  {
+   "t": "可代入的反应素材",
+   "d": "配一句处境就能转发：硬撑的小猫、委屈的狗、一句台词",
+   "ex": [
+    "whiny",
+    "knight",
+    "bsx"
+   ]
+  },
+  {
+   "t": "荒诞反差",
+   "d": "猫 × 夜店情歌、违反物理的人塔、身后的幽灵：反差引发「这是真的吗」",
+   "ex": [
+    "tower",
+    "ghost",
+    "iwly"
+   ]
+  }
+ ],
+ "change": {
+  "up": [
+   [
+    "万圣节小猫走秀",
+    "ramalama"
+   ],
+   [
+    "AI 幽灵滤镜",
+    "ghost"
+   ],
+   [
+    "腊肠狗 Single Ladies",
+    "odie"
+   ]
+  ],
+  "down": [
+   [
+    "Knight Cat（10-04 当周搜索见顶）",
+    "knight"
+   ],
+   [
+    "Hotel Lobby（9 月下旬达峰）",
+    "hotel"
+   ]
+  ],
+  "note": "节日向内容随万圣节临近升温；9 月的换主角舞台模板进入长尾。"
+ },
+ "thumbs": {
+  "odie": "assets/weeks/2026-W43/odie.webp",
+  "iwly": "assets/weeks/2026-W43/iwly.webp",
+  "ramalama": "assets/weeks/2026-W43/ramalama.webp",
+  "knight": "assets/weeks/2026-W43/knight.webp",
+  "smalltown": "assets/weeks/2026-W43/smalltown.webp",
+  "road": "assets/weeks/2026-W43/road.webp",
+  "fan": "assets/weeks/2026-W43/fan.webp",
+  "sawadika": "assets/weeks/2026-W43/sawadika.webp",
+  "hotel": "assets/weeks/2026-W43/hotel.webp",
+  "tour": "assets/weeks/2026-W43/tour.webp",
+  "taoagou": "assets/weeks/2026-W43/taoagou.webp",
+  "whiny": "assets/weeks/2026-W43/whiny.webp",
+  "bsx": "assets/weeks/2026-W43/bsx.webp",
+  "tower": "assets/weeks/2026-W43/tower.webp",
+  "ghost": "assets/weeks/2026-W43/ghost.webp"
+ },
+ "cards": {
+  "ramalama": {
+   "n": "万圣节小猫走秀",
+   "s": "小猫走秀"
+  },
+  "ghost": {
+   "n": "AI 幽灵滤镜恶作剧",
+   "s": "幽灵滤镜"
+  },
+  "odie": {
+   "n": "腊肠狗跳《Single Ladies》",
+   "s": "腊肠 C 位"
+  },
+  "smalltown": {
+   "n": "Smalltown Boy 尖叫猫",
+   "s": "尖叫猫"
+  },
+  "iwly": {
+   "n": "唱 Akon 的 AI 白猫",
+   "s": "唱歌白猫"
+  },
+  "road": {
+   "n": "「Hit the Road Dude」AI 版",
+   "s": "Hit the Road"
+  },
+  "bsx": {
+   "n": "「不烧心」AI 漫剧梗",
+   "s": "不烧心"
+  },
+  "tour": {
+   "n": "AI「世界巡演」：把 MJ 舞台换成任何人",
+   "s": "世界巡演"
+  },
+  "knight": {
+   "n": "小猫举剑 Knight Cat",
+   "s": "小猫举剑"
+  },
+  "fan": {
+   "n": "风扇转场换装",
+   "s": "风扇转场"
+  },
+  "tower": {
+   "n": "AI 人体叠塔",
+   "s": "人体叠塔"
+  },
+  "whiny": {
+   "n": "委屈哼唧的杜宾",
+   "s": "委屈杜宾"
+  },
+  "hotel": {
+   "n": "Hotel Lobby AI 换脸说唱",
+   "s": "Hotel Lobby"
+  },
+  "taoagou": {
+   "n": "陶阿狗君式「换装模板」",
+   "s": "陶阿狗君"
+  },
+  "sawadika": {
+   "n": "LISA《SaWaDiKa》水瓶舞",
+   "s": "水瓶舞"
+  }
+ }
+}
