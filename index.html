@@ -9,13 +9,13 @@
 </script>
 <style>
 :root{
-  --bg:#f7f5f0;--surface:#fffefb;--surface-2:#f1eee7;--text:#2b2a27;--text-2:#6f6b63;--text-3:#9a958b;
-  --line:#e9e5dc;--line-2:#dcd7cc;--accent:#4f7a6f;--accent-bg:#e7efec;--hot:#b4643c;--hot-bg:#f6e9df;
+  --bg:#f7f5f0;--surface:#fffefb;--surface-2:#f1eee7;--text:#1f1f1f;--text-2:#4a4a4a;--text-3:#5c5c5c;
+  --line:#e9e5dc;--line-2:#d6d0c4;--accent:#36594f;--accent-bg:#e4eeea;--hot:#8f4420;--hot-bg:#f6e7dc;
   --shadow:0 1px 2px rgba(40,35,25,.04),0 6px 20px -12px rgba(40,35,25,.18);
 }
 [data-theme=dark]{
-  --bg:#1b1b19;--surface:#232321;--surface-2:#2c2c29;--text:#e8e5de;--text-2:#a8a399;--text-3:#7d796f;
-  --line:#33322e;--line-2:#423f39;--accent:#8fbcae;--accent-bg:#29352f;--hot:#e0a07a;--hot-bg:#3a2d24;
+  --bg:#1b1b19;--surface:#232321;--surface-2:#2c2c29;--text:#efece6;--text-2:#cdc8be;--text-3:#b0aa9f;
+  --line:#33322e;--line-2:#423f39;--accent:#9fcbbd;--accent-bg:#29352f;--hot:#eeb08a;--hot-bg:#3a2d24;
   --shadow:0 1px 2px rgba(0,0,0,.25),0 8px 24px -14px rgba(0,0,0,.6);
 }
 *{box-sizing:border-box;margin:0}
@@ -58,7 +58,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .tag{font-size:12px;padding:2px 9px;border-radius:6px;background:var(--surface-2);color:var(--text-2)}
 .tag.hot{background:var(--hot-bg);color:var(--hot)}
 .tag.new{background:var(--accent-bg);color:var(--accent)}
-.more{font-size:12.5px;color:var(--text-3);display:inline-flex;align-items:center;gap:4px;padding:2px 4px;border-radius:6px}
+.more{white-space:nowrap;font-size:12.5px;color:var(--text-3);display:inline-flex;align-items:center;gap:4px;padding:2px 4px;border-radius:6px}
 .more:hover{color:var(--text)}
 .more svg{width:12px;height:12px;transition:transform .2s}
 .card.open .more svg{transform:rotate(180deg)}
@@ -67,6 +67,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .detail>div{overflow:hidden}
 .detail .in{padding-top:14px;margin-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-2);display:grid;gap:8px}
 .detail b{color:var(--text);font-weight:560;margin-right:6px}
+.thumb{display:block;position:relative;margin:-20px -20px 16px;border-radius:13px 13px 0 0;overflow:hidden;aspect-ratio:16/10;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.card:hover .thumb img{transform:scale(1.025)}
+.dg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 14px;background:radial-gradient(110% 90% at 15% 0%,var(--accent-bg),transparent 65%),var(--surface-2)}
+.dg .nd{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.dg .lb{font-size:10.5px;letter-spacing:.8px;color:var(--text-3);font-weight:600}
+.dg .bx{width:100%;min-height:58px;display:grid;place-items:center;text-align:center;font-size:13px;line-height:1.35;padding:8px 6px;border-radius:10px;background:var(--surface);border:1px solid var(--line-2);color:var(--text);font-weight:560}
+.dg .nd.mid .bx{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.dg svg{flex:none;width:14px;height:14px;color:var(--text-3);margin-top:16px}
+.gh{white-space:nowrap;font-size:12.5px;color:var(--text-2);display:inline-flex;align-items:center;gap:5px;padding:2px 4px;border-radius:6px}
+.gh:hover{color:var(--accent)}
+.gh svg{width:13px;height:13px}
+.f-r{display:flex;align-items:center;gap:6px;flex:none}
+.foot .tags{min-width:0}
+.when{margin-top:10px;font-size:12.5px;color:var(--text-3);display:flex;flex-wrap:wrap;gap:4px 14px;font-variant-numeric:tabular-nums}
+.when b{font-weight:560;color:var(--text-2);margin-right:4px}
 /* trends */
 .media{position:relative;margin:-20px -20px 16px;border-radius:13px 13px 0 0;overflow:hidden;aspect-ratio:16/9;background:var(--surface-2);cursor:pointer}
 .media img{width:100%;height:100%;object-fit:cover;display:block}
@@ -119,12 +135,270 @@ footer{margin-top:56px;font-size:12.5px;color:var(--text-3);text-align:center}
 </div>
 
 <script>
-const SKILLS=[{"n": "morluto/rea", "u": "https://github.com/morluto/rea", "s": 349369, "cr": "2026-04-14", "c": "工程/Agent", "l": "让 Agent 逆向任意 App，看懂功能再复刻", "w": "MCP 服务 + Agent Skill，调用 Ghidra、JADX 等逆向工具，从界面行为一路追到二进制，给出证据链。", "use": "拆竞品功能「到底怎么实现的」；理解 AI 正在削弱软件护城河。", "f": "hot"}, {"n": "obra/superpowers", "u": "https://github.com/obra/superpowers", "s": 302659, "cr": "2025-10-09", "c": "工程/Agent", "l": "先头脑风暴、写计划，再执行自测", "w": "一套 Agent 技能框架与开发方法论，把「想清楚再动手」固化成流程。", "use": "理解 Agent 工作流设计；面试谈 AI 产品可靠性。", "f": ""}, {"n": "Graphify-Labs/graphify", "u": "https://github.com/Graphify-Labs/graphify", "s": 130423, "cr": "2026-04-03", "c": "工程/Agent", "l": "把代码库和文档变成可查询的知识图谱", "w": "本地解析代码、文档、SQL、PDF，生成每条关系都有解释的图谱，不依赖向量库。", "use": "快速读懂一个陌生系统；和工程师对齐架构。", "f": ""}, {"n": "JuliusBrussee/caveman", "u": "https://github.com/JuliusBrussee/caveman", "s": 113886, "cr": "2026-04-04", "c": "工程/Agent", "l": "让 Agent 说「原始人话」，大幅省 token", "w": "用极简表达风格压缩 Agent 输出，仓库称可省约 65% token。", "use": "成本意识：AI 产品的单位经济模型。", "f": ""}, {"n": "Jakeschincariol/replica-skill", "u": "https://github.com/Jakeschincariol/replica-skill", "s": 3768, "cr": "2026-10-03", "c": "工程/Agent", "l": "拆解、重建、测试、修复任意 App", "w": "11 个免费 skill：逆向一个 App、重建、测 bug，再修掉用户最讨厌的点。", "use": "竞品分析 → 原型的一条龙练习。", "f": "new"}, {"n": "nextlevelbuilder/ui-ux-pro-max-skill", "u": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill", "s": 138052, "cr": "2025-11-30", "c": "设计", "l": "给 Agent 内置一整套 UI/UX 设计知识", "w": "跨平台的设计规则库：配色、排版、组件、交互模式，让 Agent 做出专业界面。", "use": "做产品原型时直接提升界面质量。", "f": ""}, {"n": "emilkowalski/skills", "u": "https://github.com/emilkowalski/skills", "s": 48081, "cr": "2026-03-16", "c": "设计", "l": "设计工程师 Emil Kowalski 的界面手艺", "w": "知名设计工程师公开的 skill，面向设计师和工程师，偏交互细节与质感。", "use": "学顶级产品的「手感」从哪来。", "f": ""}, {"n": "Nutlope/hallmark", "u": "https://github.com/Nutlope/hallmark", "s": 30469, "cr": "2026-04-27", "c": "设计", "l": "反「AI 味」设计，告别千篇一律的界面", "w": "专门对抗 AI 生成页面的套路感，给 Claude Code / Cursor / Codex 用。", "use": "让作品集原型不像 AI 模板。", "f": ""}, {"n": "oil-oil/oil-ui", "u": "https://github.com/oil-oil/oil-ui", "s": 1933, "cr": "2026-09-30", "c": "设计", "l": "并排探索多个 UI 方向，再对照截图打磨", "w": "先发散出多个设计方向并排比较，再用真实截图迭代。", "use": "练「多方案对比」的产品决策方式。", "f": "new"}, {"n": "kaankiziltug/logo-design-skill", "u": "https://github.com/kaankiziltug/logo-design-skill", "s": 3857, "cr": "2026-09-26", "c": "设计", "l": "Logo 设计全流程，附 1,400+ 参考库", "w": "设计原则、流程、SVG 制作、测试工具和大型 Logo 参考库。", "use": "给个人品牌或小项目做标识。", "f": "new"}, {"n": "Leonxlnx/taste-skill", "u": "https://github.com/Leonxlnx/taste-skill", "s": 99941, "cr": "2026-02-19", "c": "美学", "l": "给 Agent 审美：定方向、找参考、自检", "w": "先定美术方向和参考图，再用浏览器检查效果，避免通用 AI 页面。", "use": "提升任何 AI 产出的视觉品味。", "f": ""}, {"n": "wheresryan22/anatomy", "u": "https://github.com/wheresryan22/anatomy", "s": 17702, "cr": "2026-10-08", "c": "美学", "l": "生成可交互的等距机械剖面插画", "w": "为真实机器和复杂系统生成精致 SVG 等距插画，可加 WebGL 着色器和 3D 效果。", "use": "把产品架构讲成一张好看的图。", "f": "new"}, {"n": "yang0/handraw-style", "u": "https://github.com/yang0/handraw-style", "s": 5881, "cr": "2026-09-05", "c": "美学", "l": "手绘风格画廊 + 双语提示词", "w": "编号的手绘风格样例库，每种风格配中英提示词。", "use": "给内容和礼物素材找风格参考。", "f": "new"}, {"n": "yanliudesign/mono-color-skill", "u": "https://github.com/yanliudesign/mono-color-skill", "s": 3458, "cr": "2026-08-19", "c": "美学", "l": "单色印刷风：暖纸、网点、留白", "w": "单墨色编辑印刷风图像：暖色纸张、网点照片、克制排版。", "use": "做有质感的封面和海报。", "f": ""}, {"n": "s1dashu/ip-as-logo-skill", "u": "https://github.com/s1dashu/ip-as-logo-skill", "s": 6073, "cr": "2026-08-18", "c": "美学", "l": "极简圆润的 IP 吉祥物 Logo", "w": "生成高度简化、圆润、轻拟物的 IP 吉祥物形象。", "use": "直播礼物 / 虚拟形象的 IP 草图。", "f": ""}, {"n": "camilleroux/genart-skill", "u": "https://github.com/camilleroux/genart-skill", "s": 154, "cr": "2026-08-28", "c": "美学", "l": "种子驱动、可复现的生成艺术", "w": "确定性、哈希种子驱动的生成艺术，同一种子总能得到同一幅作品。", "use": "理解「每个用户独一份」的生成式礼物。", "f": "new"}, {"n": "calesthio/OpenMontage", "u": "https://github.com/calesthio/OpenMontage", "s": 70363, "cr": "2026-03-29", "c": "动效·视频", "l": "开源 Agent 视频生产系统", "w": "仓库称有 12 条生产流水线和 700+ 视频知识文件，把编程助手变成视频工作室。", "use": "你学 AI 剪辑时，看完整的视频生产拆法。", "f": ""}, {"n": "Vincentwei1021/video-shotcraft", "u": "https://github.com/Vincentwei1021/video-shotcraft", "s": 12685, "cr": "2026-07-19", "c": "动效·视频", "l": "用 Remotion 做电影感产品视频", "w": "152 张镜头配方卡、209 个动效预览，加一个可直接用的模板。", "use": "做产品演示 / 作品集视频。", "f": ""}, {"n": "alchaincyf/huashu-art-motion", "u": "https://github.com/alchaincyf/huashu-art-motion", "s": 4658, "cr": "2026-10-06", "c": "动效·视频", "l": "35 种艺术风格，用代码让画动起来", "w": "艺术动画 skill：35 种风格、9 种解说语法。", "use": "给静态素材加动效，做内容短片。", "f": "new"}, {"n": "lemomo-ai/lemo-opuscar", "u": "https://github.com/lemomo-ai/lemo-opuscar", "s": 4418, "cr": "2026-09-26", "c": "动效·视频", "l": "不用视频模型，纯代码拍 51 种风格短片", "w": "每种影片风格配提示词和纯代码样片，附导演与技术指南。", "use": "看「代码即视频」的新创作方式。", "f": "new"}, {"n": "Jakubantalik/transitions.dev", "u": "https://github.com/Jakubantalik/transitions.dev", "s": 5442, "cr": "2026-04-21", "c": "动效·视频", "l": "43+ 精制 UI 转场动效库", "w": "UI 动效 Agent + 转场库，可接入日常工作流。", "use": "学「好转场」的节奏，迁移到短视频剪辑。", "f": ""}, {"n": "CloudAI-X/threejs-skills", "u": "https://github.com/CloudAI-X/threejs-skills", "s": 3662, "cr": "2026-01-19", "c": "动效·视频", "l": "让 Agent 写对最新版 Three.js 3D", "w": "给 Claude Code 最新的 three.js API、示例和常见错误清单。", "use": "做可交互 3D 演示 / 礼物效果原型。", "f": ""}, {"n": "Donchitos/Claude-Code-Game-Studios", "u": "https://github.com/Donchitos/Claude-Code-Game-Studios", "s": 26997, "cr": "2026-02-12", "c": "玩法", "l": "49 个 Agent 组成的游戏工作室", "w": "72 个工作流 skill，模拟真实游戏工作室的分工与协作。", "use": "理解玩法设计流程，做小游戏原型。", "f": ""}, {"n": "rehan-remade/universal-modder", "u": "https://github.com/rehan-remade/universal-modder", "s": 8555, "cr": "2026-09-30", "c": "玩法", "l": "让 Claude 给你拥有的 PC 游戏做 Mod", "w": "侦察、逆向、AI 生成美术/3D/音频、游戏内测试、生成展示视频。", "use": "看 UGC 和 Mod 文化如何被 AI 放大。", "f": "new"}, {"n": "majidmanzarpour/threejs-game-skills", "u": "https://github.com/majidmanzarpour/threejs-game-skills", "s": 2554, "cr": "2026-06-14", "c": "玩法", "l": "做可玩、精致的 Three.js 网页游戏", "w": "玩法、画面、UI、QA 全套，可选 AI 生成 3D/图像/音频资产。", "use": "直播间小游戏玩法的快速原型。", "f": ""}, {"n": "oso95/scroll-world", "u": "https://github.com/oso95/scroll-world", "s": 10307, "cr": "2026-07-06", "c": "玩法", "l": "把品牌变成可滚动的 3D 世界落地页", "w": "一个 skill 把任意品牌生成为沉浸式滚动 3D 世界。", "use": "做「惊艳」级别的个人作品页。", "f": ""}, {"n": "Oldcircle/geo-sleuth", "u": "https://github.com/Oldcircle/geo-sleuth", "s": 3650, "cr": "2026-09-18", "c": "玩法", "l": "看图找地点，并展示推理过程", "w": "结合地图几何、地形天际线、卫星图和街景推断照片拍摄地。", "use": "「AI 侦探」类互动玩法灵感。", "f": "new"}, {"n": "bitwize-music-studio/claude-ai-music-skills", "u": "https://github.com/bitwize-music-studio/claude-ai-music-skills", "s": 576, "cr": "2026-01-14", "c": "玩法", "l": "人机协作的 Suno 音乐制作流程", "w": "围绕 Suno 的作词、风格、模板与工具链。", "use": "给视频和直播配原创音乐。", "f": ""}, {"n": "alchaincyf/nuwa-skill", "u": "https://github.com/alchaincyf/nuwa-skill", "s": 35292, "cr": "2026-04-05", "c": "效率", "l": "蒸馏任何人的思维方式与表达 DNA", "w": "提炼一个人的心智模型、决策启发式和表达风格，生成可调用的「思维分身」。", "use": "蒸馏优秀 PM 的思考方式，做面试陪练。", "f": ""}, {"n": "mvanhorn/last30days-skill", "u": "https://github.com/mvanhorn/last30days-skill", "s": 64890, "cr": "2026-01-23", "c": "效率", "l": "调研近 30 天全网讨论，带出处汇总", "w": "跨 Reddit、X、YouTube、HN 等检索某话题，输出有来源的摘要。", "use": "趋势周报；面试前调研公司。", "f": ""}, {"n": "QingYunA/answer-me-with-html", "u": "https://github.com/QingYunA/answer-me-with-html", "s": 4125, "cr": "2026-10-02", "c": "效率", "l": "用一页 HTML 回答复杂问题", "w": "让 Agent 把难题的答案做成一页可读的 HTML，而不是长文本。", "use": "就是这个页面的形式，可复用到你的各个 bot。", "f": "new"}, {"n": "nicobailon/visual-explainer", "u": "https://github.com/nicobailon/visual-explainer", "s": 10562, "cr": "2026-02-16", "c": "效率", "l": "把方案、数据、复盘生成可视化页面", "w": "为图表、方案审阅、数据表、项目复盘生成富 HTML 页面或幻灯片。", "use": "周复盘、PRD 可视化。", "f": ""}, {"n": "zarazhangrui/frontend-slides", "u": "https://github.com/zarazhangrui/frontend-slides", "s": 30997, "cr": "2026-01-28", "c": "效率", "l": "用前端能力做漂亮的网页幻灯片", "w": "借编程 Agent 的前端能力生成网页版演示稿。", "use": "面试作品集演示。", "f": ""}, {"n": "blader/humanizer", "u": "https://github.com/blader/humanizer", "s": 58958, "cr": "2026-01-18", "c": "效率", "l": "去掉文字里的 AI 味", "w": "识别并改写典型 AI 写作痕迹；中文版见 op7418/Humanizer-zh。", "use": "改英文求职信、LinkedIn 帖子。", "f": ""}];
-const TRENDS=[{"n": "闪身步", "p": ["抖音"], "what": "8 年前的北舞花鼓灯教学片段被翻出，全网接力模仿", "why": "几秒能学、自带喜感，明星接力放大", "pm": "「老素材 + 极低模仿门槛」可复制；可做送礼触发主播做指定动作的挑战型礼物", "m": {"t": "dy", "id": "7689422539222715686", "o": "https://jingxuan.douyin.com/m/video/7689422539222715686"}, "src": "https://m.huanqiu.com/article/4TLp3LTDidV", "v": "各报道播放量 4–7.5 亿不等；最先发布片段的账号未知"}, {"n": "风扇转场换装", "p": ["TikTok", "Instagram"], "what": "俯拍躺地，吊扇叶片每扫过一次就换一套衣服", "why": "叶片天然遮住剪辑点；AI 模板一张照片即可复刻", "pm": "换装天然带货：可做「虚拟换装礼物」，与电商试穿联动", "m": {"t": "tt", "id": "7694617702882725138", "o": "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138"}, "src": "https://thetab.com/2026/09/28/how-to-do-the-vibey-ai-ceiling-fan-trend-from-tiktok-where-your-outfit-changes", "v": "首发者不明"}, {"n": "Hotel Lobby AI 换脸说唱", "p": ["TikTok", "X"], "what": "把 Quavo 和 Takeoff 的 COLORS 表演换成猫、名人、影视角色", "why": "橙色舞台辨识度极高，两张照片就能做；Quavo 亲自转发原版", "pm": "双人位天然适合合拍 / PK；同时暴露「用谁的脸」的肖像权风控", "m": {"t": "yt", "id": "x9yop0nYR9g", "o": "https://www.youtube.com/watch?v=x9yop0nYR9g", "label": "原版表演"}, "extra": ["AI 猫咪版", "https://x.com/Zkxxeth/status/2108740428602511374"], "src": "https://www.complex.com/music/a/markelibert/quavo-takeoff-hotel-lobby-ai-trend-tiktok", "v": "起点猫咪视频的首发者未确认"}, {"n": "REA「逆向一切」", "p": ["GitHub", "X"], "what": "让 AI Agent 逆向任意软件的开源工具，一周从不到 1 万星涨到 10 万+", "why": "新模型反编译能力跃升 + AI 移植老游戏浪潮 + 一行命令安装", "pm": "功能能被 Agent 快速看懂并复刻，护城河要转向网络效应、数据和内容生态", "src": "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software", "v": "涨速有刷星质疑；少数派抽查 fork 后认为大部分热度为真"}, {"n": "AI 僧人 Yang Mun", "p": ["Instagram"], "what": "完全由 AI 生成的冥想僧人，约 250 万粉丝", "why": "情绪价值 + 日更 + 高度一致的人设", "pm": "虚拟人做情绪价值已能变现；平台侧机会是 AI 标识与真实性信号", "src": "https://spotlight.ebu.ch/p/yang-mun-ai-influencer-scam", "o": "https://www.instagram.com/yangmunus/", "v": "收入数据（30 万美元+）来自记者调查，非官方披露"}, {"n": "AI 富豪流浪汉 Charles Robinson", "p": ["Instagram"], "what": "赤脚邋遢的 AI 男人走下豪车，一周近百万粉丝", "why": "落魄外表 × 极致财富的反差，叠加好奇心", "pm": "本质是 AI 工具 Higgsfield 的增长营销；角色一致性是虚拟主播的底层能力", "src": "https://thejarrus.com/en/news/charles-robinson/", "v": "实际运营者不明"}, {"n": "雪山救狐狸 · 酱板鸭复仇", "p": ["抖音", "B站", "小红书"], "what": "AI 邵氏武侠短片：「我是那只被你抛弃的酱板鸭」", "why": "反转 + 无厘头 + 开放式剧情，品牌和官方号纷纷接梗", "pm": "开放式「梗宇宙」：让观众用礼物推动剧情分支", "m": {"t": "bili", "id": "BV1qLNczfEuP", "o": "https://www.bilibili.com/video/BV1qLNczfEuP/"}, "src": "https://www.yunyingpai.com/product-operation/1059416.html", "v": "「近 50 亿播放」为媒体估算；B站视频为网友合集"}, {"n": "SBTI 恶搞人格测试", "p": ["B站"], "what": "UP 主用 AI 几天做出的恶搞测试，服务器多次被挤崩", "why": "结果标签就是社交货币；品牌 24 小时内跟进", "pm": "「测一测」类礼物：结果卡可分享，带回流量", "src": "https://m.huxiu.com/article/4891746.html", "v": "仅单一媒体来源"}, {"n": "平台集体押注 AI 互动空间", "p": ["抖音", "B站", "小红书"], "what": "上线 AI 角色对话、分支剧情、即点即玩的互动内容入口", "why": "短视频时长见顶，Vibe Coding 让人人能做互动作品", "pm": "图文、视频、直播之后的「第四类内容形态」，面试好素材", "src": "https://m.huxiu.com/article/4891746.html", "v": "各平台数据来自媒体转述"}, {"n": "「我要验牌」", "p": ["抖音", "B站"], "what": "1991 年电影台词翻红，相关作品播放量破 50 亿", "why": "魔性口音不需要懂意思；春节打牌场景天然适配", "pm": "「暗号」即社群身份：口令触发特效的礼物", "src": "https://finance.sina.com.cn/wm/2026-03-01/doc-inhpmqry9427018.shtml", "v": "起源说法（游戏乌龙）未证实"}, {"n": "「胆子真是肥嘟嘟的」", "p": ["B站"], "what": "十秒台词 9 天内长出素材、二创、循环歌单、官方收编四层", "why": "零成本素材 + 时长激励套利", "pm": "用「官方收编」判断热点进入后段，决定礼物上下线时机", "src": "https://suenews.com/blog/bilibili-meme-dudu-attention-economics/", "v": "数字为媒体自行统计"}, {"n": "MrBeast 吃光超市赢 100 万", "p": ["YouTube"], "what": "4 人在超市住了 202 天，首日播放 7,000 万+", "why": "极端设定 + 长周期真人挑战 + 持续加码", "pm": "AI 内容泛滥时，真人和真实时间成本更稀缺，这是直播的天然优势", "m": {"t": "yt", "id": "plN7JMbadRg", "o": "https://www.youtube.com/watch?v=plN7JMbadRg"}, "src": "https://www.dexerto.com/youtube/mrbeast-breaks-his-youtube-views-record-with-1-million-grocery-store-challenge-3415556/"}, {"n": "AI 人体叠塔", "p": ["Facebook"], "what": "违反物理的杂技人塔视频，19 小时 7,700 万播放", "why": "奇观 + 「是真的吗」的争论推高互动", "pm": "打了 AI 标签也不影响传播，透明标识与增长并不冲突", "src": "https://eurweb.com/ai-human-tower/", "v": "原视频链接未找到"}, {"n": "让 AI 用你的生活填满空房间", "p": ["X", "TikTok"], "what": "上传空房间照片，让 ChatGPT / Grok 按聊天记忆布置", "why": "「AI 有多懂我」的自我投射 + 惊喜", "pm": "记忆 → 个性化视觉 → 分享：可做成专属纪念礼物", "src": "https://x.com/i/trending/2109694090983907651", "v": "来源为 X 自动生成的趋势摘要"}, {"n": "两个 AI 面试官无限说再见", "p": ["X"], "what": "求职 Agent 对 AI 面试官，谈完后陷入礼貌告别的死循环", "why": "荒诞，又戳中「AI 招聘取代人」的焦虑", "pm": "Agent 缺终止条件：evals 与对话设计的现成面试案例", "src": "https://x.com/i/trending/2110738082899316868", "v": "来源为 X 自动摘要，原视频未核实"}, {"n": "Seedance 2.5 写实短片", "p": ["X"], "what": "创作者晒真人感极强的 AI 短片，也是风扇转场的主力工具", "why": "情绪化的真人镜头 + 「这是 AI？」的钩子", "pm": "多模态视频生成的竞争格局，也是 AIGC 礼物的上游能力", "m": {"t": "x", "thumb": "https://pbs.twimg.com/amplify_video_thumb/2108060140574560256/img/tQOHztLi8LK-Vwy9.jpg", "o": "https://x.com/Zoyavelle/status/2108060187840180394"}, "src": "https://x.com/i/trending/2111725344315015515", "v": "模型参数来自 X 自动摘要"}];
+const SKILLS=[{"n": "morluto/rea", "u": "https://github.com/morluto/rea", "s": 351353, "cr": "2026-04-14", "c": "工程/Agent", "l": "让 Agent 逆向任意 App，看懂功能再复刻", "w": "MCP 服务 + Agent Skill，调用 Ghidra、JADX 等逆向工具，从界面行为一路追到二进制，给出证据链。", "use": "拆竞品功能「到底怎么实现的」；理解 AI 正在削弱软件护城河。", "f": "hot", "img": "assets/skills/rea.webp"}, {"n": "obra/superpowers", "u": "https://github.com/obra/superpowers", "s": 302735, "cr": "2025-10-09", "c": "工程/Agent", "l": "先头脑风暴、写计划，再执行自测", "w": "一套 Agent 技能框架与开发方法论，把「想清楚再动手」固化成流程。", "use": "理解 Agent 工作流设计；面试谈 AI 产品可靠性。", "f": "", "dg": ["模糊需求", "先计划再动手", "测过的代码"]}, {"n": "Graphify-Labs/graphify", "u": "https://github.com/Graphify-Labs/graphify", "s": 130672, "cr": "2026-04-03", "c": "工程/Agent", "l": "把代码库和文档变成可查询的知识图谱", "w": "本地解析代码、文档、SQL、PDF，生成每条关系都有解释的图谱，不依赖向量库。", "use": "快速读懂一个陌生系统；和工程师对齐架构。", "f": "", "img": "assets/skills/graphify.webp"}, {"n": "JuliusBrussee/caveman", "u": "https://github.com/JuliusBrussee/caveman", "s": 113933, "cr": "2026-04-04", "c": "工程/Agent", "l": "让 Agent 说「原始人话」，大幅省 token", "w": "用极简表达风格压缩 Agent 输出，仓库称可省约 65% token。", "use": "成本意识：AI 产品的单位经济模型。", "f": "", "img": "assets/skills/caveman.webp"}, {"n": "JCodesMore/ai-website-cloner-template", "u": "https://github.com/JCodesMore/ai-website-cloner-template", "s": 37079, "cr": "2026-03-13", "c": "工程/Agent", "l": "一条命令，用 Agent 克隆任意网站", "w": "给编程 Agent 的模板：截取目标站点的设计与结构，重建出可运行的副本。", "use": "快速复刻竞品落地页做对比实验；理解「界面不再是壁垒」。", "f": "", "img": "assets/skills/ai-website-cloner-template.webp"}, {"n": "addyosmani/agent-skills", "u": "https://github.com/addyosmani/agent-skills", "s": 109087, "cr": "2026-02-15", "c": "工程/Agent", "l": "Addy Osmani 的生产级工程技能集", "w": "覆盖从规格、计划、构建、测试到评审的工程技能，让 Agent 按资深工程师的流程干活。", "use": "看大厂工程师怎么把流程写给 AI；和工程团队对齐质量标准。", "f": "", "img": "assets/skills/agent-skills.webp"}, {"n": "nextlevelbuilder/ui-ux-pro-max-skill", "u": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill", "s": 138148, "cr": "2025-11-30", "c": "设计", "l": "给 Agent 内置一整套 UI/UX 设计知识", "w": "跨平台的设计规则库：配色、排版、组件、交互模式，让 Agent 做出专业界面。", "use": "做产品原型时直接提升界面质量。", "f": "", "img": "assets/skills/ui-ux-pro-max-skill.webp"}, {"n": "emilkowalski/skills", "u": "https://github.com/emilkowalski/skills", "s": 48135, "cr": "2026-03-16", "c": "设计", "l": "设计工程师 Emil Kowalski 的界面手艺", "w": "知名设计工程师公开的 skill，面向设计师和工程师，偏交互细节与质感。", "use": "学顶级产品的「手感」从哪来。", "f": "", "dg": ["普通界面", "动效与细节手艺", "有手感的界面"]}, {"n": "Nutlope/hallmark", "u": "https://github.com/Nutlope/hallmark", "s": 30494, "cr": "2026-04-27", "c": "设计", "l": "反「AI 味」设计，告别千篇一律的界面", "w": "专门对抗 AI 生成页面的套路感，给 Claude Code / Cursor / Codex 用。", "use": "让作品集原型不像 AI 模板。", "f": "", "img": "assets/skills/hallmark.webp"}, {"n": "alchaincyf/huashu-design", "u": "https://github.com/alchaincyf/huashu-design", "s": 25608, "cr": "2026-04-19", "c": "设计", "l": "在 Claude Code 里直接做 HTML 设计稿", "w": "HTML 原生的设计 skill：用网页直接产出高保真设计稿、海报、演示和动画。", "use": "不会 Figma 也能出高保真原型和作品集页面。", "f": "", "img": "assets/skills/huashu-design.webp"}, {"n": "Leonxlnx/taste-skill", "u": "https://github.com/Leonxlnx/taste-skill", "s": 100055, "cr": "2026-02-19", "c": "美学", "l": "给 Agent 审美：定方向、找参考、自检", "w": "先定美术方向和参考图，再用浏览器检查效果，避免通用 AI 页面。", "use": "提升任何 AI 产出的视觉品味。", "f": "", "img": "assets/skills/taste-skill.webp"}, {"n": "wheresryan22/anatomy", "u": "https://github.com/wheresryan22/anatomy", "s": 17875, "cr": "2026-10-08", "c": "美学", "l": "生成可交互的等距机械剖面插画", "w": "为真实机器和复杂系统生成精致 SVG 等距插画，可加 WebGL 着色器和 3D 效果。", "use": "把产品架构讲成一张好看的图。", "f": "", "img": "assets/skills/anatomy.webp"}, {"n": "tt-a1i/archify", "u": "https://github.com/tt-a1i/archify", "s": 86662, "cr": "2026-04-15", "c": "美学", "l": "把想法、方案或代码画成漂亮的交互图", "w": "任意想法、计划或代码库 → 精致的可交互架构图 / 流程图。", "use": "PRD 和面试里讲清系统；比手画框图好看得多。", "f": "", "img": "assets/skills/archify.webp"}, {"n": "helloianneo/ian-xiaohei-illustrations", "u": "https://github.com/helloianneo/ian-xiaohei-illustrations", "s": 12705, "cr": "2026-05-27", "c": "美学", "l": "给中文文章配「小黑」手绘怪诞插图", "w": "16:9 白底手绘风配图，少量红橙蓝批注，适合公众号与长文。", "use": "给小红书 / 公众号内容做统一风格的配图。", "f": "", "img": "assets/skills/ian-xiaohei-illustrations.webp"}, {"n": "calesthio/OpenMontage", "u": "https://github.com/calesthio/OpenMontage", "s": 70425, "cr": "2026-03-29", "c": "动效·视频", "l": "开源 Agent 视频生产系统", "w": "仓库称有 12 条生产流水线和 700+ 视频知识文件，把编程助手变成视频工作室。", "use": "你学 AI 剪辑时，看完整的视频生产拆法。", "f": "", "img": "assets/skills/openmontage.webp"}, {"n": "Vincentwei1021/video-shotcraft", "u": "https://github.com/Vincentwei1021/video-shotcraft", "s": 12701, "cr": "2026-07-19", "c": "动效·视频", "l": "用 Remotion 做电影感产品视频", "w": "152 张镜头配方卡、209 个动效预览，加一个可直接用的模板。", "use": "做产品演示 / 作品集视频。", "f": "", "img": "assets/skills/video-shotcraft.webp"}, {"n": "Donchitos/Claude-Code-Game-Studios", "u": "https://github.com/Donchitos/Claude-Code-Game-Studios", "s": 27014, "cr": "2026-02-12", "c": "玩法", "l": "49 个 Agent 组成的游戏工作室", "w": "72 个工作流 skill，模拟真实游戏工作室的分工与协作。", "use": "理解玩法设计流程，做小游戏原型。", "f": "", "dg": ["一个游戏点子", "49 个 Agent 分工", "可玩原型"]}, {"n": "oso95/scroll-world", "u": "https://github.com/oso95/scroll-world", "s": 10309, "cr": "2026-07-06", "c": "玩法", "l": "把品牌变成可滚动的 3D 世界落地页", "w": "一个 skill 把任意品牌生成为沉浸式滚动 3D 世界。", "use": "做「惊艳」级别的个人作品页。", "f": "", "img": "assets/skills/scroll-world.webp"}, {"n": "alchaincyf/nuwa-skill", "u": "https://github.com/alchaincyf/nuwa-skill", "s": 35328, "cr": "2026-04-05", "c": "效率", "l": "蒸馏任何人的思维方式与表达 DNA", "w": "提炼一个人的心智模型、决策启发式和表达风格，生成可调用的「思维分身」。", "use": "蒸馏优秀 PM 的思考方式，做面试陪练。", "f": "", "img": "assets/skills/nuwa-skill.webp"}, {"n": "mvanhorn/last30days-skill", "u": "https://github.com/mvanhorn/last30days-skill", "s": 64915, "cr": "2026-01-23", "c": "效率", "l": "调研近 30 天全网讨论，带出处汇总", "w": "跨 Reddit、X、YouTube、HN 等检索某话题，输出有来源的摘要。", "use": "趋势周报；面试前调研公司。", "f": "", "img": "assets/skills/last30days-skill.webp"}, {"n": "nicobailon/visual-explainer", "u": "https://github.com/nicobailon/visual-explainer", "s": 10565, "cr": "2026-02-16", "c": "效率", "l": "把方案、数据、复盘生成可视化页面", "w": "为图表、方案审阅、数据表、项目复盘生成富 HTML 页面或幻灯片。", "use": "周复盘、PRD 可视化。", "f": "", "img": "assets/skills/visual-explainer.webp"}, {"n": "zarazhangrui/frontend-slides", "u": "https://github.com/zarazhangrui/frontend-slides", "s": 31011, "cr": "2026-01-28", "c": "效率", "l": "用前端能力做漂亮的网页幻灯片", "w": "借编程 Agent 的前端能力生成网页版演示稿。", "use": "面试作品集演示。", "f": "", "img": "assets/skills/frontend-slides.webp"}, {"n": "op7418/guizang-ppt-skill", "u": "https://github.com/op7418/guizang-ppt-skill", "s": 28360, "cr": "2026-04-23", "c": "效率", "l": "生成杂志风 / 瑞士风的精美网页 PPT", "w": "让 Agent 生成排版考究的 HTML 幻灯片：编辑杂志风与瑞士国际主义风格。", "use": "面试作品集演示、周报，比模板 PPT 更有质感。", "f": "", "img": "assets/skills/guizang-ppt-skill.webp"}, {"n": "blader/humanizer", "u": "https://github.com/blader/humanizer", "s": 59031, "cr": "2026-01-18", "c": "效率", "l": "去掉文字里的 AI 味", "w": "识别并改写典型 AI 写作痕迹；中文版见 op7418/Humanizer-zh。", "use": "改英文求职信、LinkedIn 帖子。", "f": "", "dg": ["AI 味文本", "识别 AI 痕迹", "自然的人话"]}, {"n": "ayghri/i-have-adhd", "u": "https://github.com/ayghri/i-have-adhd", "s": 58064, "cr": "2026-05-13", "c": "效率", "l": "让 Agent 先说结论，别把答案埋起来", "w": "约束 Agent 的输出格式：结论先行、结构清晰、去掉铺垫，对注意力友好。", "use": "让你所有 bot 的回答更易扫读。", "f": "", "dg": ["冗长回答", "结论先行", "一眼读完"]}];
+const TRENDS=[
+{
+"n": "「不烧心」AI 漫剧梗",
+"p": [
+"抖音",
+"小红书"
+],
+"what": "AI 摆摊漫剧台词「贵是贵点，但吃了不烧心」被套用到万物",
+"why": "一句话脱离剧情也能懂；品牌集体借势二创",
+"pm": "AI 量产内容里，真正出圈的是可被截取复用的情绪符号",
+"hot": "2026-10 上旬（国庆）",
+"sd": "2026-10-14",
+"src": "https://news.qq.com/rain/a/20261014A0B9VC00",
+"v": "播放量各报道 20.9–28.5 亿不等"
+},
+{
+"n": "AI「世界巡演」：把 MJ 舞台换成任何人",
+"p": [
+"B站",
+"X"
+],
+"what": "把迈克尔·杰克逊《Jam》演唱会主角换成黄仁勋、门捷列夫、赵本山",
+"why": "万能舞台模板 + 评论区接梗；马斯克转发黄仁勋版",
+"pm": "「一个模板 + 换主角」是最强二创结构，可做成直播间同款特效",
+"hot": "2026-09 下旬起，10-04 黄仁勋版引爆",
+"sd": "2026-10-15",
+"src": "https://news.qq.com/rain/a/20261015A0B8X400",
+"m": {
+"t": "bili",
+"id": "BV1VRHr6AEZ6",
+"o": "https://www.bilibili.com/video/BV1VRHr6AEZ6/",
+"thumb": "assets/trends/jensen.webp",
+"label": "黄仁勋版"
+}
+},
+{
+"n": "AI 逆向一切：老游戏一夜跑进浏览器",
+"p": [
+"GitHub",
+"X"
+],
+"what": "REA 等工具让 Agent 反编译软件，Halo、GTA 等被移植到浏览器",
+"why": "新模型反编译能力跃升；REA 一周从不到 1 万星涨到 10 万+",
+"pm": "功能可被 Agent 快速复刻，护城河要转向网络效应、数据与内容生态",
+"hot": "2026-10 上旬",
+"sd": "2026-10-12",
+"src": "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software",
+"o": "https://news.xbox.com/en-us/2026/10/13/introducing-xbox-labs/",
+"ol": "Xbox Labs",
+"v": "REA 涨星速度有刷星质疑"
+},
+{
+"n": "闪身步",
+"p": [
+"抖音"
+],
+"what": "8 年前的北舞花鼓灯教学片段被翻出，全网接力模仿",
+"why": "几秒能学、自带喜感，明星接力放大",
+"pm": "「老素材 + 极低模仿门槛」可复制；可做送礼触发主播做指定动作的挑战型礼物",
+"m": {
+"t": "dy",
+"id": "7689422539222715686",
+"o": "https://jingxuan.douyin.com/m/video/7689422539222715686"
+},
+"src": "https://news.qq.com/rain/a/20260924A0CVW600",
+"v": "各报道播放量 4–7.5 亿不等",
+"hot": "2026-09 中下旬",
+"sd": "2026-09-24"
+},
+{
+"n": "手搓动画大赛：「纯手绘」反成爆款",
+"p": [
+"B站"
+],
+"what": "UP 主自学两个月手绘一集《猫和老鼠》，两周 800 万+ 播放",
+"why": "AI 内容泛滥后，「真人花了时间」本身成了卖点",
+"pm": "点赞率手搓约 10% vs 量产 AI 约 0.4%：AI 时代的稀缺是「活人感」",
+"hot": "2026-09-28 发布，10 月上旬爆发",
+"sd": "2026-10-14",
+"src": "https://post.smzdm.com/p/avgpr737/",
+"m": {
+"t": "bili",
+"id": "BV1E6aq6pEKR",
+"o": "https://www.bilibili.com/video/BV1E6aq6pEKR/",
+"thumb": "assets/trends/tomjerry.webp"
+},
+"v": "点赞率为作者自行抽样统计"
+},
+{
+"n": "鹿晗「雷霆特效」严肃跟拍",
+"p": [
+"抖音"
+],
+"what": "鹿晗发了条「好假的」雷霆特效视频，粉丝点「拍同款」接力",
+"why": "特效越简单越好参与；明星同款 = 参与感",
+"pm": "「拍同款」入口就是增长引擎：特效 / 礼物要能一键复用",
+"hot": "2026-10 中旬",
+"sd": "2026-10-19",
+"src": "https://k.sina.cn/article_7879923021_1d5ae154d06801nd1y.html",
+"v": "仅单一来源，无播放量数据"
+},
+{
+"n": "狼爪舞翻跳挑战",
+"p": [
+"抖音"
+],
+"what": "檀健次《Drop》舞台的狼爪手势，被大量翻跳",
+"why": "一个手势就能参与；「轮到你们交作业了」+ 本人翻牌",
+"pm": "明星「翻牌」回应是拉长传播链的关键动作，适合直播互动设计",
+"hot": "2026-10 中旬",
+"sd": "2026-10-15",
+"src": "https://k.sina.cn/article_7879776731_1d5abd9db06801f6oy.html"
+},
+{
+"n": "小红书 REDLAND「痛岛」",
+"p": [
+"小红书"
+],
+"what": "国庆 5 天，复兴岛变二次元开放世界，20 万人登岛",
+"why": "用户当 NPC、做花车，线下体验回流成线上笔记",
+"pm": "平台把圈层文化做成线下「内容生产现场」，再回流社区",
+"hot": "2026-10-01 至 10-06",
+"sd": "2026-10-12",
+"src": "https://m.huxiu.com/article/4896117.html",
+"v": "「25 亿曝光」为平台口径"
+},
+{
+"n": "风扇转场换装",
+"p": [
+"TikTok",
+"Instagram"
+],
+"what": "俯拍躺地，吊扇叶片每扫过一次就换一套衣服",
+"why": "叶片天然遮住剪辑点；AI 模板一张照片即可复刻",
+"pm": "换装天然带货：可做「虚拟换装礼物」，与电商试穿联动",
+"m": {
+"t": "tt",
+"id": "7694617702882725138",
+"o": "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138"
+},
+"src": "https://thetab.com/2026/09/28/how-to-do-the-vibey-ai-ceiling-fan-trend-from-tiktok-where-your-outfit-changes",
+"v": "首发者不明",
+"hot": "2026-09 下旬",
+"sd": "2026-09-28"
+},
+{
+"n": "Hotel Lobby AI 换脸说唱",
+"p": [
+"TikTok",
+"X"
+],
+"what": "把 Quavo 和 Takeoff 的 COLORS 表演换成猫、名人、影视角色",
+"why": "橙色舞台辨识度极高，两张照片就能做；Quavo 亲自转发原版",
+"pm": "双人位天然适合合拍 / PK；同时暴露「用谁的脸」的肖像权风控",
+"m": {
+"t": "yt",
+"id": "x9yop0nYR9g",
+"o": "https://www.youtube.com/watch?v=x9yop0nYR9g",
+"label": "原版表演"
+},
+"extra": [
+"AI 猫咪版",
+"https://x.com/Zkxxeth/status/2108740428602511374"
+],
+"src": "https://www.complex.com/music/a/markelibert/quavo-takeoff-hotel-lobby-ai-trend-tiktok",
+"v": "起点猫咪视频的首发者未确认",
+"hot": "2026-09 上旬起，9 月下旬达峰",
+"sd": "2026-09-27"
+},
+{
+"n": "AI 富豪流浪汉 Charles Robinson",
+"p": [
+"Instagram"
+],
+"what": "赤脚邋遢的 AI 男人走下豪车，一周近百万粉丝",
+"why": "落魄外表 × 极致财富的反差，叠加好奇心",
+"pm": "本质是 AI 工具 Higgsfield 的增长营销；角色一致性是虚拟主播的底层能力",
+"src": "https://thejarrus.com/en/news/charles-robinson/",
+"v": "实际运营者不明",
+"hot": "2026-10 第一周",
+"sd": "2026-10-11"
+},
+{
+"n": "MrBeast 吃光超市赢 100 万",
+"p": [
+"YouTube"
+],
+"what": "4 人在超市住了 202 天，首日播放 7,000 万+",
+"why": "极端设定 + 长周期真人挑战 + 持续加码",
+"pm": "AI 内容泛滥时，真人和真实时间成本更稀缺，这是直播的天然优势",
+"m": {
+"t": "yt",
+"id": "plN7JMbadRg",
+"o": "https://www.youtube.com/watch?v=plN7JMbadRg"
+},
+"src": "https://www.dexerto.com/youtube/mrbeast-breaks-his-youtube-views-record-with-1-million-grocery-store-challenge-3415556/",
+"hot": "2026-10-03",
+"sd": "2026-10-05"
+},
+{
+"n": "AI 人体叠塔",
+"p": [
+"Facebook"
+],
+"what": "违反物理的杂技人塔视频，19 小时 7,700 万播放",
+"why": "奇观 + 「是真的吗」的争论推高互动",
+"pm": "打了 AI 标签也不影响传播，透明标识与增长并不冲突",
+"src": "https://eurweb.com/ai-human-tower/",
+"v": "原视频链接未找到",
+"hot": "2026-09-25 前后",
+"sd": "2026-09-26"
+},
+{
+"n": "让 AI 用你的生活填满空房间",
+"p": [
+"X",
+"TikTok"
+],
+"what": "上传空房间照片，让 ChatGPT / Grok 按聊天记忆布置",
+"why": "「AI 有多懂我」的自我投射 + 惊喜",
+"pm": "记忆 → 个性化视觉 → 分享：可做成专属纪念礼物",
+"src": "https://x.com/i/trending/2109694090983907651",
+"v": "来源为 X 自动生成的趋势摘要",
+"hot": "2026-10 中旬",
+"sd": "2026-10-13"
+},
+{
+"n": "两个 AI 面试官无限说再见",
+"p": [
+"X"
+],
+"what": "求职 Agent 对 AI 面试官，谈完后陷入礼貌告别的死循环",
+"why": "荒诞，又戳中「AI 招聘取代人」的焦虑",
+"pm": "Agent 缺终止条件：evals 与对话设计的现成面试案例",
+"src": "https://x.com/i/trending/2110738082899316868",
+"v": "来源为 X 自动摘要，原视频未核实",
+"hot": "2026-10 中旬",
+"sd": "2026-10-15"
+},
+{
+"n": "Seedance 2.5 写实短片",
+"p": [
+"X"
+],
+"what": "创作者晒真人感极强的 AI 短片，也是风扇转场的主力工具",
+"why": "情绪化的真人镜头 + 「这是 AI？」的钩子",
+"pm": "多模态视频生成的竞争格局，也是 AIGC 礼物的上游能力",
+"m": {
+"t": "x",
+"thumb": "https://pbs.twimg.com/amplify_video_thumb/2108060140574560256/img/tQOHztLi8LK-Vwy9.jpg",
+"o": "https://x.com/Zoyavelle/status/2108060187840180394"
+},
+"src": "https://x.com/i/trending/2111725344315015515",
+"v": "模型参数来自 X 自动摘要",
+"hot": "2026-10 中旬（X 趋势）",
+"sd": "2026-10-18"
+}
+];
 const NOW=new Date('2026-10-21');
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const kfmt=n=>n>=1000?(n/1000).toFixed(n>=100000?0:1).replace(/\.0$/,'')+'k':String(n);
+const GH='<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>';
 const chev='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>';
 SKILLS.forEach(s=>{const d=Math.max(1,(NOW-new Date(s.cr))/864e5);s.days=Math.round(d);s.mom=s.s/d;});
 
@@ -134,13 +408,17 @@ function skillCard(s){
   const tags=[`<span class="tag">${s.c}</span>`];
   if(s.f==='hot')tags.unshift('<span class="tag hot">本月爆火</span>');
   else if(s.days<=60)tags.unshift('<span class="tag new">新</span>');
+  const ARW='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+  const vis=s.img?`<img loading="lazy" decoding="async" src="${s.img}" alt="${esc(r)} 示意图">`
+    :`<div class="dg">${s.dg.map((x,i)=>`<div class="nd${i===1?' mid':''}"><span class="lb">${['输入','SKILL','输出'][i]}</span><span class="bx">${esc(x)}</span></div>`).join(ARW)}</div>`;
   return `<article class="card">
+    <a class="thumb" href="${s.u}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">${vis}</a>
     <div class="k-top"><div><div class="owner">${esc(o)}</div>
       <a class="name" href="${s.u}" target="_blank" rel="noopener">${esc(r)}<span class="arr">↗</span></a></div>
       <span class="star">★ ${kfmt(s.s)}</span></div>
     <p class="line">${esc(s.l)}</p>
     <div class="foot"><div class="tags">${tags.slice(0,2).join('')}</div>
-      <button class="more" aria-expanded="false">详情 ${chev}</button></div>
+      <div class="f-r"><a class="gh" href="${s.u}" target="_blank" rel="noopener">${GH}GitHub ↗</a><button class="more" aria-expanded="false">详情 ${chev}</button></div></div>
     <div class="detail"><div><div class="in">
       <div><b>能做什么</b>${esc(s.w)}</div>
       <div><b>可以用在</b>${esc(s.use)}</div>
@@ -158,7 +436,7 @@ const PNAME={yt:'YouTube',tt:'TikTok',dy:'抖音',bili:'B站',x:'X'};
 function mediaHTML(m){
   if(!m)return '';
   if(m.t==='x')return `<a class="media" href="${m.o}" target="_blank" rel="noopener"><img loading="lazy" src="${m.thumb}" alt=""><div class="play">${PLAY}</div><span class="src-l">在 X 观看 ↗</span></a>`;
-  const thumb=m.t==='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${m.id}/hqdefault.jpg" alt="">`:'<div class="ph"></div>';
+  const thumb=m.t==='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${m.id}/hqdefault.jpg" alt="">`:m.thumb?`<img loading="lazy" referrerpolicy="no-referrer" src="${m.thumb}" alt="">`:'<div class="ph"></div>';
   const tall=(m.t==='tt'||m.t==='dy')?' tall':'';
   return `<div class="media${tall}" data-t="${m.t}" data-id="${m.id}" role="button" tabindex="0" aria-label="播放">${thumb}<div class="play">${PLAY}</div><span class="src-l">${PNAME[m.t]}${m.label?' · '+esc(m.label):''}</span></div>`;
 }
@@ -171,7 +449,7 @@ function embedURL(t,id){
 function trendCard(x){
   const links=[];
   if(x.m&&x.m.o&&x.m.t!=='x')links.push(`<a href="${x.m.o}" target="_blank" rel="noopener">原视频 ↗</a>`);
-  if(x.o)links.push(`<a href="${x.o}" target="_blank" rel="noopener">主页 ↗</a>`);
+  if(x.o)links.push(`<a href="${x.o}" target="_blank" rel="noopener">${esc(x.ol||'主页')} ↗</a>`);
   if(x.extra)links.push(`<a href="${x.extra[1]}" target="_blank" rel="noopener">${esc(x.extra[0])} ↗</a>`);
   links.push(`<a href="${x.src}" target="_blank" rel="noopener">来源 ↗</a>`);
   return `<article class="card">${mediaHTML(x.m)}
@@ -179,6 +457,7 @@ function trendCard(x){
     <div class="t-name">${esc(x.n)}${x.v?`<span class="tbd" tabindex="0" data-tip="${esc(x.v)}">待核实</span>`:''}</div>
     <p class="t-row">${esc(x.what)}</p>
     <p class="t-row"><i>为何传开</i>${esc(x.why)}</p>
+    <div class="when"><span><b>走红</b>${esc(x.hot||'时间待核实')}</span><span><b>来源日期</b>${esc(x.sd||'待核实')}</span></div>
     <div class="foot"><div class="links">${links.join('')}</div>
       <button class="more" aria-expanded="false">PM 启发 ${chev}</button></div>
     <div class="detail"><div><div class="in">${esc(x.pm)}</div></div></div>
