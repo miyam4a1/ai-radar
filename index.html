@@ -84,6 +84,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .when{margin-top:10px;font-size:12.5px;color:var(--text-3);display:flex;flex-wrap:wrap;gap:4px 14px;font-variant-numeric:tabular-nums}
 .when b{font-weight:560;color:var(--text-2);margin-right:4px}
 /* trends */
+.pat{margin-bottom:30px;border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:6px 22px}
+.prow{display:grid;grid-template-columns:28px 190px 1fr;gap:4px 14px;align-items:baseline;padding:13px 0;border-top:1px solid var(--line)}
+.prow:first-child{border-top:0}
+.pn{font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:600}
+.pt-t{font-size:14.5px;font-weight:620;color:var(--text)}
+.pt-d{font-size:13.5px;color:var(--text-2);line-height:1.55}
+.pt-c{grid-column:3;display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.pc{font-size:12px;padding:2px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--text-2);background:var(--bg);transition:all .15s}
+.pc:hover{color:var(--accent);border-color:var(--accent)}
+.card.flash{box-shadow:0 0 0 2px var(--accent);border-color:var(--accent)}
+.cn{margin-top:36px}
+.cn summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--text-2);padding:5px 13px;border:1px solid var(--line-2);border-radius:999px;margin-bottom:18px}
+.cn summary::-webkit-details-marker{display:none}
+.cn summary::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:4px;transition:transform .2s}
+.cn[open] summary::after{transform:rotate(225deg) translate(-1px,-1px)}
+.cn .ct{color:var(--text-3);font-size:12px}
+@media(max-width:700px){.prow{grid-template-columns:24px 1fr}.pt-d,.pt-c{grid-column:2}}
 .media{position:relative;margin:-20px -20px 16px;border-radius:13px 13px 0 0;overflow:hidden;aspect-ratio:16/9;background:var(--surface-2);cursor:pointer}
 .media img{width:100%;height:100%;object-fit:cover;display:block}
 .media .ph{position:absolute;inset:0;background:radial-gradient(120% 90% at 20% 10%,var(--accent-bg),transparent 60%),linear-gradient(135deg,var(--surface-2),var(--line))}
@@ -127,8 +144,10 @@ footer{margin-top:56px;font-size:12.5px;color:var(--text-3);text-align:center}
   </section>
 
   <section id="p-trends" class="hidden">
+    <div class="pat" id="tr-pat"></div>
     <div class="bar"><div class="chips" id="tr-chips"></div></div>
     <div class="grid" id="tr-grid"></div>
+    <details class="cn" id="tr-cn"><summary>国内 <span class="ct" id="tr-cn-ct"></span></summary><div class="grid" id="tr-cn-grid"></div></details>
   </section>
 
   <footer>数据更新于 2026-10-21</footer>
@@ -138,129 +157,278 @@ footer{margin-top:56px;font-size:12.5px;color:var(--text-3);text-align:center}
 const SKILLS=[{"n": "morluto/rea", "u": "https://github.com/morluto/rea", "s": 351353, "cr": "2026-04-14", "c": "工程/Agent", "l": "让 Agent 逆向任意 App，看懂功能再复刻", "w": "MCP 服务 + Agent Skill，调用 Ghidra、JADX 等逆向工具，从界面行为一路追到二进制，给出证据链。", "use": "拆竞品功能「到底怎么实现的」；理解 AI 正在削弱软件护城河。", "f": "hot", "img": "assets/skills/rea.webp"}, {"n": "obra/superpowers", "u": "https://github.com/obra/superpowers", "s": 302735, "cr": "2025-10-09", "c": "工程/Agent", "l": "先头脑风暴、写计划，再执行自测", "w": "一套 Agent 技能框架与开发方法论，把「想清楚再动手」固化成流程。", "use": "理解 Agent 工作流设计；面试谈 AI 产品可靠性。", "f": "", "dg": ["模糊需求", "先计划再动手", "测过的代码"]}, {"n": "Graphify-Labs/graphify", "u": "https://github.com/Graphify-Labs/graphify", "s": 130672, "cr": "2026-04-03", "c": "工程/Agent", "l": "把代码库和文档变成可查询的知识图谱", "w": "本地解析代码、文档、SQL、PDF，生成每条关系都有解释的图谱，不依赖向量库。", "use": "快速读懂一个陌生系统；和工程师对齐架构。", "f": "", "img": "assets/skills/graphify.webp"}, {"n": "JuliusBrussee/caveman", "u": "https://github.com/JuliusBrussee/caveman", "s": 113933, "cr": "2026-04-04", "c": "工程/Agent", "l": "让 Agent 说「原始人话」，大幅省 token", "w": "用极简表达风格压缩 Agent 输出，仓库称可省约 65% token。", "use": "成本意识：AI 产品的单位经济模型。", "f": "", "img": "assets/skills/caveman.webp"}, {"n": "JCodesMore/ai-website-cloner-template", "u": "https://github.com/JCodesMore/ai-website-cloner-template", "s": 37079, "cr": "2026-03-13", "c": "工程/Agent", "l": "一条命令，用 Agent 克隆任意网站", "w": "给编程 Agent 的模板：截取目标站点的设计与结构，重建出可运行的副本。", "use": "快速复刻竞品落地页做对比实验；理解「界面不再是壁垒」。", "f": "", "img": "assets/skills/ai-website-cloner-template.webp"}, {"n": "addyosmani/agent-skills", "u": "https://github.com/addyosmani/agent-skills", "s": 109087, "cr": "2026-02-15", "c": "工程/Agent", "l": "Addy Osmani 的生产级工程技能集", "w": "覆盖从规格、计划、构建、测试到评审的工程技能，让 Agent 按资深工程师的流程干活。", "use": "看大厂工程师怎么把流程写给 AI；和工程团队对齐质量标准。", "f": "", "img": "assets/skills/agent-skills.webp"}, {"n": "nextlevelbuilder/ui-ux-pro-max-skill", "u": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill", "s": 138148, "cr": "2025-11-30", "c": "设计", "l": "给 Agent 内置一整套 UI/UX 设计知识", "w": "跨平台的设计规则库：配色、排版、组件、交互模式，让 Agent 做出专业界面。", "use": "做产品原型时直接提升界面质量。", "f": "", "img": "assets/skills/ui-ux-pro-max-skill.webp"}, {"n": "emilkowalski/skills", "u": "https://github.com/emilkowalski/skills", "s": 48135, "cr": "2026-03-16", "c": "设计", "l": "设计工程师 Emil Kowalski 的界面手艺", "w": "知名设计工程师公开的 skill，面向设计师和工程师，偏交互细节与质感。", "use": "学顶级产品的「手感」从哪来。", "f": "", "dg": ["普通界面", "动效与细节手艺", "有手感的界面"]}, {"n": "Nutlope/hallmark", "u": "https://github.com/Nutlope/hallmark", "s": 30494, "cr": "2026-04-27", "c": "设计", "l": "反「AI 味」设计，告别千篇一律的界面", "w": "专门对抗 AI 生成页面的套路感，给 Claude Code / Cursor / Codex 用。", "use": "让作品集原型不像 AI 模板。", "f": "", "img": "assets/skills/hallmark.webp"}, {"n": "alchaincyf/huashu-design", "u": "https://github.com/alchaincyf/huashu-design", "s": 25608, "cr": "2026-04-19", "c": "设计", "l": "在 Claude Code 里直接做 HTML 设计稿", "w": "HTML 原生的设计 skill：用网页直接产出高保真设计稿、海报、演示和动画。", "use": "不会 Figma 也能出高保真原型和作品集页面。", "f": "", "img": "assets/skills/huashu-design.webp"}, {"n": "Leonxlnx/taste-skill", "u": "https://github.com/Leonxlnx/taste-skill", "s": 100055, "cr": "2026-02-19", "c": "美学", "l": "给 Agent 审美：定方向、找参考、自检", "w": "先定美术方向和参考图，再用浏览器检查效果，避免通用 AI 页面。", "use": "提升任何 AI 产出的视觉品味。", "f": "", "img": "assets/skills/taste-skill.webp"}, {"n": "wheresryan22/anatomy", "u": "https://github.com/wheresryan22/anatomy", "s": 17875, "cr": "2026-10-08", "c": "美学", "l": "生成可交互的等距机械剖面插画", "w": "为真实机器和复杂系统生成精致 SVG 等距插画，可加 WebGL 着色器和 3D 效果。", "use": "把产品架构讲成一张好看的图。", "f": "", "img": "assets/skills/anatomy.webp"}, {"n": "tt-a1i/archify", "u": "https://github.com/tt-a1i/archify", "s": 86662, "cr": "2026-04-15", "c": "美学", "l": "把想法、方案或代码画成漂亮的交互图", "w": "任意想法、计划或代码库 → 精致的可交互架构图 / 流程图。", "use": "PRD 和面试里讲清系统；比手画框图好看得多。", "f": "", "img": "assets/skills/archify.webp"}, {"n": "helloianneo/ian-xiaohei-illustrations", "u": "https://github.com/helloianneo/ian-xiaohei-illustrations", "s": 12705, "cr": "2026-05-27", "c": "美学", "l": "给中文文章配「小黑」手绘怪诞插图", "w": "16:9 白底手绘风配图，少量红橙蓝批注，适合公众号与长文。", "use": "给小红书 / 公众号内容做统一风格的配图。", "f": "", "img": "assets/skills/ian-xiaohei-illustrations.webp"}, {"n": "calesthio/OpenMontage", "u": "https://github.com/calesthio/OpenMontage", "s": 70425, "cr": "2026-03-29", "c": "动效·视频", "l": "开源 Agent 视频生产系统", "w": "仓库称有 12 条生产流水线和 700+ 视频知识文件，把编程助手变成视频工作室。", "use": "你学 AI 剪辑时，看完整的视频生产拆法。", "f": "", "img": "assets/skills/openmontage.webp"}, {"n": "Vincentwei1021/video-shotcraft", "u": "https://github.com/Vincentwei1021/video-shotcraft", "s": 12701, "cr": "2026-07-19", "c": "动效·视频", "l": "用 Remotion 做电影感产品视频", "w": "152 张镜头配方卡、209 个动效预览，加一个可直接用的模板。", "use": "做产品演示 / 作品集视频。", "f": "", "img": "assets/skills/video-shotcraft.webp"}, {"n": "Donchitos/Claude-Code-Game-Studios", "u": "https://github.com/Donchitos/Claude-Code-Game-Studios", "s": 27014, "cr": "2026-02-12", "c": "玩法", "l": "49 个 Agent 组成的游戏工作室", "w": "72 个工作流 skill，模拟真实游戏工作室的分工与协作。", "use": "理解玩法设计流程，做小游戏原型。", "f": "", "dg": ["一个游戏点子", "49 个 Agent 分工", "可玩原型"]}, {"n": "oso95/scroll-world", "u": "https://github.com/oso95/scroll-world", "s": 10309, "cr": "2026-07-06", "c": "玩法", "l": "把品牌变成可滚动的 3D 世界落地页", "w": "一个 skill 把任意品牌生成为沉浸式滚动 3D 世界。", "use": "做「惊艳」级别的个人作品页。", "f": "", "img": "assets/skills/scroll-world.webp"}, {"n": "alchaincyf/nuwa-skill", "u": "https://github.com/alchaincyf/nuwa-skill", "s": 35328, "cr": "2026-04-05", "c": "效率", "l": "蒸馏任何人的思维方式与表达 DNA", "w": "提炼一个人的心智模型、决策启发式和表达风格，生成可调用的「思维分身」。", "use": "蒸馏优秀 PM 的思考方式，做面试陪练。", "f": "", "img": "assets/skills/nuwa-skill.webp"}, {"n": "mvanhorn/last30days-skill", "u": "https://github.com/mvanhorn/last30days-skill", "s": 64915, "cr": "2026-01-23", "c": "效率", "l": "调研近 30 天全网讨论，带出处汇总", "w": "跨 Reddit、X、YouTube、HN 等检索某话题，输出有来源的摘要。", "use": "趋势周报；面试前调研公司。", "f": "", "img": "assets/skills/last30days-skill.webp"}, {"n": "nicobailon/visual-explainer", "u": "https://github.com/nicobailon/visual-explainer", "s": 10565, "cr": "2026-02-16", "c": "效率", "l": "把方案、数据、复盘生成可视化页面", "w": "为图表、方案审阅、数据表、项目复盘生成富 HTML 页面或幻灯片。", "use": "周复盘、PRD 可视化。", "f": "", "img": "assets/skills/visual-explainer.webp"}, {"n": "zarazhangrui/frontend-slides", "u": "https://github.com/zarazhangrui/frontend-slides", "s": 31011, "cr": "2026-01-28", "c": "效率", "l": "用前端能力做漂亮的网页幻灯片", "w": "借编程 Agent 的前端能力生成网页版演示稿。", "use": "面试作品集演示。", "f": "", "img": "assets/skills/frontend-slides.webp"}, {"n": "op7418/guizang-ppt-skill", "u": "https://github.com/op7418/guizang-ppt-skill", "s": 28360, "cr": "2026-04-23", "c": "效率", "l": "生成杂志风 / 瑞士风的精美网页 PPT", "w": "让 Agent 生成排版考究的 HTML 幻灯片：编辑杂志风与瑞士国际主义风格。", "use": "面试作品集演示、周报，比模板 PPT 更有质感。", "f": "", "img": "assets/skills/guizang-ppt-skill.webp"}, {"n": "blader/humanizer", "u": "https://github.com/blader/humanizer", "s": 59031, "cr": "2026-01-18", "c": "效率", "l": "去掉文字里的 AI 味", "w": "识别并改写典型 AI 写作痕迹；中文版见 op7418/Humanizer-zh。", "use": "改英文求职信、LinkedIn 帖子。", "f": "", "dg": ["AI 味文本", "识别 AI 痕迹", "自然的人话"]}, {"n": "ayghri/i-have-adhd", "u": "https://github.com/ayghri/i-have-adhd", "s": 58064, "cr": "2026-05-13", "c": "效率", "l": "让 Agent 先说结论，别把答案埋起来", "w": "约束 Agent 的输出格式：结论先行、结构清晰、去掉铺垫，对注意力友好。", "use": "让你所有 bot 的回答更易扫读。", "f": "", "dg": ["冗长回答", "结论先行", "一眼读完"]}];
 const TRENDS=[
 {
-"n": "「不烧心」AI 漫剧梗",
+"k": "knight",
+"n": "小猫举剑 Knight Cat",
 "p": [
-"抖音",
-"小红书"
+"Instagram",
+"X",
+"TikTok"
 ],
-"what": "AI 摆摊漫剧台词「贵是贵点，但吃了不烧心」被套用到万物",
-"why": "一句话脱离剧情也能懂；品牌集体借势二创",
-"pm": "AI 量产内容里，真正出圈的是可被截取复用的情绪符号",
-"hot": "2026-10 上旬（国庆）",
-"sd": "2026-10-14",
-"src": "https://news.qq.com/rain/a/20261014A0B9VC00",
-"v": "播放量各报道 20.9–28.5 亿不等"
-},
-{
-"n": "AI「世界巡演」：把 MJ 舞台换成任何人",
-"p": [
-"B站",
-"X"
-],
-"what": "把迈克尔·杰克逊《Jam》演唱会主角换成黄仁勋、门捷列夫、赵本山",
-"why": "万能舞台模板 + 评论区接梗；马斯克转发黄仁勋版",
-"pm": "「一个模板 + 换主角」是最强二创结构，可做成直播间同款特效",
-"hot": "2026-09 下旬起，10-04 黄仁勋版引爆",
-"sd": "2026-10-15",
-"src": "https://news.qq.com/rain/a/20261015A0B8X400",
+"what": "AI 生成的迷你盔甲小猫，在暴风里握着比自己高两倍的剑死不退后",
+"why": "被当成「硬撑着面对生活」的反应图；X 一条配文帖 80 万曝光",
+"pm": "可爱角色 + 一句可代入的处境 = 反应素材；角色 IP 化后还能出周边、做宠物同款",
+"hot": "2026-09 下旬起，10-04 当周搜索见顶",
+"sd": "2026-10-17",
+"src": "https://renoise.ai/blog/knight-cat-meme-explained",
 "m": {
-"t": "bili",
-"id": "BV1VRHr6AEZ6",
-"o": "https://www.bilibili.com/video/BV1VRHr6AEZ6/",
-"thumb": "assets/trends/jensen.webp",
-"label": "黄仁勋版"
-}
+"t": "ig",
+"id": "Dd1y2m2sMRB",
+"o": "https://www.instagram.com/reel/Dd1y2m2sMRB/",
+"label": "「Remember your gym bro」"
+},
+"extra": [
+"X 爆款帖",
+"https://x.com/Okay_Bye___/status/2104227167014121811"
+],
+"stat": "IG 合作帖 329 万赞 · X 帖 80 万曝光",
+"pt": [
+"pet",
+"emo"
+],
+"v": "原作者 @sickmanai 的 8 月原帖无法嵌入，改用 9-28 合作帖",
+"cn": 0
 },
 {
-"n": "AI 逆向一切：老游戏一夜跑进浏览器",
+"k": "sawadika",
+"n": "LISA《SaWaDiKa》水瓶舞",
 "p": [
-"GitHub",
-"X"
+"TikTok",
+"YouTube"
 ],
-"what": "REA 等工具让 Agent 反编译软件，Halo、GTA 等被移植到浏览器",
-"why": "新模型反编译能力跃升；REA 一周从不到 1 万星涨到 10 万+",
-"pm": "功能可被 Agent 快速复刻，护城河要转向网络效应、数据与内容生态",
-"hot": "2026-10 上旬",
+"what": "跳 LISA 新歌舞步时甩水瓶，水花在逆光里画出弧线",
+"why": "明星舞步 + 一个道具就出片；舞步本身已被教程化",
+"pm": "「明星官方动作 + 用户自带道具」= 可无限变体的挑战；适合做直播间同款特效",
+"hot": "2026-09 上旬起（歌 9-03 发布），9-27 VMAs 再起",
+"sd": "2026-09-28",
+"src": "https://tiktoknewshub.com/dance/sawadika-dance-trend/",
+"m": {
+"t": "tt",
+"id": "7682576156352089362",
+"o": "https://www.tiktok.com/@trxineex/video/7682576156352089362",
+"thumb": "assets/trends/tt-7682576156352089362.webp",
+"label": "水瓶版"
+},
+"stat": "该视频 130 万赞（TikTok，10-21 读取）",
+"pt": [
+"celeb",
+"beat"
+],
+"v": "网传 LISA 本人转发此视频，未核实",
+"cn": 0
+},
+{
+"k": "taoagou",
+"n": "陶阿狗君式「换装模板」",
+"p": [
+"TikTok",
+"Instagram"
+],
+"what": "中国创作者 @taoagou 的变装 + 画面互动短片，被教程用 AI 原样复刻",
+"why": "每条都是一个新转场「模板」；AI 用原视频当动作蓝图即可复刻",
+"pm": "头部创作者的结构可被 AI 一键模板化：平台可做「拍同款」并给原作者分成",
+"hot": "账号持续爆款；9 月 AI 复刻教程走红",
+"sd": "2026-09-09",
+"src": "https://mediamixi.jp/column/13470/",
+"m": {
+"t": "tt",
+"id": "7670813145904041223",
+"o": "https://www.tiktok.com/@taoagou/video/7670813145904041223",
+"thumb": "assets/trends/tt-7670813145904041223.webp",
+"label": "08-06 作品"
+},
+"extra": [
+"账号主页",
+"https://www.tiktok.com/@taoagou"
+],
+"stat": "该视频 15.4 万赞；账号 93 万粉",
+"pt": [
+"beat",
+"photo"
+],
+"v": "内嵌视频为 8 月作品；9–10 月新作的链接未能取得",
+"cn": 0
+},
+{
+"k": "iwly",
+"n": "唱 Akon 的 AI 白猫",
+"p": [
+"TikTok"
+],
+"what": "穿灯芯绒西装的白猫在夜里自拍，深情唱《I Wanna Love You》",
+"why": "猫 × 人类夜店情歌的反差；配文「黑子会说是修音」",
+"pm": "宠物版名场面天然适合「用你家猫生成」的付费模板",
+"hot": "2026-10-01 起",
+"sd": "2026-10-20",
+"src": "https://jumponthetrend.app/trends/pets/",
+"m": {
+"t": "tt",
+"id": "7691621178405834006",
+"o": "https://www.tiktok.com/@novoreel/video/7691621178405834006",
+"thumb": "assets/trends/tt-7691621178405834006.webp"
+},
+"stat": "原帖 350 万赞（TikTok，10-21 读取）",
+"pt": [
+"pet",
+"contrast"
+],
+"cn": 0
+},
+{
+"k": "smalltown",
+"n": "Smalltown Boy 尖叫猫",
+"p": [
+"Instagram",
+"TikTok"
+],
+"what": "两只直立的 AI 猫在红栅栏前轮流抱头尖叫、跳舞",
+"why": "80 年代假声老歌 × 崩溃猫；原作用 Higgsfield 生成，网友换成自家猫",
+"pm": "双角色模板天然适合合拍 / 好友互换宠物",
+"hot": "2026-10-02 起",
+"sd": "2026-10-20",
+"src": "https://jumponthetrend.app/trends/smalltown-boy-cats-ai-trend/",
+"m": {
+"t": "tt",
+"id": "7694386654563339550",
+"o": "https://www.tiktok.com/@zefosik/video/7694386654563339550",
+"thumb": "assets/trends/tt-7694386654563339550.webp",
+"label": "网友自家猫版"
+},
+"extra": [
+"原作",
+"https://www.instagram.com/bellvtrix.ai/reel/Dd_tbbsNrvu/"
+],
+"stat": "原作 IG 132 万赞；该版 31 万赞",
+"pt": [
+"pet",
+"photo"
+],
+"cn": 0
+},
+{
+"k": "odie",
+"n": "腊肠狗跳《Single Ladies》",
+"p": [
+"TikTok"
+],
+"what": "长毛腊肠 Odie 站 C 位，两位舞者在后面甩头发",
+"why": "一张狗照片 + 参考舞蹈视频，用 AI 动作迁移生成；主人公开了做法",
+"pm": "「照片 + 动作模板」已成标准生产方式：平台可直接把它做成模板工具",
+"hot": "2026-10-04 起",
+"sd": "2026-10-20",
+"src": "https://jumponthetrend.app/trends/single-ladies-dog-ai-trend/",
+"m": {
+"t": "tt",
+"id": "7692606728323583246",
+"o": "https://www.tiktok.com/@king_odiee/video/7692606728323583246",
+"thumb": "assets/trends/tt-7692606728323583246.webp"
+},
+"stat": "原帖 550 万赞（TikTok，10-21 读取）",
+"pt": [
+"pet",
+"photo",
+"celeb"
+],
+"cn": 0
+},
+{
+"k": "ramalama",
+"n": "万圣节小猫走秀",
+"p": [
+"TikTok"
+],
+"what": "穿游戏角色服装的 AI 小猫在停车场向镜头走秀",
+"why": "节日服装 + 走秀卡点；同账号此前的跳舞小猫已过亿播放",
+"pm": "节点内容可提前批量生产：万圣节 / 圣诞的宠物换装礼物",
+"hot": "2026-10-12 起",
+"sd": "2026-10-20",
+"src": "https://jumponthetrend.app/trends/pets/",
+"m": {
+"t": "tt",
+"id": "7695465798244371730",
+"o": "https://www.tiktok.com/@meowtakeover/video/7695465798244371730",
+"thumb": "assets/trends/tt-7695465798244371730.webp"
+},
+"stat": "原帖 250 万赞（TikTok，10-21 读取）",
+"pt": [
+"pet",
+"beat"
+],
+"cn": 0
+},
+{
+"k": "whiny",
+"n": "委屈哼唧的杜宾",
+"p": [
+"TikTok"
+],
+"what": "真狗趴在沙发上对镜头哼唧 8 秒，最后咧嘴一笑",
+"why": "被拿来回应各种「小委屈」，是现成的反应片段",
+"pm": "真实宠物情绪片段仍是最强反应素材；可做成评论区可插入的表情",
+"hot": "2026-09-23 起",
+"sd": "2026-10-20",
+"src": "https://jumponthetrend.app/trends/pets/",
+"m": {
+"t": "tt",
+"id": "7688617354141469970",
+"o": "https://www.tiktok.com/@samgam81/video/7688617354141469970",
+"thumb": "assets/trends/tt-7688617354141469970.webp"
+},
+"stat": "原帖 590 万赞（TikTok，10-21 读取）",
+"pt": [
+"emo",
+"pet"
+],
+"cn": 0
+},
+{
+"k": "ghost",
+"n": "AI 幽灵滤镜恶作剧",
+"p": [
+"TikTok"
+],
+"what": "滤镜让一个长发幽灵慢慢出现在人身后，拍下对方的反应",
+"why": "万圣节 + 真实惊吓反应；拿孩子开刀引发家长争议",
+"pm": "反应类玩法传播快，但要预设未成年人保护的边界",
+"hot": "2026-10 上旬起，持续到万圣节",
 "sd": "2026-10-12",
-"src": "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software",
-"o": "https://news.xbox.com/en-us/2026/10/13/introducing-xbox-labs/",
-"ol": "Xbox Labs",
-"v": "REA 涨星速度有刷星质疑"
-},
-{
-"n": "闪身步",
-"p": [
-"抖音"
-],
-"what": "8 年前的北舞花鼓灯教学片段被翻出，全网接力模仿",
-"why": "几秒能学、自带喜感，明星接力放大",
-"pm": "「老素材 + 极低模仿门槛」可复制；可做送礼触发主播做指定动作的挑战型礼物",
+"src": "https://cafemom.com/news/tiktok-ghost-filter-prank-kids",
 "m": {
-"t": "dy",
-"id": "7689422539222715686",
-"o": "https://jingxuan.douyin.com/m/video/7689422539222715686"
+"t": "tt",
+"id": "7695184154245221645",
+"o": "https://www.tiktok.com/@amandahall513/video/7695184154245221645",
+"thumb": "assets/trends/tt-7695184154245221645.webp"
 },
-"src": "https://news.qq.com/rain/a/20260924A0CVW600",
-"v": "各报道播放量 4–7.5 亿不等",
-"hot": "2026-09 中下旬",
-"sd": "2026-09-24"
+"stat": "该视频 21 万赞（TikTok，10-21 读取）",
+"pt": [
+"photo",
+"emo"
+],
+"cn": 0
 },
 {
-"n": "手搓动画大赛：「纯手绘」反成爆款",
+"k": "road",
+"n": "「Hit the Road Dude」AI 版",
 "p": [
-"B站"
+"TikTok"
 ],
-"what": "UP 主自学两个月手绘一集《猫和老鼠》，两周 800 万+ 播放",
-"why": "AI 内容泛滥后，「真人花了时间」本身成了卖点",
-"pm": "点赞率手搓约 10% vs 量产 AI 约 0.4%：AI 时代的稀缺是「活人感」",
-"hot": "2026-09-28 发布，10 月上旬爆发",
-"sd": "2026-10-14",
-"src": "https://post.smzdm.com/p/avgpr737/",
+"what": "把 2025 年的「这是私人领地」名场面换成狗、猫或自己坐在皮卡里",
+"why": "老梗 + 新主角；#stateproperty 话题 1.29 亿播放",
+"pm": "旧名场面可被 AI「换主角」反复复活，梗的寿命被拉长",
+"hot": "2026-09-25 宠物版起，10 月 AI 版回潮",
+"src": "https://jumponthetrend.app/trends/hit-the-road-dude-ai-trend/",
 "m": {
-"t": "bili",
-"id": "BV1E6aq6pEKR",
-"o": "https://www.bilibili.com/video/BV1E6aq6pEKR/",
-"thumb": "assets/trends/tomjerry.webp"
+"t": "tt",
+"id": "7693335715026914574",
+"o": "https://www.tiktok.com/@liljacq2funny/video/7693335715026914574",
+"thumb": "assets/trends/tt-7693335715026914574.webp"
 },
-"v": "点赞率为作者自行抽样统计"
-},
-{
-"n": "鹿晗「雷霆特效」严肃跟拍",
-"p": [
-"抖音"
+"stat": "该视频 15 万赞（TikTok，10-21 读取）",
+"pt": [
+"celeb",
+"photo"
 ],
-"what": "鹿晗发了条「好假的」雷霆特效视频，粉丝点「拍同款」接力",
-"why": "特效越简单越好参与；明星同款 = 参与感",
-"pm": "「拍同款」入口就是增长引擎：特效 / 礼物要能一键复用",
-"hot": "2026-10 中旬",
-"sd": "2026-10-19",
-"src": "https://k.sina.cn/article_7879923021_1d5ae154d06801nd1y.html",
-"v": "仅单一来源，无播放量数据"
-},
-{
-"n": "狼爪舞翻跳挑战",
-"p": [
-"抖音"
-],
-"what": "檀健次《Drop》舞台的狼爪手势，被大量翻跳",
-"why": "一个手势就能参与；「轮到你们交作业了」+ 本人翻牌",
-"pm": "明星「翻牌」回应是拉长传播链的关键动作，适合直播互动设计",
-"hot": "2026-10 中旬",
-"sd": "2026-10-15",
-"src": "https://k.sina.cn/article_7879776731_1d5abd9db06801f6oy.html"
-},
-{
-"n": "小红书 REDLAND「痛岛」",
-"p": [
-"小红书"
-],
-"what": "国庆 5 天，复兴岛变二次元开放世界，20 万人登岛",
-"why": "用户当 NPC、做花车，线下体验回流成线上笔记",
-"pm": "平台把圈层文化做成线下「内容生产现场」，再回流社区",
-"hot": "2026-10-01 至 10-06",
-"sd": "2026-10-12",
-"src": "https://m.huxiu.com/article/4896117.html",
-"v": "「25 亿曝光」为平台口径"
+"v": "来源页未标发布日期；话题播放量为第三方 10-14 读数",
+"cn": 0
 },
 {
 "n": "风扇转场换装",
@@ -274,12 +442,20 @@ const TRENDS=[
 "m": {
 "t": "tt",
 "id": "7694617702882725138",
-"o": "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138"
+"o": "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138",
+"thumb": "assets/trends/tt-7694617702882725138.webp"
 },
 "src": "https://thetab.com/2026/09/28/how-to-do-the-vibey-ai-ceiling-fan-trend-from-tiktok-where-your-outfit-changes",
 "v": "首发者不明",
 "hot": "2026-09 下旬",
-"sd": "2026-09-28"
+"sd": "2026-09-28",
+"k": "fan",
+"stat": "该视频 21.9 万赞（TikTok，10-21 读取）",
+"pt": [
+"beat",
+"photo"
+],
+"cn": 0
 },
 {
 "n": "Hotel Lobby AI 换脸说唱",
@@ -303,7 +479,13 @@ const TRENDS=[
 "src": "https://www.complex.com/music/a/markelibert/quavo-takeoff-hotel-lobby-ai-trend-tiktok",
 "v": "起点猫咪视频的首发者未确认",
 "hot": "2026-09 上旬起，9 月下旬达峰",
-"sd": "2026-09-27"
+"sd": "2026-09-27",
+"k": "hotel",
+"pt": [
+"celeb",
+"photo"
+],
+"cn": 0
 },
 {
 "n": "AI 富豪流浪汉 Charles Robinson",
@@ -316,7 +498,12 @@ const TRENDS=[
 "src": "https://thejarrus.com/en/news/charles-robinson/",
 "v": "实际运营者不明",
 "hot": "2026-10 第一周",
-"sd": "2026-10-11"
+"sd": "2026-10-11",
+"k": "charles",
+"pt": [
+"contrast"
+],
+"cn": 0
 },
 {
 "n": "MrBeast 吃光超市赢 100 万",
@@ -333,7 +520,10 @@ const TRENDS=[
 },
 "src": "https://www.dexerto.com/youtube/mrbeast-breaks-his-youtube-views-record-with-1-million-grocery-store-challenge-3415556/",
 "hot": "2026-10-03",
-"sd": "2026-10-05"
+"sd": "2026-10-05",
+"k": "mrbeast",
+"pt": [],
+"cn": 0
 },
 {
 "n": "AI 人体叠塔",
@@ -346,7 +536,12 @@ const TRENDS=[
 "src": "https://eurweb.com/ai-human-tower/",
 "v": "原视频链接未找到",
 "hot": "2026-09-25 前后",
-"sd": "2026-09-26"
+"sd": "2026-09-26",
+"k": "tower",
+"pt": [
+"contrast"
+],
+"cn": 0
 },
 {
 "n": "让 AI 用你的生活填满空房间",
@@ -360,38 +555,137 @@ const TRENDS=[
 "src": "https://x.com/i/trending/2109694090983907651",
 "v": "来源为 X 自动生成的趋势摘要",
 "hot": "2026-10 中旬",
-"sd": "2026-10-13"
+"sd": "2026-10-13",
+"k": "room",
+"pt": [
+"photo"
+],
+"cn": 0
 },
 {
-"n": "两个 AI 面试官无限说再见",
+"k": "ipad",
+"n": "「Where's the iPad?」",
 "p": [
+"TikTok",
 "X"
 ],
-"what": "求职 Agent 对 AI 面试官，谈完后陷入礼貌告别的死循环",
-"why": "荒诞，又戳中「AI 招聘取代人」的焦虑",
-"pm": "Agent 缺终止条件：evals 与对话设计的现成面试案例",
-"src": "https://x.com/i/trending/2110738082899316868",
-"v": "来源为 X 自动摘要，原视频未核实",
+"what": "网友在体育比赛画面里找休息区的 iPad，再把 iPad 藏进各种场景",
+"why": "零门槛找茬 + 反复接梗",
+"pm": "「找东西」型互动可直接搬进直播：观众弹幕找彩蛋",
 "hot": "2026-10 中旬",
-"sd": "2026-10-15"
+"sd": "2026-10-17",
+"src": "https://x.com/i/trending/2111166919134818438",
+"pt": [
+"emo"
+],
+"v": "来源为 X 自动生成的趋势摘要",
+"cn": 0
 },
 {
-"n": "Seedance 2.5 写实短片",
+"k": "rebus",
+"n": "谐音路牌「别念太快」",
 "p": [
+"TikTok",
 "X"
 ],
-"what": "创作者晒真人感极强的 AI 短片，也是风扇转场的主力工具",
-"why": "情绪化的真人镜头 + 「这是 AI？」的钩子",
-"pm": "多模态视频生成的竞争格局，也是 AIGC 礼物的上游能力",
-"m": {
-"t": "x",
-"thumb": "https://pbs.twimg.com/amplify_video_thumb/2108060140574560256/img/tQOHztLi8LK-Vwy9.jpg",
-"o": "https://x.com/Zoyavelle/status/2108060187840180394"
+"what": "路牌上画着手、蜜蜂、坐着的女人加 ER，慢慢念出来是 babysitter",
+"why": "看懂的瞬间有爽感，忍不住转给朋友考一下",
+"pm": "「解谜 → 恍然 → 转发」是轻互动礼物 / 弹幕游戏的好结构",
+"hot": "2026-10 上旬起，10-21 仍在趋势",
+"sd": "2026-10-21",
+"src": "https://x.com/i/trending/2112711140895818156",
+"pt": [
+"emo"
+],
+"v": "来源为 X 自动生成的趋势摘要",
+"cn": 0
 },
-"src": "https://x.com/i/trending/2111725344315015515",
-"v": "模型参数来自 X 自动摘要",
-"hot": "2026-10 中旬（X 趋势）",
-"sd": "2026-10-18"
+{
+"n": "AI 逆向一切：老游戏一夜跑进浏览器",
+"p": [
+"GitHub",
+"X"
+],
+"what": "REA 等工具让 Agent 反编译软件，Halo、GTA 等被移植到浏览器",
+"why": "新模型反编译能力跃升；REA 一周从不到 1 万星涨到 10 万+",
+"pm": "功能可被 Agent 快速复刻，护城河要转向网络效应、数据与内容生态",
+"hot": "2026-10 上旬",
+"sd": "2026-10-12",
+"src": "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software",
+"o": "https://news.xbox.com/en-us/2026/10/13/introducing-xbox-labs/",
+"ol": "Xbox Labs",
+"v": "REA 涨星速度有刷星质疑",
+"k": "rea",
+"pt": [],
+"cn": 0
+},
+{
+"n": "闪身步",
+"p": [
+"抖音"
+],
+"what": "8 年前的北舞花鼓灯教学片段被翻出，全网接力模仿",
+"why": "几秒能学、自带喜感，明星接力放大",
+"pm": "「老素材 + 极低模仿门槛」可复制；可做送礼触发主播做指定动作的挑战型礼物",
+"m": {
+"t": "dy",
+"id": "7689422539222715686",
+"o": "https://jingxuan.douyin.com/m/video/7689422539222715686"
+},
+"src": "https://news.qq.com/rain/a/20260924A0CVW600",
+"v": "各报道播放量 4–7.5 亿不等",
+"hot": "2026-09 中下旬",
+"sd": "2026-09-24",
+"k": "shan",
+"cn": 1,
+"pt": [
+"celeb"
+]
+},
+{
+"n": "AI「世界巡演」：把 MJ 舞台换成任何人",
+"p": [
+"B站",
+"X"
+],
+"what": "把迈克尔·杰克逊《Jam》演唱会主角换成黄仁勋、门捷列夫、赵本山",
+"why": "万能舞台模板 + 评论区接梗；马斯克转发黄仁勋版",
+"pm": "「一个模板 + 换主角」是最强二创结构，可做成直播间同款特效",
+"hot": "2026-09 下旬起，10-04 黄仁勋版引爆",
+"sd": "2026-10-15",
+"src": "https://news.qq.com/rain/a/20261015A0B8X400",
+"m": {
+"t": "bili",
+"id": "BV1VRHr6AEZ6",
+"o": "https://www.bilibili.com/video/BV1VRHr6AEZ6/",
+"thumb": "assets/trends/jensen.webp",
+"label": "黄仁勋版"
+},
+"k": "tour",
+"cn": 1,
+"pt": [
+"celeb",
+"photo"
+]
+},
+{
+"n": "「不烧心」AI 漫剧梗",
+"p": [
+"抖音",
+"小红书"
+],
+"what": "AI 摆摊漫剧台词「贵是贵点，但吃了不烧心」被套用到万物",
+"why": "一句话脱离剧情也能懂；品牌集体借势二创",
+"pm": "AI 量产内容里，真正出圈的是可被截取复用的情绪符号",
+"hot": "2026-10 上旬（国庆）",
+"sd": "2026-10-14",
+"src": "https://news.qq.com/rain/a/20261014A0B9VC00",
+"v": "播放量各报道 20.9–28.5 亿不等",
+"k": "bsx",
+"cn": 1,
+"pt": [
+"emo"
+]
 }
 ];
 const NOW=new Date('2026-10-21');
@@ -432,19 +726,20 @@ function renderSkills(){
   $('#sk-grid').innerHTML=list.map(skillCard).join('');
 }
 const PLAY='<span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>';
-const PNAME={yt:'YouTube',tt:'TikTok',dy:'抖音',bili:'B站',x:'X'};
+const PNAME={yt:'YouTube',tt:'TikTok',dy:'抖音',bili:'B站',x:'X',ig:'Instagram'};
 function mediaHTML(m){
   if(!m)return '';
   if(m.t==='x')return `<a class="media" href="${m.o}" target="_blank" rel="noopener"><img loading="lazy" src="${m.thumb}" alt=""><div class="play">${PLAY}</div><span class="src-l">在 X 观看 ↗</span></a>`;
   const thumb=m.t==='yt'?`<img loading="lazy" src="https://i.ytimg.com/vi/${m.id}/hqdefault.jpg" alt="">`:m.thumb?`<img loading="lazy" referrerpolicy="no-referrer" src="${m.thumb}" alt="">`:'<div class="ph"></div>';
-  const tall=(m.t==='tt'||m.t==='dy')?' tall':'';
+  const tall=(m.t==='tt'||m.t==='dy'||m.t==='ig')?' tall':'';
   return `<div class="media${tall}" data-t="${m.t}" data-id="${m.id}" role="button" tabindex="0" aria-label="播放">${thumb}<div class="play">${PLAY}</div><span class="src-l">${PNAME[m.t]}${m.label?' · '+esc(m.label):''}</span></div>`;
 }
 function embedURL(t,id){
   return {yt:`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`,
     tt:`https://www.tiktok.com/player/v1/${id}?autoplay=1&description=0&music_info=0`,
     dy:`https://open.douyin.com/player/video?vid=${id}&autoplay=1`,
-    bili:`https://player.bilibili.com/player.html?bvid=${id}&autoplay=1&high_quality=1`}[t];
+    bili:`https://player.bilibili.com/player.html?bvid=${id}&autoplay=1&high_quality=1`,
+    ig:`https://www.instagram.com/reel/${id}/embed/`}[t];
 }
 function trendCard(x){
   const links=[];
@@ -452,27 +747,44 @@ function trendCard(x){
   if(x.o)links.push(`<a href="${x.o}" target="_blank" rel="noopener">${esc(x.ol||'主页')} ↗</a>`);
   if(x.extra)links.push(`<a href="${x.extra[1]}" target="_blank" rel="noopener">${esc(x.extra[0])} ↗</a>`);
   links.push(`<a href="${x.src}" target="_blank" rel="noopener">来源 ↗</a>`);
-  return `<article class="card">${mediaHTML(x.m)}
+  return `<article class="card" id="t-${x.k}">${mediaHTML(x.m)}
     <div class="plat">${x.p.join(' · ')}</div>
     <div class="t-name">${esc(x.n)}${x.v?`<span class="tbd" tabindex="0" data-tip="${esc(x.v)}">待核实</span>`:''}</div>
     <p class="t-row">${esc(x.what)}</p>
     <p class="t-row"><i>为何传开</i>${esc(x.why)}</p>
-    <div class="when"><span><b>走红</b>${esc(x.hot||'时间待核实')}</span><span><b>来源日期</b>${esc(x.sd||'待核实')}</span></div>
+    <div class="when"><span><b>走红</b>${esc(x.hot||'时间待核实')}</span><span><b>来源日期</b>${esc(x.sd||'待核实')}</span>${x.stat?`<span>${esc(x.stat)}</span>`:''}</div>
     <div class="foot"><div class="links">${links.join('')}</div>
       <button class="more" aria-expanded="false">PM 启发 ${chev}</button></div>
     <div class="detail"><div><div class="in">${esc(x.pm)}</div></div></div>
   </article>`;
 }
 function renderTrends(){
-  $('#tr-grid').innerHTML=TRENDS.filter(x=>trCat==='全部'||x.p.includes(trCat)||(trCat==='有视频'&&x.m)).map(trendCard).join('');
+  const ok=x=>trCat==='全部'||x.p.includes(trCat)||(trCat==='有视频'&&x.m);
+  $('#tr-grid').innerHTML=TRENDS.filter(x=>!x.cn&&ok(x)).map(trendCard).join('');
+  const cn=TRENDS.filter(x=>x.cn&&ok(x));
+  $('#tr-cn-grid').innerHTML=cn.map(trendCard).join('');$('#tr-cn-ct').textContent=cn.length;
+  $('#tr-cn').classList.toggle('hidden',!cn.length);
 }
+const PATS=[
+ ['AI 萌宠做人类动作','猫狗直立唱跳、持剑、走秀；可爱 × 拟人，一眼看懂，不需要语言',[['knight','小猫举剑'],['iwly','唱歌白猫'],['smalltown','尖叫猫'],['odie','腊肠 C 位'],['ramalama','小猫走秀']]],
+ ['一张照片换主角','照片 + 参考视频 = 你的版本；Higgsfield、CapCut 模板把复刻成本压到几分钟',[['odie','腊肠 C 位'],['smalltown','尖叫猫'],['hotel','Hotel Lobby'],['road','Hit the Road'],['fan','风扇转场'],['room','填满空房间']]],
+ ['名场面变成固定舞台','明星舞台或老视频的构图、音乐、动作不变，只换主角',[['sawadika','SaWaDiKa'],['hotel','Hotel Lobby'],['odie','Single Ladies'],['road','私人领地'],['tour','世界巡演']]],
+ ['卡点转场与换装','遮挡物或节拍做剪辑点，一秒换一套；看完就想照着拍',[['fan','风扇转场'],['taoagou','陶阿狗君'],['sawadika','水瓶舞'],['ramalama','万圣节走秀']]],
+ ['可代入的反应素材','配一句处境就能转发：硬撑的小猫、委屈的狗、看懂谐音的爽感',[['knight','小猫举剑'],['whiny','委屈杜宾'],['rebus','谐音路牌'],['ipad','找 iPad'],['bsx','不烧心']]],
+ ['荒诞反差','落魄 × 豪车、猫 × 夜店情歌、违反物理的人塔：反差引发「这是真的吗」',[['charles','富豪流浪汉'],['iwly','唱歌白猫'],['tower','人体叠塔'],['ghost','幽灵滤镜']]],
+];
+$('#tr-pat').innerHTML=PATS.map((p,i)=>`<div class="prow"><span class="pn">0${i+1}</span><span class="pt-t">${p[0]}</span><span class="pt-d">${p[1]}</span><div class="pt-c">${p[2].map(c=>`<a class="pc" href="#t-${c[0]}" data-k="${c[0]}">${c[1]}</a>`).join('')}</div></div>`).join('');
+$('#tr-pat').onclick=e=>{const a=e.target.closest('.pc');if(!a)return;e.preventDefault();
+  if(trCat!=='全部'){trCat='全部';$('#tr-chips').querySelectorAll('.chip').forEach(z=>z.setAttribute('aria-pressed',z.dataset.c==='全部'));renderTrends();}
+  const c=document.getElementById('t-'+a.dataset.k);if(!c)return;const d=c.closest('details');if(d)d.open=true;
+  c.scrollIntoView({behavior:'smooth',block:'center'});c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),1600);};
 function chips(el,cats,counts,get,set,render){
   el.innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===get()}" data-c="${c}">${c}${counts?`<span class="ct">${counts(c)}</span>`:''}</button>`).join('');
   el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;set(b.dataset.c);el.querySelectorAll('.chip').forEach(z=>z.setAttribute('aria-pressed',z===b));render();};
 }
 const SKC=['全部','工程/Agent','设计','美学','动效·视频','玩法','效率'];
 chips($('#sk-chips'),SKC,c=>c==='全部'?SKILLS.length:SKILLS.filter(s=>s.c===c).length,()=>skCat,v=>skCat=v,renderSkills);
-const TRC=['全部','有视频','抖音','B站','小红书','TikTok','YouTube','Instagram','X','Facebook'];
+const TRC=['全部','有视频','TikTok','Instagram','YouTube','X','Facebook'];
 chips($('#tr-chips'),TRC,null,()=>trCat,v=>trCat=v,renderTrends);
 $('#sk-sort').onclick=e=>{const b=e.target.closest('button');if(!b)return;skSort=b.dataset.s;$('#sk-sort').querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));renderSkills();};
 document.addEventListener('click',e=>{
