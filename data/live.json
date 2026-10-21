@@ -1,41 +1,126 @@
 {
  "updated": "2026-10-21",
+ "rule": "每条必须有可播放的代表视频 + 平台显示的数字，走红在约 6 周内",
  "items": [
   {
-   "k": "ipad",
-   "n": "「Where's the iPad?」",
+   "k": "tomz",
+   "n": "Tom Holland 认不出 Zendaya 的歌词",
    "p": [
-    "TikTok",
-    "X"
-   ],
-   "what": "网友在体育比赛画面里找休息区的 iPad，再把 iPad 藏进各种场景",
-   "why": "零门槛找茬 + 反复接梗",
-   "pm": "「找东西」型互动可直接搬进直播：观众弹幕找彩蛋",
-   "hot": "2026-10 中旬",
-   "sd": "2026-10-17",
-   "src": "https://x.com/i/trending/2111166919134818438",
-   "v": "来源为 X 自动生成的趋势摘要",
-   "cn": 0,
-   "hs": "2026-10-14",
-   "vir": []
-  },
-  {
-   "k": "room",
-   "n": "让 AI 用你的生活填满空房间",
-   "p": [
-    "X",
     "TikTok"
    ],
-   "what": "上传空房间照片，让 ChatGPT / Grok 按聊天记忆布置",
-   "why": "「AI 有多懂我」的自我投射 + 惊喜",
-   "pm": "记忆 → 个性化视觉 → 分享：可做成专属纪念礼物",
+   "ai": 0,
+   "what": "旧采访里 Tom Holland 没听出 Zendaya 自己的歌词，剪辑放大尴尬表情和变调笑声",
+   "why": "熟悉的明星情侣 + 一个完整的社交失误；评论区接力编「电影片名」",
+   "pm": "好素材是一个自洽的尴尬瞬间：字幕清楚，留出让观众接梗的空间",
    "hot": "2026-10 中旬",
-   "sd": "2026-10-13",
-   "src": "https://x.com/i/trending/2109694090983907651",
-   "v": "来源为 X 自动生成的趋势摘要",
-   "cn": 0,
+   "hs": "2026-10-16",
+   "sd": "2026-10-16",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7696950412120689952",
+    "o": "https://www.tiktok.com/@midjrpl/video/7696950412120689952"
+   },
+   "st": {
+    "pl": 9100000,
+    "lk": 2400000,
+    "sh": 110300,
+    "cm": 2652,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@midjrpl/video/7696950412120689952"
+   },
+   "thumb": "assets/live/tomz.webp"
+  },
+  {
+   "k": "whatipad",
+   "n": "「What iPad?」装傻梗",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "被问到 iPad，当事人一脸「什么 iPad？」，而 iPad 明晃晃藏在画面里",
+   "why": "观众先看见藏起来的东西，忍不住评论和重看；同一音频下有成批百万播放的翻拍",
+   "pm": "「指认 → 否认 → 画面里的证据」三拍结构可套任何道具",
+   "hot": "2026-10 中旬",
+   "hs": "2026-10-15",
+   "sd": "2026-10-15",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7696598166447099150",
+    "o": "https://www.tiktok.com/@ilovecakeyum/video/7696598166447099150"
+   },
+   "st": {
+    "pl": 8700000,
+    "lk": 1900000,
+    "sh": 120800,
+    "cm": 5029,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@ilovecakeyum/video/7696598166447099150"
+   },
+   "thumb": "assets/live/whatipad.webp"
+  },
+  {
+   "k": "mebaje",
+   "n": "「这才是正确跳法」舞蹈之争",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "跳《Mebaje》新版编舞，配文吐槽「谁想出的新版本」，评论区新旧两派吵起来",
+   "why": "争议让舞蹈从「看」变成「站队」；纠正、反驳、对比视频接力",
+   "pm": "纠正式开头制造立场，评论区驱动分发；也要防争议失控",
+   "hot": "2026-10-13 起",
    "hs": "2026-10-13",
-   "vir": []
+   "sd": "2026-10-13",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7695920118206876959",
+    "o": "https://www.tiktok.com/@iv_profen/video/7695920118206876959"
+   },
+   "st": {
+    "pl": 11900000,
+    "lk": 977200,
+    "sh": 15600,
+    "cm": 3601,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@iv_profen/video/7695920118206876959"
+   },
+   "thumb": "assets/live/mebaje.webp"
+  },
+  {
+   "k": "ozil",
+   "n": "AI 重做厄齐尔名场面进球",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 1,
+   "what": "用 AI 把厄齐尔经典单刀（挑球、两次假动作、推射）换成新角色和新场景",
+   "why": "动作序列全球都认得，换皮不换动作，不需要语言",
+   "pm": "AI 适合当「换皮引擎」而不是卖点：熟悉 × 变换",
+   "hot": "2026-10 中旬",
+   "hs": "2026-10-13",
+   "sd": "2026-10-13",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7696037788889730325",
+    "o": "https://www.tiktok.com/@baguss_visual/video/7696037788889730325"
+   },
+   "st": {
+    "pl": 6300000,
+    "lk": 295900,
+    "sh": 17500,
+    "cm": 3956,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@baguss_visual/video/7696037788889730325"
+   },
+   "thumb": "assets/live/ozil.webp"
   },
   {
    "k": "ramalama",
@@ -43,27 +128,246 @@
    "p": [
     "TikTok"
    ],
+   "ai": 1,
    "what": "穿游戏角色服装的 AI 小猫在停车场向镜头走秀",
-   "why": "节日服装 + 走秀卡点；同账号此前的跳舞小猫已过亿播放",
+   "why": "节日服装 + 走秀卡点，配 Róisín Murphy《Ramalama》；同账号此前的跳舞小猫已过亿播放",
    "pm": "节点内容可提前批量生产：万圣节 / 圣诞的宠物换装礼物",
    "hot": "2026-10-12 起",
-   "sd": "2026-10-20",
-   "src": "https://jumponthetrend.app/trends/pets/",
-   "cn": 0,
    "hs": "2026-10-12",
-   "thumb": "assets/live/ramalama.webp",
+   "sd": "2026-10-12",
+   "src": "https://jumponthetrend.app/trends/pets/",
    "m": {
     "t": "tt",
     "id": "7695465798244371730",
     "o": "https://www.tiktok.com/@meowtakeover/video/7695465798244371730"
    },
-   "vir": [
-    [
-     "250 万 赞 · 90.8 万 分享 · 2 万 评论",
-     "https://www.tiktok.com/@meowtakeover/video/7695465798244371730",
-     "TikTok · 10-21 读取"
-    ]
-   ]
+   "st": {
+    "pl": 19300000,
+    "lk": 2500000,
+    "sh": 907900,
+    "cm": 20600,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@meowtakeover/video/7695465798244371730"
+   },
+   "thumb": "assets/live/ramalama.webp"
+  },
+  {
+   "k": "cough",
+   "n": "孩子一咳嗽：五秒升级",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "POV：孩子开始「湿咳」，镜头里的人从口罩、手套一路升级到防护服，最后走廊空无一人",
+   "why": "没有铺垫，每一刀都更夸张；平时几千播放的小号爆到 2,000 万+",
+   "pm": "爆款不靠粉丝基数，靠一眼看懂的升级结构",
+   "hot": "2026-10-12 起",
+   "hs": "2026-10-12",
+   "sd": "2026-10-12",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7695549517306858773",
+    "o": "https://www.tiktok.com/@amanlikejoseph/video/7695549517306858773"
+   },
+   "st": {
+    "pl": 23300000,
+    "lk": 5100000,
+    "sh": 1200000,
+    "cm": 18600,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@amanlikejoseph/video/7695549517306858773"
+   },
+   "thumb": "assets/live/cough.webp"
+  },
+  {
+   "k": "mystery",
+   "n": "神秘黄色包裹",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "墨西哥博主从卡车上买下 5 个 Mercado Libre 黄色包裹，留到下一集再拆",
+   "why": "未知内容 + 下集预告；品牌包装自带辨识度",
+   "pm": "播放极高、分享率只有 0.05%：好奇心驱动观看，不驱动转发",
+   "hot": "2026-10-11 起",
+   "hs": "2026-10-11",
+   "sd": "2026-10-11",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7695057345486884117",
+    "o": "https://www.tiktok.com/@cinthiavictoriacorea/video/7695057345486884117"
+   },
+   "st": {
+    "pl": 24700000,
+    "lk": 1500000,
+    "sh": 12100,
+    "cm": 3523,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@cinthiavictoriacorea/video/7695057345486884117"
+   },
+   "thumb": "assets/live/mystery.webp"
+  },
+  {
+   "k": "fart",
+   "n": "放屁版《Black and Yellow》",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "制作人用放屁声、冲水声、碎玻璃声重编 Wiz Khalifa 的歌，画面就是编曲软件时间线",
+   "why": "专业技巧浪费在低俗素材上的反差；分享率约 8%",
+   "pm": "「看得见的工作量」让荒诞更好笑：编辑器本身就能当画面",
+   "hot": "2026-10-11 起",
+   "hs": "2026-10-11",
+   "sd": "2026-10-11",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7695415478088518945",
+    "o": "https://www.tiktok.com/@ogwerset/video/7695415478088518945"
+   },
+   "st": {
+    "pl": 8200000,
+    "lk": 746100,
+    "sh": 668200,
+    "cm": 7263,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@ogwerset/video/7695415478088518945"
+   },
+   "thumb": "assets/live/fart.webp"
+  },
+  {
+   "k": "ghostface",
+   "n": "鬼脸杀手情侣",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "一对穿可爱睡衣、戴《惊声尖叫》面具的情侣，高个子卡着节拍把矮个子扛上肩",
+   "why": "恐怖造型 × 甜蜜身高差；万圣节内容跨出了原本的圈层",
+   "pm": "节日内容的爆点是反差，不是氛围本身",
+   "hot": "2026-10-11 起",
+   "hs": "2026-10-11",
+   "sd": "2026-10-11",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7695172321295797534",
+    "o": "https://www.tiktok.com/@bendymoto/video/7695172321295797534"
+   },
+   "st": {
+    "pl": 20900000,
+    "lk": 2800000,
+    "sh": 184800,
+    "cm": 10500,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@bendymoto/video/7695172321295797534"
+   },
+   "thumb": "assets/live/ghostface.webp"
+  },
+  {
+   "k": "congo",
+   "n": "Congo Basin 探险模仿",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "英国探险家 Ash Dykes 划充气皮划艇穿越刚果盆地 700+ 公里；网友在小区湖里拍「同款探险」",
+   "why": "真实冒险 × 低成本恶搞；本人转发恶搞视频",
+   "pm": "真人长线挑战提供素材，用户恶搞负责扩散：直播挑战可以主动邀请二创",
+   "hot": "2026-10 上旬，约 10-13 见顶",
+   "hs": "2026-10-09",
+   "sd": "2026-10-09",
+   "src": "https://knowyourmeme.com/memes/events/ash-dykes-congo-basin-raft-adventure",
+   "m": {
+    "t": "tt",
+    "id": "7694351395541011745",
+    "o": "https://www.tiktok.com/@ash_dykes/video/7694351395541011745",
+    "label": "本人 Day 1"
+   },
+   "st": {
+    "pl": 6500000,
+    "lk": 665300,
+    "sh": 50300,
+    "cm": 12000,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@ash_dykes/video/7694351395541011745"
+   },
+   "extra": [
+    "网友恶搞",
+    "https://www.tiktok.com/@sugarchwrry208/video/7692548290814020886"
+   ],
+   "v": "「本人转发恶搞」来自 Yahoo 报道",
+   "thumb": "assets/live/congo.webp"
+  },
+  {
+   "k": "listen",
+   "n": "「Listening ear activated」",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "上课、开会时心不在焉，一听到关键词立刻坐直、开始记笔记",
+   "why": "一句字幕说明处境，人人都有「突然被点醒」的瞬间",
+   "pm": "字幕就是梗本体：同一音频可无限换场景，适合功能宣传",
+   "hot": "2026-10-08 起",
+   "hs": "2026-10-08",
+   "sd": "2026-10-08",
+   "src": "https://www.ramd.am/blog/trends-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7694004035677916430",
+    "o": "https://www.tiktok.com/@kaikixrox/video/7694004035677916430"
+   },
+   "st": {
+    "pl": 7500000,
+    "lk": 1300000,
+    "sh": 155700,
+    "cm": 1094,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@kaikixrox/video/7694004035677916430"
+   },
+   "thumb": "assets/live/listen.webp"
+  },
+  {
+   "k": "redbull",
+   "n": "Red Bull 悬崖跳水第一视角",
+   "p": [
+    "YouTube"
+   ],
+   "ai": 0,
+   "what": "Red Bull 悬崖跳水赛的竖屏 Short：运动员从海边高台翻腾入海，浪很大",
+   "why": "极限画面、不需要语言；13 天 1 亿+ 播放，进入 18 国 Shorts 榜",
+   "pm": "品牌号也能拿到全球 Shorts 第 2：先是好看的内容，然后才是品牌",
+   "hot": "2026-10-08 起",
+   "hs": "2026-10-08",
+   "sd": "2026-10-08",
+   "src": "https://chartslist.com/youtube/video/Jw5TdfVYXwM/those-waves-are-intense/",
+   "m": {
+    "t": "yt",
+    "id": "Jw5TdfVYXwM",
+    "o": "https://www.youtube.com/shorts/Jw5TdfVYXwM",
+    "v": 1
+   },
+   "st": {
+    "pl": 108375939,
+    "lk": 1356694,
+    "cm": 12261,
+    "plat": "YouTube",
+    "rd": "2026-10-21",
+    "u": "https://chartslist.com/youtube/video/Jw5TdfVYXwM/those-waves-are-intense/",
+    "via": "ChartsList（YouTube 数据）"
+   },
+   "thumb": "assets/live/redbull.webp"
   },
   {
    "k": "ghost",
@@ -71,72 +375,29 @@
    "p": [
     "TikTok"
    ],
+   "ai": 1,
    "what": "滤镜让一个长发幽灵慢慢出现在人身后，拍下对方的反应",
    "why": "万圣节 + 真实惊吓反应；拿孩子开刀引发家长争议",
    "pm": "反应类玩法传播快，但要预设未成年人保护的边界",
    "hot": "2026-10 上旬起，持续到万圣节",
-   "sd": "2026-10-12",
-   "src": "https://cafemom.com/news/tiktok-ghost-filter-prank-kids",
-   "cn": 0,
    "hs": "2026-10-07",
-   "thumb": "assets/live/ghost.webp",
+   "sd": "2026-10-11",
+   "src": "https://cafemom.com/news/tiktok-ghost-filter-prank-kids",
    "m": {
     "t": "tt",
     "id": "7695184154245221645",
     "o": "https://www.tiktok.com/@amandahall513/video/7695184154245221645"
    },
-   "vir": [
-    [
-     "21.4 万 赞 · 1.4 万 分享 · 2,174 评论",
-     "https://www.tiktok.com/@amandahall513/video/7695184154245221645",
-     "TikTok · 10-21 读取"
-    ]
-   ]
-  },
-  {
-   "k": "rebus",
-   "n": "谐音路牌「别念太快」",
-   "p": [
-    "TikTok",
-    "X"
-   ],
-   "what": "路牌上画着手、蜜蜂、坐着的女人加 ER，慢慢念出来是 babysitter",
-   "why": "看懂的瞬间有爽感，忍不住转给朋友考一下",
-   "pm": "「解谜 → 恍然 → 转发」是轻互动礼物 / 弹幕游戏的好结构",
-   "hot": "2026-10 上旬起，10-21 仍在趋势",
-   "sd": "2026-10-21",
-   "src": "https://x.com/i/trending/2112711140895818156",
-   "v": "来源为 X 自动生成的趋势摘要",
-   "cn": 0,
-   "hs": "2026-10-06",
-   "vir": []
-  },
-  {
-   "k": "rea",
-   "n": "AI 逆向一切：老游戏一夜跑进浏览器",
-   "p": [
-    "GitHub",
-    "X"
-   ],
-   "what": "REA 等工具让 Agent 反编译软件，Halo、GTA 等被移植到浏览器",
-   "why": "新模型反编译能力跃升；REA 一周从不到 1 万星涨到 10 万+",
-   "pm": "功能可被 Agent 快速复刻，护城河要转向网络效应、数据与内容生态",
-   "hot": "2026-10 上旬",
-   "sd": "2026-10-12",
-   "src": "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software",
-   "v": "REA 涨星速度有刷星质疑",
-   "o": "https://news.xbox.com/en-us/2026/10/13/introducing-xbox-labs/",
-   "ol": "Xbox Labs",
-   "cn": 0,
-   "hs": "2026-10-06",
-   "thumb": "assets/live/rea.webp",
-   "vir": [
-    [
-     "一周从不到 1 万星到 10 万+",
-     "https://decrypt.co/380741/gta-v-iphone-free-photoshop-ai-tool-rea-upending-software",
-     "Decrypt"
-    ]
-   ]
+   "st": {
+    "pl": 14100000,
+    "lk": 214100,
+    "sh": 13900,
+    "cm": 2174,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@amandahall513/video/7695184154245221645"
+   },
+   "thumb": "assets/live/ghost.webp"
   },
   {
    "k": "odie",
@@ -144,27 +405,29 @@
    "p": [
     "TikTok"
    ],
+   "ai": 1,
    "what": "长毛腊肠 Odie 站 C 位，两位舞者在后面甩头发",
    "why": "一张狗照片 + 参考舞蹈视频，用 AI 动作迁移生成；主人公开了做法",
    "pm": "「照片 + 动作模板」已成标准生产方式：平台可直接把它做成模板工具",
    "hot": "2026-10-04 起",
-   "sd": "2026-10-20",
-   "src": "https://jumponthetrend.app/trends/single-ladies-dog-ai-trend/",
-   "cn": 0,
    "hs": "2026-10-04",
-   "thumb": "assets/live/odie.webp",
+   "sd": "2026-10-04",
+   "src": "https://jumponthetrend.app/trends/single-ladies-dog-ai-trend/",
    "m": {
     "t": "tt",
     "id": "7692606728323583246",
     "o": "https://www.tiktok.com/@king_odiee/video/7692606728323583246"
    },
-   "vir": [
-    [
-     "550 万 赞 · 120 万 分享 · 1.3 万 评论",
-     "https://www.tiktok.com/@king_odiee/video/7692606728323583246",
-     "TikTok · 10-21 读取"
-    ]
-   ]
+   "st": {
+    "pl": 45000000,
+    "lk": 5500000,
+    "sh": 1200000,
+    "cm": 13300,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@king_odiee/video/7692606728323583246"
+   },
+   "thumb": "assets/live/odie.webp"
   },
   {
    "k": "mrbeast",
@@ -172,66 +435,104 @@
    "p": [
     "YouTube"
    ],
-   "what": "4 人在超市住了 202 天，首日播放 7,000 万+",
-   "why": "极端设定 + 长周期真人挑战 + 持续加码",
+   "ai": 0,
+   "what": "4 人在超市里住了 202 天，吃光就赢 100 万美元",
+   "why": "极端设定 + 长周期真人挑战 + 持续加码；打破他本人的首日播放纪录",
    "pm": "AI 内容泛滥时，真人和真实时间成本更稀缺，这是直播的天然优势",
    "hot": "2026-10-03",
-   "sd": "2026-10-05",
-   "src": "https://www.dexerto.com/youtube/mrbeast-breaks-his-youtube-views-record-with-1-million-grocery-store-challenge-3415556/",
-   "cn": 0,
    "hs": "2026-10-03",
-   "thumb": "assets/live/mrbeast.webp",
+   "sd": "2026-10-03",
+   "src": "https://www.dexerto.com/youtube/mrbeast-breaks-his-youtube-views-record-with-1-million-grocery-store-challenge-3415556/",
    "m": {
     "t": "yt",
     "id": "plN7JMbadRg",
     "o": "https://www.youtube.com/watch?v=plN7JMbadRg"
    },
-   "vir": [
-    [
-     "首日 7,000 万+ 播放",
-     "https://www.dexerto.com/youtube/mrbeast-breaks-his-youtube-views-record-with-1-million-grocery-store-challenge-3415556/",
-     "Dexerto"
-    ]
-   ]
+   "st": {
+    "pl": 284200000,
+    "lk": 4230000,
+    "cm": 157000,
+    "plat": "YouTube",
+    "rd": "2026-10-21",
+    "u": "https://flashcounts.jp/youtube/videos/plN7JMbadRg",
+    "via": "FlashCounts 实时计数"
+   },
+   "thumb": "assets/live/mrbeast.webp"
   },
   {
    "k": "smalltown",
    "n": "Smalltown Boy 尖叫猫",
    "p": [
-    "Instagram",
-    "TikTok"
+    "TikTok",
+    "Instagram"
    ],
+   "ai": 1,
    "what": "两只直立的 AI 猫在红栅栏前轮流抱头尖叫、跳舞",
-   "why": "80 年代假声老歌 × 崩溃猫；原作用 Higgsfield 生成，网友换成自家猫",
+   "why": "80 年代假声老歌 × 崩溃猫；网友换成自家猫接力",
    "pm": "双角色模板天然适合合拍 / 好友互换宠物",
    "hot": "2026-10-02 起",
-   "sd": "2026-10-20",
-   "src": "https://jumponthetrend.app/trends/smalltown-boy-cats-ai-trend/",
-   "extra": [
-    "原作",
-    "https://www.instagram.com/bellvtrix.ai/reel/Dd_tbbsNrvu/"
-   ],
-   "cn": 0,
    "hs": "2026-10-02",
-   "thumb": "assets/live/smalltown.webp",
+   "sd": "2026-10-02",
+   "src": "https://jumponthetrend.app/trends/smalltown-boy-cats-ai-trend/",
    "m": {
     "t": "tt",
-    "id": "7694386654563339550",
-    "o": "https://www.tiktok.com/@zefosik/video/7694386654563339550",
-    "label": "网友自家猫版"
+    "id": "7692079591711657236",
+    "o": "https://www.tiktok.com/@bellvtrix.ai/video/7692079591711657236",
+    "label": "原作者 @bellvtrix.ai"
+   },
+   "st": {
+    "pl": 10800000,
+    "lk": 1200000,
+    "sh": 748900,
+    "cm": 16800,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@bellvtrix.ai/video/7692079591711657236"
+   },
+   "extra": [
+    "网友自家猫版",
+    "https://www.tiktok.com/@zefosik/video/7694386654563339550"
+   ],
+   "thumb": "assets/live/smalltown.webp"
+  },
+  {
+   "k": "bulin47",
+   "n": "Bulin 47 街头即兴",
+   "p": [
+    "TikTok",
+    "Instagram"
+   ],
+   "ai": 1,
+   "what": "多米尼加歌手 Bulin 47 在马德里街头，对着路人的音箱即兴 19 秒 dembow；网友用 AI 把自己换进去",
+   "why": "画面只换人：街景、红光、手持镜头和声音都不变，换谁都一眼认出",
+   "pm": "真实名场面变成 AI 模板只用了 4 天（10-02 原片，10-06 首个换脸版）",
+   "hot": "2026-10-02 起，10-06 起 AI 换脸版",
+   "hs": "2026-10-02",
+   "sd": "2026-10-02",
+   "src": "https://sloptvnews.com/bulin-47-ai-video-template/",
+   "m": {
+    "t": "tt",
+    "id": "7691875916644994326",
+    "o": "https://www.tiktok.com/@kevincitooficial11/video/7691875916644994326",
+    "label": "原片"
+   },
+   "st": {
+    "pl": 10000000,
+    "lk": 1100000,
+    "sh": 70700,
+    "cm": 8638,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@kevincitooficial11/video/7691875916644994326"
    },
    "vir": [
     [
-     "原作 132 万赞",
-     "https://www.instagram.com/bellvtrix.ai/reel/Dd_tbbsNrvu/",
-     "Instagram"
-    ],
-    [
-     "网友版 31.1 万 赞 · 13.6 万 分享 · 3,358 评论",
-     "https://www.tiktok.com/@zefosik/video/7694386654563339550",
-     "TikTok · 10-21 读取"
+     "IG 原帖约 780 万赞",
+     "https://www.instagram.com/reel/Dd-UOeUC6rl/",
+     "第三方 10-19 读数"
     ]
-   ]
+   ],
+   "thumb": "assets/live/bulin47.webp"
   },
   {
    "k": "iwly",
@@ -239,108 +540,59 @@
    "p": [
     "TikTok"
    ],
+   "ai": 1,
    "what": "穿灯芯绒西装的白猫在夜里自拍，深情唱《I Wanna Love You》",
    "why": "猫 × 人类夜店情歌的反差；配文「黑子会说是修音」",
    "pm": "宠物版名场面天然适合「用你家猫生成」的付费模板",
    "hot": "2026-10-01 起",
-   "sd": "2026-10-20",
-   "src": "https://jumponthetrend.app/trends/pets/",
-   "cn": 0,
    "hs": "2026-10-01",
-   "thumb": "assets/live/iwly.webp",
+   "sd": "2026-10-01",
+   "src": "https://jumponthetrend.app/trends/pets/",
    "m": {
     "t": "tt",
     "id": "7691621178405834006",
     "o": "https://www.tiktok.com/@novoreel/video/7691621178405834006"
    },
-   "vir": [
-    [
-     "350 万 赞 · 170 万 分享 · 2.6 万 评论",
-     "https://www.tiktok.com/@novoreel/video/7691621178405834006",
-     "TikTok · 10-21 读取"
-    ]
-   ]
+   "st": {
+    "pl": 23400000,
+    "lk": 3500000,
+    "sh": 1700000,
+    "cm": 25600,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@novoreel/video/7691621178405834006"
+   },
+   "thumb": "assets/live/iwly.webp"
   },
   {
-   "k": "road",
-   "n": "「Hit the Road Dude」AI 版",
+   "k": "notperfect",
+   "n": "「I'm not a perfect person」坦白局",
    "p": [
     "TikTok"
    ],
-   "what": "把 2025 年的「这是私人领地」名场面换成狗、猫或自己坐在皮卡里",
-   "why": "老梗 + 新主角；#stateproperty 话题 1.29 亿播放",
-   "pm": "旧名场面可被 AI「换主角」反复复活，梗的寿命被拉长",
-   "hot": "2026-09-25 宠物版起，10 月 AI 版回潮",
-   "src": "https://jumponthetrend.app/trends/hit-the-road-dude-ai-trend/",
-   "v": "来源页未标发布日期；话题播放量为第三方 10-14 读数",
-   "cn": 0,
-   "hs": "2026-10-01",
-   "thumb": "assets/live/road.webp",
+   "ai": 0,
+   "what": "先用字幕坦白一个尴尬习惯，再对口型唱「I'm not a perfect person」",
+   "why": "自嘲式坦白，越具体越有共鸣",
+   "pm": "「坦白旧做法 → 新做法」是天然的产品前后对比",
+   "hot": "2026-09 下旬起",
+   "hs": "2026-09-29",
+   "sd": "2026-09-29",
+   "src": "https://www.ramd.am/blog/trends-tiktok",
    "m": {
     "t": "tt",
-    "id": "7693335715026914574",
-    "o": "https://www.tiktok.com/@liljacq2funny/video/7693335715026914574"
+    "id": "7690700880114404621",
+    "o": "https://www.tiktok.com/@lillianasabag/video/7690700880114404621"
    },
-   "vir": [
-    [
-     "15.3 万 赞 · 1 万 分享 · 2,541 评论",
-     "https://www.tiktok.com/@liljacq2funny/video/7693335715026914574",
-     "TikTok · 10-21 读取"
-    ],
-    [
-     "#stateproperty 1.29 亿播放",
-     "https://jumponthetrend.app/trends/hit-the-road-dude-ai-trend/",
-     "第三方 10-14 读数"
-    ]
-   ]
-  },
-  {
-   "k": "charles",
-   "n": "AI 富豪流浪汉 Charles Robinson",
-   "p": [
-    "Instagram"
-   ],
-   "what": "赤脚邋遢的 AI 男人走下豪车，一周近百万粉丝",
-   "why": "落魄外表 × 极致财富的反差，叠加好奇心",
-   "pm": "本质是 AI 工具 Higgsfield 的增长营销；角色一致性是虚拟主播的底层能力",
-   "hot": "2026-10 第一周",
-   "sd": "2026-10-11",
-   "src": "https://thejarrus.com/en/news/charles-robinson/",
-   "v": "实际运营者不明",
-   "cn": 0,
-   "hs": "2026-10-01",
-   "vir": [
-    [
-     "约 94.8 万粉（一周内）",
-     "https://thejarrus.com/en/news/charles-robinson/",
-     "thejarrus"
-    ]
-   ]
-  },
-  {
-   "k": "bsx",
-   "n": "「不烧心」AI 漫剧梗",
-   "p": [
-    "抖音",
-    "小红书"
-   ],
-   "what": "AI 摆摊漫剧台词「贵是贵点，但吃了不烧心」被套用到万物",
-   "why": "一句话脱离剧情也能懂；品牌集体借势二创",
-   "pm": "AI 量产内容里，真正出圈的是可被截取复用的情绪符号",
-   "hot": "2026-10 上旬（国庆）",
-   "sd": "2026-10-14",
-   "src": "https://news.qq.com/rain/a/20261014A0B9VC00",
-   "v": "播放量各报道 20.9–28.5 亿不等",
-   "cn": 1,
-   "hs": "2026-10-01",
-   "thumb": "assets/live/bsx.webp",
-   "vir": [
-    [
-     "抖音相关播放 22 亿+（10-13）",
-     "https://news.qq.com/rain/a/20261014A0B9VC00",
-     "腾讯新闻"
-    ]
-   ]
+   "st": {
+    "pl": 4900000,
+    "lk": 632200,
+    "sh": 73100,
+    "cm": 991,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@lillianasabag/video/7690700880114404621"
+   },
+   "thumb": "assets/live/notperfect.webp"
   },
   {
    "k": "tour",
@@ -349,28 +601,67 @@
     "B站",
     "X"
    ],
+   "ai": 1,
+   "cn": 1,
    "what": "把迈克尔·杰克逊《Jam》演唱会主角换成黄仁勋、门捷列夫、赵本山",
    "why": "万能舞台模板 + 评论区接梗；马斯克转发黄仁勋版",
    "pm": "「一个模板 + 换主角」是最强二创结构，可做成直播间同款特效",
    "hot": "2026-09 下旬起，10-04 黄仁勋版引爆",
-   "sd": "2026-10-15",
-   "src": "https://news.qq.com/rain/a/20261015A0B8X400",
-   "cn": 1,
    "hs": "2026-09-29",
-   "thumb": "assets/live/tour.webp",
+   "sd": "2026-10-04",
+   "src": "https://news.qq.com/rain/a/20261015A0B8X400",
    "m": {
     "t": "bili",
     "id": "BV1VRHr6AEZ6",
     "o": "https://www.bilibili.com/video/BV1VRHr6AEZ6/",
     "label": "黄仁勋版"
    },
-   "vir": [
-    [
-     "B站 533 万播放",
-     "https://news.qq.com/rain/a/20261015A0B8X400",
-     "腾讯新闻"
-    ]
-   ]
+   "st": {
+    "pl": 5904103,
+    "lk": 227617,
+    "sh": 55698,
+    "cm": 7505,
+    "plat": "B站",
+    "rd": "2026-10-21",
+    "u": "https://www.bilibili.com/video/BV1VRHr6AEZ6/"
+   },
+   "thumb": "assets/live/tour.webp"
+  },
+  {
+   "k": "rumpel",
+   "n": "侏儒怪踮脚舞「Tip Toein' In My Jordans」",
+   "p": [
+    "TikTok",
+    "Instagram",
+    "X"
+   ],
+   "ai": 1,
+   "what": "一段假装是 80 年代奇幻片的 AI 视频：侏儒怪踮着脚跳舞，配 Riff Raff 的说唱",
+   "why": "像真老电影，大家先去找「出自哪部片」，几天后才发现是 AI；配一句处境就能用",
+   "pm": "「这是真的吗」本身就是传播引擎；用户并不在乎来源，AI 标识要靠平台",
+   "hot": "2026-09-28 TikTok 起，10 月上旬 AI 重演",
+   "hs": "2026-09-28",
+   "sd": "2026-09-28",
+   "src": "https://www.nbcnews.com/tech/internet/ai-generated-rumpelstiltskin-meme-freaking-much-internet-rcna602132",
+   "m": {
+    "t": "tt",
+    "id": "7690337196309581069",
+    "o": "https://www.tiktok.com/@musicjunkie5210/video/7690337196309581069"
+   },
+   "st": {
+    "pl": 6300000,
+    "lk": 430300,
+    "sh": 231300,
+    "cm": 7092,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@musicjunkie5210/video/7690337196309581069"
+   },
+   "extra": [
+    "雌雄大盗重演版",
+    "https://www.tiktok.com/@tip.toe.n.my.jordans/video/7693713868241079582"
+   ],
+   "thumb": "assets/live/rumpel.webp"
   },
   {
    "k": "knight",
@@ -380,38 +671,83 @@
     "X",
     "TikTok"
    ],
+   "ai": 1,
    "what": "AI 生成的迷你盔甲小猫，在暴风里握着比自己高两倍的剑死不退后",
    "why": "被当成「硬撑着面对生活」的反应图；X 一条配文帖 80 万曝光",
-   "pm": "可爱角色 + 一句可代入的处境 = 反应素材；角色 IP 化后还能出周边、做宠物同款",
+   "pm": "可爱角色 + 一句可代入的处境 = 反应素材；角色 IP 化后还能出周边",
    "hot": "2026-09 下旬起，10-04 当周搜索见顶",
-   "sd": "2026-10-17",
-   "src": "https://renoise.ai/blog/knight-cat-meme-explained",
-   "v": "原作者 @sickmanai 的 8 月原帖无法嵌入，改用 9-28 合作帖",
-   "extra": [
-    "X 爆款帖",
-    "https://x.com/Okay_Bye___/status/2104227167014121811"
-   ],
-   "cn": 0,
    "hs": "2026-09-27",
-   "thumb": "assets/live/knight.webp",
+   "sd": "2026-09-28",
+   "src": "https://renoise.ai/blog/knight-cat-meme-explained",
    "m": {
     "t": "ig",
     "id": "Dd1y2m2sMRB",
     "o": "https://www.instagram.com/reel/Dd1y2m2sMRB/",
-    "label": "「Remember your gym bro」"
+    "label": "9-28 合作帖"
    },
+   "st": {
+    "lk": 3290000,
+    "plat": "Instagram",
+    "rd": "2026-10-18",
+    "u": "https://www.instagram.com/reel/Dd1y2m2sMRB/",
+    "via": "Jump on the Trend 读数"
+   },
+   "extra": [
+    "X 爆款帖",
+    "https://x.com/Okay_Bye___/status/2104227167014121811"
+   ],
    "vir": [
-    [
-     "IG 合作帖 329 万赞",
-     "https://www.instagram.com/reel/Dd1y2m2sMRB/",
-     "Instagram"
-    ],
     [
      "X 帖 80.2 万曝光 · 2.37 万赞",
      "https://x.com/Okay_Bye___/status/2104227167014121811",
      "X"
     ]
-   ]
+   ],
+   "v": "Instagram 不公开播放数；原作者 @sickmanai 的 8 月原帖无法嵌入，改用合作帖",
+   "thumb": "assets/live/knight.webp"
+  },
+  {
+   "k": "road",
+   "n": "「Hit the Road Dude」换主角重演",
+   "p": [
+    "TikTok",
+    "YouTube"
+   ],
+   "ai": 1,
+   "what": "把 2025 年「这是私人领地」名场面换成狗、猫或自己来演",
+   "why": "老梗 + 新主角；AI 版和真人重演同时在跑",
+   "pm": "旧名场面可被「换主角」反复复活，梗的寿命被拉长",
+   "hot": "2026-09-25 宠物版起，10 月上旬回潮",
+   "hs": "2026-09-25",
+   "sd": "2026-09-25",
+   "src": "https://jumponthetrend.app/trends/hit-the-road-dude-ai-trend/",
+   "m": {
+    "t": "tt",
+    "id": "7689355333793352974",
+    "o": "https://www.tiktok.com/@zenoxlayla/video/7689355333793352974",
+    "label": "狗狗开车版"
+   },
+   "st": {
+    "pl": 1800000,
+    "lk": 166700,
+    "sh": 44200,
+    "cm": 1279,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@zenoxlayla/video/7689355333793352974"
+   },
+   "extra": [
+    "真人逐帧重演",
+    "https://www.tiktok.com/@liljacq2funny/video/7693335715026914574"
+   ],
+   "vir": [
+    [
+     "#stateproperty 话题 1.29 亿播放",
+     "https://jumponthetrend.app/trends/hit-the-road-dude-ai-trend/",
+     "第三方 10-14 读数"
+    ]
+   ],
+   "thumb": "assets/live/road.webp"
   },
   {
    "k": "fan",
@@ -420,52 +756,64 @@
     "TikTok",
     "Instagram"
    ],
+   "ai": 0,
    "what": "俯拍躺地，吊扇叶片每扫过一次就换一套衣服",
-   "why": "叶片天然遮住剪辑点；AI 模板一张照片即可复刻",
+   "why": "叶片天然遮住剪辑点，观众看得懂机关；也有一张照片即可复刻的 AI 模板",
    "pm": "换装天然带货：可做「虚拟换装礼物」，与电商试穿联动",
-   "hot": "2026-09 下旬",
-   "sd": "2026-09-28",
-   "src": "https://thetab.com/2026/09/28/how-to-do-the-vibey-ai-ceiling-fan-trend-from-tiktok-where-your-outfit-changes",
-   "v": "首发者不明",
-   "cn": 0,
+   "hot": "2026-09 下旬起，10 月中旬仍在榜",
    "hs": "2026-09-25",
-   "thumb": "assets/live/fan.webp",
+   "sd": "2026-10-10",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
    "m": {
     "t": "tt",
-    "id": "7694617702882725138",
-    "o": "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138"
+    "id": "7695045104460942606",
+    "o": "https://www.tiktok.com/@khvdenn/video/7695045104460942606"
    },
-   "vir": [
-    [
-     "21.9 万 赞 · 6,934 分享 · 684 评论",
-     "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138",
-     "TikTok · 10-21 读取"
-    ]
-   ]
+   "st": {
+    "pl": 1900000,
+    "lk": 192900,
+    "sh": 4926,
+    "cm": 766,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@khvdenn/video/7695045104460942606"
+   },
+   "extra": [
+    "日系版",
+    "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138"
+   ],
+   "thumb": "assets/live/fan.webp"
   },
   {
-   "k": "tower",
-   "n": "AI 人体叠塔",
+   "k": "crying",
+   "n": "AI 哭脸滤镜",
    "p": [
-    "Facebook"
+    "TikTok"
    ],
-   "what": "违反物理的杂技人塔视频，19 小时 7,700 万播放",
-   "why": "奇观 + 「是真的吗」的争论推高互动",
-   "pm": "打了 AI 标签也不影响传播，透明标识与增长并不冲突",
-   "hot": "2026-09-25 前后",
-   "sd": "2026-09-26",
-   "src": "https://eurweb.com/ai-human-tower/",
-   "v": "原视频链接未找到",
-   "cn": 0,
+   "ai": 1,
+   "what": "CapCut 新 AI 特效把一张普通自拍变成电影感的流泪特写",
+   "why": "一张照片就出「情绪大片」；教程帖本身就是爆款",
+   "pm": "模板工具的爆款常以教程形态传播：教程即分发",
+   "hot": "2026-09 下旬起",
    "hs": "2026-09-25",
-   "thumb": "assets/live/tower.webp",
-   "vir": [
-    [
-     "19 小时 7,700 万播放",
-     "https://eurweb.com/ai-human-tower/",
-     "EURweb"
-    ]
-   ]
+   "sd": "2026-09-25",
+   "src": "https://scripthooks.ai/blog/weekly-trends-october-11-2026",
+   "m": {
+    "t": "tt",
+    "id": "7689324656716827924",
+    "o": "https://www.tiktok.com/@wanqigyxpew/video/7689324656716827924",
+    "label": "教程帖"
+   },
+   "st": {
+    "pl": 7100000,
+    "lk": 180100,
+    "sh": 112300,
+    "cm": 2305,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@wanqigyxpew/video/7689324656716827924"
+   },
+   "thumb": "assets/live/crying.webp"
   },
   {
    "k": "whiny",
@@ -473,55 +821,94 @@
    "p": [
     "TikTok"
    ],
+   "ai": 0,
    "what": "真狗趴在沙发上对镜头哼唧 8 秒，最后咧嘴一笑",
    "why": "被拿来回应各种「小委屈」，是现成的反应片段",
    "pm": "真实宠物情绪片段仍是最强反应素材；可做成评论区可插入的表情",
    "hot": "2026-09-23 起",
-   "sd": "2026-10-20",
-   "src": "https://jumponthetrend.app/trends/pets/",
-   "cn": 0,
    "hs": "2026-09-23",
-   "thumb": "assets/live/whiny.webp",
+   "sd": "2026-09-23",
+   "src": "https://jumponthetrend.app/trends/pets/",
    "m": {
     "t": "tt",
     "id": "7688617354141469970",
     "o": "https://www.tiktok.com/@samgam81/video/7688617354141469970"
    },
-   "vir": [
-    [
-     "590 万 赞 · 400 万 分享 · 5.2 万 评论",
-     "https://www.tiktok.com/@samgam81/video/7688617354141469970",
-     "TikTok · 10-21 读取"
-    ]
-   ]
+   "st": {
+    "pl": 34900000,
+    "lk": 5900000,
+    "sh": 4000000,
+    "cm": 52000,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@samgam81/video/7688617354141469970"
+   },
+   "thumb": "assets/live/whiny.webp"
   },
   {
-   "k": "shan",
-   "n": "闪身步",
+   "k": "ohlook",
+   "n": "「Oh look」情侣梗",
    "p": [
-    "抖音"
+    "TikTok"
    ],
-   "what": "8 年前的北舞花鼓灯教学片段被翻出，全网接力模仿",
-   "why": "几秒能学、自带喜感，明星接力放大",
-   "pm": "「老素材 + 极低模仿门槛」可复制；可做送礼触发主播做指定动作的挑战型礼物",
-   "hot": "2026-09 中下旬",
-   "sd": "2026-09-24",
-   "src": "https://news.qq.com/rain/a/20260924A0CVW600",
-   "v": "各报道播放量 4–7.5 亿不等",
-   "cn": 1,
+   "ai": 0,
+   "what": "一方指着某样东西说「Oh look」，另一方夸张惊恐；第二轮反转成更扎心的答案",
+   "why": "两拍结构 + 反转，分享率约 4.5%",
+   "pm": "重复 + 反转是最短的叙事单元，适合 15 秒内讲完",
+   "hot": "2026-09 下旬–10 月上旬",
    "hs": "2026-09-20",
+   "sd": "2026-09-20",
+   "src": "https://www.ramd.am/blog/trends-tiktok",
    "m": {
-    "t": "dy",
-    "id": "7689422539222715686",
-    "o": "https://jingxuan.douyin.com/m/video/7689422539222715686"
+    "t": "tt",
+    "id": "7687602399929765142",
+    "o": "https://www.tiktok.com/@sophia.sadolin/video/7687602399929765142"
    },
-   "vir": [
-    [
-     "4–7.5 亿播放（各报道不一）",
-     "https://news.qq.com/rain/a/20260924A0CVW600",
-     "腾讯新闻"
-    ]
-   ]
+   "st": {
+    "pl": 4200000,
+    "lk": 890400,
+    "sh": 189200,
+    "cm": 928,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@sophia.sadolin/video/7687602399929765142"
+   },
+   "thumb": "assets/live/ohlook.webp"
+  },
+  {
+   "k": "beok",
+   "n": "「Be OK」笑着摆烂",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "配 Ingrid Michaelson《Be OK》开心跳舞，字幕却写着一团糟的处境",
+   "why": "画面「一切都好」× 字幕「其实很崩」，零舞蹈门槛",
+   "pm": "反差式自嘲适合讲「用户痛点」，比直接卖点更好接受",
+   "hot": "2026-09 中旬起，10 月中旬仍在各榜单",
+   "hs": "2026-09-19",
+   "sd": "2026-09-19",
+   "src": "https://www.ramd.am/blog/trends-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7686990848902384910",
+    "o": "https://www.tiktok.com/@thatsurvivorfan/video/7686990848902384910"
+   },
+   "st": {
+    "pl": 5400000,
+    "lk": 902200,
+    "sh": 99500,
+    "cm": 4684,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@thatsurvivorfan/video/7686990848902384910"
+   },
+   "extra": [
+    "8-26 早期爆款",
+    "https://www.tiktok.com/@kalefensty/video/7678137900940283167"
+   ],
+   "v": "音频的早期爆款发于 8-26（1,900 万播放），10 月仍在 newengen、Ramdam 榜单",
+   "thumb": "assets/live/beok.webp"
   },
   {
    "k": "hotel",
@@ -530,67 +917,34 @@
     "TikTok",
     "X"
    ],
+   "ai": 1,
    "what": "把 Quavo 和 Takeoff 的 COLORS 表演换成猫、名人、影视角色",
    "why": "橙色舞台辨识度极高，两张照片就能做；Quavo 亲自转发原版",
    "pm": "双人位天然适合合拍 / PK；同时暴露「用谁的脸」的肖像权风控",
    "hot": "2026-09 上旬起，9 月下旬达峰",
-   "sd": "2026-09-27",
-   "src": "https://www.complex.com/music/a/markelibert/quavo-takeoff-hotel-lobby-ai-trend-tiktok",
-   "v": "起点猫咪视频的首发者未确认",
-   "extra": [
-    "AI 猫咪版",
-    "https://x.com/Zkxxeth/status/2108740428602511374"
-   ],
-   "cn": 0,
    "hs": "2026-09-10",
-   "thumb": "assets/live/hotel.webp",
-   "m": {
-    "t": "yt",
-    "id": "x9yop0nYR9g",
-    "o": "https://www.youtube.com/watch?v=x9yop0nYR9g",
-    "label": "原版表演"
-   },
-   "vir": []
-  },
-  {
-   "k": "taoagou",
-   "n": "陶阿狗君式「换装模板」",
-   "p": [
-    "TikTok",
-    "Instagram"
-   ],
-   "what": "中国创作者 @taoagou 的变装 + 画面互动短片，被教程用 AI 原样复刻",
-   "why": "每条都是一个新转场「模板」；AI 用原视频当动作蓝图即可复刻",
-   "pm": "头部创作者的结构可被 AI 一键模板化：平台可做「拍同款」并给原作者分成",
-   "hot": "账号持续爆款；9 月 AI 复刻教程走红",
-   "sd": "2026-09-09",
-   "src": "https://mediamixi.jp/column/13470/",
-   "v": "内嵌视频为 8 月作品；9–10 月新作的链接未能取得",
-   "extra": [
-    "账号主页",
-    "https://www.tiktok.com/@taoagou"
-   ],
-   "cn": 0,
-   "hs": "2026-09-09",
-   "thumb": "assets/live/taoagou.webp",
+   "sd": "2026-09-24",
+   "src": "https://www.complex.com/music/a/markelibert/quavo-takeoff-hotel-lobby-ai-trend-tiktok",
    "m": {
     "t": "tt",
-    "id": "7670813145904041223",
-    "o": "https://www.tiktok.com/@taoagou/video/7670813145904041223",
-    "label": "08-06 作品"
+    "id": "7688816269180783903",
+    "o": "https://www.tiktok.com/@therealmeowfia/video/7688816269180783903",
+    "label": "猫咪版"
    },
-   "vir": [
-    [
-     "15.4 万 赞 · 4,111 分享 · 241 评论",
-     "https://www.tiktok.com/@taoagou/video/7670813145904041223",
-     "TikTok · 10-21 读取"
-    ],
-    [
-     "账号 93.4 万粉",
-     "https://www.tiktok.com/@taoagou",
-     "TikTok"
-    ]
-   ]
+   "st": {
+    "pl": 6200000,
+    "lk": 720700,
+    "sh": 373700,
+    "cm": 7437,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@therealmeowfia/video/7688816269180783903"
+   },
+   "extra": [
+    "原版表演",
+    "https://www.youtube.com/watch?v=x9yop0nYR9g"
+   ],
+   "thumb": "assets/live/hotel.webp"
   },
   {
    "k": "sawadika",
@@ -599,29 +953,31 @@
     "TikTok",
     "YouTube"
    ],
+   "ai": 0,
    "what": "跳 LISA 新歌舞步时甩水瓶，水花在逆光里画出弧线",
    "why": "明星舞步 + 一个道具就出片；舞步本身已被教程化",
    "pm": "「明星官方动作 + 用户自带道具」= 可无限变体的挑战；适合做直播间同款特效",
    "hot": "2026-09 上旬起（歌 9-03 发布），9-27 VMAs 再起",
-   "sd": "2026-09-28",
-   "src": "https://tiktoknewshub.com/dance/sawadika-dance-trend/",
-   "v": "网传 LISA 本人转发此视频，未核实",
-   "cn": 0,
    "hs": "2026-09-07",
-   "thumb": "assets/live/sawadika.webp",
+   "sd": "2026-09-07",
+   "src": "https://tiktoknewshub.com/dance/sawadika-dance-trend/",
    "m": {
     "t": "tt",
     "id": "7682576156352089362",
     "o": "https://www.tiktok.com/@trxineex/video/7682576156352089362",
     "label": "水瓶版"
    },
-   "vir": [
-    [
-     "130 万 赞 · 2.3 万 分享 · 3,069 评论",
-     "https://www.tiktok.com/@trxineex/video/7682576156352089362",
-     "TikTok · 10-21 读取"
-    ]
-   ]
+   "st": {
+    "pl": 7100000,
+    "lk": 1300000,
+    "sh": 22700,
+    "cm": 3068,
+    "plat": "TikTok",
+    "rd": "2026-10-21",
+    "u": "https://www.tiktok.com/@trxineex/video/7682576156352089362"
+   },
+   "v": "走红约 6 周，接近收录上限",
+   "thumb": "assets/live/sawadika.webp"
   }
  ]
 }

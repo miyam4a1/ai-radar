@@ -7,164 +7,223 @@
  "patterns": [
   {
    "t": "AI 萌宠做人类动作",
-   "d": "猫狗直立唱跳、持剑、走秀；可爱 × 拟人，一眼看懂，不需要语言",
+   "d": "猫狗直立唱跳、走秀、持剑；可爱 × 拟人，一眼看懂，不需要语言",
    "ex": [
     "odie",
     "iwly",
     "ramalama",
-    "knight"
+    "smalltown"
    ]
   },
   {
    "t": "一张照片换主角",
-   "d": "照片 + 参考视频 = 你的版本；Higgsfield、CapCut 模板把复刻成本压到几分钟",
+   "d": "固定场景 + 你的脸或宠物；CapCut、Higgsfield 把复刻压到几分钟，真实名场面 4 天就变模板",
    "ex": [
-    "smalltown",
-    "road",
-    "fan"
+    "bulin47",
+    "hotel",
+    "crying",
+    "road"
    ]
   },
   {
-   "t": "名场面变成固定舞台",
-   "d": "明星舞台或老视频的构图、音乐、动作不变，只换主角",
+   "t": "名场面换皮",
+   "d": "动作、构图、音乐都不变，只换角色或世界：假老电影、经典进球、明星舞台",
    "ex": [
+    "rumpel",
+    "ozil",
     "sawadika",
-    "hotel",
     "tour"
    ]
   },
   {
-   "t": "卡点转场与换装",
-   "d": "遮挡物或节拍做剪辑点，一秒换一套；看完就想照着拍",
+   "t": "一句字幕就是梗",
+   "d": "画面固定，字幕写处境：被点醒、笑着崩溃、委屈、硬撑",
    "ex": [
-    "taoagou",
-    "fan",
-    "ramalama"
+    "listen",
+    "beok",
+    "whiny",
+    "knight"
    ]
   },
   {
-   "t": "可代入的反应素材",
-   "d": "配一句处境就能转发：硬撑的小猫、委屈的狗、一句台词",
+   "t": "评论区是第二个剧本",
+   "d": "留一个让观众纠正、指认或接梗的口子：藏起来的 iPad、新旧舞步之争、明星采访失误",
    "ex": [
-    "whiny",
-    "knight",
-    "bsx"
+    "whatipad",
+    "mebaje",
+    "tomz",
+    "congo"
    ]
   },
   {
    "t": "荒诞反差",
-   "d": "猫 × 夜店情歌、违反物理的人塔、身后的幽灵：反差引发「这是真的吗」",
+   "d": "专业技巧配低俗素材、恐怖面具配甜蜜身高差、五秒连续升级",
    "ex": [
-    "tower",
-    "ghost",
-    "iwly"
+    "fart",
+    "ghostface",
+    "cough",
+    "ghost"
    ]
   }
  ],
  "change": {
   "up": [
    [
+    "Bulin 47 换脸",
+    "bulin47"
+   ],
+   [
+    "What iPad?",
+    "whatipad"
+   ],
+   [
+    "Tom Holland 采访梗",
+    "tomz"
+   ],
+   [
     "万圣节小猫走秀",
     "ramalama"
-   ],
-   [
-    "AI 幽灵滤镜",
-    "ghost"
-   ],
-   [
-    "腊肠狗 Single Ladies",
-    "odie"
    ]
   ],
   "down": [
    [
-    "Knight Cat（10-04 当周搜索见顶）",
-    "knight"
+    "Congo Basin（约 10-13 见顶）",
+    "congo"
    ],
    [
     "Hotel Lobby（9 月下旬达峰）",
     "hotel"
+   ],
+   [
+    "Knight Cat（10-04 当周见顶）",
+    "knight"
    ]
   ],
-  "note": "节日向内容随万圣节临近升温；9 月的换主角舞台模板进入长尾。"
+  "note": "万圣节内容继续升温；9 月的换主角模板进入长尾，新的模板来自 10 月初的真实街头视频。"
  },
  "thumbs": {
   "odie": "assets/weeks/2026-W43/odie.webp",
   "iwly": "assets/weeks/2026-W43/iwly.webp",
   "ramalama": "assets/weeks/2026-W43/ramalama.webp",
-  "knight": "assets/weeks/2026-W43/knight.webp",
   "smalltown": "assets/weeks/2026-W43/smalltown.webp",
-  "road": "assets/weeks/2026-W43/road.webp",
-  "fan": "assets/weeks/2026-W43/fan.webp",
-  "sawadika": "assets/weeks/2026-W43/sawadika.webp",
+  "bulin47": "assets/weeks/2026-W43/bulin47.webp",
   "hotel": "assets/weeks/2026-W43/hotel.webp",
+  "crying": "assets/weeks/2026-W43/crying.webp",
+  "road": "assets/weeks/2026-W43/road.webp",
+  "rumpel": "assets/weeks/2026-W43/rumpel.webp",
+  "ozil": "assets/weeks/2026-W43/ozil.webp",
+  "sawadika": "assets/weeks/2026-W43/sawadika.webp",
   "tour": "assets/weeks/2026-W43/tour.webp",
-  "taoagou": "assets/weeks/2026-W43/taoagou.webp",
+  "listen": "assets/weeks/2026-W43/listen.webp",
+  "beok": "assets/weeks/2026-W43/beok.webp",
   "whiny": "assets/weeks/2026-W43/whiny.webp",
-  "bsx": "assets/weeks/2026-W43/bsx.webp",
-  "tower": "assets/weeks/2026-W43/tower.webp",
+  "knight": "assets/weeks/2026-W43/knight.webp",
+  "whatipad": "assets/weeks/2026-W43/whatipad.webp",
+  "mebaje": "assets/weeks/2026-W43/mebaje.webp",
+  "tomz": "assets/weeks/2026-W43/tomz.webp",
+  "congo": "assets/weeks/2026-W43/congo.webp",
+  "fart": "assets/weeks/2026-W43/fart.webp",
+  "ghostface": "assets/weeks/2026-W43/ghostface.webp",
+  "cough": "assets/weeks/2026-W43/cough.webp",
   "ghost": "assets/weeks/2026-W43/ghost.webp"
  },
  "cards": {
-  "ramalama": {
-   "n": "万圣节小猫走秀",
-   "s": "小猫走秀"
-  },
-  "ghost": {
-   "n": "AI 幽灵滤镜恶作剧",
-   "s": "幽灵滤镜"
-  },
   "odie": {
    "n": "腊肠狗跳《Single Ladies》",
    "s": "腊肠 C 位"
-  },
-  "smalltown": {
-   "n": "Smalltown Boy 尖叫猫",
-   "s": "尖叫猫"
   },
   "iwly": {
    "n": "唱 Akon 的 AI 白猫",
    "s": "唱歌白猫"
   },
-  "road": {
-   "n": "「Hit the Road Dude」AI 版",
-   "s": "Hit the Road"
+  "ramalama": {
+   "n": "万圣节小猫走秀",
+   "s": "小猫走秀"
   },
-  "bsx": {
-   "n": "「不烧心」AI 漫剧梗",
-   "s": "不烧心"
+  "smalltown": {
+   "n": "Smalltown Boy 尖叫猫",
+   "s": "尖叫猫"
   },
-  "tour": {
-   "n": "AI「世界巡演」：把 MJ 舞台换成任何人",
-   "s": "世界巡演"
-  },
-  "knight": {
-   "n": "小猫举剑 Knight Cat",
-   "s": "小猫举剑"
-  },
-  "fan": {
-   "n": "风扇转场换装",
-   "s": "风扇转场"
-  },
-  "tower": {
-   "n": "AI 人体叠塔",
-   "s": "人体叠塔"
-  },
-  "whiny": {
-   "n": "委屈哼唧的杜宾",
-   "s": "委屈杜宾"
+  "bulin47": {
+   "n": "Bulin 47 街头即兴",
+   "s": "Bulin 47"
   },
   "hotel": {
    "n": "Hotel Lobby AI 换脸说唱",
    "s": "Hotel Lobby"
   },
-  "taoagou": {
-   "n": "陶阿狗君式「换装模板」",
-   "s": "陶阿狗君"
+  "crying": {
+   "n": "AI 哭脸滤镜",
+   "s": "AI 哭脸"
+  },
+  "road": {
+   "n": "「Hit the Road Dude」换主角重演",
+   "s": "Hit the Road"
+  },
+  "rumpel": {
+   "n": "侏儒怪踮脚舞「Tip Toein' In My Jordans」",
+   "s": "侏儒怪踮脚"
+  },
+  "ozil": {
+   "n": "AI 重做厄齐尔名场面进球",
+   "s": "AI 厄齐尔"
   },
   "sawadika": {
    "n": "LISA《SaWaDiKa》水瓶舞",
    "s": "水瓶舞"
+  },
+  "tour": {
+   "n": "AI「世界巡演」：把 MJ 舞台换成任何人",
+   "s": "世界巡演"
+  },
+  "listen": {
+   "n": "「Listening ear activated」",
+   "s": "Listening ear"
+  },
+  "beok": {
+   "n": "「Be OK」笑着摆烂",
+   "s": "Be OK"
+  },
+  "whiny": {
+   "n": "委屈哼唧的杜宾",
+   "s": "委屈杜宾"
+  },
+  "knight": {
+   "n": "小猫举剑 Knight Cat",
+   "s": "小猫举剑"
+  },
+  "whatipad": {
+   "n": "「What iPad?」装傻梗",
+   "s": "What iPad?"
+  },
+  "mebaje": {
+   "n": "「这才是正确跳法」舞蹈之争",
+   "s": "舞步之争"
+  },
+  "tomz": {
+   "n": "Tom Holland 认不出 Zendaya 的歌词",
+   "s": "Tom & Zendaya"
+  },
+  "congo": {
+   "n": "Congo Basin 探险模仿",
+   "s": "Congo Basin"
+  },
+  "fart": {
+   "n": "放屁版《Black and Yellow》",
+   "s": "放屁编曲"
+  },
+  "ghostface": {
+   "n": "鬼脸杀手情侣",
+   "s": "鬼脸情侣"
+  },
+  "cough": {
+   "n": "孩子一咳嗽：五秒升级",
+   "s": "五秒升级"
+  },
+  "ghost": {
+   "n": "AI 幽灵滤镜恶作剧",
+   "s": "幽灵滤镜"
   }
- }
+ },
+ "log": "10-21 更新：只保留有可播放代表视频和平台数字的条目。移除不烧心、人体叠塔、陶阿狗君换装、闪身步等；新增 Bulin 47、侏儒怪踮脚舞、What iPad? 等 17 条。"
 }
