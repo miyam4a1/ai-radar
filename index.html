@@ -121,6 +121,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .mx .mx-src{font-size:11.5px;color:var(--text-3);border-bottom:1px dotted var(--line-2)}
 .mx .mx-src:hover{color:var(--accent)}
 .t-row i.lab{display:inline-block;min-width:3.6em}
+.t-row.kx{color:var(--text);background:var(--accent-bg);border-radius:8px;padding:7px 10px;margin-top:10px}
+.t-row.kx i.lab{color:var(--accent);font-weight:600}
+.pin{font-size:11px;font-weight:650;letter-spacing:.3px;color:#fff;background:var(--accent);padding:1px 7px;border-radius:5px;margin-right:8px;vertical-align:1px}
+.vir span.nl{color:var(--text-2)}
+.vir span.nl small{color:var(--text-3);font-size:11.5px;margin-left:5px}
 .openv{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:560;color:var(--text);padding:4px 10px;border:1px solid var(--line-2);border-radius:8px;white-space:nowrap}
 .openv:hover{border-color:var(--accent);color:var(--accent)}
 .lc .foot .links{flex-wrap:wrap;align-items:center;gap:6px 14px}
@@ -293,24 +298,26 @@ function trendCard(x){
   links.push(`<a href="${x.src}" target="_blank" rel="noopener">来源 ↗</a>`);
   const mx=[st.pl?`<span><b>${fmtN(st.pl)}</b>播放</span>`:'',st.lk?`<span><b>${fmtN(st.lk)}</b>赞</span>`:'',st.sh?`<span><b>${fmtN(st.sh)}</b>分享</span>`:'',
     st.u?`<a class="mx-src" href="${st.u}" target="_blank" rel="noopener">${esc(st.plat)} · ${esc((st.rd||'').slice(5))} 采集${st.via?' · '+esc(st.via):''}</a>`:''].join('');
+  const rx=x.rx&&x.rx.length?`<b>二创证据</b><span class="vir">${x.rx.map(v=>v[1]?`<a href="${v[1]}" target="_blank" rel="noopener">${esc(v[0])}<small>${esc(v[2]||'')} ↗</small></a>`:`<span class="nl">${esc(v[0])}<small>${esc(v[2]||'')}</small></span>`).join('')}</span>`:'';
   const vir=x.vir&&x.vir.length?`<b>补充数据</b><span class="vir">${x.vir.map(v=>`<a href="${v[1]}" target="_blank" rel="noopener">${esc(v[0])}<small>${esc(v[2])} ↗</small></a>`).join('')}</span>`:'';
   return `<article class="card lc" id="t-${x.k}">${vmHTML(x)}<div class="body">
-    <div class="plat">${x.p.join(' · ')}${x.ai?'<span class="aib">AI 生成</span>':''}</div>
+    <div class="plat">${x.pin?'<span class="pin">重点</span>':''}${x.p.join(' · ')}${x.ai?'<span class="aib">AI 生成</span>':''}</div>
     <div class="t-head"><div class="t-name">${esc(x.n)}${x.v?`<span class="tbd" tabindex="0" data-tip="${esc(x.v)}">注</span>`:''}</div>${pi!==null?`<span class="pi" tabindex="0" data-tip="${PI_TIP}">传播 ${pi}</span>`:''}</div>
     <div class="mx">${mx}</div>
     <p class="t-row"><i class="lab">是什么</i>${esc(x.what)}</p>
     <p class="t-row"><i class="lab">为什么火</i>${esc(x.why)}</p>
-    <div class="meta"><b>走红时间</b><span>${esc(x.hot)}</span><b>来源日期</b><span>${esc(x.sd)}</span>${vir}</div>
+    ${x.kx?`<p class="t-row kx"><i class="lab">可借鉴</i>${esc(x.kx)}</p>`:''}
+    <div class="meta"><b>走红时间</b><span>${esc(x.hot)}</span><b>来源日期</b><span>${esc(x.sd)}</span>${rx}${vir}</div>
     <div class="foot"><div class="links">${links.join('')}</div>
       <button class="more" aria-expanded="false">PM 启发 ${chev}</button></div>
     <div class="detail"><div><div class="in">${esc(x.pm)}</div></div></div>
   </div></article>`;
 }
-const TRC=['全部','AI 生成','TikTok','Instagram','YouTube','X'];
+const TRC=['全部','AI 生成','TikTok','Instagram','YouTube','X','B站'];
 function renderTrends(){
   const ok=x=>trCat==='全部'||(trCat==='AI 生成'?x.ai:x.p.includes(trCat));
   const key={hs:x=>x.hs,pi:x=>pidx(x.st)??-1,pl:x=>(x.st&&x.st.pl)||-1}[trSort];
-  const list=TRENDS.slice().sort((a,b)=>trSort==='hs'?b.hs.localeCompare(a.hs):key(b)-key(a));
+  const list=TRENDS.slice().sort((a,b)=>(a.pin||99)-(b.pin||99)||(trSort==='hs'?b.hs.localeCompare(a.hs):key(b)-key(a)));
   $('#tr-grid').innerHTML=list.filter(x=>!x.cn&&ok(x)).map(trendCard).join('')||'<p class="empty">暂无</p>';
   const cn=list.filter(x=>x.cn&&ok(x));
   $('#tr-cn-grid').innerHTML=cn.map(trendCard).join('');$('#tr-cn-ct').textContent=cn.length;
@@ -337,7 +344,7 @@ function issueBody(W){
   const lk=a=>`<a href="#t-${a[1]}" data-k="${a[1]}">${esc(a[0])}</a>`;
   const c=W.change;
   const chg=c?`<div class="chg"><b>本周变化</b><span class="up">↑ 升温</span> ${c.up.map(lk).join('、')}　<span class="dn">↓ 降温</span> ${c.down.map(lk).join('、')}${c.note?`<span class="nt">${esc(c.note)}</span>`:''}</div>`:'';
-  const edl=W.log?`<div class="edl">${esc(W.log)}</div>`:'';
+  const edl=W.log?[].concat(W.log).map(l=>`<div class="edl">${esc(l)}</div>`).join(''):'';
   return chg+edl+W.patterns.map((p,i)=>`<div class="wp"><span class="pn">${String(i+1).padStart(2,'0')}</span><div><div class="pt-t">${esc(p.t)}</div><div class="pt-d">${esc(p.d)}</div></div>
     <div class="strip">${p.ex.slice(0,4).map(k=>`<button class="st-i" data-k="${k}" title="在实时中播放"><span class="im">${W.thumbs[k]?`<img loading="lazy" src="${U(W.thumbs[k])}" alt="">`:''}</span><span>${esc(nm(k))}</span></button>`).join('')}</div></div>`).join('');
 }

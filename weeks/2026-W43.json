@@ -7,12 +7,12 @@
  "patterns": [
   {
    "t": "AI 萌宠做人类动作",
-   "d": "猫狗直立唱跳、走秀、持剑；可爱 × 拟人，一眼看懂，不需要语言",
+   "d": "猫狗直立唱跳、尖叫、持剑；网友换成自家宠物接力，「上传宠物照片」就是现成的模板入口",
    "ex": [
     "odie",
     "iwly",
-    "ramalama",
-    "smalltown"
+    "smalltown",
+    "knight"
    ]
   },
   {
@@ -21,75 +21,63 @@
    "ex": [
     "bulin47",
     "hotel",
-    "crying",
-    "road"
+    "crying"
    ]
   },
   {
    "t": "名场面换皮",
-   "d": "动作、构图、音乐都不变，只换角色或世界：假老电影、经典进球、明星舞台",
+   "d": "动作、构图、音乐都不变，只换角色或世界：假老电影、经典进球、明星舞台、私人领地",
    "ex": [
     "rumpel",
     "ozil",
-    "sawadika",
-    "tour"
+    "tour",
+    "road"
+   ]
+  },
+  {
+   "t": "名场面台词 / 角色化二创",
+   "d": "一句固定台词或一个角色形象，人人往里填新内容：长今的汤里放了什么、给 AI 模型立人设、两拍反转对话",
+   "ex": [
+    "janggeum",
+    "aimoe",
+    "ohlook"
    ]
   },
   {
    "t": "一句字幕就是梗",
-   "d": "画面固定，字幕写处境：被点醒、笑着崩溃、委屈、硬撑",
+   "d": "画面固定，字幕写处境：被点醒、笑着崩溃、委屈、坦白",
    "ex": [
     "listen",
     "beok",
     "whiny",
-    "knight"
+    "notperfect"
    ]
   },
   {
-   "t": "评论区是第二个剧本",
-   "d": "留一个让观众纠正、指认或接梗的口子：藏起来的 iPad、新旧舞步之争、明星采访失误",
+   "t": "一个动作 + 一个道具",
+   "d": "挑战门槛压到一个动作：风扇叶片遮住剪辑点、甩水瓶甩出水花",
    "ex": [
-    "whatipad",
-    "mebaje",
-    "tomz",
-    "congo"
-   ]
-  },
-  {
-   "t": "荒诞反差",
-   "d": "专业技巧配低俗素材、恐怖面具配甜蜜身高差、五秒连续升级",
-   "ex": [
-    "fart",
-    "ghostface",
-    "cough",
-    "ghost"
+    "fan",
+    "sawadika"
    ]
   }
  ],
  "change": {
   "up": [
    [
+    "大长今「汤里放了什么」",
+    "janggeum"
+   ],
+   [
+    "DeepSeek 大肥鱼",
+    "aimoe"
+   ],
+   [
     "Bulin 47 换脸",
     "bulin47"
-   ],
-   [
-    "What iPad?",
-    "whatipad"
-   ],
-   [
-    "Tom Holland 采访梗",
-    "tomz"
-   ],
-   [
-    "万圣节小猫走秀",
-    "ramalama"
    ]
   ],
   "down": [
-   [
-    "Congo Basin（约 10-13 见顶）",
-    "congo"
-   ],
    [
     "Hotel Lobby（9 月下旬达峰）",
     "hotel"
@@ -99,12 +87,11 @@
     "knight"
    ]
   ],
-  "note": "万圣节内容继续升温；9 月的换主角模板进入长尾，新的模板来自 10 月初的真实街头视频。"
+  "note": "国内两个新二创进入主榜：一句老剧台词、一个 AI 角色形象都能被反复填新内容；9 月的换主角模板进入长尾。"
  },
  "thumbs": {
   "odie": "assets/weeks/2026-W43/odie.webp",
   "iwly": "assets/weeks/2026-W43/iwly.webp",
-  "ramalama": "assets/weeks/2026-W43/ramalama.webp",
   "smalltown": "assets/weeks/2026-W43/smalltown.webp",
   "bulin47": "assets/weeks/2026-W43/bulin47.webp",
   "hotel": "assets/weeks/2026-W43/hotel.webp",
@@ -118,14 +105,11 @@
   "beok": "assets/weeks/2026-W43/beok.webp",
   "whiny": "assets/weeks/2026-W43/whiny.webp",
   "knight": "assets/weeks/2026-W43/knight.webp",
-  "whatipad": "assets/weeks/2026-W43/whatipad.webp",
-  "mebaje": "assets/weeks/2026-W43/mebaje.webp",
-  "tomz": "assets/weeks/2026-W43/tomz.webp",
-  "congo": "assets/weeks/2026-W43/congo.webp",
-  "fart": "assets/weeks/2026-W43/fart.webp",
-  "ghostface": "assets/weeks/2026-W43/ghostface.webp",
-  "cough": "assets/weeks/2026-W43/cough.webp",
-  "ghost": "assets/weeks/2026-W43/ghost.webp"
+  "ohlook": "assets/weeks/2026-W43/ohlook.webp",
+  "aimoe": "assets/weeks/2026-W43/aimoe.webp",
+  "fan": "assets/weeks/2026-W43/fan.webp",
+  "notperfect": "assets/weeks/2026-W43/notperfect.webp",
+  "janggeum": "assets/weeks/2026-W43/janggeum.webp"
  },
  "cards": {
   "odie": {
@@ -135,10 +119,6 @@
   "iwly": {
    "n": "唱 Akon 的 AI 白猫",
    "s": "唱歌白猫"
-  },
-  "ramalama": {
-   "n": "万圣节小猫走秀",
-   "s": "小猫走秀"
   },
   "smalltown": {
    "n": "Smalltown Boy 尖叫猫",
@@ -192,38 +172,29 @@
    "n": "小猫举剑 Knight Cat",
    "s": "小猫举剑"
   },
-  "whatipad": {
-   "n": "「What iPad?」装傻梗",
-   "s": "What iPad?"
+  "ohlook": {
+   "n": "「Oh look」情侣梗",
+   "s": "Oh look"
   },
-  "mebaje": {
-   "n": "「这才是正确跳法」舞蹈之争",
-   "s": "舞步之争"
+  "aimoe": {
+   "n": "DeepSeek / Claude / GPT 拟人 二创",
+   "s": "AI 拟人"
   },
-  "tomz": {
-   "n": "Tom Holland 认不出 Zendaya 的歌词",
-   "s": "Tom & Zendaya"
+  "fan": {
+   "n": "风扇转场换装",
+   "s": "风扇换装"
   },
-  "congo": {
-   "n": "Congo Basin 探险模仿",
-   "s": "Congo Basin"
+  "notperfect": {
+   "n": "「I'm not a perfect person」坦白局",
+   "s": "Not perfect"
   },
-  "fart": {
-   "n": "放屁版《Black and Yellow》",
-   "s": "放屁编曲"
-  },
-  "ghostface": {
-   "n": "鬼脸杀手情侣",
-   "s": "鬼脸情侣"
-  },
-  "cough": {
-   "n": "孩子一咳嗽：五秒升级",
-   "s": "五秒升级"
-  },
-  "ghost": {
-   "n": "AI 幽灵滤镜恶作剧",
-   "s": "幽灵滤镜"
+  "janggeum": {
+   "n": "大长今「长今，你在汤里放了什么？」",
+   "s": "大长今问汤"
   }
  },
- "log": "10-21 更新：只保留有可播放代表视频和平台数字的条目。移除不烧心、人体叠塔、陶阿狗君换装、闪身步等；新增 Bulin 47、侏儒怪踮脚舞、What iPad? 等 17 条。"
+ "log": [
+  "10-23 更新：只留「真火 + 大量二创 + 能迁移到社交 / 创作 / 直播产品」的条目，每条加「可借鉴」和二创证据。移除 12 条一次性或难迁移的内容（What iPad?、Tom Holland 采访梗、孩子咳嗽、神秘包裹等）；新增大长今「汤里放了什么」、DeepSeek / Claude / GPT 拟人二创。",
+  "10-21 更新：只保留有可播放代表视频和平台数字的条目。移除不烧心、人体叠塔、陶阿狗君换装、闪身步等；新增 Bulin 47、侏儒怪踮脚舞、What iPad? 等 17 条。"
+ ]
 }
