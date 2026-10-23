@@ -1,0 +1,163 @@
+{
+ "id": "2026-W44",
+ "range": "2026-10-26 ~ 10-30",
+ "start": "2026-10-26",
+ "end": "2026-10-30",
+ "status": "本周更新中",
+ "patterns": [
+  {
+   "t": "万圣节「先藏后揭」",
+   "d": "低机位抬镜头、图集最后一张、遮挡转场：万圣节（10-31）当周最后一波",
+   "ex": [
+    "costume",
+    "sorry",
+    "fan"
+   ]
+  },
+  {
+   "t": "AI 角色做人类动作",
+   "d": "AI 猫狗唱跳、鼓掌、持剑；换成自家宠物接力",
+   "ex": [
+    "clapcat",
+    "odie",
+    "iwly",
+    "smalltown"
+   ]
+  },
+  {
+   "t": "名场面台词 / 换皮",
+   "d": "固定台词、角色或构图，只换内容：长今问汤、AI 拟人、名场面重演",
+   "ex": [
+    "janggeum",
+    "aimoe",
+    "road",
+    "ozil"
+   ]
+  },
+  {
+   "t": "一句字幕就是梗",
+   "d": "画面固定，字幕写处境",
+   "ex": [
+    "listen",
+    "beok",
+    "whiny",
+    "notperfect"
+   ]
+  }
+ ],
+ "change": {
+  "up": [
+   [
+    "「I'm so sorry」万圣节版",
+    "sorry"
+   ],
+   [
+    "Ramalama 变装走秀",
+    "costume"
+   ]
+  ],
+  "down": [
+   [
+    "水瓶舞",
+    "sawadika"
+   ],
+   [
+    "Hotel Lobby",
+    "hotel"
+   ]
+  ],
+  "note": "开期基线（沿用 10-23 数据）：本周会重点看万圣节条目何时退潮、水瓶舞是否移出实时。"
+ },
+ "cards": {
+  "costume": {
+   "n": "「Ramalama」低机位变装走秀",
+   "s": "Ramalama 走秀"
+  },
+  "sorry": {
+   "n": "「I'm so sorry」反转图集",
+   "s": "I'm so sorry"
+  },
+  "fan": {
+   "n": "风扇转场换装",
+   "s": "风扇换装"
+  },
+  "clapcat": {
+   "n": "AI 黑猫鼓掌",
+   "s": "鼓掌黑猫"
+  },
+  "odie": {
+   "n": "腊肠狗跳《Single Ladies》",
+   "s": "腊肠 C 位"
+  },
+  "iwly": {
+   "n": "唱 Akon 的 AI 白猫",
+   "s": "唱歌白猫"
+  },
+  "smalltown": {
+   "n": "Smalltown Boy 尖叫猫",
+   "s": "尖叫猫"
+  },
+  "janggeum": {
+   "n": "大长今「长今，你在汤里放了什么？」",
+   "s": "大长今问汤"
+  },
+  "aimoe": {
+   "n": "DeepSeek / Claude / GPT 拟人 二创",
+   "s": "AI 拟人"
+  },
+  "road": {
+   "n": "「Hit the Road Dude」换主角重演",
+   "s": "Hit the Road"
+  },
+  "ozil": {
+   "n": "AI 重做厄齐尔名场面进球",
+   "s": "AI 厄齐尔"
+  },
+  "listen": {
+   "n": "「Listening ear activated」",
+   "s": "Listening ear"
+  },
+  "beok": {
+   "n": "「Be OK」笑着摆烂",
+   "s": "Be OK"
+  },
+  "whiny": {
+   "n": "委屈哼唧的杜宾",
+   "s": "委屈杜宾"
+  },
+  "notperfect": {
+   "n": "「I'm not a perfect person」坦白局",
+   "s": "Not perfect"
+  },
+  "sawadika": {
+   "n": "LISA《SaWaDiKa》水瓶舞",
+   "s": "水瓶舞"
+  },
+  "hotel": {
+   "n": "Hotel Lobby AI 换脸说唱",
+   "s": "Hotel Lobby"
+  }
+ },
+ "log": [
+  "10-23 开期：沿用 W43 定稿时的 23 条实时条目。"
+ ],
+ "thumbs": {
+  "aimoe": "assets/weeks/2026-W44/aimoe.webp",
+  "beok": "assets/weeks/2026-W44/beok.webp",
+  "clapcat": "assets/weeks/2026-W44/clapcat.webp",
+  "costume": "assets/weeks/2026-W44/costume.webp",
+  "fan": "assets/weeks/2026-W44/fan.webp",
+  "hotel": "assets/weeks/2026-W44/hotel.webp",
+  "iwly": "assets/weeks/2026-W44/iwly.webp",
+  "janggeum": "assets/weeks/2026-W44/janggeum.webp",
+  "listen": "assets/weeks/2026-W44/listen.webp",
+  "notperfect": "assets/weeks/2026-W44/notperfect.webp",
+  "odie": "assets/weeks/2026-W44/odie.webp",
+  "ozil": "assets/weeks/2026-W44/ozil.webp",
+  "road": "assets/weeks/2026-W44/road.webp",
+  "sawadika": "assets/weeks/2026-W44/sawadika.webp",
+  "smalltown": "assets/weeks/2026-W44/smalltown.webp",
+  "sorry": "assets/weeks/2026-W44/sorry.webp",
+  "whiny": "assets/weeks/2026-W44/whiny.webp"
+ }
+}

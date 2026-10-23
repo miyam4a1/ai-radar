@@ -3,15 +3,15 @@
  "range": "2026-10-19 ~ 10-23",
  "start": "2026-10-19",
  "end": "2026-10-23",
- "status": "本周更新中",
+ "status": "已定稿",
  "patterns": [
   {
    "t": "AI 萌宠做人类动作",
-   "d": "猫狗直立唱跳、尖叫、持剑；网友换成自家宠物接力，「上传宠物照片」就是现成的模板入口",
+   "d": "猫狗直立唱跳、尖叫、持剑、鼓掌；网友换成自家宠物接力，「上传宠物照片」或「绿幕抠像」就是现成的模板入口",
    "ex": [
     "odie",
     "iwly",
-    "smalltown",
+    "clapcat",
     "knight"
    ]
   },
@@ -20,6 +20,7 @@
    "d": "固定场景 + 你的脸或宠物；CapCut、Higgsfield 把复刻压到几分钟，真实名场面 4 天就变模板",
    "ex": [
     "bulin47",
+    "smalltown",
     "hotel",
     "crying"
    ]
@@ -54,32 +55,41 @@
    ]
   },
   {
-   "t": "一个动作 + 一个道具",
-   "d": "挑战门槛压到一个动作：风扇叶片遮住剪辑点、甩水瓶甩出水花",
+   "t": "万圣节「先藏后揭」",
+   "d": "低机位走路再抬镜头、图集翻到最后一张、风扇叶片一遮一换：先藏住，再揭晓；万圣节前集中爆发",
    "ex": [
-    "fan",
-    "sawadika"
+    "costume",
+    "sorry",
+    "fan"
    ]
   }
  ],
  "change": {
   "up": [
    [
-    "大长今「汤里放了什么」",
-    "janggeum"
+    "「I'm so sorry」万圣节版（10-20 起，两天内多条百万播放）",
+    "sorry"
    ],
    [
-    "DeepSeek 大肥鱼",
-    "aimoe"
+    "Ramalama 变装走秀（Coraline 版 6,430 万播放）",
+    "costume"
    ],
    [
-    "Bulin 47 换脸",
+    "Listening ear（两天 750 万 → 780 万播放）",
+    "listen"
+   ],
+   [
+    "Bulin 47（两天 1,000 万 → 1,060 万播放）",
     "bulin47"
    ]
   ],
   "down": [
    [
-    "Hotel Lobby（9 月下旬达峰）",
+    "水瓶舞（官方帖和代表视频两天播放零增长，走红已约 6 周）",
+    "sawadika"
+   ],
+   [
+    "Hotel Lobby（两天播放持平在 620 万）",
     "hotel"
    ],
    [
@@ -87,29 +97,32 @@
     "knight"
    ]
   ],
-  "note": "国内两个新二创进入主榜：一句老剧台词、一个 AI 角色形象都能被反复填新内容；9 月的换主角模板进入长尾。"
+  "note": "本周新增的爆点都是万圣节「先藏后揭」：两张图或一个抬镜头就能复制。9 月的换主角模板和水瓶舞进入长尾；节日条目预计 10-31 后快速退潮。"
  },
  "thumbs": {
-  "odie": "assets/weeks/2026-W43/odie.webp",
-  "iwly": "assets/weeks/2026-W43/iwly.webp",
-  "smalltown": "assets/weeks/2026-W43/smalltown.webp",
+  "aimoe": "assets/weeks/2026-W43/aimoe.webp",
+  "beok": "assets/weeks/2026-W43/beok.webp",
   "bulin47": "assets/weeks/2026-W43/bulin47.webp",
-  "hotel": "assets/weeks/2026-W43/hotel.webp",
+  "clapcat": "assets/weeks/2026-W43/clapcat.webp",
+  "costume": "assets/weeks/2026-W43/costume.webp",
   "crying": "assets/weeks/2026-W43/crying.webp",
+  "fan": "assets/weeks/2026-W43/fan.webp",
+  "hotel": "assets/weeks/2026-W43/hotel.webp",
+  "iwly": "assets/weeks/2026-W43/iwly.webp",
+  "janggeum": "assets/weeks/2026-W43/janggeum.webp",
+  "knight": "assets/weeks/2026-W43/knight.webp",
+  "listen": "assets/weeks/2026-W43/listen.webp",
+  "notperfect": "assets/weeks/2026-W43/notperfect.webp",
+  "odie": "assets/weeks/2026-W43/odie.webp",
+  "ohlook": "assets/weeks/2026-W43/ohlook.webp",
+  "ozil": "assets/weeks/2026-W43/ozil.webp",
   "road": "assets/weeks/2026-W43/road.webp",
   "rumpel": "assets/weeks/2026-W43/rumpel.webp",
-  "ozil": "assets/weeks/2026-W43/ozil.webp",
   "sawadika": "assets/weeks/2026-W43/sawadika.webp",
+  "smalltown": "assets/weeks/2026-W43/smalltown.webp",
+  "sorry": "assets/weeks/2026-W43/sorry.webp",
   "tour": "assets/weeks/2026-W43/tour.webp",
-  "listen": "assets/weeks/2026-W43/listen.webp",
-  "beok": "assets/weeks/2026-W43/beok.webp",
-  "whiny": "assets/weeks/2026-W43/whiny.webp",
-  "knight": "assets/weeks/2026-W43/knight.webp",
-  "ohlook": "assets/weeks/2026-W43/ohlook.webp",
-  "aimoe": "assets/weeks/2026-W43/aimoe.webp",
-  "fan": "assets/weeks/2026-W43/fan.webp",
-  "notperfect": "assets/weeks/2026-W43/notperfect.webp",
-  "janggeum": "assets/weeks/2026-W43/janggeum.webp"
+  "whiny": "assets/weeks/2026-W43/whiny.webp"
  },
  "cards": {
   "odie": {
@@ -191,9 +204,22 @@
   "janggeum": {
    "n": "大长今「长今，你在汤里放了什么？」",
    "s": "大长今问汤"
+  },
+  "clapcat": {
+   "n": "AI 黑猫鼓掌",
+   "s": "鼓掌黑猫"
+  },
+  "sorry": {
+   "n": "「I'm so sorry」反转图集",
+   "s": "I'm so sorry"
+  },
+  "costume": {
+   "n": "「Ramalama」低机位变装走秀",
+   "s": "Ramalama 走秀"
   }
  },
  "log": [
+  "10-23 定稿：新增 AI 黑猫鼓掌、「I'm so sorry」反转图集、Ramalama 变装走秀；所有 TikTok 数字 10-23 重读，原有 20 条代表视频均在线。",
   "10-23 更新：只留「真火 + 大量二创 + 能迁移到社交 / 创作 / 直播产品」的条目，每条加「可借鉴」和二创证据。移除 12 条一次性或难迁移的内容（What iPad?、Tom Holland 采访梗、孩子咳嗽、神秘包裹等）；新增大长今「汤里放了什么」、DeepSeek / Claude / GPT 拟人二创。",
   "10-21 更新：只保留有可播放代表视频和平台数字的条目。移除不烧心、人体叠塔、陶阿狗君换装、闪身步等；新增 Bulin 47、侏儒怪踮脚舞、What iPad? 等 17 条。"
  ]
