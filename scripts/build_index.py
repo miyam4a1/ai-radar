@@ -8,10 +8,13 @@ data-only change needs no rebuild.
   python3 scripts/build_index.py                  # writes index.html
   python3 scripts/build_index.py --offline out.html   # standalone copy that reads data from the live site
 """
-import json, sys, pathlib
+import json, re, sys, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LIVE = 'https://miyam4a1.github.io/ai-radar/'
 t = (ROOT / 'src/index.template.html').read_text()
+tpl = re.sub(r'<!-- tpl-note:start -->[\s\S]*?<!-- tpl-note:end -->\s*', '', t)
+assert tpl != t, 'tpl-note block not found in template'
+t = tpl
 sk = json.loads((ROOT / 'data/skills.json').read_text())
 html = t.replace('__SKILLS__', json.dumps(sk, ensure_ascii=False))
 if '--offline' in sys.argv:
