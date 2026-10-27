@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 雷达</title>
+<script>
+(function(){try{var t=localStorage.getItem('radar-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light';}})();
+</script>
+<style>
+:root{
+  --bg:#f7f5f0;--surface:#fffefb;--surface-2:#f1eee7;--text:#1f1f1f;--text-2:#4a4a4a;--text-3:#5c5c5c;
+  --line:#e9e5dc;--line-2:#d6d0c4;--accent:#36594f;--accent-bg:#e4eeea;--hot:#8f4420;--hot-bg:#f6e7dc;
+  --shadow:0 1px 2px rgba(40,35,25,.04),0 6px 20px -12px rgba(40,35,25,.18);
+}
+[data-theme=dark]{
+  --bg:#1b1b19;--surface:#232321;--surface-2:#2c2c29;--text:#efece6;--text-2:#cdc8be;--text-3:#b0aa9f;
+  --line:#33322e;--line-2:#423f39;--accent:#9fcbbd;--accent-bg:#29352f;--hot:#eeb08a;--hot-bg:#3a2d24;
+  --shadow:0 1px 2px rgba(0,0,0,.25),0 8px 24px -14px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 28px 72px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:36px}
+.brand{font-size:15px;font-weight:600;letter-spacing:.2px;color:var(--text-2)}
+.brand b{color:var(--text);font-weight:650}
+.seg{display:inline-flex;background:var(--surface-2);border-radius:10px;padding:3px}
+.seg button{padding:7px 18px;border-radius:8px;font-size:14.5px;color:var(--text-2);transition:all .2s}
+.seg button[aria-selected=true]{background:var(--surface);color:var(--text);box-shadow:var(--shadow);font-weight:560}
+.theme{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--text-2);border:1px solid var(--line)}
+.theme:hover{color:var(--text);border-color:var(--line-2)}
+.theme svg{width:17px;height:17px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:5px 13px;border-radius:999px;font-size:13.5px;color:var(--text-2);border:1px solid transparent;transition:all .15s}
+.chip:hover{color:var(--text)}
+.chip[aria-pressed=true]{background:var(--surface);border-color:var(--line-2);color:var(--text);font-weight:560}
+.chip .ct{color:var(--text-3);font-size:12px;margin-left:4px;font-weight:400}
+.sort{font-size:13px;color:var(--text-3)}
+.sort button{color:var(--text-3);padding:2px 6px;border-radius:6px}
+.sort button[aria-pressed=true]{color:var(--text);background:var(--surface-2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 20px 16px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.card:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+.k-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.owner{font-size:12.5px;color:var(--text-3);line-height:1.3}
+.name{font-size:16px;font-weight:620;line-height:1.35;word-break:break-word;display:inline-flex;align-items:center;gap:6px}
+.name:hover{color:var(--accent)}
+.name .arr{opacity:0;transition:opacity .15s;font-size:13px;color:var(--text-3)}
+.card:hover .name .arr{opacity:1}
+.star{font-size:12px;color:var(--text-3);white-space:nowrap;font-variant-numeric:tabular-nums;padding-top:2px}
+.line{margin-top:10px;font-size:14.5px;color:var(--text-2);line-height:1.6}
+.foot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:8px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;padding:2px 9px;border-radius:6px;background:var(--surface-2);color:var(--text-2)}
+.tag.hot{background:var(--hot-bg);color:var(--hot)}
+.tag.new{background:var(--accent-bg);color:var(--accent)}
+.more{white-space:nowrap;font-size:12.5px;color:var(--text-3);display:inline-flex;align-items:center;gap:4px;padding:2px 4px;border-radius:6px}
+.more:hover{color:var(--text)}
+.more svg{width:12px;height:12px;transition:transform .2s}
+.card.open .more svg{transform:rotate(180deg)}
+.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+.card.open .detail{grid-template-rows:1fr}
+.detail>div{overflow:hidden}
+.detail .in{padding-top:14px;margin-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--text-2);display:grid;gap:8px}
+.detail b{color:var(--text);font-weight:560;margin-right:6px}
+.thumb{display:block;position:relative;margin:-20px -20px 16px;border-radius:13px 13px 0 0;overflow:hidden;aspect-ratio:16/10;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.card:hover .thumb img{transform:scale(1.025)}
+.dg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 14px;background:radial-gradient(110% 90% at 15% 0%,var(--accent-bg),transparent 65%),var(--surface-2)}
+.dg .nd{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.dg .lb{font-size:10.5px;letter-spacing:.8px;color:var(--text-3);font-weight:600}
+.dg .bx{width:100%;min-height:58px;display:grid;place-items:center;text-align:center;font-size:13px;line-height:1.35;padding:8px 6px;border-radius:10px;background:var(--surface);border:1px solid var(--line-2);color:var(--text);font-weight:560}
+.dg .nd.mid .bx{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.dg svg{flex:none;width:14px;height:14px;color:var(--text-3);margin-top:16px}
+.gh{white-space:nowrap;font-size:12.5px;color:var(--text-2);display:inline-flex;align-items:center;gap:5px;padding:2px 4px;border-radius:6px}
+.gh:hover{color:var(--accent)}
+.gh svg{width:13px;height:13px}
+.f-r{display:flex;align-items:center;gap:6px;flex:none}
+.foot .tags{min-width:0}
+.when{margin-top:10px;font-size:12.5px;color:var(--text-3);display:flex;flex-wrap:wrap;gap:4px 14px;font-variant-numeric:tabular-nums}
+.when b{font-weight:560;color:var(--text-2);margin-right:4px}
+/* trends */
+.sub{margin-bottom:22px}
+.sub button{padding:6px 16px;font-size:14px}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:16px;align-items:start}
+.lc{display:grid;grid-template-columns:200px minmax(0,1fr);gap:18px;padding:14px 18px 14px 14px}
+.vm{position:relative;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:var(--surface-2);align-self:start}
+.vm[data-t]{cursor:pointer}
+.vm.noimg{aspect-ratio:auto;align-self:stretch;min-height:180px}
+.vm img{width:100%;height:100%;object-fit:cover;display:block}
+.vm .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:16px;background:radial-gradient(120% 80% at 20% 0%,var(--accent-bg),transparent 65%),linear-gradient(160deg,var(--surface-2),var(--line));color:var(--text-2);font-size:13px;line-height:1.5}
+.vm .ph b{display:block;font-size:11px;letter-spacing:.8px;color:var(--text-3);font-weight:600;margin-bottom:6px}
+.vm .play{position:absolute;inset:0;display:grid;place-items:center}
+.vm .play span{width:46px;height:46px;border-radius:50%;background:rgba(20,20,18,.55);backdrop-filter:blur(6px);display:grid;place-items:center;transition:transform .2s}
+.vm:hover .play span{transform:scale(1.07)}
+.vm .play svg{width:18px;height:18px;fill:#fff;margin-left:3px}
+.vm .src-l{position:absolute;left:8px;bottom:8px;font-size:11px;color:#fff;background:rgba(20,20,18,.6);padding:2px 7px;border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 16px)}
+.vm iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.lc .body{min-width:0;display:flex;flex-direction:column;align-self:stretch}
+.lc .t-row{margin-top:6px}
+.meta{margin-top:10px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:12.5px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.meta b{font-weight:560;color:var(--text-2);white-space:nowrap}
+.vir{display:flex;flex-direction:column;gap:2px}
+.vir a{color:var(--text-2)}
+.vir a:hover{color:var(--accent)}
+.vir a small{color:var(--text-3);font-size:11.5px;margin-left:5px;white-space:nowrap}
+.lc .foot{margin-top:auto;padding-top:12px}
+.bar-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.tag.ty{background:transparent;border:1px solid var(--line-2);color:var(--text-2);padding:1px 8px}
+.t-head{display:flex;align-items:flex-start;gap:10px}
+.t-head .t-name{flex:1;min-width:0}
+.pi{flex:none;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:1px 8px;border-radius:6px;cursor:help;position:relative;white-space:nowrap;font-variant-numeric:tabular-nums;margin-top:2px}
+.pi:hover::after,.pi:focus::after{content:attr(data-tip);position:absolute;right:0;top:calc(100% + 6px);width:250px;background:var(--text);color:var(--bg);font-size:12px;line-height:1.55;padding:8px 10px;border-radius:8px;z-index:6;white-space:normal;font-weight:400}
+.aib{font-size:11px;font-weight:600;letter-spacing:.3px;color:var(--hot);margin-left:8px}
+.mx{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin-top:8px;font-size:12.5px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.mx b{font-size:15px;font-weight:650;color:var(--text);margin-right:3px}
+.mx .mx-src{font-size:11.5px;color:var(--text-3);border-bottom:1px dotted var(--line-2)}
+.mx .mx-src:hover{color:var(--accent)}
+.t-row i.lab{display:inline-block;min-width:3.6em}
+.t-row.kx{color:var(--text);background:var(--accent-bg);border-radius:8px;padding:7px 10px;margin-top:10px}
+.t-row.kx i.lab{color:var(--accent);font-weight:600}
+.pin{font-size:11px;font-weight:650;letter-spacing:.3px;color:#fff;background:var(--accent);padding:1px 7px;border-radius:5px;margin-right:8px;vertical-align:1px}
+.vir span.nl{color:var(--text-2)}
+.vir span.nl small{color:var(--text-3);font-size:11.5px;margin-left:5px}
+.openv{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:560;color:var(--text);padding:4px 10px;border:1px solid var(--line-2);border-radius:8px;white-space:nowrap}
+.openv:hover{border-color:var(--accent);color:var(--accent)}
+.lc .foot .links{flex-wrap:wrap;align-items:center;gap:6px 14px}
+.edl{font-size:12px;color:var(--text-3);margin:6px 2px 2px}
+.card.flash{box-shadow:0 0 0 2px var(--accent);border-color:var(--accent)}
+.cn{margin-top:36px}
+.cn summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--text-2);padding:5px 13px;border:1px solid var(--line-2);border-radius:999px;margin-bottom:18px}
+.cn summary::-webkit-details-marker{display:none}
+.cn summary::after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:4px;transition:transform .2s}
+.cn[open] summary::after{transform:rotate(225deg) translate(-1px,-1px)}
+.cn .ct{color:var(--text-3);font-size:12px}
+/* weekly */
+.issue{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.ih{width:100%;display:flex;align-items:center;gap:12px;padding:16px 20px;text-align:left}
+.ih .rg{font-size:15.5px;font-weight:620;font-variant-numeric:tabular-nums}
+.ih .wk{font-size:12.5px;color:var(--text-3)}
+.st{font-size:11.5px;padding:1px 8px;border-radius:999px;background:var(--surface-2);color:var(--text-2)}
+.st.live{background:var(--hot-bg);color:var(--hot)}
+.ih .cv{margin-left:auto;width:14px;height:14px;flex:none;color:var(--text-3);transition:transform .2s}
+.issue.open .ih .cv{transform:rotate(180deg)}
+.ib{padding:0 20px 8px}
+.chg{font-size:13.5px;color:var(--text-2);line-height:1.75;padding:12px 14px;border-radius:10px;background:var(--surface-2);margin-bottom:4px}
+.chg b{font-weight:600;color:var(--text);margin-right:8px}
+.chg .up{color:var(--hot);font-weight:560}
+.chg .dn{color:var(--accent);font-weight:560}
+.chg a{border-bottom:1px dotted var(--text-3)}
+.chg a:hover{color:var(--accent)}
+.chg .nt{display:block;color:var(--text-3);font-size:12.5px}
+.wp{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:8px 16px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.chg+.wp{border-top:0}
+.pn{font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:600}
+.pt-t{font-size:15px;font-weight:620;color:var(--text)}
+.pt-d{font-size:13.5px;color:var(--text-2);line-height:1.55;margin-top:2px}
+.strip{display:flex;gap:8px}
+.st-i{width:78px;flex:none;text-align:left}
+.st-i .im{position:relative;display:block;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:var(--surface-2);border:1px solid var(--line)}
+.st-i img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.st-i:hover img{transform:scale(1.05)}
+.st-i .im::after{content:'';position:absolute;right:6px;bottom:6px;border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;filter:drop-shadow(0 0 2px rgba(0,0,0,.7))}
+.st-i>span:last-child{display:block;font-size:11.5px;color:var(--text-2);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.past-h{font-size:13px;color:var(--text-3);margin:26px 0 10px}
+.pager{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.pager button{min-width:30px;padding:3px 8px;border-radius:7px;font-size:13px;color:var(--text-2);border:1px solid var(--line)}
+.pager button[aria-current=true]{background:var(--surface);color:var(--text);border-color:var(--line-2)}
+.empty{font-size:13px;color:var(--text-3);padding:4px 0}
+@media(max-width:760px){.wp{grid-template-columns:24px minmax(0,1fr)}.strip{grid-column:2;overflow-x:auto;padding-bottom:2px}}
+@media(max-width:600px){.lgrid{grid-template-columns:1fr}.lc{grid-template-columns:1fr;gap:14px;padding:12px 12px 14px}.vm{aspect-ratio:4/5}.vm.playing{aspect-ratio:9/16}.lc .body{padding:0 4px}.vm.noimg{min-height:0;height:120px}.top .seg{order:3}.top .theme{order:2}.ib{padding:0 14px 6px}.ih{padding:14px}}
+.plat{font-size:12.5px;color:var(--text-3);margin-bottom:4px}
+.t-name{font-size:16px;font-weight:620;line-height:1.4;display:flex;align-items:center;gap:8px}
+.tbd{font-size:11px;font-weight:500;color:var(--hot);border:1px solid var(--hot-bg);background:var(--hot-bg);padding:0 6px;border-radius:5px;cursor:help;white-space:nowrap;position:relative}
+.tbd:hover::after,.tbd:focus::after{content:attr(data-tip);position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);width:220px;background:var(--text);color:var(--bg);font-size:12px;line-height:1.5;padding:7px 10px;border-radius:8px;z-index:5;white-space:normal;font-weight:400}
+.t-row{margin-top:8px;font-size:14.5px;color:var(--text-2);line-height:1.6}
+.t-row i{font-style:normal;color:var(--text-3);font-size:12.5px;margin-right:6px}
+.links{display:flex;gap:14px;font-size:12.5px;color:var(--text-3)}
+.links a:hover{color:var(--accent)}
+.hidden{display:none!important}
+footer{margin-top:56px;font-size:12.5px;color:var(--text-3);text-align:center}
+@media(max-width:600px){.wrap{padding:24px 16px 56px}.top{flex-wrap:wrap}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><b>AI 雷达</b> · 2026.10</div>
+    <div class="seg" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="skills">Skills</button>
+      <button role="tab" aria-selected="false" data-tab="trends">世界在 hi 什么</button>
+    </div>
+    <button class="theme" id="theme" aria-label="切换深浅色"></button>
+  </div>
+
+  <section id="p-skills">
+    <div class="bar">
+      <div class="chips" id="sk-chips"></div>
+      <div class="bar-r"><div class="sort" id="sk-type">类型 <button data-t="all" aria-pressed="true">全部</button><button data-t="skill" aria-pressed="false">Skill</button><button data-t="tool" aria-pressed="false">项目/工具</button></div>
+      <div class="sort" id="sk-sort">排序 <button data-s="mom" aria-pressed="true">势头</button><button data-s="tot" aria-pressed="false">总星</button></div></div>
+    </div>
+    <div class="grid" id="sk-grid"></div>
+  </section>
+
+  <section id="p-trends" class="hidden">
+    <div class="seg sub" role="tablist" id="tr-sub"><button role="tab" aria-selected="true" data-v="live">实时</button><button role="tab" aria-selected="false" data-v="week">周报</button></div>
+    <div id="v-live">
+      <div class="bar"><div class="chips" id="tr-chips"></div><div class="sort" id="tr-sort">排序 <button data-s="hs" aria-pressed="true">最新</button><button data-s="pi" aria-pressed="false">传播指数</button><button data-s="pl" aria-pressed="false">播放</button></div></div>
+      <div class="lgrid" id="tr-grid"></div>
+      <details class="cn" id="tr-cn"><summary>国内 <span class="ct" id="tr-cn-ct"></span></summary><div class="lgrid" id="tr-cn-grid"></div></details>
+    </div>
+    <div id="v-week" class="hidden">
+      <div id="wk-cur"></div>
+      <div id="wk-past-wrap" class="hidden"><div class="past-h">往期</div><div id="wk-past"></div><div class="pager" id="wk-pager"></div></div>
+    </div>
+  </section>
+
+  <footer id="foot">数据更新于 2026-10-21</footer>
+</div>
+
+<script>
+const SKILLS=__SKILLS__;
+const BASE='';
+let TRENDS=[];
+const NOW=new Date('2026-10-21');
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const kfmt=n=>n>=1000?(n/1000).toFixed(n>=100000?0:1).replace(/\.0$/,'')+'k':String(n);
+const GH='<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>';
+const chev='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>';
+SKILLS.forEach(s=>{const d=Math.max(1,(NOW-new Date(s.cr))/864e5);s.days=Math.round(d);s.mom=s.s/d;});
+
+let skCat='全部',skSort='mom',skType='all',trCat='全部',trSort='hs';
+const TYN={skill:'Skill',tool:'项目/工具'};
+function skillCard(s){
+  const [o,r]=s.n.split('/');
+  const tags=[`<span class="tag">${s.c}</span>`,`<span class="tag ty">${TYN[s.t]}</span>`];
+  if(s.f==='hot')tags.unshift('<span class="tag hot">本月爆火</span>');
+  else if(s.days<=60)tags.unshift('<span class="tag new">新</span>');
+  const ARW='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+  const vis=s.img?`<img loading="lazy" decoding="async" src="${U(s.img)}" alt="${esc(r)} 示意图">`
+    :`<div class="dg">${s.dg.map((x,i)=>`<div class="nd${i===1?' mid':''}"><span class="lb">${['输入','SKILL','输出'][i]}</span><span class="bx">${esc(x)}</span></div>`).join(ARW)}</div>`;
+  return `<article class="card">
+    <a class="thumb" href="${s.u}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">${vis}</a>
+    <div class="k-top"><div><div class="owner">${esc(o)}</div>
+      <a class="name" href="${s.u}" target="_blank" rel="noopener">${esc(r)}<span class="arr">↗</span></a></div>
+      <span class="star">★ ${kfmt(s.s)}</span></div>
+    <p class="line">${esc(s.l)}</p>
+    <div class="foot"><div class="tags">${tags.slice(0,3).join('')}</div>
+      <div class="f-r"><a class="gh" href="${s.u}" target="_blank" rel="noopener">${GH}GitHub ↗</a><button class="more" aria-expanded="false">详情 ${chev}</button></div></div>
+    <div class="detail"><div><div class="in">
+      <div><b>能做什么</b>${esc(s.w)}</div>
+      <div><b>可以用在</b>${esc(s.use)}</div>
+      <div><b>热度</b>★ ${s.s.toLocaleString('en-US')} · 创建 ${s.cr} · 日均 ${Math.round(s.mom).toLocaleString('en-US')} 星</div>
+    </div></div></div>
+  </article>`;
+}
+function renderSkills(){
+  let list=SKILLS.filter(s=>(skCat==='全部'||s.c===skCat)&&(skType==='all'||s.t===skType));
+  list.sort((a,b)=>skSort==='mom'?b.mom-a.mom:b.s-a.s);
+  $('#sk-grid').innerHTML=list.map(skillCard).join('');
+}
+const PLAY='<span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>';
+const PNAME={yt:'YouTube',tt:'TikTok',dy:'抖音',bili:'B站',x:'X',ig:'Instagram'};
+const U=p=>/^https?:/.test(p)?p:BASE+p;
+let SUB='live',WEEKS=null,WPAGE=0;const WPER=6,WCACHE={};
+function embedURL(t,id){
+  return {yt:`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`,
+    tt:`https://www.tiktok.com/player/v1/${id}?autoplay=1&description=0&music_info=0`,
+    dy:`https://open.douyin.com/player/video?vid=${id}&autoplay=1`,
+    bili:`https://player.bilibili.com/player.html?bvid=${id}&autoplay=1&high_quality=1`,
+    ig:`https://www.instagram.com/reel/${id}/embed/`}[t];
+}
+function vmHTML(x){
+  const m=x.m;
+  const img=x.thumb?`<img loading="lazy" decoding="async" src="${U(x.thumb)}" alt="${esc(x.n)}">`:`<div class="ph"><div><b>${esc(x.p[0])}</b>${esc(x.n)}</div></div>`;
+  if(!m)return `<div class="vm${x.thumb?'':' noimg'}">${img}</div>`;
+  const wide=((m.t==='yt'||m.t==='bili')&&!m.v)?' wide':'';
+  return `<div class="vm${wide}" data-t="${m.t}" data-id="${m.id}" role="button" tabindex="0" aria-label="播放 ${esc(x.n)}">${img}<div class="play">${PLAY}</div><span class="src-l">${PNAME[m.t]}${m.label?' · '+esc(m.label):''}</span></div>`;
+}
+function playMedia(md){
+  if(md.dataset.t==='yt'&&location.protocol==='file:'){window.open('https://www.youtube.com/watch?v='+md.dataset.id,'_blank','noopener');return;}
+  md.classList.add('playing');
+  md.innerHTML=`<iframe src="${embedURL(md.dataset.t,md.dataset.id)}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+}
+const fmtN=n=>n>=1e8?(n/1e8).toFixed(2).replace(/\.?0+$/,'')+' 亿':n>=1e6?Math.round(n/1e4)+' 万':n>=1e4?(n/1e4).toFixed(1).replace(/\.0$/,'')+' 万':n.toLocaleString('en-US');
+const PI_TIP='传播指数 = 60 × min(lg播放 ÷ 8, 1) + 40 × min(分享率 ÷ 10%, 1)。播放 1 亿记满 60，分享率 10% 记满 40。只用平台显示的播放和分享数，缺一项不计算。';
+function pidx(st){return st&&st.pl&&st.sh?Math.round(60*Math.min(Math.log10(st.pl)/8,1)+40*Math.min(st.sh/st.pl/0.1,1)):null;}
+function trendCard(x){
+  const st=x.st||{},pi=pidx(st);
+  const links=[];
+  if(x.m&&x.m.o)links.push(`<a class="openv" href="${x.m.o}" target="_blank" rel="noopener">打开原视频 ↗</a>`);
+  if(x.extra)links.push(`<a href="${x.extra[1]}" target="_blank" rel="noopener">${esc(x.extra[0])} ↗</a>`);
+  links.push(`<a href="${x.src}" target="_blank" rel="noopener">来源 ↗</a>`);
+  const mx=[st.pl?`<span><b>${fmtN(st.pl)}</b>播放</span>`:'',st.lk?`<span><b>${fmtN(st.lk)}</b>赞</span>`:'',st.sh?`<span><b>${fmtN(st.sh)}</b>分享</span>`:'',
+    st.u?`<a class="mx-src" href="${st.u}" target="_blank" rel="noopener">${esc(st.plat)} · ${esc((st.rd||'').slice(5))} 采集${st.via?' · '+esc(st.via):''}</a>`:''].join('');
+  const rx=x.rx&&x.rx.length?`<b>二创证据</b><span class="vir">${x.rx.map(v=>v[1]?`<a href="${v[1]}" target="_blank" rel="noopener">${esc(v[0])}<small>${esc(v[2]||'')} ↗</small></a>`:`<span class="nl">${esc(v[0])}<small>${esc(v[2]||'')}</small></span>`).join('')}</span>`:'';
+  const vir=x.vir&&x.vir.length?`<b>补充数据</b><span class="vir">${x.vir.map(v=>`<a href="${v[1]}" target="_blank" rel="noopener">${esc(v[0])}<small>${esc(v[2])} ↗</small></a>`).join('')}</span>`:'';
+  return `<article class="card lc" id="t-${x.k}">${vmHTML(x)}<div class="body">
+    <div class="plat">${x.pin?'<span class="pin">重点</span>':''}${x.p.join(' · ')}${x.ai?'<span class="aib">AI 生成</span>':''}</div>
+    <div class="t-head"><div class="t-name">${esc(x.n)}${x.v?`<span class="tbd" tabindex="0" data-tip="${esc(x.v)}">注</span>`:''}</div>${pi!==null?`<span class="pi" tabindex="0" data-tip="${PI_TIP}">传播 ${pi}</span>`:''}</div>
+    <div class="mx">${mx}</div>
+    <p class="t-row"><i class="lab">是什么</i>${esc(x.what)}</p>
+    <p class="t-row"><i class="lab">为什么火</i>${esc(x.why)}</p>
+    ${x.kx?`<p class="t-row kx"><i class="lab">可借鉴</i>${esc(x.kx)}</p>`:''}
+    <div class="meta"><b>走红时间</b><span>${esc(x.hot)}</span><b>来源日期</b><span>${esc(x.sd)}</span>${rx}${vir}</div>
+    <div class="foot"><div class="links">${links.join('')}</div>
+      <button class="more" aria-expanded="false">PM 启发 ${chev}</button></div>
+    <div class="detail"><div><div class="in">${esc(x.pm)}</div></div></div>
+  </div></article>`;
+}
+const TRC=['全部','AI 生成','TikTok','Instagram','YouTube','X','B站'];
+function renderTrends(){
+  const ok=x=>trCat==='全部'||(trCat==='AI 生成'?x.ai:x.p.includes(trCat));
+  const key={hs:x=>x.hs,pi:x=>pidx(x.st)??-1,pl:x=>(x.st&&x.st.pl)||-1}[trSort];
+  const list=TRENDS.slice().sort((a,b)=>(a.pin||99)-(b.pin||99)||(trSort==='hs'?b.hs.localeCompare(a.hs):key(b)-key(a)));
+  $('#tr-grid').innerHTML=list.filter(x=>!x.cn&&ok(x)).map(trendCard).join('')||'<p class="empty">暂无</p>';
+  const cn=list.filter(x=>x.cn&&ok(x));
+  $('#tr-cn-grid').innerHTML=cn.map(trendCard).join('');$('#tr-cn-ct').textContent=cn.length;
+  $('#tr-cn').classList.toggle('hidden',!cn.length);
+}
+function setSub(v){
+  SUB=v;$('#tr-sub').querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
+  $('#v-live').classList.toggle('hidden',v!=='live');$('#v-week').classList.toggle('hidden',v!=='week');
+  if(v==='week')loadWeeks();
+  try{history.replaceState(null,'',v==='week'?'#trends/week':'#trends')}catch(e){}
+}
+function jumpTo(k,play){
+  setSub('live');
+  if(trCat!=='全部'){trCat='全部';$('#tr-chips').querySelectorAll('.chip').forEach(z=>z.setAttribute('aria-pressed',z.dataset.c==='全部'));renderTrends();}
+  const c=document.getElementById('t-'+k);if(!c)return;const d=c.closest('details');if(d)d.open=true;
+  c.scrollIntoView({behavior:'smooth',block:'center'});c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),1800);
+  const md=c.querySelector('.vm[data-t]');if(play&&md&&!md.classList.contains('playing'))playMedia(md);
+}
+// status: auto 已定稿 after Friday 23:59:59 UTC+8
+function status(w){return (w.status==='已定稿'||Date.now()>new Date(w.end+'T23:59:59+08:00').getTime())?'已定稿':w.status;}
+function issueHead(w){const s=status(w);return `<button class="ih" aria-expanded="false"><span class="rg">${esc(w.range)}</span><span class="wk">${esc(w.id)}</span><span class="st${s==='已定稿'?'':' live'}">${esc(s)}</span><svg class="cv" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg></button><div class="ib hidden"></div>`;}
+function issueBody(W){
+  const nm=k=>(W.cards[k]&&(W.cards[k].s||W.cards[k].n))||((TRENDS.find(x=>x.k===k)||{}).n)||k;
+  const lk=a=>`<a href="#t-${a[1]}" data-k="${a[1]}">${esc(a[0])}</a>`;
+  const c=W.change;
+  const chg=c?`<div class="chg"><b>本周变化</b><span class="up">↑ 升温</span> ${c.up.map(lk).join('、')}　<span class="dn">↓ 降温</span> ${c.down.map(lk).join('、')}${c.note?`<span class="nt">${esc(c.note)}</span>`:''}</div>`:'';
+  const edl=W.log?[].concat(W.log).map(l=>`<div class="edl">${esc(l)}</div>`).join(''):'';
+  return chg+edl+W.patterns.map((p,i)=>`<div class="wp"><span class="pn">${String(i+1).padStart(2,'0')}</span><div><div class="pt-t">${esc(p.t)}</div><div class="pt-d">${esc(p.d)}</div></div>
+    <div class="strip">${p.ex.slice(0,4).map(k=>`<button class="st-i" data-k="${k}" title="在实时中播放"><span class="im">${W.thumbs[k]?`<img loading="lazy" src="${U(W.thumbs[k])}" alt="">`:''}</span><span>${esc(nm(k))}</span></button>`).join('')}</div></div>`).join('');
+}
+async function openIssue(el,id){
+  const b=el.querySelector('.ib'),h=el.querySelector('.ih');const o=!el.classList.contains('open');
+  el.classList.toggle('open',o);h.setAttribute('aria-expanded',o);b.classList.toggle('hidden',!o);
+  if(!o||b.dataset.ok)return;
+  b.innerHTML='<p class="empty">加载中…</p>';
+  try{const W=WCACHE[id]||(WCACHE[id]=await (await fetch(U(`weeks/${id}.json`))).json());b.innerHTML=issueBody(W);b.dataset.ok=1;}
+  catch(e){b.innerHTML='<p class="empty">加载失败，请刷新重试</p>';}
+}
+function renderPast(){
+  const past=WEEKS.slice(1),n=Math.ceil(past.length/WPER);
+  $('#wk-past-wrap').classList.toggle('hidden',!past.length);
+  $('#wk-past').innerHTML=past.slice(WPAGE*WPER,WPAGE*WPER+WPER).map(w=>`<div class="issue" data-id="${w.id}">${issueHead(w)}</div>`).join('');
+  $('#wk-pager').innerHTML=n>1?Array.from({length:n},(_,i)=>`<button data-p="${i}" aria-current="${i===WPAGE}">${i+1}</button>`).join(''):'';
+}
+async function loadWeeks(){
+  if(WEEKS)return;WEEKS=[];
+  try{WEEKS=(await (await fetch(U('weeks/index.json'))).json()).issues.sort((a,b)=>b.start.localeCompare(a.start));}catch(e){$('#wk-cur').innerHTML='<p class="empty">周报加载失败</p>';return;}
+  if(!WEEKS.length)return;
+  $('#wk-cur').innerHTML=`<div class="issue" data-id="${WEEKS[0].id}">${issueHead(WEEKS[0])}</div>`;
+  openIssue($('#wk-cur .issue'),WEEKS[0].id);renderPast();
+}
+async function initTrends(){
+  chips($('#tr-chips'),TRC,c=>c==='全部'?TRENDS.filter(x=>!x.cn).length:TRENDS.filter(x=>!x.cn&&(c==='AI 生成'?x.ai:x.p.includes(c))).length,()=>trCat,v=>trCat=v,renderTrends);
+  $('#tr-sort').onclick=e=>{const b=e.target.closest('button');if(!b)return;trSort=b.dataset.s;$('#tr-sort').querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));renderTrends();};
+  $('#tr-sub').onclick=e=>{const b=e.target.closest('button');if(b)setSub(b.dataset.v);};
+  $('#v-week').onclick=e=>{
+    const s=e.target.closest('.st-i');if(s){jumpTo(s.dataset.k,true);return;}
+    const a=e.target.closest('.chg a');if(a){e.preventDefault();jumpTo(a.dataset.k,false);return;}
+    const h=e.target.closest('.ih');if(h){const el=h.closest('.issue');openIssue(el,el.dataset.id);return;}
+    const p=e.target.closest('.pager button');if(p){WPAGE=+p.dataset.p;renderPast();}
+  };
+  try{const d=await (await fetch(U('data/live.json'))).json();TRENDS=d.items;chips($('#tr-chips'),TRC,c=>c==='全部'?TRENDS.filter(x=>!x.cn).length:TRENDS.filter(x=>!x.cn&&(c==='AI 生成'?x.ai:x.p.includes(c))).length,()=>trCat,v=>trCat=v,renderTrends);renderTrends();if(d.updated)$('#foot').textContent='数据更新于 '+d.updated;}
+  catch(e){$('#tr-grid').innerHTML='<p class="empty">实时数据加载失败</p>';}
+}
+function chips(el,cats,counts,get,set,render){
+  el.innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===get()}" data-c="${c}">${c}${counts?`<span class="ct">${counts(c)}</span>`:''}</button>`).join('');
+  el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;set(b.dataset.c);el.querySelectorAll('.chip').forEach(z=>z.setAttribute('aria-pressed',z===b));render();};
+}
+const SKC=['全部','工程/Agent','设计','美学','动效·视频','玩法','效率'];
+const skPool=()=>SKILLS.filter(s=>skType==='all'||s.t===skType);
+const skChips=()=>chips($('#sk-chips'),SKC,c=>c==='全部'?skPool().length:skPool().filter(s=>s.c===c).length,()=>skCat,v=>skCat=v,renderSkills);
+skChips();
+$('#sk-type').onclick=e=>{const b=e.target.closest('button');if(!b)return;skType=b.dataset.t;$('#sk-type').querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));skChips();renderSkills();};
+$('#sk-sort').onclick=e=>{const b=e.target.closest('button');if(!b)return;skSort=b.dataset.s;$('#sk-sort').querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));renderSkills();};
+document.addEventListener('click',e=>{
+  const m=e.target.closest('.more');
+  if(m){const c=m.closest('.card');const o=c.classList.toggle('open');m.setAttribute('aria-expanded',o);return;}
+  const md=e.target.closest('.vm[data-t]');
+  if(md&&!md.classList.contains('playing'))playMedia(md);
+});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('.vm[data-t]')){e.preventDefault();e.target.click();}});
+document.querySelectorAll('.top .seg button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.top .seg button').forEach(z=>z.setAttribute('aria-selected',z===b));
+  $('#p-skills').classList.toggle('hidden',b.dataset.tab!=='skills');
+  $('#p-trends').classList.toggle('hidden',b.dataset.tab!=='trends');
+  try{history.replaceState(null,'','#'+(b.dataset.tab==='trends'&&SUB==='week'?'trends/week':b.dataset.tab))}catch(e){}
+});
+const SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+const MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+function syncTheme(){$('#theme').innerHTML=document.documentElement.dataset.theme==='dark'?SUN:MOON;}
+$('#theme').onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('radar-theme',t)}catch(e){}syncTheme();};
+syncTheme();renderSkills();initTrends();
+const H0=location.hash;if(H0==='#trends/week')SUB='week';
+if(H0.startsWith('#trends'))document.querySelector('.top .seg [data-tab=trends]').click();
+if(H0==='#trends/week')setSub('week');
+</script>
+</body>
+</html>

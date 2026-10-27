@@ -1,0 +1,71 @@
+{
+ "note": "Seed leads from Miya's TikTok For You screenshots (2026-10-27). Numbers are what was visible on screen, not verified. A seed becomes a card only after: real URL found, numbers re-read with scripts/refresh_tiktok.py --probe, remix evidence found, and it passes docs/curation-rules.md. Update status as you go: needs link+verification -> verified -> added (k) / rejected (reason).",
+ "seeds": [
+  {
+   "id": "seed-birthday-champagne",
+   "platform": "TikTok",
+   "creator": "Marshall (display name; @handle not visible)",
+   "caption": "#capcut #capcutpioneer champagne 💕 birthday trend champagne birthda... (truncated)",
+   "on_screen": "CapCut · Try this template; big text 'Happy Birthday To me!'; woman on a bench at night over a city view, raising a fist while a champagne-bottle fountain shoots up",
+   "sound": "It's Raining Me... (likely 'It's Raining Men', truncated on screen)",
+   "visible_numbers": {"likes": "15.3K", "comments": "68", "saves": "5,141", "shares": "9,539"},
+   "numbers_source": "from user screenshot 2026-10-27",
+   "taste_type": "T1 一键模板庆祝",
+   "hunt": ["CapCut template 'happy birthday to me champagne'", "#capcutpioneer birthday champagne", "#birthdaytrend", "sound 'It's Raining Men' + birthday"],
+   "status": "needs link+verification"
+  },
+  {
+   "id": "seed-cadillac-f1-pov",
+   "platform": "TikTok",
+   "creator": "Overtakers Shop",
+   "caption": "POV: Los pilotos de Cadillac cuando se acuerdan de que ya casi es el GP... (truncated)",
+   "on_screen": "Driver in a Cadillac Formula 1 suit screams holding his head; a blond driver (#77 suit, looks like Valtteri Bottas) moves in the background against a wooden fence. Identity of the front driver not confirmed.",
+   "sound": "not visible",
+   "visible_numbers": {"likes": "12.2K", "comments": "178", "saves": "1,025", "shares": "3,480"},
+   "numbers_source": "from user screenshot 2026-10-27",
+   "taste_type": "T2 POV 反应梗 × 品牌 / 体育",
+   "hunt": ["Overtakers Shop TikTok", "Cadillac F1 POV meme", "#F1 POV screaming", "Bottas Cadillac TikTok"],
+   "status": "needs link+verification"
+  },
+  {
+   "id": "seed-uncanny-pool",
+   "platform": "TikTok",
+   "creator": "Edith_Paf",
+   "caption": "Summer memories ☀️",
+   "on_screen": "AI-looking, uncanny exaggerated retro characters at a pool deck: a thin mustached man carries a woman, a stout woman in a 1920s-style swimsuit stares",
+   "sound": "Sarà perché ti amo - @Ri... (truncated; likely Ricchi e Poveri)",
+   "visible_numbers": {"likes": "65K", "comments": "352", "saves": "5,020", "shares": "5,028"},
+   "numbers_source": "from user screenshot 2026-10-27",
+   "taste_type": "T3 AI 怪诞角色 × 怀旧老歌",
+   "hunt": ["Edith_Paf TikTok", "sound 'Sarà perché ti amo' AI", "#aivideo uncanny summer", "#italianbrainrot-style retro AI characters"],
+   "status": "needs link+verification"
+  },
+  {
+   "id": "seed-patchwork-runway",
+   "platform": "TikTok",
+   "creator": "kietfei.3",
+   "caption": "#BalliBotMogis #TrendingReels #TrendingReels #Foryoupage ##... (truncated)",
+   "on_screen": "Person with a red bob in a colorful patchwork dress, stripes and purple tights walks a runway-style line across a dance studio with mirrors; a second person stands at the back",
+   "sound": "not visible",
+   "visible_numbers": {"likes": "373.7K", "comments": "11.7K", "saves": "28.5K", "shares": "297.2K"},
+   "numbers_source": "from user screenshot 2026-10-27",
+   "taste_type": "T5 走秀 / 角色走路",
+   "hunt": ["#BalliBotMogis (meaning unknown, verify)", "kietfei.3", "#runwaywalk dance studio", "#mogging walk"],
+   "status": "needs link+verification",
+   "open_question": "Share ratio is very high (~80% of likes). Check whether the original is someone else's video and this is a repost; find the original creator."
+  },
+  {
+   "id": "seed-king-odie",
+   "platform": "TikTok",
+   "creator": "King Odie (@king_odiee)",
+   "caption": "I learned some new dance moves from my girl @Beyoncé #dachshund #... (truncated)",
+   "on_screen": "Long-haired dachshund center frame, two dancers whip their hair behind it",
+   "sound": "not visible",
+   "visible_numbers": {"likes": "5.7M", "comments": "14K", "saves": "281K", "shares": "1.2M"},
+   "numbers_source": "from user screenshot 2026-10-27",
+   "taste_type": "T4 宠物做人类编舞",
+   "url": "https://www.tiktok.com/@king_odiee/video/7692606728323583246",
+   "status": "verified: already on the site as card `odie` (yt-dlp 2026-10-27: 46.3M plays, 5.7M likes, 1.2M shares). Next: find bigger remixes than the current rx (7.9万 / 1.4万)."
+  }
+ ]
+}
