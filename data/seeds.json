@@ -22,7 +22,7 @@
     "#birthdaytrend",
     "sound 'It's Raining Men' + birthday"
    ],
-   "status": "verified: 趋势真实存在，但不加入实时。代表原作 @beatrizzsilvab 2026-05-05（yt-dlp 2026-10-27: 98.8万播放/2.93万赞/8,682分享）；教程 @eg3bx1 2026-05-20（220万播放）、@ujyh8807goflj00891 2026-05-21（240万播放）、@remy6308 2026-09-28（86.4万播放）。截图里的 Marshall 更像 CapCut 模板作者显示名，未找到可核验 handle。走红主要在 5 月，9-10 月只是长尾教程，超过实时约 6 周窗口。 10-27 复查：本周新模板教程 @kisfg0uvr4（10-26）仅 4,748 播放、@csababaran 1,335、@ashlan.cordell1 368，确认进入长尾，维持不收录。"
+   "status": "added: champagne（Miya 10-27 点名要求收录，按常青长尾收录并注明主峰在 5 月）。代表教程 @remy6308 2026-09-28（86.4万播放）；5 月原作 @beatrizzsilvab 98.8万；5 月教程 @eg3bx1 220万 / @ujyh8807goflj00891 240万；本周新教程 @kisfg0uvr4（10-26）4,748 播放 = 长尾仍在推。截图里的 Marshall 是 CapCut 模板作者显示名，未找到可核验 handle。"
   },
   {
    "id": "seed-cadillac-f1-pov",
@@ -68,7 +68,7 @@
     "#aivideo uncanny summer",
     "#italianbrainrot-style retro AI characters"
    ],
-   "status": "rejected: 已找到真实链接 @edith_paf/video/7693628399545306401「Summer memories ☀️」（yt-dlp 2026-10-27: 190万播放/6.5万赞/5,028分享，2026-10-06 发布，音频 Sarà perché ti amo）。同账号续作「Summers memories 2」240万播放、「The Akatsuki is finally complete」180万播放，但都是原作者自己的系列，未找到不同账号二创；不收录。"
+   "status": "added: edith（Miya 10-27 点名要求收录，注明目前是原作者个人系列，观察是否出现跨账号同款）。yt-dlp 2026-10-27：Summer memories 190万播放/6.5万赞/5,028分享（10-06）；续作 240万（10-07）；同宇宙 130–180万（10-11）；作者自述 17 天涨粉 20 万。"
   },
   {
    "id": "seed-patchwork-runway",
@@ -132,7 +132,7 @@
     "Masonic/Odd Fellows hall champagne fountain birthday",
     "champagne fountain party video it looks delicious comment"
    ],
-   "status": "rejected: TikTok 搜索（2026-10-27）检索不到 OddFellows Rio Linda #129 原视频或任何二创；只有其他 Odd Fellows 主题内容。按无法核实的单次线下场景视频排除。"
+   "status": "blocked: 需要 Miya 的分享链接。10-27 用 4 组精确关键词（OddFellows Rio Linda 129 champagne birthday 等）在 TikTok 网页搜索均无结果，该账号可能未被未登录搜索索引，无法获得真实视频链接。"
   },
   {
    "id": "seed-ai-source-uncanny",
@@ -154,7 +154,7 @@
     "'Karo Makespartan' AI",
     "Befour Magic Melody AI puppet animation trending"
    ],
-   "status": "rejected: TikTok 搜索（2026-10-27）找不到 AI Source「Chapter 13: Animating the Misery」或 Befour Magic Melody 相关 AI 木偶视频；只能命中无关的 Roblox「misery trend」。无法核实真实链接与跨账号二创，排除。"
+   "status": "blocked: 需要 Miya 的分享链接。10-27 用 3 组关键词（AI Source Magic Melody Befour / Karo Makespartan 等）在 TikTok 网页搜索均无结果，无法获得真实视频链接。"
   }
  ]
 }
