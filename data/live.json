@@ -1174,6 +1174,116 @@
     ]
    ],
    "thumb": "assets/live/party.webp"
+  },
+  {
+   "k": "fruitnovela",
+   "n": "AI 水果连续剧「Fruit Novelas」",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 1,
+   "what": "香蕉、草莓、菠萝变成西语肥皂剧角色，AI 生成连载短剧，每集结尾留悬念",
+   "why": "老套路剧情 × 低成本 3D 角色；西语 / 英语区十几个账号同时连载，粉丝按集催更",
+   "pm": "AI 把连载短剧的生产成本压到接近零；让人回来看的是悬念，不是制作",
+   "hot": "2026-09 中旬起火西语区，多账号日更；10-26 最新一集一天 52.7 万播放",
+   "hs": "2026-09-13",
+   "sd": "2026-10-26",
+   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "m": {
+    "t": "tt",
+    "id": "7701113457629826326",
+    "o": "https://www.tiktok.com/@rayitoons/video/7701113457629826326",
+    "label": "@rayitoons 最新一集"
+   },
+   "st": {
+    "pl": 527500,
+    "lk": 55400,
+    "sh": 1089,
+    "cm": 311,
+    "plat": "TikTok",
+    "rd": "2026-10-27",
+    "u": "https://www.tiktok.com/@rayitoons/video/7701113457629826326"
+   },
+   "vir": [
+    [
+     "同类连载账号粉丝量",
+     "https://www.tiktok.com/search?q=fruit+novela",
+     "frutasalocados 180 万粉 · fruti_telenovela 94.4 万粉（TikTok 搜索页 10-27 读数）"
+    ]
+   ],
+   "kx": "「AI 连载微短剧」模板：用户定角色和关系，AI 每周自动生成下一集并引粉追更；直播间可做投票决定剧情走向",
+   "rx": [
+    [
+     "另一账号的全剧情版",
+     "https://www.tiktok.com/@aifuritstory3/video/7684993236980616478",
+     "@aifuritstory3 · 80 万 播放 · 09-13"
+    ],
+    [
+     "二创账号连载",
+     "https://www.tiktok.com/@meowverse0811/video/7689464030066445590",
+     "@meowverse0811 · 65.5 万 播放 · 09-25"
+    ],
+    [
+     "英语区账号版",
+     "https://www.tiktok.com/@tutti.frutti0682/video/7695033130721250582",
+     "@tutti.frutti0682 · 54 万 播放 · 10-10"
+    ],
+    [
+     "香蕉先生剧情线",
+     "https://www.tiktok.com/@kristalove5/video/7692153089914260739",
+     "@kristalove5 · 3.3 万 播放 · 10-02"
+    ]
+   ],
+   "thumb": "assets/live/fruitnovela.webp"
+  },
+  {
+   "k": "topogigio",
+   "n": "一张照片进恩佐「Topo Gigio」庆祝",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 1,
+   "what": "恩佐·费尔南德斯双手捂耳鼓腮的庆祝动作做成 AI 模板：一张照片把你放进满场球场做同款庆祝",
+   "why": "世界杯名场面 × 一张照片生成；模板教程账号连日推，单条教程 82 万播放，媒体还讨论这条庆祝本身",
+   "pm": "体育名场面的 AI 模板生命周期跟着赛事走：比赛日就是它的流量日",
+   "hot": "2026-10-16 起教程密集，10-25 后有账号日更",
+   "hs": "2026-10-16",
+   "sd": "2026-10-16",
+   "src": "https://www.makeviral.ai/templates/topo-gigio-celebration-ai-trend",
+   "m": {
+    "t": "tt",
+    "id": "7697281453498830094",
+    "o": "https://www.tiktok.com/@mareesky07/video/7697281453498830094",
+    "label": "模板教程"
+   },
+   "st": {
+    "pl": 821800,
+    "lk": 49400,
+    "sh": 4789,
+    "cm": 738,
+    "plat": "TikTok",
+    "rd": "2026-10-27",
+    "u": "https://www.tiktok.com/@mareesky07/video/7697281453498830094"
+   },
+   "kx": "「名场面庆祝」AI 模板池：按赛事日历上新经典庆祝动作，球迷用自己的照片生成后带球队话题发；直播进球时一键做同款庆祝",
+   "rx": [
+    [
+     "另一模板教程账号",
+     "https://www.tiktok.com/@diana.ivy4/video/7698298156982750484",
+     "@diana.ivy4 · 47.5 万 播放 · 10-19"
+    ],
+    [
+     "新账号当天跟进",
+     "https://www.tiktok.com/@saheebrajendran/video/7700945616238677256",
+     "@saheebrajendran · 12.7 万 播放 · 10-26"
+    ],
+    [
+     "葡萄牙语教程账号",
+     "https://www.tiktok.com/@vhuphc95/video/7700486057040596254",
+     "@vhuphc95 · 10-25；与 mareesky 同一原声（original sound - 𝐍𝐒𝟕）"
+    ]
+   ],
+   "thumb": "assets/live/topogigio.webp"
   }
  ]
 }

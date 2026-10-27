@@ -16,22 +16,22 @@
   },
   {
    "t": "AI 角色做人类动作",
-   "d": "AI 猫狗唱跳、鼓掌、持剑；或一张脸直接进现成派对名场面",
+   "d": "AI 猫狗唱跳、AI 脸进派对名场面、AI 水果演肥皂剧",
    "ex": [
     "clapcat",
+    "fruitnovela",
     "odie",
-    "iwly",
     "party"
    ]
   },
   {
    "t": "名场面台词 / 换皮",
-   "d": "固定台词、角色或构图，只换内容：长今问汤、AI 拟人、名场面进球",
+   "d": "固定台词、角色或构图，只换内容：长今问汤、AI 拟人、名场面进球与庆祝",
    "ex": [
     "janggeum",
     "aimoe",
-    "road",
-    "ozil"
+    "ozil",
+    "topogigio"
    ]
   },
   {
@@ -47,6 +47,14 @@
  ],
  "change": {
   "up": [
+   [
+    "AI 水果连续剧（最新一集一天 52.7 万播放）",
+    "fruitnovela"
+   ],
+   [
+    "恩佐 Topo Gigio 庆祝 AI 模板（单条教程 82 万播放）",
+    "topogigio"
+   ],
    [
     "一张脸进派对舞（10-19 起教程密集，第三方 10-23 后日增约 200 条）",
     "party"
@@ -73,6 +81,14 @@
   "note": "10-27 刷新：现有 65 个代表和二创链接均在线；AI 世界巡演因完全没有二创证据移出实时；水瓶舞、Hotel Lobby 仍因置顶和历史规则保留，但继续观察。"
  },
  "cards": {
+  "fruitnovela": {
+   "n": "AI 水果连续剧「Fruit Novelas」",
+   "s": "水果肥皂剧"
+  },
+  "topogigio": {
+   "n": "一张照片进恩佐「Topo Gigio」庆祝",
+   "s": "Topo Gigio"
+  },
   "party": {
    "n": "一张脸进派对舞「Party Viral Dance」",
    "s": "派对换脸舞"
@@ -147,10 +163,13 @@
   }
  },
  "log": [
+  "10-27 更新二：TikTok 搜索补两条 Miya 点名的类型：AI 水果连续剧（十几个账号连载，最新一集一天 52.7 万播放）、恩佐 Topo Gigio 庆祝 AI 模板（教程 82 万播放）；生日香槟模板确认进入长尾（本周新教程仅数千播放）保持不收；Odd Fellows 大厅香槟和 AI Source 木偶乐队无法核实，不收。修复卡片二创证据长文本横向溢出问题。",
   "10-27 更新：现有 65 个代表/二创链接全部在线；22 张卡刷新平台数字。新增一张脸进派对舞；移除 AI「世界巡演」（无二创证据，不满足硬性收录规则）；给 Odie 补 @kevinsweiii 36.6 万曝光二创（第三方读数）。",
   "10-23 开期：沿用 W43 定稿时的 23 条实时条目。"
  ],
  "thumbs": {
+  "fruitnovela": "assets/weeks/2026-W44/fruitnovela.webp",
+  "topogigio": "assets/weeks/2026-W44/topogigio.webp",
   "party": "assets/weeks/2026-W44/party.webp",
   "aimoe": "assets/weeks/2026-W44/aimoe.webp",
   "beok": "assets/weeks/2026-W44/beok.webp",

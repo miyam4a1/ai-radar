@@ -104,10 +104,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .lc .t-row{margin-top:6px}
 .meta{margin-top:10px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 12px;font-size:12.5px;color:var(--text-3);font-variant-numeric:tabular-nums}
 .meta b{font-weight:560;color:var(--text-2);white-space:nowrap}
-.vir{display:flex;flex-direction:column;gap:2px}
-.vir a{color:var(--text-2)}
+.vir{display:flex;flex-direction:column;gap:3px;min-width:0}
+.vir a{color:var(--text-2);overflow-wrap:anywhere;word-break:break-word}
 .vir a:hover{color:var(--accent)}
-.vir a small{color:var(--text-3);font-size:11.5px;margin-left:5px;white-space:nowrap}
+.vir a small{display:inline;color:var(--text-3);font-size:11.5px;margin-left:5px}
 .lc .foot{margin-top:auto;padding-top:12px}
 .bar-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .tag.ty{background:transparent;border:1px solid var(--line-2);color:var(--text-2);padding:1px 8px}
@@ -413,6 +413,15 @@ syncTheme();renderSkills();initTrends();
 const H0=location.hash;if(H0==='#trends/week')SUB='week';
 if(H0.startsWith('#trends'))document.querySelector('.top .seg [data-tab=trends]').click();
 if(H0==='#trends/week')setSub('week');
+addEventListener('hashchange',()=>{
+  const h=location.hash;
+  if(h==='#skills'){document.querySelector('.top .seg [data-tab=skills]')?.click();}
+  else if(h.startsWith('#trends')){
+    const tb=document.querySelector('.top .seg [data-tab=trends]');
+    if(tb&&tb.getAttribute('aria-selected')!=='true')tb.click();
+    setSub(h==='#trends/week'?'week':'live');
+  }
+});
 </script>
 </body>
 </html>
