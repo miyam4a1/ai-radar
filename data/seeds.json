@@ -12,7 +12,7 @@
    "numbers_source": "from user screenshot 2026-10-27",
    "taste_type": "T1 一键模板庆祝",
    "hunt": ["CapCut template 'happy birthday to me champagne'", "#capcutpioneer birthday champagne", "#birthdaytrend", "sound 'It's Raining Men' + birthday"],
-   "status": "needs link+verification"
+   "status": "verified: 趋势真实存在，但不加入实时。代表原作 @beatrizzsilvab 2026-05-05（yt-dlp 2026-10-27: 98.8万播放/2.93万赞/8,682分享）；教程 @eg3bx1 2026-05-20（220万播放）、@ujyh8807goflj00891 2026-05-21（240万播放）、@remy6308 2026-09-28（86.4万播放）。截图里的 Marshall 更像 CapCut 模板作者显示名，未找到可核验 handle。走红主要在 5 月，9-10 月只是长尾教程，超过实时约 6 周窗口。"
   },
   {
    "id": "seed-cadillac-f1-pov",
@@ -25,7 +25,7 @@
    "numbers_source": "from user screenshot 2026-10-27",
    "taste_type": "T2 POV 反应梗 × 品牌 / 体育",
    "hunt": ["Overtakers Shop TikTok", "Cadillac F1 POV meme", "#F1 POV screaming", "Bottas Cadillac TikTok"],
-   "status": "needs link+verification"
+   "status": "rejected: 已找到真实链接 @overtakers.shop/video/7697888188026604808（yt-dlp 2026-10-27: 11.4万播放/1.22万赞/3,483分享，2026-10-18 发布），但作者近 30 条只有这一条 POV，未找到 2-3 个不同账号二创；按一次性单条视频排除。"
   },
   {
    "id": "seed-uncanny-pool",
@@ -38,7 +38,7 @@
    "numbers_source": "from user screenshot 2026-10-27",
    "taste_type": "T3 AI 怪诞角色 × 怀旧老歌",
    "hunt": ["Edith_Paf TikTok", "sound 'Sarà perché ti amo' AI", "#aivideo uncanny summer", "#italianbrainrot-style retro AI characters"],
-   "status": "needs link+verification"
+   "status": "rejected: 已找到真实链接 @edith_paf/video/7693628399545306401「Summer memories ☀️」（yt-dlp 2026-10-27: 190万播放/6.5万赞/5,028分享，2026-10-06 发布，音频 Sarà perché ti amo）。同账号续作「Summers memories 2」240万播放、「The Akatsuki is finally complete」180万播放，但都是原作者自己的系列，未找到不同账号二创；不收录。"
   },
   {
    "id": "seed-patchwork-runway",
@@ -51,8 +51,8 @@
    "numbers_source": "from user screenshot 2026-10-27",
    "taste_type": "T5 走秀 / 角色走路",
    "hunt": ["#BalliBotMogis (meaning unknown, verify)", "kietfei.3", "#runwaywalk dance studio", "#mogging walk"],
-   "status": "needs link+verification",
-   "open_question": "Share ratio is very high (~80% of likes). Check whether the original is someone else's video and this is a repost; find the original creator."
+   "status": "added: party",
+   "open_question": "截图里的走秀画质不是独立趋势：#BalliBotMogis 是模板教程账号造的检索词，核心内容是「Party Viral Dance」一张脸进夜宴跳舞。真实源声 @nakhlatw/video/7694062545178610965（yt-dlp 2026-10-27: 54.9万播放/1.05万赞/2,177分享，2026-10-07 发布）；教程 @annaliseamira8 8.8万播放（10-13）、@lsffncz 22.4万播放（10-21）；不同账号结果 @alfa.tesar 46.7万、@kevinsweiii 36.6万、@_.cella 28万、@sunnysax04 230万（Jump on the Trend 第三方 10-27 读数）。"
   },
   {
    "id": "seed-king-odie",
@@ -65,7 +65,7 @@
    "numbers_source": "from user screenshot 2026-10-27",
    "taste_type": "T4 宠物做人类编舞",
    "url": "https://www.tiktok.com/@king_odiee/video/7692606728323583246",
-   "status": "verified: already on the site as card `odie` (yt-dlp 2026-10-27: 46.3M plays, 5.7M likes, 1.2M shares). Next: find bigger remixes than the current rx (7.9万 / 1.4万)."
+   "status": "verified: already on the site as card `odie` (yt-dlp 2026-10-27: 4,630万播放, 570万赞, 120万分享). 已补更大的不同账号二创 @kevinsweiii 36.6万曝光（Jump on the Trend 第三方 10-27 读数；TikTok 页面可开，yt-dlp 对这条返回 IP blocked）。"
   }
  ]
 }

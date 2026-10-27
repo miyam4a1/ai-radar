@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23",
+ "updated": "2026-10-27",
  "rule": "收录标准：真火 + 有大量模仿 / 二创 + 能迁移到社交、创作、直播产品；每条有可播放的代表视频、平台数字和二创证据，走红在约 6 周内",
  "items": [
   {
@@ -81,11 +81,11 @@
    },
    "st": {
     "pl": 2000000,
-    "lk": 195300,
-    "sh": 4999,
-    "cm": 772,
+    "lk": 198100,
+    "sh": 5071,
+    "cm": 781,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@khvdenn/video/7695045104460942606"
    },
    "pin": 2,
@@ -104,7 +104,7 @@
     [
      "情侣版",
      "https://www.tiktok.com/@elsanna6/video/7690491538132061470",
-     "@elsanna6 · 34.7 万 播放 · 09-28"
+     "@elsanna6 · 34.8 万 播放 · 09-28"
     ]
    ],
    "thumb": "assets/live/fan.webp"
@@ -133,10 +133,10 @@
    "st": {
     "pl": 7100000,
     "lk": 1300000,
-    "sh": 22700,
-    "cm": 3074,
+    "sh": 22800,
+    "cm": 3082,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@trxineex/video/7682576156352089362"
    },
    "v": "走红约 6 周，接近收录上限",
@@ -146,7 +146,7 @@
     [
      "LISA 官方挑战帖",
      "https://www.tiktok.com/@lalalalisa_m/video/7685745154308738318",
-     "@lalalalisa_m · 1370 万 播放 · 09-15"
+     "@lalalalisa_m · 1390 万 播放 · 09-15"
     ]
    ],
    "thumb": "assets/live/sawadika.webp"
@@ -177,29 +177,29 @@
     "v": 1
    },
    "st": {
-    "pl": 155108,
-    "lk": 7648,
-    "sh": 876,
-    "cm": 313,
+    "pl": 180916,
+    "lk": 8487,
+    "sh": 944,
+    "cm": 328,
     "plat": "B站",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.bilibili.com/video/BV1V9aU6VEKt/"
    },
    "rx": [
     [
      "多种演法版（含 AI 版，B站热门）",
      "https://www.bilibili.com/video/BV1mSJt63Enj/",
-     "B站 @李如儒也是李蠕蠕 · 147.8 万 播放 · 10-16"
+     "B站 @李如儒也是李蠕蠕 · 175.6 万 播放 · 10-16"
     ],
     [
      "「肠筋，你在汤里放了什么」",
      "https://www.bilibili.com/video/BV1yap16tETa/",
-     "B站 @干饭小困困 · 4.5 万 播放 · 10-14"
+     "B站 @干饭小困困 · 4.6 万 播放 · 10-14"
     ],
     [
      "用废话文学开 small talk",
      "https://www.bilibili.com/video/BV12MHQ65Etu/",
-     "B站 @Miracle觅奇 · 6,008 播放 · 10-08"
+     "B站 @Miracle觅奇 · 6,559 播放 · 10-08"
     ]
    ],
    "vir": [
@@ -246,29 +246,29 @@
     "v": 1
    },
    "st": {
-    "pl": 3128492,
-    "lk": 145741,
-    "sh": 1571,
-    "cm": 1898,
+    "pl": 4194958,
+    "lk": 184662,
+    "sh": 2122,
+    "cm": 2418,
     "plat": "B站",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.bilibili.com/video/BV1uaJy6ZE9P/"
    },
    "rx": [
     [
      "大肥鱼翻唱《人是猫》",
      "https://www.bilibili.com/video/BV1fYpn6SEk9/",
-     "B站 @星落落_oi · 255.3 万 播放 · 10-11"
+     "B站 @星落落_oi · 304.3 万 播放 · 10-11"
     ],
     [
      "和其他角色「面基」",
      "https://www.bilibili.com/video/BV1cJaB6dEg5/",
-     "B站 @小陈的脚凑凑的 · 220.6 万 播放 · 10-01"
+     "B站 @小陈的脚凑凑的 · 226.6 万 播放 · 10-01"
     ],
     [
      "DS × Claude 新番风短片",
      "https://www.bilibili.com/video/BV191Yr6bEYy/",
-     "B站 @黑猫勇者 · 59.3 万 播放 · 09-14"
+     "B站 @黑猫勇者 · 60.2 万 播放 · 09-14"
     ]
    ],
    "vir": [
@@ -307,12 +307,12 @@
     "label": "宝宝版"
    },
    "st": {
-    "pl": 1600000,
-    "lk": 102100,
-    "sh": 22000,
-    "cm": 479,
+    "pl": 2700000,
+    "lk": 158000,
+    "sh": 33200,
+    "cm": 735,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@certifiedlolnonsense/video/7698650625839500574"
    },
    "rx": [
@@ -324,12 +324,12 @@
     [
      "万圣节版",
      "https://www.tiktok.com/@kamdan.13/video/7699171246923173151",
-     "@kamdan.13 · 28.4 万 播放 · 10-22"
+     "@kamdan.13 · 50 万 播放 · 10-22"
     ],
     [
      "万圣节版",
      "https://www.tiktok.com/@lilostitch_2012/video/7698988793801542942",
-     "@lilostitch_2012 · 38 万 播放 · 10-21"
+     "@lilostitch_2012 · 41.1 万 播放 · 10-21"
     ]
    ],
    "vir": [
@@ -366,12 +366,12 @@
     "o": "https://www.tiktok.com/@baguss_visual/video/7696037788889730325"
    },
    "st": {
-    "pl": 6400000,
-    "lk": 299400,
-    "sh": 17700,
-    "cm": 4010,
+    "pl": 6700000,
+    "lk": 309100,
+    "sh": 18400,
+    "cm": 4193,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@baguss_visual/video/7696037788889730325"
    },
    "kx": "「同一套动作换皮」模板：保留经典动作序列，换成游戏角色、宠物或自己",
@@ -406,10 +406,10 @@
    "st": {
     "pl": 7800000,
     "lk": 1300000,
-    "sh": 156800,
-    "cm": 1096,
+    "sh": 157300,
+    "cm": 1103,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@kaikixrox/video/7694004035677916430"
    },
    "kx": "一句字幕 + 一个动作的处境模板：同一音频换场景即可发，适合做「梗字幕」创作入口",
@@ -417,7 +417,7 @@
     [
      "同音频另一版",
      "https://www.tiktok.com/@neuteredsubmissivetwink/video/7695219970006912269",
-     "@neuteredsubmissivetwink · 270 万 播放 · 10-11"
+     "@neuteredsubmissivetwink · 340 万 播放 · 10-11"
     ]
    ],
    "thumb": "assets/live/listen.webp"
@@ -442,12 +442,12 @@
     "o": "https://www.tiktok.com/@king_odiee/video/7692606728323583246"
    },
    "st": {
-    "pl": 45500000,
-    "lk": 5600000,
+    "pl": 46300000,
+    "lk": 5700000,
     "sh": 1200000,
-    "cm": 13600,
+    "cm": 14000,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@king_odiee/video/7692606728323583246"
    },
    "kx": "「上传宠物照片 + 选一支舞」的动作迁移模板，生成后一键发起同款挑战",
@@ -455,12 +455,17 @@
     [
      "另一只狗跳同款",
      "https://www.tiktok.com/@_uni_toro/video/7694964183477030151",
-     "@_uni_toro · 7.9 万 播放 · 10-10"
+     "@_uni_toro · 8.1 万 播放 · 10-10"
     ],
     [
      "同款宠物版",
      "https://www.tiktok.com/@catyunaa/video/7690948582316248372",
      "@catyunaa · 1.4 万 播放 · 09-29"
+    ],
+    [
+     "国王犬版",
+     "https://www.tiktok.com/@kevinsweiii/video/7699921083559595271",
+     "@kevinsweiii · Jump on the Trend 第三方 10-27 读数 36.6 万曝光"
     ]
    ],
    "thumb": "assets/live/odie.webp"
@@ -487,12 +492,12 @@
     "label": "原作者 @bellvtrix.ai"
    },
    "st": {
-    "pl": 10900000,
+    "pl": 11100000,
     "lk": 1200000,
-    "sh": 752100,
-    "cm": 16900,
+    "sh": 757500,
+    "cm": 17100,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@bellvtrix.ai/video/7692079591711657236"
    },
    "kx": "双角色合拍模板：两位好友各传一只宠物，合成同框「尖叫二重唱」",
@@ -505,12 +510,12 @@
     [
      "自家猫版",
      "https://www.tiktok.com/@zefosik/video/7694386654563339550",
-     "@zefosik · 410 万 播放 · 10-09"
+     "@zefosik · 430 万 播放 · 10-09"
     ],
     [
      "真猫版",
      "https://www.tiktok.com/@baloosilly/video/7694119266102152478",
-     "@baloosilly · 26.2 万 播放 · 10-08"
+     "@baloosilly · 27.2 万 播放 · 10-08"
     ]
    ],
    "thumb": "assets/live/smalltown.webp"
@@ -537,12 +542,12 @@
     "label": "原片"
    },
    "st": {
-    "pl": 10600000,
-    "lk": 1200000,
-    "sh": 76600,
-    "cm": 9058,
+    "pl": 12400000,
+    "lk": 1400000,
+    "sh": 88100,
+    "cm": 10200,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@kevincitooficial11/video/7691875916644994326"
    },
    "vir": [
@@ -567,7 +572,7 @@
     [
      "另一版",
      "https://www.tiktok.com/@visjanukcenaj/video/7694344166033132807",
-     "@visjanukcenaj · 93.4 万 播放 · 10-09"
+     "@visjanukcenaj · 94.2 万 播放 · 10-09"
     ]
    ],
    "thumb": "assets/live/bulin47.webp"
@@ -592,12 +597,12 @@
     "o": "https://www.tiktok.com/@novoreel/video/7691621178405834006"
    },
    "st": {
-    "pl": 23800000,
-    "lk": 3600000,
-    "sh": 1700000,
-    "cm": 25900,
+    "pl": 24600000,
+    "lk": 3700000,
+    "sh": 1800000,
+    "cm": 26600,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@novoreel/video/7691621178405834006"
    },
    "kx": "「让你的宠物唱这首歌」AI 对口型模板，按歌曲上新，支持一键合拍原作",
@@ -605,12 +610,12 @@
     [
      "换成别的猫",
      "https://www.tiktok.com/@fluffyfishlover/video/7694942402422820114",
-     "@fluffyfishlover · 730 万 播放 · 10-10"
+     "@fluffyfishlover · 810 万 播放 · 10-10"
     ],
     [
      "原作者续集",
      "https://www.tiktok.com/@novoreel/video/7693228396641357078",
-     "@novoreel · 590 万 播放 · 10-06"
+     "@novoreel · 600 万 播放 · 10-06"
     ]
    ],
    "thumb": "assets/live/iwly.webp"
@@ -636,11 +641,11 @@
    },
    "st": {
     "pl": 4900000,
-    "lk": 635600,
-    "sh": 73500,
-    "cm": 997,
+    "lk": 646800,
+    "sh": 75100,
+    "cm": 1001,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@lillianasabag/video/7690700880114404621"
    },
    "kx": "「坦白局」字幕模板：先填一个小缺点再对口型，可做成好友互相接力的话题",
@@ -648,44 +653,10 @@
     [
      "同音频另一版",
      "https://www.tiktok.com/@sickofya11/video/7689241795015789837",
-     "@sickofya11 · 6.8 万 播放 · 09-25"
+     "@sickofya11 · 7 万 播放 · 09-25"
     ]
    ],
    "thumb": "assets/live/notperfect.webp"
-  },
-  {
-   "k": "tour",
-   "n": "AI「世界巡演」：把 MJ 舞台换成任何人",
-   "p": [
-    "B站",
-    "X"
-   ],
-   "ai": 1,
-   "cn": 1,
-   "what": "把迈克尔·杰克逊《Jam》演唱会主角换成黄仁勋、门捷列夫、赵本山",
-   "why": "万能舞台模板 + 评论区接梗；马斯克转发黄仁勋版",
-   "pm": "「一个模板 + 换主角」是最强二创结构，可做成直播间同款特效",
-   "hot": "2026-09 下旬起，10-04 黄仁勋版引爆",
-   "hs": "2026-09-29",
-   "sd": "2026-10-04",
-   "src": "https://news.qq.com/rain/a/20261015A0B8X400",
-   "m": {
-    "t": "bili",
-    "id": "BV1VRHr6AEZ6",
-    "o": "https://www.bilibili.com/video/BV1VRHr6AEZ6/",
-    "label": "黄仁勋版"
-   },
-   "st": {
-    "pl": 5904103,
-    "lk": 227617,
-    "sh": 55698,
-    "cm": 7505,
-    "plat": "B站",
-    "rd": "2026-10-23",
-    "u": "https://www.bilibili.com/video/BV1VRHr6AEZ6/"
-   },
-   "kx": "「万能舞台 + 换主角」直播间同款特效",
-   "thumb": "assets/live/tour.webp"
   },
   {
    "k": "costume",
@@ -709,34 +680,34 @@
     "label": "Coraline 版"
    },
    "st": {
-    "pl": 64300000,
-    "lk": 9900000,
-    "sh": 446400,
-    "cm": 18400,
+    "pl": 69400000,
+    "lk": 10300000,
+    "sh": 471400,
+    "cm": 19400,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@nataliireynoldss/video/7692957276587429150"
    },
    "rx": [
     [
      "真人版",
      "https://www.tiktok.com/@jaxsongauntt/video/7693738874970950942",
-     "@jaxsongauntt · 2420 万 播放 · 10-07"
+     "@jaxsongauntt · 2540 万 播放 · 10-07"
     ],
     [
      "公主装版",
      "https://www.tiktok.com/@notsophiesilva/video/7693445955437301022",
-     "@notsophiesilva · 1830 万 播放 · 10-06"
+     "@notsophiesilva · 1910 万 播放 · 10-06"
     ],
     [
      "双人 cos 版",
      "https://www.tiktok.com/@goblinzgutz/video/7690740818600070430",
-     "@goblinzgutz · 850 万 播放 · 09-29"
+     "@goblinzgutz · 860 万 播放 · 09-29"
     ],
     [
      "AI 小猫版",
      "https://www.tiktok.com/@meowtakeover/video/7695465798244371730",
-     "@meowtakeover · 1930 万 播放 · 10-12"
+     "@meowtakeover · 2050 万 播放 · 10-12"
     ]
    ],
    "thumb": "assets/live/costume.webp"
@@ -763,12 +734,12 @@
     "o": "https://www.tiktok.com/@musicjunkie5210/video/7690337196309581069"
    },
    "st": {
-    "pl": 6400000,
-    "lk": 434700,
-    "sh": 233500,
-    "cm": 7154,
+    "pl": 6600000,
+    "lk": 440300,
+    "sh": 236300,
+    "cm": 7220,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@musicjunkie5210/video/7690337196309581069"
    },
    "kx": "「假老电影」风格滤镜 + 一句处境字幕，让用户把自己演成复古片里的角色",
@@ -781,7 +752,7 @@
     [
      "二创",
      "https://www.tiktok.com/@maurascherfspam/video/7692329455875804430",
-     "@maurascherfspam · 240 万 播放 · 10-03"
+     "@maurascherfspam · 250 万 播放 · 10-03"
     ]
    ],
    "thumb": "assets/live/rumpel.webp"
@@ -809,11 +780,11 @@
    },
    "st": {
     "pl": 1800000,
-    "lk": 168800,
-    "sh": 44500,
-    "cm": 1304,
+    "lk": 171300,
+    "sh": 45000,
+    "cm": 1333,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@zenoxlayla/video/7689355333793352974"
    },
    "vir": [
@@ -870,11 +841,11 @@
    },
    "st": {
     "pl": 7200000,
-    "lk": 180400,
-    "sh": 112600,
-    "cm": 2331,
+    "lk": 180700,
+    "sh": 113100,
+    "cm": 2355,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@wanqigyxpew/video/7689324656716827924"
    },
    "kx": "「一张自拍出情绪大片」特效：可延伸成哭、笑、惊吓等一组情绪滤镜，配教程式引导",
@@ -882,12 +853,12 @@
     [
      "同滤镜",
      "https://www.tiktok.com/@marina_199199/video/7690628116426984726",
-     "@marina_199199 · 160 万 播放 · 09-29"
+     "@marina_199199 · 170 万 播放 · 09-29"
     ],
     [
      "同滤镜",
      "https://www.tiktok.com/@jqvahzqek5/video/7693371779871477012",
-     "@jqvahzqek5 · 69.3 万 播放 · 10-06"
+     "@jqvahzqek5 · 69.5 万 播放 · 10-06"
     ]
    ],
    "thumb": "assets/live/crying.webp"
@@ -916,18 +887,18 @@
    },
    "st": {
     "pl": 6500000,
-    "lk": 651200,
+    "lk": 651400,
     "sh": 103300,
-    "cm": 1358,
+    "cm": 1346,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@asian5767/video/7690722850595982606"
    },
    "rx": [
     [
      "「be quiet」版",
      "https://www.tiktok.com/@yeltiktok/video/7691696173437963534",
-     "@yeltiktok · 450 万 播放 · 10-01"
+     "@yeltiktok · 460 万 播放 · 10-01"
     ],
     [
      "毕业班版",
@@ -974,12 +945,12 @@
     "o": "https://www.tiktok.com/@samgam81/video/7688617354141469970"
    },
    "st": {
-    "pl": 35200000,
-    "lk": 5900000,
-    "sh": 4000000,
-    "cm": 52200,
+    "pl": 35600000,
+    "lk": 6000000,
+    "sh": 4100000,
+    "cm": 52600,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@samgam81/video/7688617354141469970"
    },
    "kx": "真实宠物情绪片段做成可插入评论区的表情 / 音效，并支持「模仿挑战」",
@@ -987,12 +958,12 @@
     [
      "同音频剪辑版",
      "https://www.tiktok.com/@mfyls20/video/7690036844213390612",
-     "@mfyls20 · 1930 万 播放 · 09-27"
+     "@mfyls20 · 1940 万 播放 · 09-27"
     ],
     [
      "模仿哼唧挑战",
      "https://www.tiktok.com/@anatoxich/video/7695039657440054548",
-     "@anatoxich · 2080 万 播放 · 10-10"
+     "@anatoxich · 2100 万 播放 · 10-10"
     ],
     [
      "CapCut MemeScreens 模板（10-02）",
@@ -1022,12 +993,12 @@
     "o": "https://www.tiktok.com/@sophia.sadolin/video/7687602399929765142"
    },
    "st": {
-    "pl": 4200000,
-    "lk": 893500,
-    "sh": 189700,
-    "cm": 930,
+    "pl": 4300000,
+    "lk": 902200,
+    "sh": 191200,
+    "cm": 950,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@sophia.sadolin/video/7687602399929765142"
    },
    "kx": "两拍反转对话模板：A 说「Oh look」、B 接反应，适合好友合拍或直播连麦互动",
@@ -1060,12 +1031,12 @@
     "o": "https://www.tiktok.com/@thatsurvivorfan/video/7686990848902384910"
    },
    "st": {
-    "pl": 5400000,
-    "lk": 904300,
-    "sh": 99800,
-    "cm": 4701,
+    "pl": 5500000,
+    "lk": 908200,
+    "sh": 100200,
+    "cm": 4729,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@thatsurvivorfan/video/7686990848902384910"
    },
    "v": "音频的早期爆款发于 8-26（1,900 万播放），10 月仍在 newengen、Ramdam 榜单",
@@ -1079,7 +1050,7 @@
     [
      "另一版",
      "https://www.tiktok.com/@alfiebbrown/video/7682409207521348886",
-     "@alfiebbrown · 710 万 播放 · 09-06"
+     "@alfiebbrown · 730 万 播放 · 09-06"
     ]
    ],
    "thumb": "assets/live/beok.webp"
@@ -1107,11 +1078,11 @@
    },
    "st": {
     "pl": 6200000,
-    "lk": 721500,
-    "sh": 374000,
-    "cm": 7447,
+    "lk": 723000,
+    "sh": 374600,
+    "cm": 7462,
     "plat": "TikTok",
-    "rd": "2026-10-23",
+    "rd": "2026-10-27",
     "u": "https://www.tiktok.com/@therealmeowfia/video/7688816269180783903"
    },
    "extra": [
@@ -1128,15 +1099,81 @@
     [
      "换脸版",
      "https://www.tiktok.com/@otnashi/video/7688129873876929823",
-     "@otnashi · 91.1 万 播放 · 09-22"
+     "@otnashi · 91.4 万 播放 · 09-22"
     ],
     [
      "AI 工具版",
      "https://www.tiktok.com/@pokito.ai/video/7690388554442181921",
-     "@pokito.ai · 39 万 播放 · 09-28"
+     "@pokito.ai · 39.2 万 播放 · 09-28"
     ]
    ],
    "thumb": "assets/live/hotel.webp"
+  },
+  {
+   "k": "party",
+   "n": "一张脸进派对舞「Party Viral Dance」",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 1,
+   "what": "同一场夜宴里客人鼓掌，AI 把你换成长卷发舞者：先摇摆走过人群，再到空地弹跳踢腿",
+   "why": "「他怎么跳成这样」就是钩子；场景、客人、动作不变，只换你的脸，10-19 起教程密集出现",
+   "pm": "固定名场面 + 一张脸 = 比学舞挑战更低门槛的 AI 模板；教程账号本身承担分发",
+   "hot": "2026-10-07 源声起，10-13 模板出现，10-19 起英文教程密集，10-23 后日增约 200 条",
+   "hs": "2026-10-19",
+   "sd": "2026-10-07",
+   "src": "https://www.makeviral.ai/templates/party-viral-dance-ai-trend",
+   "m": {
+    "t": "tt",
+    "id": "7694062545178610965",
+    "o": "https://www.tiktok.com/@nakhlatw/video/7694062545178610965",
+    "label": "源声"
+   },
+   "st": {
+    "pl": 549200,
+    "lk": 10500,
+    "sh": 2177,
+    "cm": 627,
+    "plat": "TikTok",
+    "rd": "2026-10-27",
+    "u": "https://www.tiktok.com/@nakhlatw/video/7694062545178610965"
+   },
+   "vir": [
+    [
+     "最大单个结果 @sunnysax04",
+     "https://www.tiktok.com/@sunnysax04/video/7701090132275125534",
+     "Jump on the Trend 第三方 10-27 读数 230 万曝光"
+    ],
+    [
+     "源声 441 条视频，10-23 后日增约 200 条",
+     "https://www.makeviral.ai/templates/party-viral-dance-ai-trend",
+     "MakeViral 10-23 读数"
+    ]
+   ],
+   "kx": "「一张脸进固定派对名场面」模板：用户上传照片，选择一段现成派对 / 舞台视频，AI 自动保持场景和动作只替换主角，可做成好友轮流进同一名场面的接力玩法",
+   "rx": [
+    [
+     "首批模板教程",
+     "https://www.tiktok.com/@annaliseamira8/video/7696184012137581855",
+     "@annaliseamira8 · 8.8 万 播放 · 10-13"
+    ],
+    [
+     "英文教程爆款",
+     "https://www.tiktok.com/@lsffncz/video/7699115949147966751",
+     "@lsffncz · 22.4 万 播放 · 10-21"
+    ],
+    [
+     "变装结果",
+     "https://www.tiktok.com/@alfa.tesar/video/7699529359844801813",
+     "@alfa.tesar · Jump on the Trend 第三方 10-27 读数 46.7 万曝光"
+    ],
+    [
+     "最大单个结果",
+     "https://www.tiktok.com/@sunnysax04/video/7701090132275125534",
+     "@sunnysax04 · Jump on the Trend 第三方 10-27 读数 230 万曝光"
+    ]
+   ],
+   "thumb": "assets/live/party.webp"
   }
  ]
 }
