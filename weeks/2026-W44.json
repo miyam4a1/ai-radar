@@ -3,144 +3,128 @@
  "range": "2026-10-26 ~ 10-30",
  "start": "2026-10-26",
  "end": "2026-10-30",
- "status": "本周更新中",
+ "status": "已定稿",
  "patterns": [
   {
-   "t": "万圣节「先藏后揭」",
-   "d": "低机位抬镜头、图集最后一张、遮挡转场：万圣节（10-31）当周最后一波",
+   "t": "真人梗换成宠物，再爆一次",
+   "d": "人类原版跳完、吵完，AI 猫狗逐拍复刻同一段动作；宠物版的增速常常超过原版",
    "ex": [
-    "costume",
-    "sorry",
-    "fan"
+    "badtimes",
+    "odie",
+    "smalltown",
+    "iwly"
    ]
   },
   {
-   "t": "AI 角色做人类动作",
-   "d": "AI 猫狗唱跳、AI 脸进派对名场面、AI 水果与怪诞角色按集连更",
+   "t": "AI 角色开连续剧",
+   "d": "一个 AI 小世界按集更新：精灵说悄悄话、水果肥皂剧、复古怪诞角色，观众追更、起名、要求出自己版",
    "ex": [
-    "clapcat",
+    "fairy",
     "fruitnovela",
-    "edith",
-    "party"
+    "edith"
    ]
   },
   {
-   "t": "名场面台词 / 换皮",
-   "d": "固定台词、角色或构图，只换内容：长今问汤、AI 拟人、名场面进球与庆祝",
+   "t": "名场面换人",
+   "d": "经典画面不动，只换主角：输球教练进 Tiny Desk、派对 STAFF 换成牛仔、街头即兴和进球名场面换成自己",
    "ex": [
-    "janggeum",
-    "aimoe",
-    "ozil",
-    "topogigio"
+    "tinydesk",
+    "bbywow",
+    "bulin47",
+    "ozil"
    ]
   },
   {
-   "t": "一句字幕就是梗",
-   "d": "画面固定，字幕写处境",
+   "t": "一首歌一套简单动作，拉人一起跳",
+   "d": "几拍动作 + 一段老歌或台词 beat，宿舍走廊、朋友双人、宠物都能跳，跨语言传播",
    "ex": [
-    "listen",
-    "beok",
-    "whiny",
-    "notperfect"
+    "toctoc",
+    "prmami",
+    "sawadika"
    ]
   },
   {
-   "t": "一键大片模板",
-   "d": "生日、毕业这类人生节点：一张照片 + 大字标题就出片，分享率奇高",
+   "t": "一张照片就出片的模板",
+   "d": "生日、进球庆祝、派对舞：一张照片换进现成画面，分享给朋友",
    "ex": [
     "champagne",
     "topogigio",
     "party"
+   ]
+  },
+  {
+   "t": "万圣节「先藏后揭」",
+   "d": "低机位抬镜头、图集最后一张、遮挡转场：万圣节（10-31）前最后一波",
+   "ex": [
+    "costume",
+    "sorry",
+    "fan"
    ]
   }
  ],
  "change": {
   "up": [
    [
-    "Miya 点名补入：生日香槟模板（常青长尾，本周仍推送）、Edith_Paf 怪诞宇宙",
-    "champagne"
+    "Toc Toc 宿舍走廊版 4,500 万播放（10-27 第三方读数 4,230 万）",
+    "toctoc"
    ],
    [
-    "AI 水果连续剧（最新一集一天 52.7 万播放）",
-    "fruitnovela"
+    "Bad Times AI 宠物版：AI 狗 1,300 万、AI 猫 540 万，人类原版已放缓",
+    "badtimes"
    ],
    [
-    "恩佐 Topo Gigio 庆祝 AI 模板（单条教程 82 万播放）",
-    "topogigio"
+    "精灵悄悄话：巴西转发版 12 天 7,780 万播放",
+    "fairy"
    ],
    [
-    "一张脸进派对舞（10-19 起教程密集，第三方 10-23 后日增约 200 条）",
-    "party"
+    "Tiny Desk 输球乐队：12 天 310 万，NFL 版跟进",
+    "tinydesk"
    ],
    [
-    "「I'm so sorry」万圣节版",
-    "sorry"
+    "Bby Wow Guy：本人 10-18 新视频 810 万",
+    "bbywow"
    ],
    [
-    "Ramalama 变装走秀",
+    "Puerto Rican Mami：beat 340 万，双人跟拍多条近百万",
+    "prmami"
+   ],
+   [
+    "Ramalama 走秀 3 天 6,940 万 → 7,450 万",
     "costume"
+   ],
+   [
+    "水果连续剧最新一集 3 天 52.8 万 → 74.6 万",
+    "fruitnovela"
    ]
   ],
   "down": [
    [
-    "水瓶舞",
+    "派对换脸舞 3 天只涨 0.8 千播放",
+    "party"
+   ],
+   [
+    "水瓶舞 3 天 710 万 → 720 万，主峰在 9 月（仍置顶）",
     "sawadika"
    ],
    [
-    "Hotel Lobby",
-    "hotel"
+    "鼓掌黑猫播放持平",
+    "clapcat"
    ]
   ],
-  "note": "10-27 刷新：现有 65 个代表和二创链接均在线；AI 世界巡演因完全没有二创证据移出实时；水瓶舞、Hotel Lobby 仍因置顶和历史规则保留，但继续观察。"
+  "note": "10-30 定稿：本周主线从「AI 角色做人类动作」变成「真人梗换宠物 / 换主角再爆一次」，并出现 AI 角色连载；一句字幕处境梗整体停涨，Hotel Lobby、Oh look、Be OK 已移出实时。"
  },
  "cards": {
-  "champagne": {
-   "n": "一键生日香槟大片「Happy Birthday To Me」",
-   "s": "生日香槟"
-  },
-  "edith": {
-   "n": "Edith_Paf 怪诞复古角色宇宙",
-   "s": "复古怪诞"
-  },
-  "fruitnovela": {
-   "n": "AI 水果连续剧「Fruit Novelas」",
-   "s": "水果肥皂剧"
-  },
-  "topogigio": {
-   "n": "一张照片进恩佐「Topo Gigio」庆祝",
-   "s": "Topo Gigio"
-  },
-  "party": {
-   "n": "一张脸进派对舞「Party Viral Dance」",
-   "s": "派对换脸舞"
-  },
-  "costume": {
-   "n": "「Ramalama」低机位变装走秀",
-   "s": "Ramalama 走秀"
-  },
-  "sorry": {
-   "n": "「I'm so sorry」反转图集",
-   "s": "I'm so sorry"
+  "knight": {
+   "n": "小猫举剑 Knight Cat",
+   "s": "小猫举剑"
   },
   "fan": {
    "n": "风扇转场换装",
    "s": "风扇换装"
   },
-  "clapcat": {
-   "n": "AI 黑猫鼓掌",
-   "s": "鼓掌黑猫"
-  },
-  "odie": {
-   "n": "腊肠狗跳《Single Ladies》",
-   "s": "腊肠 C 位"
-  },
-  "iwly": {
-   "n": "唱 Akon 的 AI 白猫",
-   "s": "唱歌白猫"
-  },
-  "smalltown": {
-   "n": "Smalltown Boy 尖叫猫",
-   "s": "尖叫猫"
+  "sawadika": {
+   "n": "LISA《SaWaDiKa》水瓶舞",
+   "s": "水瓶舞"
   },
   "janggeum": {
    "n": "大长今「长今，你在汤里放了什么？」",
@@ -150,9 +134,9 @@
    "n": "DeepSeek / Claude / GPT 拟人 二创",
    "s": "AI 拟人"
   },
-  "road": {
-   "n": "「Hit the Road Dude」换主角重演",
-   "s": "Hit the Road"
+  "sorry": {
+   "n": "「I'm so sorry」反转图集",
+   "s": "I'm so sorry"
   },
   "ozil": {
    "n": "AI 重做厄齐尔名场面进球",
@@ -162,53 +146,132 @@
    "n": "「Listening ear activated」",
    "s": "Listening ear"
   },
-  "beok": {
-   "n": "「Be OK」笑着摆烂",
-   "s": "Be OK"
+  "odie": {
+   "n": "腊肠狗跳《Single Ladies》",
+   "s": "腊肠 C 位"
   },
-  "whiny": {
-   "n": "委屈哼唧的杜宾",
-   "s": "委屈杜宾"
+  "smalltown": {
+   "n": "Smalltown Boy 尖叫猫",
+   "s": "尖叫猫"
+  },
+  "bulin47": {
+   "n": "Bulin 47 街头即兴",
+   "s": "Bulin 47"
+  },
+  "iwly": {
+   "n": "唱 Akon 的 AI 白猫",
+   "s": "唱歌白猫"
   },
   "notperfect": {
    "n": "「I'm not a perfect person」坦白局",
    "s": "Not perfect"
   },
-  "sawadika": {
-   "n": "LISA《SaWaDiKa》水瓶舞",
-   "s": "水瓶舞"
+  "costume": {
+   "n": "「Ramalama」低机位变装走秀",
+   "s": "Ramalama 走秀"
   },
-  "hotel": {
-   "n": "Hotel Lobby AI 换脸说唱",
-   "s": "Hotel Lobby"
+  "rumpel": {
+   "n": "侏儒怪踮脚舞「Tip Toein' In My Jordans」",
+   "s": "侏儒怪踮脚"
+  },
+  "road": {
+   "n": "「Hit the Road Dude」换主角重演",
+   "s": "Hit the Road"
+  },
+  "crying": {
+   "n": "AI 哭脸滤镜",
+   "s": "AI 哭脸"
+  },
+  "clapcat": {
+   "n": "AI 黑猫鼓掌",
+   "s": "鼓掌黑猫"
+  },
+  "whiny": {
+   "n": "委屈哼唧的杜宾",
+   "s": "委屈杜宾"
+  },
+  "party": {
+   "n": "一张脸进派对舞「Party Viral Dance」",
+   "s": "派对换脸舞"
+  },
+  "fruitnovela": {
+   "n": "AI 水果连续剧「Fruit Novelas」",
+   "s": "水果肥皂剧"
+  },
+  "topogigio": {
+   "n": "一张照片进恩佐「Topo Gigio」庆祝",
+   "s": "Topo Gigio"
+  },
+  "champagne": {
+   "n": "一键生日香槟大片「Happy Birthday To Me」",
+   "s": "生日香槟"
+  },
+  "edith": {
+   "n": "Edith_Paf 怪诞复古角色宇宙",
+   "s": "复古怪诞"
+  },
+  "toctoc": {
+   "n": "「Toc Toc」单脚跳敲门舞",
+   "s": "敲门舞"
+  },
+  "badtimes": {
+   "n": "「Bad Times」厨房吵架对口型（AI 宠物版）",
+   "s": "宠物吵架"
+  },
+  "fairy": {
+   "n": "AI 精灵说悄悄话「Prilili」",
+   "s": "精灵八卦"
+  },
+  "tinydesk": {
+   "n": "AI「Tiny Desk」输球乐队",
+   "s": "Tiny Desk"
+  },
+  "bbywow": {
+   "n": "「Bby Wow Guy」派对 STAFF 舞",
+   "s": "STAFF 舞"
+  },
+  "prmami": {
+   "n": "「Puerto Rican Mami」双人舞",
+   "s": "PR 双人舞"
   }
  },
  "log": [
+  "10-30 定稿更新：新增 Toc Toc 敲门舞、Bad Times AI 宠物版、AI 精灵悄悄话、Tiny Desk 输球乐队、Bby Wow Guy、Puerto Rican Mami 双人舞（均有 TikTok 平台读数 + 2–3 个不同账号二创）；移除 Hotel Lobby（走红超过 6 周、播放持平、第三方标注放缓）、「Oh look」情侣梗和「Be OK」（10-27 → 10-30 播放持平）。87 个代表 / 二创链接无失效，3 条二创链接从 box 读不到（IP 被拦，非删除）。",
   "10-27 更新三：按 Miya 的要求，把她当天截图点名的内容补上——生日香槟模板（注明走红主峰在 5 月，当前常青长尾）和 Edith_Paf 怪诞复古宇宙（注明目前是原作者个人系列）；King Odie 本就在站里。Odd Fellows 大厅香槟、AI Source 木偶乐队在 TikTok 网页搜索多组关键词均找不到，等 Miya 分享链接后补入。",
   "10-27 更新二：TikTok 搜索补两条 Miya 点名的类型：AI 水果连续剧（十几个账号连载，最新一集一天 52.7 万播放）、恩佐 Topo Gigio 庆祝 AI 模板（教程 82 万播放）；生日香槟模板确认进入长尾（本周新教程仅数千播放）保持不收；Odd Fellows 大厅香槟和 AI Source 木偶乐队无法核实，不收。修复卡片二创证据长文本横向溢出问题。",
   "10-27 更新：现有 65 个代表/二创链接全部在线；22 张卡刷新平台数字。新增一张脸进派对舞；移除 AI「世界巡演」（无二创证据，不满足硬性收录规则）；给 Odie 补 @kevinsweiii 36.6 万曝光二创（第三方读数）。",
   "10-23 开期：沿用 W43 定稿时的 23 条实时条目。"
  ],
  "thumbs": {
+  "knight": "assets/weeks/2026-W44/knight.webp",
+  "fan": "assets/weeks/2026-W44/fan.webp",
+  "sawadika": "assets/weeks/2026-W44/sawadika.webp",
+  "janggeum": "assets/weeks/2026-W44/janggeum.webp",
+  "aimoe": "assets/weeks/2026-W44/aimoe.webp",
+  "sorry": "assets/weeks/2026-W44/sorry.webp",
+  "ozil": "assets/weeks/2026-W44/ozil.webp",
+  "listen": "assets/weeks/2026-W44/listen.webp",
+  "odie": "assets/weeks/2026-W44/odie.webp",
+  "smalltown": "assets/weeks/2026-W44/smalltown.webp",
+  "bulin47": "assets/weeks/2026-W44/bulin47.webp",
+  "iwly": "assets/weeks/2026-W44/iwly.webp",
+  "notperfect": "assets/weeks/2026-W44/notperfect.webp",
+  "costume": "assets/weeks/2026-W44/costume.webp",
+  "rumpel": "assets/weeks/2026-W44/rumpel.webp",
+  "road": "assets/weeks/2026-W44/road.webp",
+  "crying": "assets/weeks/2026-W44/crying.webp",
+  "clapcat": "assets/weeks/2026-W44/clapcat.webp",
+  "whiny": "assets/weeks/2026-W44/whiny.webp",
+  "party": "assets/weeks/2026-W44/party.webp",
   "fruitnovela": "assets/weeks/2026-W44/fruitnovela.webp",
   "topogigio": "assets/weeks/2026-W44/topogigio.webp",
-  "party": "assets/weeks/2026-W44/party.webp",
-  "aimoe": "assets/weeks/2026-W44/aimoe.webp",
-  "beok": "assets/weeks/2026-W44/beok.webp",
-  "clapcat": "assets/weeks/2026-W44/clapcat.webp",
-  "costume": "assets/weeks/2026-W44/costume.webp",
-  "fan": "assets/weeks/2026-W44/fan.webp",
-  "hotel": "assets/weeks/2026-W44/hotel.webp",
-  "iwly": "assets/weeks/2026-W44/iwly.webp",
-  "janggeum": "assets/weeks/2026-W44/janggeum.webp",
-  "listen": "assets/weeks/2026-W44/listen.webp",
-  "notperfect": "assets/weeks/2026-W44/notperfect.webp",
-  "odie": "assets/weeks/2026-W44/odie.webp",
-  "ozil": "assets/weeks/2026-W44/ozil.webp",
-  "road": "assets/weeks/2026-W44/road.webp",
-  "sawadika": "assets/weeks/2026-W44/sawadika.webp",
-  "smalltown": "assets/weeks/2026-W44/smalltown.webp",
-  "sorry": "assets/weeks/2026-W44/sorry.webp",
-  "whiny": "assets/weeks/2026-W44/whiny.webp"
+  "champagne": "assets/weeks/2026-W44/champagne.webp",
+  "edith": "assets/weeks/2026-W44/edith.webp",
+  "toctoc": "assets/weeks/2026-W44/toctoc.webp",
+  "badtimes": "assets/weeks/2026-W44/badtimes.webp",
+  "fairy": "assets/weeks/2026-W44/fairy.webp",
+  "tinydesk": "assets/weeks/2026-W44/tinydesk.webp",
+  "bbywow": "assets/weeks/2026-W44/bbywow.webp",
+  "prmami": "assets/weeks/2026-W44/prmami.webp"
  }
 }

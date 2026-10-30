@@ -1,0 +1,240 @@
+{
+ "id": "2026-W45",
+ "range": "2026-11-02 ~ 11-06",
+ "start": "2026-11-02",
+ "end": "2026-11-06",
+ "status": "本周更新中",
+ "patterns": [
+  {
+   "t": "真人梗换成宠物，再爆一次",
+   "d": "人类原版跳完、吵完，AI 猫狗逐拍复刻同一段动作；宠物版的增速常常超过原版",
+   "ex": [
+    "badtimes",
+    "odie",
+    "smalltown",
+    "iwly"
+   ]
+  },
+  {
+   "t": "AI 角色开连续剧",
+   "d": "一个 AI 小世界按集更新：精灵说悄悄话、水果肥皂剧、复古怪诞角色，观众追更、起名、要求出自己版",
+   "ex": [
+    "fairy",
+    "fruitnovela",
+    "edith"
+   ]
+  },
+  {
+   "t": "名场面换人",
+   "d": "经典画面不动，只换主角：输球教练进 Tiny Desk、派对 STAFF 换成牛仔、街头即兴和进球名场面换成自己",
+   "ex": [
+    "tinydesk",
+    "bbywow",
+    "bulin47",
+    "ozil"
+   ]
+  },
+  {
+   "t": "一首歌一套简单动作，拉人一起跳",
+   "d": "几拍动作 + 一段老歌或台词 beat，宿舍走廊、朋友双人、宠物都能跳，跨语言传播",
+   "ex": [
+    "toctoc",
+    "prmami",
+    "sawadika"
+   ]
+  },
+  {
+   "t": "一张照片就出片的模板",
+   "d": "生日、进球庆祝、派对舞：一张照片换进现成画面，分享给朋友",
+   "ex": [
+    "champagne",
+    "topogigio",
+    "party"
+   ]
+  }
+ ],
+ "change": {
+  "up": [
+   [
+    "开期时仍在涨：精灵悄悄话",
+    "fairy"
+   ],
+   [
+    "Toc Toc 敲门舞",
+    "toctoc"
+   ],
+   [
+    "Bad Times 宠物版",
+    "badtimes"
+   ]
+  ],
+  "down": [
+   [
+    "开期时已停涨：派对换脸舞",
+    "party"
+   ],
+   [
+    "水瓶舞",
+    "sawadika"
+   ]
+  ],
+  "note": "开期沿用 W44 定稿（10-30）时的 30 条实时和读数；万圣节过后「先藏后揭」预计退潮，下周五复核。"
+ },
+ "log": [
+  "10-30 开期：沿用 W44 定稿时的 30 条实时条目。"
+ ],
+ "thumbs": {
+  "knight": "assets/weeks/2026-W45/knight.webp",
+  "fan": "assets/weeks/2026-W45/fan.webp",
+  "sawadika": "assets/weeks/2026-W45/sawadika.webp",
+  "janggeum": "assets/weeks/2026-W45/janggeum.webp",
+  "aimoe": "assets/weeks/2026-W45/aimoe.webp",
+  "sorry": "assets/weeks/2026-W45/sorry.webp",
+  "ozil": "assets/weeks/2026-W45/ozil.webp",
+  "listen": "assets/weeks/2026-W45/listen.webp",
+  "odie": "assets/weeks/2026-W45/odie.webp",
+  "smalltown": "assets/weeks/2026-W45/smalltown.webp",
+  "bulin47": "assets/weeks/2026-W45/bulin47.webp",
+  "iwly": "assets/weeks/2026-W45/iwly.webp",
+  "notperfect": "assets/weeks/2026-W45/notperfect.webp",
+  "costume": "assets/weeks/2026-W45/costume.webp",
+  "rumpel": "assets/weeks/2026-W45/rumpel.webp",
+  "road": "assets/weeks/2026-W45/road.webp",
+  "crying": "assets/weeks/2026-W45/crying.webp",
+  "clapcat": "assets/weeks/2026-W45/clapcat.webp",
+  "whiny": "assets/weeks/2026-W45/whiny.webp",
+  "party": "assets/weeks/2026-W45/party.webp",
+  "fruitnovela": "assets/weeks/2026-W45/fruitnovela.webp",
+  "topogigio": "assets/weeks/2026-W45/topogigio.webp",
+  "champagne": "assets/weeks/2026-W45/champagne.webp",
+  "edith": "assets/weeks/2026-W45/edith.webp",
+  "toctoc": "assets/weeks/2026-W45/toctoc.webp",
+  "badtimes": "assets/weeks/2026-W45/badtimes.webp",
+  "fairy": "assets/weeks/2026-W45/fairy.webp",
+  "tinydesk": "assets/weeks/2026-W45/tinydesk.webp",
+  "bbywow": "assets/weeks/2026-W45/bbywow.webp",
+  "prmami": "assets/weeks/2026-W45/prmami.webp"
+ },
+ "cards": {
+  "knight": {
+   "n": "小猫举剑 Knight Cat",
+   "s": "小猫举剑"
+  },
+  "fan": {
+   "n": "风扇转场换装",
+   "s": "风扇换装"
+  },
+  "sawadika": {
+   "n": "LISA《SaWaDiKa》水瓶舞",
+   "s": "水瓶舞"
+  },
+  "janggeum": {
+   "n": "大长今「长今，你在汤里放了什么？」",
+   "s": "大长今问汤"
+  },
+  "aimoe": {
+   "n": "DeepSeek / Claude / GPT 拟人 二创",
+   "s": "AI 拟人"
+  },
+  "sorry": {
+   "n": "「I'm so sorry」反转图集",
+   "s": "I'm so sorry"
+  },
+  "ozil": {
+   "n": "AI 重做厄齐尔名场面进球",
+   "s": "AI 厄齐尔"
+  },
+  "listen": {
+   "n": "「Listening ear activated」",
+   "s": "Listening ear"
+  },
+  "odie": {
+   "n": "腊肠狗跳《Single Ladies》",
+   "s": "腊肠 C 位"
+  },
+  "smalltown": {
+   "n": "Smalltown Boy 尖叫猫",
+   "s": "尖叫猫"
+  },
+  "bulin47": {
+   "n": "Bulin 47 街头即兴",
+   "s": "Bulin 47"
+  },
+  "iwly": {
+   "n": "唱 Akon 的 AI 白猫",
+   "s": "唱歌白猫"
+  },
+  "notperfect": {
+   "n": "「I'm not a perfect person」坦白局",
+   "s": "Not perfect"
+  },
+  "costume": {
+   "n": "「Ramalama」低机位变装走秀",
+   "s": "Ramalama 走秀"
+  },
+  "rumpel": {
+   "n": "侏儒怪踮脚舞「Tip Toein' In My Jordans」",
+   "s": "侏儒怪踮脚"
+  },
+  "road": {
+   "n": "「Hit the Road Dude」换主角重演",
+   "s": "Hit the Road"
+  },
+  "crying": {
+   "n": "AI 哭脸滤镜",
+   "s": "AI 哭脸"
+  },
+  "clapcat": {
+   "n": "AI 黑猫鼓掌",
+   "s": "鼓掌黑猫"
+  },
+  "whiny": {
+   "n": "委屈哼唧的杜宾",
+   "s": "委屈杜宾"
+  },
+  "party": {
+   "n": "一张脸进派对舞「Party Viral Dance」",
+   "s": "派对换脸舞"
+  },
+  "fruitnovela": {
+   "n": "AI 水果连续剧「Fruit Novelas」",
+   "s": "水果肥皂剧"
+  },
+  "topogigio": {
+   "n": "一张照片进恩佐「Topo Gigio」庆祝",
+   "s": "Topo Gigio"
+  },
+  "champagne": {
+   "n": "一键生日香槟大片「Happy Birthday To Me」",
+   "s": "生日香槟"
+  },
+  "edith": {
+   "n": "Edith_Paf 怪诞复古角色宇宙",
+   "s": "复古怪诞"
+  },
+  "toctoc": {
+   "n": "「Toc Toc」单脚跳敲门舞",
+   "s": "敲门舞"
+  },
+  "badtimes": {
+   "n": "「Bad Times」厨房吵架对口型（AI 宠物版）",
+   "s": "宠物吵架"
+  },
+  "fairy": {
+   "n": "AI 精灵说悄悄话「Prilili」",
+   "s": "精灵八卦"
+  },
+  "tinydesk": {
+   "n": "AI「Tiny Desk」输球乐队",
+   "s": "Tiny Desk"
+  },
+  "bbywow": {
+   "n": "「Bby Wow Guy」派对 STAFF 舞",
+   "s": "STAFF 舞"
+  },
+  "prmami": {
+   "n": "「Puerto Rican Mami」双人舞",
+   "s": "PR 双人舞"
+  }
+ }
+}
