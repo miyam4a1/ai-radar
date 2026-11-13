@@ -1,0 +1,128 @@
+{
+ "date": "2026-11-06",
+ "tt": {
+  "7695045104460942606": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7682576156352089362": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7698650625839500574": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7696037788889730325": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7694004035677916430": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7692606728323583246": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7692079591711657236": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7691875916644994326": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7691621178405834006": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7690700880114404621": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7692957276587429150": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7690337196309581069": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7689355333793352974": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7689324656716827924": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7690722850595982606": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7688617354141469970": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7694062545178610965": {
+   "status": "error",
+   "err": "HTTP Error 429: Too Many Requests"
+  },
+  "7701113457629826326": {
+   "status": "error",
+   "err": "HTTP Error 429: Too Many Requests"
+  },
+  "7697281453498830094": {
+   "status": "error",
+   "err": "HTTP Error 429: Too Many Requests"
+  },
+  "7690513679674035470": {
+   "status": "error",
+   "err": "HTTP Error 429: Too Many Requests"
+  },
+  "7693628399545306401": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7693363127001435422": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7688386199270001953": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7693246436124740878": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7698160711830129934": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7530706948828712197": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "7697272812209294622": {
+   "status": "error",
+   "err": "HTTP Error 400: Bad Request"
+  },
+  "BV1V9aU6VEKt": {
+   "status": "ok",
+   "pl": 214132,
+   "lk": 9167,
+   "sh": 1087,
+   "cm": 346
+  },
+  "BV1uaJy6ZE9P": {
+   "status": "ok",
+   "pl": 4811121,
+   "lk": 204970,
+   "sh": 2404,
+   "cm": 3552
+  }
+ },
+ "note": "play counts not refreshed (yt-dlp IP blocked); lk/sh/cm from player API"
+}

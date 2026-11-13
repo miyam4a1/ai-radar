@@ -1,0 +1,584 @@
+{
+ "date": "2026-11-06",
+ "cards": {
+  "knight": {
+   "status": "skip_via",
+   "note": "instagram via"
+  },
+  "fan": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 2100000,
+    "lk": 203800,
+    "sh": 5219,
+    "cm": 797,
+    "user": "7201318871738008618",
+    "date": "20261010"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 203800,
+    "sh": 5219,
+    "cm": 797,
+    "user": "khvdenn"
+   },
+   "old_pl": 2100000,
+   "new_pl": 2100000
+  },
+  "sawadika": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 7200000,
+    "lk": 1300000,
+    "sh": 23100,
+    "cm": 3136,
+    "user": "7477713396796802064",
+    "date": "20260906"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 1300000,
+    "sh": 23100,
+    "cm": 3137,
+    "user": "trxineex"
+   },
+   "old_pl": 7200000,
+   "new_pl": 7200000
+  },
+  "janggeum": {
+   "status": "ok",
+   "pl": 214144,
+   "lk": 9167,
+   "sh": 1087,
+   "cm": 346
+  },
+  "aimoe": {
+   "status": "ok",
+   "pl": 4811534,
+   "lk": 204977,
+   "sh": 2404,
+   "cm": 3552
+  },
+  "sorry": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 3100000,
+    "lk": 174100,
+    "sh": 35900,
+    "cm": 821,
+    "user": "7694877608140719118",
+    "date": "20261020"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 174100,
+    "sh": 35900,
+    "cm": 822,
+    "user": "certifiedlolnonsense"
+   },
+   "old_pl": 2900000,
+   "new_pl": 3100000
+  },
+  "ozil": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 7200000,
+    "lk": 321000,
+    "sh": 18900,
+    "cm": 4428,
+    "user": "6873008199315735554",
+    "date": "20261013"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 321000,
+    "sh": 18900,
+    "cm": 4426,
+    "user": "baguss_visual"
+   },
+   "old_pl": 7000000,
+   "new_pl": 7200000
+  },
+  "listen": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 7900000,
+    "lk": 1300000,
+    "sh": 157700,
+    "cm": 1105,
+    "user": "7231785437313139758",
+    "date": "20261007"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 1300000,
+    "sh": 157700,
+    "cm": 1105,
+    "user": "kaikixrox"
+   },
+   "old_pl": 7900000,
+   "new_pl": 7900000
+  },
+  "odie": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 47000000,
+    "lk": 5700000,
+    "sh": 1200000,
+    "cm": 14400,
+    "user": "6658777215793070085",
+    "date": "20261004"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 5700000,
+    "sh": 1200000,
+    "cm": 14400,
+    "user": "king_odiee"
+   },
+   "old_pl": 46500000,
+   "new_pl": 47000000
+  },
+  "smalltown": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 11500000,
+    "lk": 1300000,
+    "sh": 769300,
+    "cm": 17500,
+    "user": "6744318705909679109",
+    "date": "20261002"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 1300000,
+    "sh": 769200,
+    "cm": 17500,
+    "user": "bellvtrix.ai"
+   },
+   "old_pl": 11200000,
+   "new_pl": 11500000
+  },
+  "bulin47": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 15100000,
+    "lk": 1700000,
+    "sh": 106400,
+    "cm": 11600,
+    "user": "7418368186313950240",
+    "date": "20261002"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 1700000,
+    "sh": 106400,
+    "cm": 11600,
+    "user": "kevincitooficial11"
+   },
+   "old_pl": 13400000,
+   "new_pl": 15100000
+  },
+  "iwly": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 26600000,
+    "lk": 3900000,
+    "sh": 1900000,
+    "cm": 29300,
+    "user": "7663272510062986262",
+    "date": "20261001"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 3900000,
+    "sh": 1900000,
+    "cm": 29300,
+    "user": "novoreel"
+   },
+   "old_pl": 25300000,
+   "new_pl": 26600000
+  },
+  "notperfect": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 5100000,
+    "lk": 675900,
+    "sh": 79300,
+    "cm": 1029,
+    "user": "6588545223062781958",
+    "date": "20260928"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 675900,
+    "sh": 79300,
+    "cm": 1029,
+    "user": "lillianasabag"
+   },
+   "old_pl": 5100000,
+   "new_pl": 5100000
+  },
+  "costume": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 82100000,
+    "lk": 11500000,
+    "sh": 535400,
+    "cm": 21600,
+    "user": "7526684415180768311",
+    "date": "20261004"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 11500000,
+    "sh": 535400,
+    "cm": 21600,
+    "user": "nataliireynoldss"
+   },
+   "old_pl": 74500000,
+   "new_pl": 82100000
+  },
+  "rumpel": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 6800000,
+    "lk": 448000,
+    "sh": 240000,
+    "cm": 7319,
+    "user": "6628619801575833605",
+    "date": "20260927"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 448000,
+    "sh": 240000,
+    "cm": 7320,
+    "user": "musicjunkie5210"
+   },
+   "old_pl": 6700000,
+   "new_pl": 6800000
+  },
+  "road": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 1900000,
+    "lk": 176200,
+    "sh": 45900,
+    "cm": 1413,
+    "user": "7606832338391696415",
+    "date": "20260925"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 176200,
+    "sh": 45900,
+    "cm": 1412,
+    "user": "zenoxlayla"
+   },
+   "old_pl": 1900000,
+   "new_pl": 1900000
+  },
+  "crying": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 7200000,
+    "lk": 181100,
+    "sh": 113800,
+    "cm": 2291,
+    "user": "7630751951315977224",
+    "date": "20260925"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 181100,
+    "sh": 113800,
+    "cm": 2291,
+    "user": "wanqigyxpew"
+   },
+   "old_pl": 7200000,
+   "new_pl": 7200000
+  },
+  "clapcat": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 6500000,
+    "lk": 651500,
+    "sh": 103300,
+    "cm": 1336,
+    "user": "7652122782779917326",
+    "date": "20260928"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 651500,
+    "sh": 103300,
+    "cm": 1336,
+    "user": "asian5767"
+   },
+   "old_pl": 6500000,
+   "new_pl": 6500000
+  },
+  "whiny": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 36400000,
+    "lk": 6100000,
+    "sh": 4100000,
+    "cm": 53200,
+    "user": "6834328906363995137",
+    "date": "20260923"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 6100000,
+    "sh": 4100000,
+    "cm": 53200
+   },
+   "old_pl": 36000000,
+   "new_pl": 36400000
+  },
+  "party": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 551300,
+    "lk": 10500,
+    "sh": 2194,
+    "cm": 632,
+    "user": "7154215803465483269",
+    "date": "20261007"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 10500,
+    "sh": 2194,
+    "cm": 632,
+    "user": "nakhlatw"
+   },
+   "old_pl": 550000,
+   "new_pl": 551300
+  },
+  "fruitnovela": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 1800000,
+    "lk": 186700,
+    "sh": 4635,
+    "cm": 760,
+    "user": "7694317879017489430",
+    "date": "20261026"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 186600,
+    "sh": 4633,
+    "cm": 759,
+    "user": "rayitoons"
+   },
+   "old_pl": 746200,
+   "new_pl": 1800000
+  },
+  "topogigio": {
+   "status": "error",
+   "yt": {
+    "status": "error",
+    "err": "ERROR: [TikTok] 7697281453498830094: Your IP address is blocked from accessing this post\n"
+   },
+   "player": {
+    "status": "error",
+    "err": "fatal/empty"
+   }
+  },
+  "champagne": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 880000,
+    "lk": 7978,
+    "sh": 4501,
+    "cm": 28,
+    "user": "7620736147489391630",
+    "date": "20260928"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 7978,
+    "sh": 4501,
+    "cm": 28,
+    "user": "remy6308"
+   },
+   "old_pl": 868800,
+   "new_pl": 880000
+  },
+  "edith": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 2000000,
+    "lk": 65700,
+    "sh": 5078,
+    "cm": 358,
+    "user": "7691386091279188994",
+    "date": "20261006"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 65700,
+    "sh": 5078,
+    "cm": 358,
+    "user": "edith_paf"
+   },
+   "old_pl": 1900000,
+   "new_pl": 2000000
+  },
+  "toctoc": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 50000000,
+    "lk": 6100000,
+    "sh": 358100,
+    "cm": 20800,
+    "user": "7656698273339720718",
+    "date": "20261006"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 6100000,
+    "sh": 358100,
+    "cm": 20800,
+    "user": "4thfloorboys"
+   },
+   "old_pl": 45000000,
+   "new_pl": 50000000
+  },
+  "badtimes": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 13200000,
+    "lk": 949200,
+    "sh": 556500,
+    "cm": 23300,
+    "user": "6940189648291578885",
+    "date": "20260922"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 949200,
+    "sh": 556500,
+    "cm": 23300,
+    "user": "tillandsialover"
+   },
+   "old_pl": 13000000,
+   "new_pl": 13200000
+  },
+  "fairy": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 9400000,
+    "lk": 1200000,
+    "sh": 630600,
+    "cm": 11500,
+    "user": "7690245078464480269",
+    "date": "20261005"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 1200000,
+    "sh": 630600,
+    "cm": 11500,
+    "user": "fae.eyes"
+   },
+   "old_pl": 9100000,
+   "new_pl": 9400000
+  },
+  "tinydesk": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 4200000,
+    "lk": 322200,
+    "sh": 123900,
+    "cm": 5025,
+    "user": "7563100671316378638",
+    "date": "20261018"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 322200,
+    "sh": 123900,
+    "cm": 5026,
+    "user": "theburnerfromhe11"
+   },
+   "old_pl": 3100000,
+   "new_pl": 4200000
+  },
+  "bbywow": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 9200000,
+    "lk": 743400,
+    "sh": 60200,
+    "cm": 4226,
+    "user": "7529432591725036550",
+    "date": "20250724"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 743300,
+    "sh": 60200,
+    "cm": 4226,
+    "user": "eve.el.cholo"
+   },
+   "old_pl": 8600000,
+   "new_pl": 9200000
+  },
+  "prmami": {
+   "status": "ok",
+   "yt": {
+    "status": "ok",
+    "pl": 3700000,
+    "lk": 373900,
+    "sh": 79300,
+    "cm": 5221,
+    "user": "6876221430011298817",
+    "date": "20261016"
+   },
+   "player": {
+    "status": "ok",
+    "lk": 373900,
+    "sh": 79300,
+    "cm": 5217,
+    "user": "babyonthetrack"
+   },
+   "old_pl": 3400000,
+   "new_pl": 3700000
+  }
+ },
+ "rx": {},
+ "dead": [],
+ "errors": [
+  "topogigio"
+ ]
+}
