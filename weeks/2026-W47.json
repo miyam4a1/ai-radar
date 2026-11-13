@@ -1,0 +1,228 @@
+{
+ "id": "2026-W47",
+ "range": "2026-11-16 ~ 11-20",
+ "start": "2026-11-16",
+ "end": "2026-11-20",
+ "status": "本周更新中",
+ "patterns": [
+  {
+   "t": "几拍动作或一个手势，把身边的人拉进镜头",
+   "d": "圣诞睡衣舞、二头肌比心、走廊换位舞：动作越简单越能把妈妈、情侣、室友拉进来；本周最大的几条都是两个人拍的",
+   "ex": [
+    "xmasdance",
+    "bicep",
+    "hophop",
+    "toctoc"
+   ]
+  },
+  {
+   "t": "一句台词音频 + 一行处境字幕",
+   "d": "音频固定，用户只填自己的处境（被无视、说一套做一套、别人在玩我在卷）；Virlo 本周榜前五里有两条是这种，第三条在前七",
+   "ex": [
+    "smoothie",
+    "buddhist",
+    "partying",
+    "listen"
+   ]
+  },
+  {
+   "t": "前后反转图集",
+   "d": "旧照 → 现在、可爱 → 离谱：两三张照片 + 一句台词卡点切换，图集模式就能做",
+   "ex": [
+    "declined",
+    "sorry"
+   ]
+  },
+  {
+   "t": "宠物线回到真猫真反应",
+   "d": "上月的「AI 宠物复刻真人梗」一周涨幅都不到 2%；本周起量的是真猫被摸的真实反应，分享率很高；AI 唱歌猫仍在涨",
+   "ex": [
+    "strangercat",
+    "iwly"
+   ]
+  },
+  {
+   "t": "AI 角色连载继续涨",
+   "d": "水果肥皂剧、AI 模型拟人、复古怪诞角色：按集更新的 AI 小世界一周仍涨 7–44%，比单条 AI 爆款更耐久",
+   "ex": [
+    "fruitnovela",
+    "aimoe",
+    "edith"
+   ]
+  },
+  {
+   "t": "名场面换人",
+   "d": "街头即兴、派对 STAFF、进球、Tiny Desk：画面不动只换主角，Bulin 47 和 Bby Wow 本周仍涨约一成",
+   "ex": [
+    "bulin47",
+    "bbywow",
+    "ozil",
+    "tinydesk"
+   ]
+  }
+ ],
+ "change": {
+  "up": [
+   [
+    "开期时仍在涨：圣诞睡衣舞",
+    "xmasdance"
+   ],
+   [
+    "二头肌比心",
+    "bicep"
+   ],
+   [
+    "8th Avenue smoothie",
+    "smoothie"
+   ]
+  ],
+  "down": [
+   [
+    "开期时已停涨：精灵悄悄话",
+    "fairy"
+   ],
+   [
+    "Puerto Rican Mami",
+    "prmami"
+   ]
+  ],
+  "note": "开期沿用 W46 定稿（11-13）时的 26 条实时和读数；圣诞季格式预计继续升温，下周五复核小猫举剑（置顶 1，接近 6 周上限）和 10 月上旬的条目。"
+ },
+ "log": [
+  "11-13 开期：沿用 W46 定稿时的 26 条实时条目。"
+ ],
+ "thumbs": {
+  "knight": "assets/weeks/2026-W47/knight.webp",
+  "fan": "assets/weeks/2026-W47/fan.webp",
+  "janggeum": "assets/weeks/2026-W47/janggeum.webp",
+  "aimoe": "assets/weeks/2026-W47/aimoe.webp",
+  "smoothie": "assets/weeks/2026-W47/smoothie.webp",
+  "buddhist": "assets/weeks/2026-W47/buddhist.webp",
+  "strangercat": "assets/weeks/2026-W47/strangercat.webp",
+  "declined": "assets/weeks/2026-W47/declined.webp",
+  "partying": "assets/weeks/2026-W47/partying.webp",
+  "rps": "assets/weeks/2026-W47/rps.webp",
+  "xmasdance": "assets/weeks/2026-W47/xmasdance.webp",
+  "bicep": "assets/weeks/2026-W47/bicep.webp",
+  "hophop": "assets/weeks/2026-W47/hophop.webp",
+  "sorry": "assets/weeks/2026-W47/sorry.webp",
+  "tinydesk": "assets/weeks/2026-W47/tinydesk.webp",
+  "prmami": "assets/weeks/2026-W47/prmami.webp",
+  "ozil": "assets/weeks/2026-W47/ozil.webp",
+  "bbywow": "assets/weeks/2026-W47/bbywow.webp",
+  "listen": "assets/weeks/2026-W47/listen.webp",
+  "edith": "assets/weeks/2026-W47/edith.webp",
+  "fairy": "assets/weeks/2026-W47/fairy.webp",
+  "bulin47": "assets/weeks/2026-W47/bulin47.webp",
+  "iwly": "assets/weeks/2026-W47/iwly.webp",
+  "champagne": "assets/weeks/2026-W47/champagne.webp",
+  "toctoc": "assets/weeks/2026-W47/toctoc.webp",
+  "fruitnovela": "assets/weeks/2026-W47/fruitnovela.webp"
+ },
+ "cards": {
+  "knight": {
+   "n": "小猫举剑 Knight Cat",
+   "s": "小猫举剑"
+  },
+  "fan": {
+   "n": "风扇转场换装",
+   "s": "风扇换装"
+  },
+  "janggeum": {
+   "n": "大长今「长今，你在汤里放了什么？」",
+   "s": "大长今问汤"
+  },
+  "aimoe": {
+   "n": "DeepSeek / Claude / GPT 拟人 二创",
+   "s": "AI 拟人"
+  },
+  "smoothie": {
+   "n": "「I saw you on 8th Avenue drinking a smoothie」",
+   "s": "8th Avenue 台词"
+  },
+  "buddhist": {
+   "n": "「But you're not a Buddhist」台词对口型",
+   "s": "Not a Buddhist"
+  },
+  "strangercat": {
+   "n": "「Human Nature」伸手摸猫",
+   "s": "伸手摸猫"
+  },
+  "declined": {
+   "n": "「Wdym my card's been declined?」变美图集",
+   "s": "Card declined 变美"
+  },
+  "partying": {
+   "n": "「While they're out partying btw」",
+   "s": "While they're partying"
+  },
+  "rps": {
+   "n": "石头剪刀布抢食挑战",
+   "s": "猜拳抢食"
+  },
+  "xmasdance": {
+   "n": "「Deck the Halls」圣诞睡衣双人舞",
+   "s": "圣诞睡衣双人舞"
+  },
+  "bicep": {
+   "n": "「Bicep heart」二头肌比心",
+   "s": "二头肌比心"
+  },
+  "hophop": {
+   "n": "「Hop hop hop」走廊换位舞",
+   "s": "Hop hop hop 换位"
+  },
+  "sorry": {
+   "n": "「I'm so sorry」反转图集",
+   "s": "I'm so sorry"
+  },
+  "tinydesk": {
+   "n": "AI「Tiny Desk」输球乐队",
+   "s": "Tiny Desk"
+  },
+  "prmami": {
+   "n": "「Puerto Rican Mami」双人舞",
+   "s": "PR 双人舞"
+  },
+  "ozil": {
+   "n": "AI 重做厄齐尔名场面进球",
+   "s": "AI 厄齐尔"
+  },
+  "bbywow": {
+   "n": "「Bby Wow Guy」派对 STAFF 舞",
+   "s": "STAFF 舞"
+  },
+  "listen": {
+   "n": "「Listening ear activated」",
+   "s": "Listening ear"
+  },
+  "edith": {
+   "n": "Edith_Paf 怪诞复古角色宇宙",
+   "s": "复古怪诞"
+  },
+  "fairy": {
+   "n": "AI 精灵说悄悄话「Prilili」",
+   "s": "精灵八卦"
+  },
+  "bulin47": {
+   "n": "Bulin 47 街头即兴",
+   "s": "Bulin 47"
+  },
+  "iwly": {
+   "n": "唱 Akon 的 AI 白猫",
+   "s": "唱歌白猫"
+  },
+  "champagne": {
+   "n": "一键生日香槟大片「Happy Birthday To Me」",
+   "s": "生日香槟"
+  },
+  "toctoc": {
+   "n": "「Toc Toc」单脚跳敲门舞",
+   "s": "敲门舞"
+  },
+  "fruitnovela": {
+   "n": "AI 水果连续剧「Fruit Novelas」",
+   "s": "水果肥皂剧"
+  }
+ }
+}
