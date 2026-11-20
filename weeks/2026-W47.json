@@ -3,99 +3,119 @@
  "range": "2026-11-16 ~ 11-20",
  "start": "2026-11-16",
  "end": "2026-11-20",
- "status": "本周更新中",
+ "status": "已定稿",
  "patterns": [
   {
-   "t": "几拍动作或一个手势，把身边的人拉进镜头",
-   "d": "圣诞睡衣舞、二头肌比心、走廊换位舞：动作越简单越能把妈妈、情侣、室友拉进来；本周最大的几条都是两个人拍的",
+   "t": "节日合拍把身边的人拉进镜头",
+   "d": "Deck the Halls「妈妈加入」版一周 1,470 万→2,120 万（+44%），情侣版 730 万→1,120 万；动作越简单，妈妈和另一半越容易下场。二头肌比心、走廊换位舞本周也还在涨",
    "ex": [
     "xmasdance",
+    "shoulder",
     "bicep",
-    "hophop",
-    "toctoc"
+    "hophop"
+   ]
+  },
+  {
+   "t": "情侣专属的文案对齐和蒙太奇",
+   "d": "My Moon My Man 用 FINNEAS 翻唱，把「my moon, my maaaaaaan」拉过两张照片或一段情侣片段；Virlo 本周仅蒙太奇格式就有 667 位创作者（新出现），单条最高 1,510 万播放",
+   "ex": [
+    "mymoon",
+    "shoulder"
    ]
   },
   {
    "t": "一句台词音频 + 一行处境字幕",
-   "d": "音频固定，用户只填自己的处境（被无视、说一套做一套、别人在玩我在卷）；Virlo 本周榜前五里有两条是这种，第三条在前七",
+   "d": "「While they're out partying btw」Virlo 本周 299 位创作者、比上周 +162%，Dude Perfect 版一周 680 万→1,130 万，另有 11-17 一条打到 3,080 万。新进的 SNL「He wanna pay full price」也是同一结构；8th Avenue 一条跟拍一周 290 万→530 万",
    "ex": [
-    "smoothie",
-    "buddhist",
     "partying",
-    "listen"
+    "fullprice",
+    "smoothie",
+    "buddhist"
    ]
   },
   {
-   "t": "前后反转图集",
-   "d": "旧照 → 现在、可爱 → 离谱：两三张照片 + 一句台词卡点切换，图集模式就能做",
-   "ex": [
-    "declined",
-    "sorry"
-   ]
-  },
-  {
-   "t": "宠物线回到真猫真反应",
-   "d": "上月的「AI 宠物复刻真人梗」一周涨幅都不到 2%；本周起量的是真猫被摸的真实反应，分享率很高；AI 唱歌猫仍在涨",
+   "t": "真猫真反应还在加量",
+   "d": "「伸手摸猫」代表视频一周 420 万→560 万，橘猫版 160 万→570 万（+256%）。Virlo 统计新创作者在减少，但已有爆款还在涨；AI 唱歌猫仍在长尾加量",
    "ex": [
     "strangercat",
     "iwly"
    ]
   },
   {
-   "t": "AI 角色连载继续涨",
-   "d": "水果肥皂剧、AI 模型拟人、复古怪诞角色：按集更新的 AI 小世界一周仍涨 7–44%，比单条 AI 爆款更耐久",
+   "t": "AI 角色连载比单条更耐久",
+   "d": "水果肥皂剧 10-26 这一集一周再涨 19%（260 万→310 万），走红已超 6 周仍在更新。AI 拟人代表视频几乎停涨，但「人是猫」翻唱还加了 17.7 万播放",
    "ex": [
     "fruitnovela",
-    "aimoe",
-    "edith"
+    "aimoe"
    ]
   },
   {
-   "t": "名场面换人",
-   "d": "街头即兴、派对 STAFF、进球、Tiny Desk：画面不动只换主角，Bulin 47 和 Bby Wow 本周仍涨约一成",
+   "t": "名场面和简单对局还在涨",
+   "d": "Toc Toc 宿舍版一周再加 280 万（5,350 万→5,630 万）；Bulin 47 +10%；石头剪刀布 1,300 万→1,650 万，姐妹版 620 万→980 万；Talk to Me Doja 和 iPhone Kupi 是本周补进的可跟跳格式",
    "ex": [
+    "toctoc",
+    "rps",
     "bulin47",
-    "bbywow",
-    "ozil",
-    "tinydesk"
+    "doja"
    ]
   }
  ],
  "change": {
   "up": [
    [
-    "开期时仍在涨：圣诞睡衣舞",
+    "Deck the Halls「妈妈加入」版 1,470 万→2,120 万（+44%），Brooke Monk 版 1,210 万→1,610 万，情侣版 730 万→1,120 万",
     "xmasdance"
    ],
    [
-    "二头肌比心",
-    "bicep"
+    "While they're partying：Dude Perfect 版 680 万→1,130 万（+66%）；Virlo 本周 299 位创作者、+162%；11-17 又一条 3,080 万",
+    "partying"
    ],
    [
-    "8th Avenue smoothie",
+    "新增 My Moon My Man：Virlo 蒙太奇格式本周 667 位创作者（新出现），11-16 爆款到 11-20 已有 1,510 万播放",
+    "mymoon"
+   ],
+   [
+    "伸手摸猫：代表视频 420 万→560 万，橘猫版 160 万→570 万（+256%）",
+    "strangercat"
+   ],
+   [
+    "石头剪刀布：1,300 万→1,650 万，姐妹版 620 万→980 万",
+    "rps"
+   ],
+   [
+    "新增肩扛镜自拍：@marina_official 11-18 一条到 11-20 已有 1,400 万播放、19.1 万分享",
+    "shoulder"
+   ],
+   [
+    "8th Avenue 跟拍一周 290 万→530 万；水果连载 260 万→310 万；Toc Toc 宿舍版再加 280 万",
     "smoothie"
    ]
   ],
   "down": [
    [
-    "开期时已停涨：精灵悄悄话",
-    "fairy"
+    "But you're not a Buddhist：Virlo 本周 82 位创作者（上周 127，-35%），已有爆款仍在涨",
+    "buddhist"
    ],
    [
-    "Puerto Rican Mami",
-    "prmami"
+    "伸手摸猫：Virlo 本周 76 位创作者（上周 118，-36%），已有爆款仍在涨（橘猫版 +256%）",
+    "strangercat"
+   ],
+   [
+    "AI 拟人代表视频几乎停涨（514.9 万→516.3 万，+0.3%），已取消置顶；「人是猫」翻唱仍 +17.7 万",
+    "aimoe"
    ]
   ],
-  "note": "开期沿用 W46 定稿（11-13）时的 26 条实时和读数；圣诞季格式预计继续升温，下周五复核小猫举剑（置顶 1，接近 6 周上限）和 10 月上旬的条目。"
+  "note": "11-20 定稿：圣诞合拍和情侣格式成为本周主线，「妈妈加入」圣诞舞一周再涨 44%，My Moon My Man 一周内冲到 Virlo 榜首。置顶 1 小猫举剑、置顶 2 风扇换装因走红超 6 周且已停涨移出；大长今和 AI 拟人也取消置顶（代表视频几乎停涨，仍留在信息流供产品借鉴）。台词处境梗里 partying 还在猛涨；伸手摸猫和 Buddhist 的新创作者在减少，但已有爆款还在加播放。新进 5 条里 4 条是真人拍摄格式，iPhone Kupi 是补进的仍在传的大舞蹈。"
  },
  "log": [
+  "11-20 定稿更新：新增 My Moon My Man 情侣蒙太奇、He wanna pay full price、肩扛镜自拍、Talk to Me Doja、iPhone Kupi 折叠手机舞（均有 11-20 TikTok 平台读数 + 不同账号二创或第三方创作者数）；移出 10 条：小猫举剑（原置顶 1，超 6 周且无本周新读数）、风扇换装（原置顶 2，一周播放持平）、生日香槟、精灵悄悄话、Listening ear、I'm so sorry、Puerto Rican Mami、Tiny Desk、Özil、Edith_Paf（二创全是原作者系列）。大长今、AI 拟人取消置顶但仍保留。全部 TikTok / B站链接 11-20 重新读数（风扇一条二创 @bizinhatsuyoi_ 重读未成功，该条已随风扇换装移出）。",
   "11-13 开期：沿用 W46 定稿时的 26 条实时条目。"
  ],
  "thumbs": {
-  "knight": "assets/weeks/2026-W47/knight.webp",
-  "fan": "assets/weeks/2026-W47/fan.webp",
-  "janggeum": "assets/weeks/2026-W47/janggeum.webp",
-  "aimoe": "assets/weeks/2026-W47/aimoe.webp",
+  "fullprice": "assets/weeks/2026-W47/fullprice.webp",
+  "shoulder": "assets/weeks/2026-W47/shoulder.webp",
+  "mymoon": "assets/weeks/2026-W47/mymoon.webp",
+  "doja": "assets/weeks/2026-W47/doja.webp",
   "smoothie": "assets/weeks/2026-W47/smoothie.webp",
   "buddhist": "assets/weeks/2026-W47/buddhist.webp",
   "strangercat": "assets/weeks/2026-W47/strangercat.webp",
@@ -105,36 +125,31 @@
   "xmasdance": "assets/weeks/2026-W47/xmasdance.webp",
   "bicep": "assets/weeks/2026-W47/bicep.webp",
   "hophop": "assets/weeks/2026-W47/hophop.webp",
-  "sorry": "assets/weeks/2026-W47/sorry.webp",
-  "tinydesk": "assets/weeks/2026-W47/tinydesk.webp",
-  "prmami": "assets/weeks/2026-W47/prmami.webp",
-  "ozil": "assets/weeks/2026-W47/ozil.webp",
+  "kupi": "assets/weeks/2026-W47/kupi.webp",
   "bbywow": "assets/weeks/2026-W47/bbywow.webp",
-  "listen": "assets/weeks/2026-W47/listen.webp",
-  "edith": "assets/weeks/2026-W47/edith.webp",
-  "fairy": "assets/weeks/2026-W47/fairy.webp",
   "bulin47": "assets/weeks/2026-W47/bulin47.webp",
+  "janggeum": "assets/weeks/2026-W47/janggeum.webp",
   "iwly": "assets/weeks/2026-W47/iwly.webp",
-  "champagne": "assets/weeks/2026-W47/champagne.webp",
   "toctoc": "assets/weeks/2026-W47/toctoc.webp",
+  "aimoe": "assets/weeks/2026-W47/aimoe.webp",
   "fruitnovela": "assets/weeks/2026-W47/fruitnovela.webp"
  },
  "cards": {
-  "knight": {
-   "n": "小猫举剑 Knight Cat",
-   "s": "小猫举剑"
+  "fullprice": {
+   "n": "「He wanna pay full price」SNL 台词",
+   "s": "Pay full price"
   },
-  "fan": {
-   "n": "风扇转场换装",
-   "s": "风扇换装"
+  "shoulder": {
+   "n": "肩扛镜自拍",
+   "s": "肩扛镜自拍"
   },
-  "janggeum": {
-   "n": "大长今「长今，你在汤里放了什么？」",
-   "s": "大长今问汤"
+  "mymoon": {
+   "n": "「My Moon My Man」情侣蒙太奇",
+   "s": "My Moon My Man"
   },
-  "aimoe": {
-   "n": "DeepSeek / Claude / GPT 拟人 二创",
-   "s": "AI 拟人"
+  "doja": {
+   "n": "「Talk to Me Doja」害羞摇摆舞",
+   "s": "Talk to Me Doja"
   },
   "smoothie": {
    "n": "「I saw you on 8th Avenue drinking a smoothie」",
@@ -172,53 +187,33 @@
    "n": "「Hop hop hop」走廊换位舞",
    "s": "Hop hop hop 换位"
   },
-  "sorry": {
-   "n": "「I'm so sorry」反转图集",
-   "s": "I'm so sorry"
-  },
-  "tinydesk": {
-   "n": "AI「Tiny Desk」输球乐队",
-   "s": "Tiny Desk"
-  },
-  "prmami": {
-   "n": "「Puerto Rican Mami」双人舞",
-   "s": "PR 双人舞"
-  },
-  "ozil": {
-   "n": "AI 重做厄齐尔名场面进球",
-   "s": "AI 厄齐尔"
+  "kupi": {
+   "n": "「iPhone Kupi」折叠手机舞",
+   "s": "iPhone Kupi 舞"
   },
   "bbywow": {
    "n": "「Bby Wow Guy」派对 STAFF 舞",
    "s": "STAFF 舞"
   },
-  "listen": {
-   "n": "「Listening ear activated」",
-   "s": "Listening ear"
-  },
-  "edith": {
-   "n": "Edith_Paf 怪诞复古角色宇宙",
-   "s": "复古怪诞"
-  },
-  "fairy": {
-   "n": "AI 精灵说悄悄话「Prilili」",
-   "s": "精灵八卦"
-  },
   "bulin47": {
    "n": "Bulin 47 街头即兴",
    "s": "Bulin 47"
+  },
+  "janggeum": {
+   "n": "大长今「长今，你在汤里放了什么？」",
+   "s": "大长今问汤"
   },
   "iwly": {
    "n": "唱 Akon 的 AI 白猫",
    "s": "唱歌白猫"
   },
-  "champagne": {
-   "n": "一键生日香槟大片「Happy Birthday To Me」",
-   "s": "生日香槟"
-  },
   "toctoc": {
    "n": "「Toc Toc」单脚跳敲门舞",
    "s": "敲门舞"
+  },
+  "aimoe": {
+   "n": "DeepSeek / Claude / GPT 拟人 二创",
+   "s": "AI 拟人"
   },
   "fruitnovela": {
    "n": "AI 水果连续剧「Fruit Novelas」",

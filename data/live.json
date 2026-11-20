@@ -1,247 +1,236 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-20",
  "rule": "收录标准：真火 + 有大量模仿 / 二创 + 能迁移到社交、创作、直播产品；每条有可播放的代表视频、平台数字和二创证据，走红在约 6 周内",
  "items": [
   {
-   "k": "knight",
-   "n": "小猫举剑 Knight Cat",
+   "k": "fullprice",
+   "n": "「He wanna pay full price」SNL 台词",
    "p": [
-    "Instagram",
-    "X",
     "TikTok"
    ],
-   "ai": 1,
-   "what": "AI 生成的迷你盔甲小猫，在暴风里握着比自己高两倍的剑死不退后",
-   "why": "被当成「硬撑着面对生活」的反应图；X 一条配文帖 80 万曝光",
-   "pm": "可爱角色 + 一句可代入的处境 = 反应素材；角色 IP 化后还能出周边",
-   "hot": "2026-09 下旬起，10-04 当周搜索见顶；接近 6 周上限，下周复核",
-   "hs": "2026-09-27",
-   "sd": "2026-09-28",
-   "src": "https://renoise.ai/blog/knight-cat-meme-explained",
+   "ai": 0,
+   "what": "对口型一段 SNL（Druski）台词「He wanna pay full price」，字幕写自己舍得花、或不得不花很多钱的处境：过生日、养孩子、度假",
+   "why": "又是「固定音频 + 一行处境」。Virlo 统计本周 164 位创作者发布（本周新出现）；11-15 到 11-16 多条过 350 万，最高一条 660 万、9.8 万分享",
+   "pm": "吐槽「真的有人愿意原价买 / 不得不原价付」的消费瞬间，适合电商、礼物和节日节点",
+   "kx": "「台词音频 + 处境字幕」模板：音频固定，用户只填一行「为什么要原价付」；也可做直播间的贵价礼物槽点和评论区音频表情",
+   "hot": "2026-11 月中起，本周新出现在 Virlo 榜；11-16 爆款到 11-20 已有 660 万播放",
+   "hs": "2026-11-15",
+   "sd": "2026-11-16",
+   "src": "https://virlo.ai/trends",
    "m": {
-    "t": "ig",
-    "id": "Dd1y2m2sMRB",
-    "o": "https://www.instagram.com/reel/Dd1y2m2sMRB/",
-    "label": "9-28 合作帖"
+    "t": "tt",
+    "id": "7708462202109299982",
+    "o": "https://www.tiktok.com/@a.sias1a/video/7708462202109299982",
+    "label": "11-16 爆款"
    },
    "st": {
-    "lk": 3290000,
-    "plat": "Instagram",
-    "rd": "2026-10-18",
-    "u": "https://www.instagram.com/reel/Dd1y2m2sMRB/",
-    "via": "Jump on the Trend 读数"
+    "pl": 6600000,
+    "lk": 1500000,
+    "sh": 98400,
+    "cm": 19500,
+    "plat": "TikTok",
+    "rd": "2026-11-20",
+    "u": "https://www.tiktok.com/@a.sias1a/video/7708462202109299982"
    },
-   "extra": [
-    "X 爆款帖",
-    "https://x.com/Okay_Bye___/status/2104227167014121811"
-   ],
-   "vir": [
-    [
-     "X 帖 80.2 万曝光 · 2.37 万赞",
-     "https://x.com/Okay_Bye___/status/2104227167014121811",
-     "X"
-    ]
-   ],
-   "v": "Instagram 不公开播放数；原作者 @sickmanai 的 8 月原帖无法嵌入，改用合作帖",
-   "kx": "做成「角色 + 一句处境」的反应贴纸：评论区和私信一键插入，可改字、可换成自家宠物",
    "rx": [
     [
-     "Zooop 换宠物模板 1,319 次使用",
-     "https://jumponthetrend.app/trends/knight-cat-ai-trend/",
-     "第三方 10-18 读数"
+     "本周 164 位创作者发布（本周新出现）",
+     "https://virlo.ai/trends",
+     "第三方 Virlo 11-20 读数"
     ],
     [
-     "@aimak.s 二创 Reel",
-     "https://www.instagram.com/reel/DeCSc1HoMsA/",
-     "Instagram · 10-03"
+     "#snl #druski 版",
+     "https://www.tiktok.com/@anereslaila1/video/7708427947723509006",
+     "@anereslaila1 · 510 万 播放 · 11-15"
+    ],
+    [
+     "口播「HE WANNA PAY FULL PRICE」",
+     "https://www.tiktok.com/@sparklyglitterymj/video/7708599985033563406",
+     "@sparklyglitterymj · 350 万 播放 · 11-16"
+    ],
+    [
+     "跟拍",
+     "https://www.tiktok.com/@chandlerarnell/video/7708939043098086669",
+     "@chandlerarnell · 110 万 播放 · 11-17"
     ]
    ],
-   "thumb": "assets/live/knight.webp",
-   "pin": 1
+   "thumb": "assets/live/fullprice.webp"
   },
   {
-   "k": "fan",
-   "n": "风扇转场换装",
+   "k": "shoulder",
+   "n": "肩扛镜自拍",
+   "p": [
+    "TikTok"
+   ],
+   "ai": 0,
+   "what": "一个人把伴侣或朋友扛在肩上，对着镜子自拍，配同一段有节奏的音频；也有人用 CapCut 模板把旧照做成这个姿势",
+   "why": "动作只有一个，但画面是双人的。Virlo 统计本周 138 位创作者发布（本周新出现）；@marina_official 11-18 和男友的版本到 11-20 已有 1,400 万播放、19.1 万分享",
+   "pm": "「一个姿势就能把两个人拍进同一张照片」比学一支舞更容易带动另一半出镜",
+   "kx": "「双人姿势」合拍模板：识别到肩扛或引导用户摆出这个姿势再拍镜自拍；也可做成旧照一键生成同款姿势，适合情侣运营和节日玩法",
+   "hot": "本周新出现；11-18 爆款两天到 11-20 已有 1,400 万播放，11-15 夫妻版 360 万，并出现多条 CapCut 模板教程",
+   "hs": "2026-11-15",
+   "sd": "2026-11-18",
+   "src": "https://virlo.ai/trends",
+   "m": {
+    "t": "tt",
+    "id": "7709536400919514401",
+    "o": "https://www.tiktok.com/@marina_official/video/7709536400919514401",
+    "label": "11-18 爆款"
+   },
+   "st": {
+    "pl": 14000000,
+    "lk": 2100000,
+    "sh": 190700,
+    "cm": 10400,
+    "plat": "TikTok",
+    "rd": "2026-11-20",
+    "u": "https://www.tiktok.com/@marina_official/video/7709536400919514401"
+   },
+   "rx": [
+    [
+     "本周 138 位创作者发布（本周新出现）",
+     "https://virlo.ai/trends",
+     "第三方 Virlo 11-20 读数"
+    ],
+    [
+     "跟拍「finally hopping on this trend」",
+     "https://www.tiktok.com/@camilla/video/7709239122732403998",
+     "@camilla · 440 万 播放 · 11-18"
+    ],
+    [
+     "夫妻版",
+     "https://www.tiktok.com/@aureliadobre/video/7708063833499127070",
+     "@aureliadobre · 360 万 播放 · 11-15"
+    ],
+    [
+     "CapCut 模板教程",
+     "https://www.tiktok.com/@thecapcutterx/video/7708431039365909782",
+     "@thecapcutterx · 460 万 播放 · 11-16"
+    ]
+   ],
+   "thumb": "assets/live/shoulder.webp"
+  },
+  {
+   "k": "mymoon",
+   "n": "「My Moon My Man」情侣蒙太奇",
    "p": [
     "TikTok",
     "Instagram"
    ],
    "ai": 0,
-   "what": "俯拍躺地，吊扇叶片每扫过一次就换一套衣服",
-   "why": "叶片天然遮住剪辑点，观众看得懂机关；也有一张照片即可复刻的 AI 模板",
-   "pm": "换装天然带货：可做「虚拟换装礼物」，与电商试穿联动",
-   "hot": "2026-09 下旬起；11-06→11-13 代表视频仍涨 10 万播放（+4.8%）",
-   "hs": "2026-09-25",
-   "sd": "2026-10-10",
-   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
+   "what": "配 FINNEAS 在加拿大词曲名人堂演唱的 Feist《My Moon My Man》翻唱，把情侣照片或片段剪成蒙太奇；图集版会把「My Moon My Maaaaaan」一行字从第一张拉到第二张对准",
+   "why": "一句被拉长的歌词既是字幕也是转场。Virlo 统计「情侣蒙太奇」本周 667 位创作者（本周新出现），相关的「My moon / My man」标记版还有 395 位、比上周 +70%。The Tab、Know Your Meme 和 Billboard 本周都写了这篇",
+   "pm": "情侣内容每年都缺新格式：把一行文案自动对齐到两张照片，比再做一个双人舞的门槛更低",
+   "kx": "「双图文案对齐」模板：用户选两张照片，一行歌词从第一张拖到第二张自动对齐；也可做成情侣蒙太奇一键成片，适合节日和纪念日常",
+   "hot": "2026-11-07 图集文案对齐版出现；11-14 起蒙太奇集中爆量，11-16 @haleyybaylee 版到 11-20 已有 1,510 万播放",
+   "hs": "2026-11-14",
+   "sd": "2026-11-16",
+   "src": "https://knowyourmeme.com/memes/my-moon-my-man-trend",
    "m": {
     "t": "tt",
-    "id": "7695045104460942606",
-    "o": "https://www.tiktok.com/@khvdenn/video/7695045104460942606"
+    "id": "7708505666104708365",
+    "o": "https://www.tiktok.com/@haleyybaylee/video/7708505666104708365",
+    "label": "11-16 爆款"
    },
    "st": {
-    "pl": 2200000,
-    "lk": 206100,
-    "sh": 5271,
-    "cm": 804,
+    "pl": 15100000,
+    "lk": 2200000,
+    "sh": 14900,
+    "cm": 1602,
     "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@khvdenn/video/7695045104460942606"
+    "rd": "2026-11-20",
+    "u": "https://www.tiktok.com/@haleyybaylee/video/7708505666104708365"
    },
-   "kx": "直播间「转场换装」特效：主播每次遮挡镜头触发换一套虚拟服装，可绑定礼物或商品试穿",
    "rx": [
     [
-     "日系版",
-     "https://www.tiktok.com/@bizinhatsuyoi_/video/7694617702882725138",
-     "@bizinhatsuyoi_ · 150 万 播放 · 10-09"
+     "情侣蒙太奇本周 667 位创作者（新出现）；标记版 395 位、比上周 +70%",
+     "https://virlo.ai/trends",
+     "第三方 Virlo 11-20 读数（asOf 18:07 UTC+8）"
     ],
     [
-     "AI 风扇转场教程",
-     "https://www.tiktok.com/@edit_szns/video/7690852612094119189",
-     "@edit_szns · 110 万 播放 · 09-29"
+     "11-14 爆款",
+     "https://www.tiktok.com/@user.m3l3/video/7707940998030069025",
+     "@user.m3l3 · 1360 万 播放 · 11-14"
     ],
     [
-     "情侣版",
-     "https://www.tiktok.com/@elsanna6/video/7690491538132061470",
-     "@elsanna6 · 35.1 万 播放 · 09-28"
+     "「My maaaaaan」版",
+     "https://www.tiktok.com/@gracie.meredith/video/7707793970235067669",
+     "@gracie.meredith · 840 万 播放 · 11-14"
+    ],
+    [
+     "跟拍",
+     "https://www.tiktok.com/@iamonlyglenda/video/7708127624110804238",
+     "@iamonlyglenda · 600 万 播放 · 11-15"
     ]
    ],
-   "thumb": "assets/live/fan.webp",
-   "pin": 2
+   "vir": [
+    [
+     "Feist 原曲 11-10～16 美国点播流媒体约 430 万，比前一周 270 万 +61%",
+     "https://www.billboard.com/music/chart-beat/feist-my-moon-my-man-goes-viral-trending-up-1236384986/",
+     "Billboard / Luminate，文章 11-18"
+    ],
+    [
+     "The Tab 11-17 介绍文案对齐做法",
+     "https://thetab.com/2026/11/17/apparently-everyone-is-doing-the-my-moon-my-maaaaan-couples-trend-wrong-and-tiktok-is-unhappy",
+     "The Tab"
+    ]
+   ],
+   "thumb": "assets/live/mymoon.webp"
   },
   {
-   "k": "janggeum",
-   "n": "大长今「长今，你在汤里放了什么？」",
+   "k": "doja",
+   "n": "「Talk to Me Doja」害羞摇摆舞",
    "p": [
-    "抖音",
-    "B站",
-    "微博"
+    "TikTok",
+    "Instagram"
    ],
    "ai": 0,
-   "what": "模仿《大长今》配音腔，一本正经地问「长今，你在这碗汤里放了什么？」，答案越说越离谱",
-   "why": "全网都认得的老剧台词 + 固定问答句式，谁都能换个答案接着演；被叫作「大长今废话文学」",
-   "kx": "「名台词问答」接龙：固定上半句，用户填下半句并配同款腔调，可做成评论区接龙或连麦对戏玩法",
-   "pm": "老 IP 的一句台词就是现成模板：台词越固定，二创门槛越低",
-   "hot": "2026-10-01 起 B站出现「废话文学」视频，10-09 后模仿版密集出现，10-18 媒体报道",
-   "hs": "2026-10-01",
-   "sd": "2026-10-02",
-   "src": "https://news.qq.com/rain/a/20261018A07S6A00",
+   "what": "跟动画《山田君与7人魔女》里 Urara 双手托腮、左右摇摆的害羞舞，配加速版 Doja Cat《Like That》，旁边常常叠原作片段，字幕写「Talk to me Doja」",
+   "why": "动作只有左右晃，还可以跟原作动画对拍。Know Your Meme 11-12 收录；MakeViral 称 11-13 话题 #talktomedoja 下有 631 条视频、1,200 万播放。11-09 的跟跳到 11-20 已有 500 万播放、7.3 万分享",
+   "pm": "「跟角色对拍」把学习成本和娱乐性绑在一起：一边是经典动画，一边是自己，对得越像越好玩",
+   "kx": "「跟角色分屏对拍」：一边放动画或表情包，一边引导用户做同一个小动作并自动对齐节拍；直播间可做连麦跟跳",
+   "hot": "2026-11-07 原剪辑出现，11-09 起真人跟跳走红；@the_real.ryan 版到 11-20 已有 500 万播放",
+   "hs": "2026-11-09",
+   "sd": "2026-11-09",
+   "src": "https://knowyourmeme.com/memes/talk-to-me-doja",
    "m": {
-    "t": "bili",
-    "id": "BV1V9aU6VEKt",
-    "o": "https://www.bilibili.com/video/BV1V9aU6VEKt/",
-    "label": "废话文学版",
-    "v": 1
+    "t": "tt",
+    "id": "7706097117160361229",
+    "o": "https://www.tiktok.com/@the_real.ryan/video/7706097117160361229",
+    "label": "跟跳爆款"
    },
    "st": {
-    "pl": 224205,
-    "lk": 9325,
-    "sh": 1119,
-    "cm": 354,
-    "plat": "B站",
-    "rd": "2026-11-13",
-    "u": "https://www.bilibili.com/video/BV1V9aU6VEKt/"
+    "pl": 5000000,
+    "lk": 533100,
+    "sh": 73100,
+    "cm": 9676,
+    "plat": "TikTok",
+    "rd": "2026-11-20",
+    "u": "https://www.tiktok.com/@the_real.ryan/video/7706097117160361229"
    },
    "rx": [
     [
-     "多种演法版（含 AI 版，B站热门）",
-     "https://www.bilibili.com/video/BV1mSJt63Enj/",
-     "B站 @李如儒也是李蠕蠕 · 230.4 万 播放 · 10-16"
+     "#talktomedoja 631 条视频、约 1,200 万播放",
+     "https://www.makeviral.ai/templates/talk-to-me-doja-ai-trend",
+     "第三方 MakeViral，11-13 读数"
     ],
     [
-     "「肠筋，你在汤里放了什么」",
-     "https://www.bilibili.com/video/BV1yap16tETa/",
-     "B站 @干饭小困困 · 5.2 万 播放 · 10-14"
+     "起点：「Speak to me Doja」原剪辑",
+     "https://www.tiktok.com/@lovingbalanci/video/7705422899473173774",
+     "@lovingbalanci · 43.6 万 播放 · 11-07"
     ],
     [
-     "用废话文学开 small talk",
-     "https://www.bilibili.com/video/BV12MHQ65Etu/",
-     "B站 @Miracle觅奇 · 8,465 播放 · 10-08"
+     "跟跳",
+     "https://www.tiktok.com/@bunnicutieluv/video/7706351111191416095",
+     "@bunnicutieluv · 110 万 播放 · 11-10"
+    ],
+    [
+     "床垫店老板版",
+     "https://www.tiktok.com/@twin.cities.mattress/video/7706633127090834702",
+     "@twin.cities.mattress · 81.6 万 播放 · 11-11"
     ]
    ],
-   "vir": [
-    [
-     "新周刊 / 腾讯新闻报道",
-     "https://news.qq.com/rain/a/20261018A07S6A00",
-     "10-18"
-    ],
-    [
-     "澎湃新闻报道",
-     "https://www.thepaper.cn/newsDetail_forward_34275116",
-     "媒体"
-    ],
-    [
-     "新浪娱乐报道",
-     "https://ent.sina.cn/2026-10-19/detail-inivsnmf6419652.d.html",
-     "10-19"
-    ]
-   ],
-   "v": "据微博报道，原作来自抖音 @和安晗，但抖音数据从这里读不到，代表视频和数字用 B站",
-   "thumb": "assets/live/janggeum.webp",
-   "pin": 3
-  },
-  {
-   "k": "aimoe",
-   "n": "DeepSeek / Claude / GPT 拟人 二创",
-   "p": [
-    "B站"
-   ],
-   "ai": 1,
-   "what": "把 AI 模型画成角色：DeepSeek 是蓝发「大肥鱼」鲸鱼娘，Claude 橙发、GPT 白发；网友给她们写剧情、翻唱、做新番",
-   "why": "人人每天在用的 AI 有了脸和性格；「DeepSeek 崩了」这类真实事件立刻变成剧情素材",
-   "kx": "让用户给自己常用的 AI 助手捏形象、定人设，再生成角色短剧或表情包；AI 产品本身也可以 IP 化运营",
-   "pm": "用户会给工具「立人设」：情感连接比功能说明更容易传播",
-   "hot": "「大肥鱼」形象约 2026-07 起流行，9 月中旬起 B站二创密集；11-06→11-13 代表视频 +34 万播放",
-   "hs": "2026-09-14",
-   "sd": "2026-10-15",
-   "src": "https://news.qq.com/rain/a/20261009A0ARW600",
-   "m": {
-    "t": "bili",
-    "id": "BV1uaJy6ZE9P",
-    "o": "https://www.bilibili.com/video/BV1uaJy6ZE9P/",
-    "label": "DeepSeek 崩了的那天",
-    "v": 1
-   },
-   "st": {
-    "pl": 5149325,
-    "lk": 214412,
-    "sh": 2501,
-    "cm": 3965,
-    "plat": "B站",
-    "rd": "2026-11-13",
-    "u": "https://www.bilibili.com/video/BV1uaJy6ZE9P/"
-   },
-   "rx": [
-    [
-     "大肥鱼翻唱《人是猫》",
-     "https://www.bilibili.com/video/BV1fYpn6SEk9/",
-     "B站 @星落落_oi · 409.2 万 播放 · 10-12"
-    ],
-    [
-     "和其他角色「面基」",
-     "https://www.bilibili.com/video/BV1cJaB6dEg5/",
-     "B站 @小陈的脚凑凑的 · 234.3 万 播放 · 10-01"
-    ],
-    [
-     "DS × Claude 新番风短片",
-     "https://www.bilibili.com/video/BV191Yr6bEYy/",
-     "B站 @黑猫勇者 · 62.3 万 播放 · 09-14"
-    ]
-   ],
-   "vir": [
-    [
-     "腾讯新闻：拟人形象投票，鲸鱼娘约 314.5 万票",
-     "https://news.qq.com/rain/a/20261009A0ARW600",
-     "10-09"
-    ],
-    [
-     "vgover：Claude × DeepSeek 二创走红海外",
-     "https://www.vgover.com/news/241494",
-     "10-19"
-    ]
-   ],
-   "thumb": "assets/live/aimoe.webp",
-   "pin": 4
+   "thumb": "assets/live/doja.webp"
   },
   {
    "k": "smoothie",
@@ -251,10 +240,10 @@
    ],
    "ai": 0,
    "what": "一段音频反复念「I saw you on 8th Avenue drinking a smoothie and you paid me no mind」，屏幕字幕写一个代入感强的处境：被无视、重复干活、一头雾水",
-   "why": "一句洗脑的抱怨台词 + 万能字幕位，什么处境都能套；Virlo 统计本周 200 位创作者发布，是本周新出现的格式",
+   "why": "一句洗脑的抱怨台词 + 万能字幕位，什么处境都能套；代表视频本周仍涨，11-12 的跟拍一周 290 万→530 万",
    "pm": "「台词音频 + 一行字幕」是生产成本最低的梗格式，用户只需要贡献一句处境",
    "kx": "「梗台词 + 字幕位」模板：音频固定，用户只填一行处境字幕；也可做评论区的音频表情和直播间的弹幕梗",
-   "hot": "2026-11-08 起出现，11-11 爆款 690 万播放，11-12 跟拍 290 万",
+   "hot": "2026-11-08 起出现；11-11 爆款 11-13→11-20 从 690 万涨到 740 万，11-12 跟拍从 290 万涨到 530 万",
    "hs": "2026-11-08",
    "sd": "2026-11-11",
    "src": "https://virlo.ai/trends",
@@ -265,12 +254,12 @@
     "label": "爆款"
    },
    "st": {
-    "pl": 6900000,
+    "pl": 7400000,
     "lk": 1600000,
-    "sh": 131900,
-    "cm": 2774,
+    "sh": 135400,
+    "cm": 2830,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@chewbonio/video/7706597622114422038"
    },
    "rx": [
@@ -282,17 +271,17 @@
     [
      "跟拍",
      "https://www.tiktok.com/@more.dejankat/video/7707002136193699093",
-     "@more.dejankat · 290 万 播放 · 11-12"
+     "@more.dejankat · 530 万 播放 · 11-12"
     ],
     [
      "早期版",
      "https://www.tiktok.com/@ataraxyne/video/7705583005204630798",
-     "@ataraxyne · 79.3 万 播放 · 11-08"
+     "@ataraxyne · 110 万 播放 · 11-08"
     ],
     [
      "#8thavenue 版",
      "https://www.tiktok.com/@chlloewillson/video/7706435291506167061",
-     "@chlloewillson · 75.2 万 播放 · 11-10"
+     "@chlloewillson · 110 万 播放 · 11-10"
     ]
    ],
    "v": "音频来源按爆款作者 caption 自述（录自他人 story），未核实原始出处",
@@ -306,10 +295,10 @@
    ],
    "ai": 0,
    "what": "对口型动画《King of the Hill》里 Peggy 和 Bobby 的一段对话（「But you're not a Buddhist.」「Yes, I am, mom.」），字幕吐槽某个自称某种身份、行为却明显对不上的人",
-   "why": "熟悉的动画台词 + 「说一套做一套」的吐槽，人人身边都有这样的人；Virlo 统计本周 178 位创作者发布",
+   "why": "熟悉的动画台词 + 「说一套做一套」的吐槽；Virlo 统计本周 82 位创作者（上周 127 位，-35%），已有爆款仍在涨，跟拍一条一周 400 万→610 万",
    "pm": "吐槽类台词梗靠「你身边也有这种人」传播，评论区会自发补充新版本",
    "kx": "「双人台词对口型」：台词分好 A / B 角色，好友各录一句自动合成；适合合拍或连麦对戏",
-   "hot": "2026-11-08 起，11-11 爆款 380 万播放",
+   "hot": "2026-11-08 起；11-11 爆款 11-13→11-20 从 380 万涨到 450 万，另一条跟拍从 400 万涨到 610 万。Virlo 本周新创作者在减少",
    "hs": "2026-11-08",
    "sd": "2026-11-11",
    "src": "https://virlo.ai/trends",
@@ -320,29 +309,29 @@
     "label": "爆款"
    },
    "st": {
-    "pl": 3800000,
-    "lk": 950400,
-    "sh": 34000,
-    "cm": 3054,
+    "pl": 4500000,
+    "lk": 1100000,
+    "sh": 39200,
+    "cm": 3639,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@brookieistryingherbest/video/7706728557501795602"
    },
    "rx": [
     [
-     "本周 178 位创作者发布（本周新出现）",
+     "本周 82 位创作者发布（上周 127 位，-35%）",
      "https://virlo.ai/trends",
-     "第三方 Virlo 11-13 读数"
+     "第三方 Virlo 11-20 读数；已有爆款仍在涨"
     ],
     [
      "跟拍",
      "https://www.tiktok.com/@tygersbears/video/7705559840499797261",
-     "@tygersbears · 400 万 播放 · 11-08"
+     "@tygersbears · 610 万 播放 · 11-08"
     ],
     [
      "跟拍",
      "https://www.tiktok.com/@dookcumber/video/7706101823307795734",
-     "@dookcumber · 260 万 播放 · 11-09"
+     "@dookcumber · 320 万 播放 · 11-09"
     ]
    ],
    "thumb": "assets/live/buddhist.webp"
@@ -355,10 +344,10 @@
    ],
    "ai": 0,
    "what": "配《Human Nature》音频，镜头里的人慢慢伸手去摸一只猫，然后一把抱住，拍下猫的反应",
-   "why": "慢动作的期待 + 猫的真实反应；分享率很高（爆款 420 万播放、19.6 万分享），Virlo 统计本周 139 位创作者发布",
+   "why": "慢动作的期待 + 猫的真实反应，分享率仍然很高。Virlo 统计本周 76 位创作者（上周 118 位，-36%），但已有爆款还在加量：橘猫版一周 160 万→570 万",
    "pm": "宠物真实反应仍是最稳的分享内容；但「突然抓猫」有动物福利争议，爆款作者都加注「猫没受伤」，做产品要设边界",
    "kx": "「宠物反应」接力话题：固定音频 + 一个动作，主人拍自家猫狗的反应；宠物社区可做成每周挑战",
-   "hot": "2026-11-08 起，11-10 爆款 420 万播放，11-12 起橘猫、黑猫版接力",
+   "hot": "2026-11-08 起；11-10 爆款 11-13→11-20 从 420 万涨到 560 万，11-12 橘猫版从 160 万涨到 570 万（+256%）",
    "hs": "2026-11-08",
    "sd": "2026-11-10",
    "src": "https://virlo.ai/trends",
@@ -369,34 +358,44 @@
     "label": "爆款"
    },
    "st": {
-    "pl": 4200000,
-    "lk": 1200000,
-    "sh": 196300,
-    "cm": 1861,
+    "pl": 5600000,
+    "lk": 1400000,
+    "sh": 222200,
+    "cm": 2305,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@thehurtfam/video/7706379353101274399"
    },
    "rx": [
     [
-     "本周 139 位创作者发布（本周新出现）",
+     "本周 76 位创作者发布（上周 118 位，-36%）",
      "https://virlo.ai/trends",
-     "第三方 Virlo 11-13 读数"
+     "第三方 Virlo 11-20 读数；已有爆款仍在涨"
     ],
     [
      "小猫版",
      "https://www.tiktok.com/@slyerstar_/video/7705600037522394398",
-     "@slyerstar_ · 380 万 播放 · 11-08"
+     "@slyerstar_ · 620 万 播放 · 11-08"
     ],
     [
      "跟拍",
      "https://www.tiktok.com/@im.mal.1k/video/7707134794601139469",
-     "@im.mal.1k · 190 万 播放 · 11-12"
+     "@im.mal.1k · 510 万 播放 · 11-12"
     ],
     [
      "橘猫版",
      "https://www.tiktok.com/@basic_orange_cats/video/7707086545471212831",
-     "@basic_orange_cats · 160 万 播放 · 11-12"
+     "@basic_orange_cats · 570 万 播放 · 11-12"
+    ],
+    [
+     "11-14 跟拍",
+     "https://www.tiktok.com/@_emmahalcom_/video/7707812500149914894",
+     "@_emmahalcom_ · 450 万 播放 · 11-14"
+    ],
+    [
+     "11-15 跟拍",
+     "https://www.tiktok.com/@urfavjen06/video/7708262024425311501",
+     "@urfavjen06 · 390 万 播放 · 11-15"
     ]
    ],
    "thumb": "assets/live/strangercat.webp"
@@ -409,10 +408,10 @@
    ],
    "ai": 0,
    "what": "先放几张旧照或不太好看的照片，卡在「Wdym my card's been declined?」这句音频上切到现在变好看的自己；多数是图集",
-   "why": "before / after 反转 + 一句好笑台词，只要几张照片；Virlo 统计本周 155 位创作者发布",
+   "why": "before / after 反转 + 一句好笑台词，只要几张照片；视频版一周 240 万→320 万，图集版仍在涨",
    "pm": "「旧照 vs 现在」是图集模式的天然玩法，和上月的「I'm so sorry」反转图集同一结构",
    "kx": "「before / after 图集」一键模板：选新旧照片自动卡点切换，可接美颜、妆造、穿搭产品",
-   "hot": "2026-11-07 起，11-08 视频版 240 万播放，图集版多条 130–160 万",
+   "hot": "2026-11-07 起；11-08 视频版 11-13→11-20 从 240 万涨到 320 万（+33%），图集版 160 万→190 万、130 万→140 万",
    "hs": "2026-11-07",
    "sd": "2026-11-08",
    "src": "https://virlo.ai/trends",
@@ -423,12 +422,12 @@
     "label": "视频版"
    },
    "st": {
-    "pl": 2400000,
-    "lk": 300700,
-    "sh": 61600,
-    "cm": 2666,
+    "pl": 3200000,
+    "lk": 357400,
+    "sh": 70200,
+    "cm": 3162,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@sharkboi_jake/video/7705730005799619853"
    },
    "rx": [
@@ -440,12 +439,12 @@
     [
      "图集版",
      "https://www.tiktok.com/@giorgi_bedoshvili/photo/7706208976727280903",
-     "@giorgi_bedoshvili · 160 万 播放 · 11-10"
+     "@giorgi_bedoshvili · 190 万 播放 · 11-10"
     ],
     [
      "图集版",
      "https://www.tiktok.com/@haleyybaylee/photo/7705168891319684365",
-     "@haleyybaylee · 130 万 播放 · 11-07"
+     "@haleyybaylee · 140 万 播放 · 11-07"
     ]
    ],
    "thumb": "assets/live/declined.webp"
@@ -458,10 +457,10 @@
    ],
    "ai": 0,
    "what": "字幕「While they're out partying btw」配一段有节奏的喘气声，画面是自己在打游戏、在快餐店上班、在训练",
-   "why": "「别人在玩、我在卷」的自嘲 / 自夸，什么场景都能套；Dude Perfect 下场，Virlo 统计本周 105 位创作者发布，比上周 +218%",
+   "why": "「别人在玩、我在卷」的自嘲 / 自夸，什么场景都能套；Dude Perfect 下场后本周还在猛涨。Virlo 统计本周 299 位创作者发布，比上周 114 位 +162%",
    "pm": "「自律打卡」内容配上自嘲字幕更容易被转发",
    "kx": "「打卡反差」分享卡：学习、健身、加班打卡时自动套这句字幕和音频，适合自律类 App 和直播间的「陪伴学习」场景",
-   "hot": "2026-11-07 起，11-11 Dude Perfect 版 680 万播放",
+   "hot": "2026-11-07 起；11-11 Dude Perfect 版 11-13→11-20 从 680 万涨到 1,130 万（+66%），11-17 又一条打到 3,080 万播放",
    "hs": "2026-11-07",
    "sd": "2026-11-11",
    "src": "https://virlo.ai/trends",
@@ -472,29 +471,44 @@
     "label": "Dude Perfect 版"
    },
    "st": {
-    "pl": 6800000,
-    "lk": 488300,
-    "sh": 71400,
-    "cm": 1278,
+    "pl": 11300000,
+    "lk": 807000,
+    "sh": 128700,
+    "cm": 2506,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@dudeperfect/video/7706687987861474574"
    },
    "rx": [
     [
-     "本周 105 位创作者发布，比上周 +218%",
+     "本周 299 位创作者发布，比上周 +162%",
      "https://virlo.ai/trends",
-     "第三方 Virlo 11-13 读数"
+     "第三方 Virlo 11-20 读数（asOf 18:07 UTC+8）"
+    ],
+    [
+     "本周最高播放（打游戏版）",
+     "https://www.tiktok.com/@larpniverse/video/7709154079179558175",
+     "@larpniverse · 3080 万 播放 · 11-17"
+    ],
+    [
+     "图集版",
+     "https://www.tiktok.com/@nevaehmosher/photo/7707841680929606943",
+     "@nevaehmosher · 340 万 播放 · 11-14"
+    ],
+    [
+     "GTA VI 加班版",
+     "https://www.tiktok.com/@lacy/video/7709527233437650190",
+     "@lacy · 230 万 播放 · 11-18"
     ],
     [
      "Subway 打工版",
      "https://www.tiktok.com/@user9485729499/video/7706023206984879391",
-     "@user9485729499 · 130 万 播放 · 11-09"
+     "@user9485729499 · 390 万 播放 · 11-09"
     ],
     [
      "跟拍",
      "https://www.tiktok.com/@drewwall_/video/7705244618807332110",
-     "@drewwall_ · 72.2 万 播放 · 11-07"
+     "@drewwall_ · 85.7 万 播放 · 11-07"
     ]
    ],
    "thumb": "assets/live/partying.webp"
@@ -510,7 +524,7 @@
    "why": "规则人人懂、每一局都马上揭晓；吃播 + 家人 / 情侣 / 姐妹互动，同一周多条 400 万以上",
    "pm": "简单的对抗规则自带悬念，适合做成互动玩法而不只是内容",
    "kx": "「直播间猜拳 PK」：主播和连麦嘉宾或观众猜拳决定谁吃、谁受罚，观众可送礼物押注；也可做成好友合拍小游戏",
-   "hot": "2026-11-07 同一天多条起量：1,300 万、620 万、430 万播放",
+   "hot": "2026-11-07 同一天多条起量；代表视频 11-13→11-20 从 1,300 万涨到 1,650 万，姐妹版从 620 万涨到 980 万",
    "hs": "2026-11-07",
    "sd": "2026-11-07",
    "src": "https://virlo.ai/trends",
@@ -521,12 +535,12 @@
     "label": "蟹棒版"
    },
    "st": {
-    "pl": 13000000,
-    "lk": 783900,
-    "sh": 24000,
-    "cm": 7350,
+    "pl": 16500000,
+    "lk": 993600,
+    "sh": 31100,
+    "cm": 9317,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@miarace_/video/7705241175602515231"
    },
    "rx": [
@@ -538,12 +552,12 @@
     [
      "姐妹版",
      "https://www.tiktok.com/@sistersisterzz/video/7705286295064464670",
-     "@sistersisterzz · 620 万 播放 · 11-07"
+     "@sistersisterzz · 980 万 播放 · 11-07"
     ],
     [
      "情侣版",
      "https://www.tiktok.com/@candybites732/video/7705227803423214879",
-     "@candybites732 · 430 万 播放 · 11-07"
+     "@candybites732 · 500 万 播放 · 11-07"
     ]
    ],
    "thumb": "assets/live/rps.webp"
@@ -556,10 +570,10 @@
    ],
    "ai": 0,
    "what": "两个人（母女、姐妹、闺蜜）穿同款圣诞睡衣并排站，跟 DJ Izzy Duzzit 的《Deck the Halls x Blow the Whistle》混音跳 15 秒简单舞：扭胯、绕手、小跳、转圈、举拳",
-   "why": "起点是 @ayiahsoufi_ 带 #satire 的玩笑帖（「今年的圣诞舞大概都长这样」），结果大家真学了；动作只有几拍，妈妈一加入更好笑；第三方称 11-08 音频下已有约 3.19 万条视频",
+   "why": "起点是 @ayiahsoufi_ 带 #satire 的玩笑帖（「今年的圣诞舞大概都长这样」），结果大家真学了；动作只有几拍，妈妈一加入更好笑；第三方称 11-08 音频下约 3.19 万条视频",
    "pm": "节日「全家一起拍」的需求每年都有：一首辨识度高的歌 + 足够简单的动作，就能把不拍视频的人（妈妈）拉进来",
    "kx": "「家人 / 闺蜜合拍舞」模板：邀请一位好友或家人分屏同跳，自动对齐节拍拼成双人画面；直播间可做连麦同跳，照片也能生成宠物版",
-   "hot": "2026-11-01/02 起；11-04「妈妈加入」版 1,470 万播放，11-08 Brooke Monk 跟拍 1,210 万，11-09 情侣版 730 万",
+   "hot": "2026-11-01/02 起；11-04「妈妈加入」版 11-13→11-20 从 1,470 万涨到 2,120 万（+44%），Brooke Monk 版 1,210 万→1,610 万，情侣版 730 万→1,120 万",
    "hs": "2026-11-02",
    "sd": "2026-11-04",
    "src": "https://christmas-dance.com/",
@@ -570,12 +584,12 @@
     "label": "「妈妈加入」版"
    },
    "st": {
-    "pl": 14700000,
-    "lk": 1800000,
-    "sh": 73700,
-    "cm": 4169,
+    "pl": 21200000,
+    "lk": 2400000,
+    "sh": 94300,
+    "cm": 5651,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@calysta.belle/video/7704053710728498462"
    },
    "rx": [
@@ -587,29 +601,29 @@
     [
      "起点：「should we make a dance??」",
      "https://www.tiktok.com/@ayiahsoufi_/video/7703698484062407967",
-     "@ayiahsoufi_ · 580 万 播放 · 11-03"
+     "@ayiahsoufi_ · 860 万 播放 · 11-03"
     ],
     [
      "Brooke Monk 版",
      "https://www.tiktok.com/@brookemonk_/video/7705537326981827871",
-     "@brookemonk_ · 1210 万 播放 · 11-08"
+     "@brookemonk_ · 1610 万 播放 · 11-08"
     ],
     [
      "情侣版",
      "https://www.tiktok.com/@notnataliereynoldss/video/7705880878710263053",
-     "@notnataliereynoldss · 730 万 播放 · 11-09"
+     "@notnataliereynoldss · 1120 万 播放 · 11-09"
     ]
    ],
    "vir": [
     [
      "原作者带妈妈的三人版",
      "https://www.tiktok.com/@ayiahsoufi_/video/7704076163399847198",
-     "@ayiahsoufi_ · 600 万 播放 · 11-04"
+     "@ayiahsoufi_ · 670 万 播放 · 11-04"
     ],
     [
      "换上圣诞睡衣再跳",
      "https://www.tiktok.com/@everydaywithericksons/video/7704721884801174814",
-     "@everydaywithericksons · 290 万 播放 · 11-06"
+     "@everydaywithericksons · 300 万 播放 · 11-06"
     ]
    ],
    "thumb": "assets/live/xmasdance.webp"
@@ -623,10 +637,10 @@
    ],
    "ai": 0,
    "what": "撸起袖子绷起一边二头肌，另一只手弯过来搭在上面，两条胳膊拼成一颗心，对镜头笑",
-   "why": "起点是评论区一句「send bicep hearts」：它是一个可以「送给别人」的手势；健身博主、情侣、普通人都能拍，Virlo 统计本周 174 位创作者跟拍，比上周 +2386%",
+   "why": "起点是评论区一句「send bicep hearts」：它是一个可以「送给别人」的手势；11-09 两条大跟拍本周仍涨到 2,180 万、1,440 万",
    "pm": "手势型梗的门槛比舞蹈还低，传得更广；「回复评论里的请求」本身就是接力机制",
    "kx": "「手势触发特效 / 礼物」：识别到二头肌比心就触发爱心特效或直播间点赞雨；私信里可做「给 TA 送一个 bicep heart」贴纸",
-   "hot": "2026-10-31 / 11-01 起；11-09 两条跟拍到 11-13 分别 2,000 万、1,260 万播放",
+   "hot": "2026-10-31 / 11-01 起；11-09 两条跟拍 11-13→11-20 分别从 2,000 万、1,260 万涨到 2,180 万、1,440 万",
    "hs": "2026-11-01",
    "sd": "2026-11-01",
    "src": "https://jumponthetrend.app/trends/bicep-heart-ai-trend/",
@@ -637,12 +651,12 @@
     "label": "11-01 爆款"
    },
    "st": {
-    "pl": 7500000,
+    "pl": 8300000,
     "lk": 1300000,
-    "sh": 111500,
-    "cm": 3743,
+    "sh": 113300,
+    "cm": 3851,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@kavithageorge/video/7703044626931895583"
    },
    "rx": [
@@ -654,12 +668,12 @@
     [
      "最大一条跟拍",
      "https://www.tiktok.com/@artthuroficial_/video/7705803370358967553",
-     "@artthuroficial_ · 2000 万 播放 · 11-09"
+     "@artthuroficial_ · 2180 万 播放 · 11-09"
     ],
     [
      "跟拍",
      "https://www.tiktok.com/@marlon.noah/video/7705854126000753952",
-     "@marlon.noah · 1260 万 播放 · 11-09"
+     "@marlon.noah · 1440 万 播放 · 11-09"
     ],
     [
      "「im sad please send bicep hearts」",
@@ -687,7 +701,7 @@
    "why": "配加速版俄语歌《Её парень》（Shluzov），一个镜头机关 + 两个人就能拍；10-25 起出现 AI 版（俄罗斯民间故事角色）",
    "pm": "「远近换位」是低成本的视觉错觉，换成 AI 角色也成立",
    "kx": "「远近换位」双人特效：前景的人一按手，远处的人就被「按」下去，切镜后互换；可做双人合拍滤镜或直播连麦互动",
-   "hot": "2026-10-18 双胞胎版先起量，10-24 走廊版定型；@john_stockman 版 11-09 → 11-13 从 400 万（第三方读数）涨到 530 万",
+   "hot": "2026-10-18 双胞胎版先起量，10-24 走廊版定型；@john_stockman 版 11-13→11-20 从 530 万涨到 640 万（+21%）",
    "hs": "2026-10-24",
    "sd": "2026-10-24",
    "src": "https://jumponthetrend.app/trends/hop-hop-hop-dance-ai-trend/",
@@ -698,19 +712,19 @@
     "label": "走廊版"
    },
    "st": {
-    "pl": 5300000,
-    "lk": 628300,
-    "sh": 43000,
-    "cm": 7856,
+    "pl": 6400000,
+    "lk": 720200,
+    "sh": 49100,
+    "cm": 8830,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@john_stockman/video/7699849893854203157"
    },
    "rx": [
     [
      "「squished or get squashed」",
      "https://www.tiktok.com/@nirami1/video/7700291582259514657",
-     "@nirami1 · 170 万 播放 · 10-25"
+     "@nirami1 · 180 万 播放 · 10-25"
     ],
     [
      "AI 民间故事角色版",
@@ -721,208 +735,49 @@
    "thumb": "assets/live/hophop.webp"
   },
   {
-   "k": "sorry",
-   "n": "「I'm so sorry」反转图集",
-   "p": [
-    "TikTok"
-   ],
-   "ai": 0,
-   "what": "第一张是可爱的小时候照片配「I'm so sorry…」，翻到最后才露出离谱的现在，或一套万圣节装扮",
-   "why": "只要两张照片 + 一个预期反转；10-20 起万圣节版接棒，两天内多条百万播放",
-   "kx": "「前后对比图集」模板：选两张照片自动排成反转图集，可按节日（万圣节、毕业季）出主题版",
-   "pm": "成本最低的叙事模板：两张图 + 一句话，适合做发布页的默认玩法",
-   "hot": "2026-08-22 原帖 2,560 万播放；10-20 起万圣节版二次爆发，KYM 10-22 收录",
-   "hs": "2026-10-20",
-   "sd": "2026-10-20",
-   "src": "https://knowyourmeme.com/memes/im-so-sorry-tiktok-trend",
-   "m": {
-    "t": "tt",
-    "id": "7698650625839500574",
-    "o": "https://www.tiktok.com/@certifiedlolnonsense/video/7698650625839500574",
-    "label": "宝宝版"
-   },
-   "st": {
-    "pl": 3300000,
-    "lk": 180100,
-    "sh": 37100,
-    "cm": 849,
-    "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@certifiedlolnonsense/video/7698650625839500574"
-   },
-   "rx": [
-    [
-     "公主 → 艺伎装（图集）",
-     "https://www.tiktok.com/@girllover4u1/photo/7698792823386164513",
-     "@girllover4u1 · 260 万 播放 · 10-21"
-    ],
-    [
-     "万圣节版",
-     "https://www.tiktok.com/@kamdan.13/video/7699171246923173151",
-     "@kamdan.13 · 63 万 播放 · 10-22"
-    ],
-    [
-     "万圣节版",
-     "https://www.tiktok.com/@lilostitch_2012/video/7698988793801542942",
-     "@lilostitch_2012 · 42.2 万 播放 · 10-21"
-    ]
-   ],
-   "vir": [
-    [
-     "8-22 原帖（图集）",
-     "https://www.tiktok.com/@theywanthunter/photo/7677005467830275358",
-     "@theywanthunter · 2570 万 播放 · 08-23"
-    ],
-    [
-     "Know Your Meme 词条",
-     "https://knowyourmeme.com/memes/im-so-sorry-tiktok-trend",
-     "10-22 收录"
-    ]
-   ],
-   "thumb": "assets/live/sorry.webp"
-  },
-  {
-   "k": "tinydesk",
-   "n": "AI「Tiny Desk」输球乐队",
+   "k": "kupi",
+   "n": "「iPhone Kupi」折叠手机舞",
    "p": [
     "TikTok"
    ],
    "ai": 1,
-   "what": "把 Charlie Wilson 的 NPR Tiny Desk 现场《Outstanding》换成 AI 版：本周输球的教练们当主唱和乐手",
-   "why": "名场面 + 体育圈每周新素材：每个比赛周都能换一批「输家」重演；NFL、记者、球队账号都在跟",
-   "pm": "「固定名场面 × 每周热点人物」= 可周更的梗栏目",
-   "kx": "「本周名场面乐队」模板：选一段经典现场，把本周热点人物 / 好友 / 主播换进乐队席，按赛事或节目日历周更",
-   "hot": "2026-10-18 起，10-23 起 NFL 版和教程跟进",
-   "hs": "2026-10-18",
-   "sd": "2026-10-18",
-   "src": "https://jumponthetrend.app/trends/tiny-desk-ai-trend/",
+   "what": "在昏暗酒店房间里，先把一部折叠手机翻开怼到镜头前，再展开一部更大的折叠屏，然后退后尽情跳舞并把手机抛起来；配俄语歌《Базовый минимум》（hook 里的「iPhone kupi」是「买一部 iPhone」）",
+   "why": "一个道具揭晓 + 一段尽兴的舞，很好仿。原作 @win.william_official 10-23 的「iPhone 5555」到 11-20 有 1.083 亿播放、110 万分享；同一天 @thecocovex 的 AI 换人版 2,950 万播放。Jump on the Trend 11-16 上线了 AI 模板",
+   "pm": "「揭晓一个夸张道具，再进入高潮舞蹈」是可复用的 15 秒结构，也适合做一键换人",
+   "kx": "「道具揭晓 + 高潮舞」模板：前几秒怼脸展示折叠/放大的手机，后面接同一段舞；支持用自己的照片换到酒店房间里跳",
+   "hot": "2026-10-23 原作和 AI 换人版同一天发出；11-16 第三方上线模板。11-19 第三方读原作 1.076 亿，11-20 平台读数 1.083 亿，仍在缓慢加量",
+   "hs": "2026-10-23",
+   "sd": "2026-10-23",
+   "src": "https://jumponthetrend.app/trends/iphone-kupi-dance-ai-trend/",
    "m": {
     "t": "tt",
-    "id": "7698160711830129934",
-    "o": "https://www.tiktok.com/@theburnerfromhe11/video/7698160711830129934",
-    "label": "大学橄榄球输家版"
+    "id": "7699876919000468757",
+    "o": "https://www.tiktok.com/@win.william_official/video/7699876919000468757",
+    "label": "原作「iPhone 5555」"
    },
    "st": {
-    "pl": 4300000,
-    "lk": 326700,
-    "sh": 125000,
-    "cm": 5045,
+    "pl": 108300000,
+    "lk": 11900000,
+    "sh": 1100000,
+    "cm": 83400,
     "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@theburnerfromhe11/video/7698160711830129934"
+    "rd": "2026-11-20",
+    "u": "https://www.tiktok.com/@win.william_official/video/7699876919000468757"
    },
    "rx": [
     [
-     "NFL 记者版",
-     "https://www.tiktok.com/@decibelsports/video/7699882208852512013",
-     "@decibelsports · 340 万 播放 · 10-23"
+     "同一天的 AI 换人版",
+     "https://www.tiktok.com/@thecocovex/video/7699881955302690068",
+     "@thecocovex · 2950 万 播放 · 10-23"
     ],
     [
-     "NFC 东区教练版",
-     "https://www.tiktok.com/@lawsnation/video/7699712149400128799",
-     "@lawsnation · 53 万 播放 · 10-23"
-    ],
-    [
-     "做法教程",
-     "https://www.tiktok.com/@wilmavargas511/video/7700260501552450847",
-     "@wilmavargas511 · 47.7 万 播放 · 10-24"
+     "原作 11-19 第三方读数 1.076 亿播放、1,190 万赞；AI 版 2,930 万",
+     "https://jumponthetrend.app/trends/iphone-kupi-dance-ai-trend/",
+     "第三方 Jump on the Trend，读数日期 11-19"
     ]
    ],
-   "thumb": "assets/live/tinydesk.webp"
-  },
-  {
-   "k": "prmami",
-   "n": "「Puerto Rican Mami」双人舞",
-   "p": [
-    "TikTok"
-   ],
-   "what": "情景喜剧《人人都恨克里斯》里的一句「Is that what you tell your little Puerto Rican mami?」被做成 beat，大学生配上双人舞：举手、拍膝、换位、弯腰",
-   "why": "一句台词 + 15 秒双人动作，和朋友、室友就能拍；10-16 beat 发布后一周内大量双人跟拍（#2persondance）",
-   "pm": "台词梗 → 音乐 → 舞蹈，三层二创在一周内完成",
-   "kx": "「拉好友合拍」双人舞模板：邀请一位好友各录一半、自动对齐换位，或用两张照片生成双人 AI 版",
-   "hot": "2026-10-16 beat 发布，10-17 双人舞走红，10-20 起 AI 模板",
-   "hs": "2026-10-16",
-   "sd": "2026-10-16",
-   "src": "https://jumponthetrend.app/trends/puerto-rican-mami-dance-ai-trend/",
-   "m": {
-    "t": "tt",
-    "id": "7697272812209294622",
-    "o": "https://www.tiktok.com/@babyonthetrack/video/7697272812209294622",
-    "label": "beat 原声"
-   },
-   "st": {
-    "pl": 3700000,
-    "lk": 375000,
-    "sh": 79600,
-    "cm": 5213,
-    "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@babyonthetrack/video/7697272812209294622"
-   },
-   "rx": [
-    [
-     "双人舞原版",
-     "https://www.tiktok.com/@_kenyaad/video/7697789602379091214",
-     "@_kenyaad · 55.9 万 播放 · 10-17"
-    ],
-    [
-     "跟拍",
-     "https://www.tiktok.com/@deirdre_barry/video/7698407381583056159",
-     "@deirdre_barry · 110 万 播放 · 10-19"
-    ],
-    [
-     "跟拍",
-     "https://www.tiktok.com/@po1son1vysgarden/video/7698826340056845598",
-     "@po1son1vysgarden · 110 万 播放 · 10-20"
-    ]
-   ],
-   "vir": [
-    [
-     "beat 音频 8,676 条视频",
-     "https://www.makeviral.ai/templates/puerto-rican-mami-ai-dance",
-     "第三方（MakeViral 10-25 读数）"
-    ]
-   ],
-   "v": "跟拍两条按标题和话题判断为同一 beat 的同款，画面未逐条核对",
-   "thumb": "assets/live/prmami.webp"
-  },
-  {
-   "k": "ozil",
-   "n": "AI 重做厄齐尔名场面进球",
-   "p": [
-    "TikTok"
-   ],
-   "ai": 1,
-   "what": "用 AI 把厄齐尔经典单刀（挑球、两次假动作、推射）换成新角色和新场景",
-   "why": "动作序列全球都认得，换皮不换动作，不需要语言",
-   "pm": "AI 适合当「换皮引擎」而不是卖点：熟悉 × 变换",
-   "hot": "2026-10 中旬",
-   "hs": "2026-10-13",
-   "sd": "2026-10-13",
-   "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
-   "m": {
-    "t": "tt",
-    "id": "7696037788889730325",
-    "o": "https://www.tiktok.com/@baguss_visual/video/7696037788889730325"
-   },
-   "st": {
-    "pl": 7300000,
-    "lk": 322900,
-    "sh": 19000,
-    "cm": 4444,
-    "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@baguss_visual/video/7696037788889730325"
-   },
-   "kx": "「同一套动作换皮」模板：保留经典动作序列，换成游戏角色、宠物或自己",
-   "rx": [
-    [
-     "300+ 创作者使用原声；我的世界村民版 10 天 480 万播放",
-     "https://trendswap.app/blog/ozil-ai-trend-explained-ludogorets-goal",
-     "TrendSwap 10-19"
-    ]
-   ],
-   "thumb": "assets/live/ozil.webp"
+   "v": "原作走红已约 4 周，本周主要是大视频的长尾加量和模板站补位，新创作者规模未在 Virlo 本周榜上看到",
+   "thumb": "assets/live/kupi.webp"
   },
   {
    "k": "bbywow",
@@ -936,7 +791,7 @@
    "why": "十月全球第一的 TikTok 歌 × 一个表情到位的普通人；绿幕素材、品牌改 T 恤、AI 换人三条线同时跟",
    "pm": "热歌把旧视频重新点燃：素材库里的旧名场面配上当周热歌就是新梗",
    "kx": "「热歌 × 旧名场面」自动配对：给经典绿幕素材推荐当周热歌，用户一键换成自己或好友跳",
-   "hot": "原视频 2025-07；2026-10-12 配上《BbY WOW》后走红，10-17 起 AI 换人版",
+   "hot": "原视频 2025-07；2026-10-12 配上《BbY WOW》后走红，10-17 起 AI 换人版；11-13→11-20 代表视频 1,030 万→1,110 万（+7.8%）",
    "hs": "2026-10-12",
    "sd": "2025-07-24",
    "src": "https://www.makeviral.ai/templates/bby-wow-guy-ai-trend",
@@ -947,19 +802,19 @@
     "label": "本人发的原片"
    },
    "st": {
-    "pl": 10300000,
-    "lk": 882500,
-    "sh": 67200,
-    "cm": 4900,
+    "pl": 11100000,
+    "lk": 960900,
+    "sh": 71200,
+    "cm": 5298,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@eve.el.cholo/video/7530706948828712197"
    },
    "rx": [
     [
      "AI 换人「Dime dime baby」",
      "https://www.tiktok.com/@elmariobrox/video/7697698998819294484",
-     "@elmariobrox · 210 万 播放 · 10-17"
+     "@elmariobrox · 220 万 播放 · 10-17"
     ],
     [
      "AI 版做法教程",
@@ -988,146 +843,6 @@
    "thumb": "assets/live/bbywow.webp"
   },
   {
-   "k": "listen",
-   "n": "「Listening ear activated」",
-   "p": [
-    "TikTok"
-   ],
-   "ai": 0,
-   "what": "上课、开会时心不在焉，一听到关键词立刻坐直、开始记笔记",
-   "why": "一句字幕说明处境，人人都有「突然被点醒」的瞬间",
-   "pm": "字幕就是梗本体：同一音频可无限换场景，适合功能宣传",
-   "hot": "2026-10-08 起",
-   "hs": "2026-10-08",
-   "sd": "2026-10-08",
-   "src": "https://www.ramd.am/blog/trends-tiktok",
-   "m": {
-    "t": "tt",
-    "id": "7694004035677916430",
-    "o": "https://www.tiktok.com/@kaikixrox/video/7694004035677916430"
-   },
-   "st": {
-    "pl": 8000000,
-    "lk": 1300000,
-    "sh": 157900,
-    "cm": 1106,
-    "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@kaikixrox/video/7694004035677916430"
-   },
-   "kx": "一句字幕 + 一个动作的处境模板：同一音频换场景即可发，适合做「梗字幕」创作入口",
-   "rx": [
-    [
-     "同音频另一版",
-     "https://www.tiktok.com/@neuteredsubmissivetwink/video/7695219970006912269",
-     "@neuteredsubmissivetwink · 340 万 播放 · 10-11"
-    ]
-   ],
-   "thumb": "assets/live/listen.webp"
-  },
-  {
-   "k": "edith",
-   "n": "Edith_Paf 怪诞复古角色宇宙",
-   "p": [
-    "TikTok"
-   ],
-   "ai": 1,
-   "what": "AI 生成上世纪泳池度假场：瘦高胡子男抱着金发女郎、1920s 泳装的壮女士站一旁，配意大利老歌 Sarà perché ti amo",
-   "why": "一眼「不对劲但想看完」：夸张身材比例 × 度假怀旧 × 老歌；作者 17 天涨粉 20 万，按固定人设批量连更",
-   "pm": "角色设定的连续性比单条质量更能攒粉：AI 让同一个人设每天更新成为可能",
-   "hot": "2026-10-06 Summer memories 190 万播放起，一周内续作 240 万，10-11 两条各 130–180 万",
-   "hs": "2026-10-06",
-   "sd": "2026-10-06",
-   "src": "https://www.tiktok.com/@edith_paf/video/7693628399545306401",
-   "m": {
-    "t": "tt",
-    "id": "7693628399545306401",
-    "o": "https://www.tiktok.com/@edith_paf/video/7693628399545306401",
-    "label": "Summer memories"
-   },
-   "st": {
-    "pl": 2200000,
-    "lk": 67900,
-    "sh": 5261,
-    "cm": 379,
-    "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@edith_paf/video/7693628399545306401"
-   },
-   "v": "目前是原作者个人宇宙，未出现其他账号同款；保留观察：如果别的账号开始仿她的风格，就是下一轮模板",
-   "kx": "「AI 角色卡」功能：上传一次设定（长相、服装、场景），工具保证跨集一致，让用户像连续剧一样日更同一个怪诞角色",
-   "rx": [
-    [
-     "原作续集",
-     "https://www.tiktok.com/@edith_paf/video/7693712189739240736",
-     "@edith_paf · 370 万 播放 · 10-07"
-    ],
-    [
-     "同宇宙 Naruto 版",
-     "https://www.tiktok.com/@edith_paf/video/7695394660923002144",
-     "@edith_paf · 240 万 播放 · 10-11"
-    ],
-    [
-     "同宇宙心碎版",
-     "https://www.tiktok.com/@edith_paf/video/7695331320104291617",
-     "@edith_paf · 180 万 播放 · 10-11"
-    ]
-   ],
-   "vir": [
-    [
-     "作者自述「17 天 20 万粉」",
-     "https://www.tiktok.com/@edith_paf/video/7697585400600104225",
-     "10-17 作品 caption"
-    ]
-   ],
-   "thumb": "assets/live/edith.webp"
-  },
-  {
-   "k": "fairy",
-   "n": "AI 精灵说悄悄话「Prilili」",
-   "p": [
-    "TikTok"
-   ],
-   "ai": 1,
-   "what": "像夜里手电筒偷拍到的两只 AI 小精灵：一只凑耳朵说悄悄话，另一只倒吸一口气，然后一起笑到打滚",
-   "why": "不需要语言：咿呀乱语被网友听写成「milili prilili ñaca」，配「我和闺蜜听到八卦」字幕就能转发；巴西转发版 7,780 万播放",
-   "pm": "一个 8 秒的 AI 角色片段就能长成「闺蜜梗」+ 连载剧（作者给主角起名 Prilili 开始更「精灵肥皂剧」）",
-   "kx": "「闺蜜精灵」双人模板：上传自己和好友的照片，变成两只说悄悄话的精灵，一键发给对方或发到群里；直播间可做连麦八卦特效",
-   "hot": "2026-10-05 原作走红，10-18 巴西转发版爆，10-26 起仿作账号日更",
-   "hs": "2026-10-05",
-   "sd": "2026-10-05",
-   "src": "https://www.makeviral.ai/templates/laughing-fairy-ai-trend",
-   "m": {
-    "t": "tt",
-    "id": "7693246436124740878",
-    "o": "https://www.tiktok.com/@fae.eyes/video/7693246436124740878",
-    "label": "原作"
-   },
-   "st": {
-    "pl": 9500000,
-    "lk": 1200000,
-    "sh": 633200,
-    "cm": 11600,
-    "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@fae.eyes/video/7693246436124740878"
-   },
-   "rx": [
-    [
-     "仿作账号",
-     "https://www.tiktok.com/@_piripiriprilli_/video/7700963030473100564",
-     "@_piripiriprilli_ · 440 万 播放 · 10-26"
-    ],
-    [
-     "西语「Milili prilili」版",
-     "https://www.tiktok.com/@key_s64/video/7694046347036577044",
-     "@key_s64 · 200 万 播放 · 10-07"
-    ]
-   ],
-   "v": "仿作账号的画面是否为同一作者授权未核实；巴西转发版（@lele19092011，10-30 读数 7,780 万）11-13 复查时被 TikTok 标为受限内容、未登录看不到，已移出二创证据",
-   "thumb": "assets/live/fairy.webp"
-  },
-  {
    "k": "bulin47",
    "n": "Bulin 47 街头即兴",
    "p": [
@@ -1138,7 +853,7 @@
    "what": "多米尼加歌手 Bulin 47 在马德里街头，对着路人的音箱即兴 19 秒 dembow；网友用 AI 把自己换进去",
    "why": "画面只换人：街景、红光、手持镜头和声音都不变，换谁都一眼认出",
    "pm": "真实名场面变成 AI 模板只用了 4 天（10-02 原片，10-06 首个换脸版）",
-   "hot": "2026-10-02 起，10-06 起 AI 换脸版；11-06→11-13 代表视频 +140 万播放",
+   "hot": "2026-10-02 起，10-06 起 AI 换脸版；11-13→11-20 代表视频 1,650 万→1,820 万（+10%）",
    "hs": "2026-10-02",
    "sd": "2026-10-02",
    "src": "https://sloptvnews.com/bulin-47-ai-video-template/",
@@ -1149,12 +864,12 @@
     "label": "原片"
    },
    "st": {
-    "pl": 16500000,
-    "lk": 1800000,
-    "sh": 115400,
-    "cm": 12200,
+    "pl": 18200000,
+    "lk": 2000000,
+    "sh": 128200,
+    "cm": 13000,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@kevincitooficial11/video/7691875916644994326"
    },
    "vir": [
@@ -1179,10 +894,80 @@
     [
      "另一版",
      "https://www.tiktok.com/@visjanukcenaj/video/7694344166033132807",
-     "@visjanukcenaj · 95.1 万 播放 · 10-09"
+     "@visjanukcenaj · 95.3 万 播放 · 10-09"
     ]
    ],
    "thumb": "assets/live/bulin47.webp"
+  },
+  {
+   "k": "janggeum",
+   "n": "大长今「长今，你在汤里放了什么？」",
+   "p": [
+    "抖音",
+    "B站",
+    "微博"
+   ],
+   "ai": 0,
+   "what": "模仿《大长今》配音腔，一本正经地问「长今，你在这碗汤里放了什么？」，答案越说越离谱",
+   "why": "全网都认得的老剧台词 + 固定问答句式，谁都能换个答案接着演；被叫作「大长今废话文学」",
+   "kx": "「名台词问答」接龙：固定上半句，用户填下半句并配同款腔调，可做成评论区接龙或连麦对戏玩法",
+   "pm": "老 IP 的一句台词就是现成模板：台词越固定，二创门槛越低",
+   "hot": "2026-10-01 起 B站出现「废话文学」视频，10-09 后模仿版密集出现，10-18 媒体报道；11-13→11-20 代表视频 22.4 万→23.1 万（+3.1%），已取消置顶",
+   "hs": "2026-10-01",
+   "sd": "2026-10-02",
+   "src": "https://news.qq.com/rain/a/20261018A07S6A00",
+   "m": {
+    "t": "bili",
+    "id": "BV1V9aU6VEKt",
+    "o": "https://www.bilibili.com/video/BV1V9aU6VEKt/",
+    "label": "废话文学版",
+    "v": 1
+   },
+   "st": {
+    "pl": 231235,
+    "lk": 9415,
+    "sh": 1146,
+    "cm": 356,
+    "plat": "B站",
+    "rd": "2026-11-20",
+    "u": "https://www.bilibili.com/video/BV1V9aU6VEKt/"
+   },
+   "rx": [
+    [
+     "多种演法版（含 AI 版，B站热门）",
+     "https://www.bilibili.com/video/BV1mSJt63Enj/",
+     "B站 @李如儒也是李蠕蠕 · 233.3 万 播放 · 10-16"
+    ],
+    [
+     "「肠筋，你在汤里放了什么」",
+     "https://www.bilibili.com/video/BV1yap16tETa/",
+     "B站 @干饭小困困 · 5.2 万 播放 · 10-14"
+    ],
+    [
+     "用废话文学开 small talk",
+     "https://www.bilibili.com/video/BV12MHQ65Etu/",
+     "B站 @Miracle觅奇 · 8,678 播放 · 10-08"
+    ]
+   ],
+   "vir": [
+    [
+     "新周刊 / 腾讯新闻报道",
+     "https://news.qq.com/rain/a/20261018A07S6A00",
+     "10-18"
+    ],
+    [
+     "澎湃新闻报道",
+     "https://www.thepaper.cn/newsDetail_forward_34275116",
+     "媒体"
+    ],
+    [
+     "新浪娱乐报道",
+     "https://ent.sina.cn/2026-10-19/detail-inivsnmf6419652.d.html",
+     "10-19"
+    ]
+   ],
+   "v": "据微博报道，原作来自抖音 @和安晗，但抖音数据从这里读不到，代表视频和数字用 B站",
+   "thumb": "assets/live/janggeum.webp"
   },
   {
    "k": "iwly",
@@ -1194,7 +979,7 @@
    "what": "穿灯芯绒西装的白猫在夜里自拍，深情唱《I Wanna Love You》",
    "why": "猫 × 人类夜店情歌的反差；配文「黑子会说是修音」",
    "pm": "宠物版名场面天然适合「用你家猫生成」的付费模板",
-   "hot": "2026-10-01 起；11-06→11-13 仍涨 130 万播放",
+   "hot": "2026-10-01 起；11-13→11-20 仍涨 90 万播放（2,790 万→2,880 万）",
    "hs": "2026-10-01",
    "sd": "2026-10-01",
    "src": "https://jumponthetrend.app/trends/pets/",
@@ -1204,12 +989,12 @@
     "o": "https://www.tiktok.com/@novoreel/video/7691621178405834006"
    },
    "st": {
-    "pl": 27900000,
-    "lk": 4100000,
+    "pl": 28800000,
+    "lk": 4200000,
     "sh": 1900000,
-    "cm": 30700,
+    "cm": 31700,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@novoreel/video/7691621178405834006"
    },
    "kx": "「让你的宠物唱这首歌」AI 对口型模板，按歌曲上新，支持一键合拍原作",
@@ -1217,78 +1002,15 @@
     [
      "换成别的猫",
      "https://www.tiktok.com/@fluffyfishlover/video/7694942402422820114",
-     "@fluffyfishlover · 980 万 播放 · 10-10"
+     "@fluffyfishlover · 1030 万 播放 · 10-10"
     ],
     [
      "原作者续集",
      "https://www.tiktok.com/@novoreel/video/7693228396641357078",
-     "@novoreel · 640 万 播放 · 10-06"
+     "@novoreel · 650 万 播放 · 10-06"
     ]
    ],
    "thumb": "assets/live/iwly.webp"
-  },
-  {
-   "k": "champagne",
-   "n": "一键生日香槟大片「Happy Birthday To Me」",
-   "p": [
-    "TikTok",
-    "Instagram"
-   ],
-   "ai": 1,
-   "what": "CapCut 模板：一张照片生成你在夜处长椅开香槟、酒柱冲天、画面切黑白定格，头顶大写 HAPPY BIRTHDAY",
-   "why": "生日是人人都要发的人生节点；模板给出大片感不用剪；分享数接近赞数的 60%，大家直接转给要过生日的朋友",
-   "pm": "「人生节点大片」是模板上能持续回流的钩：每年都有生日，教程本身承担分发",
-   "hot": "2026-05 主峰（教程 220–240 万播放）；9–10 月长盛，本周 For You 仍在推（新增教程日均数千播放）",
-   "hs": "2026-09-28",
-   "sd": "2026-09-28",
-   "src": "https://www.makeviral.ai/templates/champagne-birthday-ai-trend",
-   "m": {
-    "t": "tt",
-    "id": "7690513679674035470",
-    "o": "https://www.tiktok.com/@remy6308/video/7690513679674035470",
-    "label": "模板教程"
-   },
-   "st": {
-    "pl": 885800,
-    "lk": 8032,
-    "sh": 4609,
-    "cm": 28,
-    "plat": "TikTok",
-    "rd": "2026-11-13",
-    "u": "https://www.tiktok.com/@remy6308/video/7690513679674035470"
-   },
-   "v": "走红主峰在 5 月（教程 220–240 万播放），当前为常青长尾；Miya 10-27 在 For You 仍刷到新模板推送",
-   "vir": [
-    [
-     "原作（真实拍摄）",
-     "https://www.tiktok.com/@beatrizzsilvab/video/7636438865611427093",
-     "@beatrizzsilvab · 100 万 播放 · 05-05"
-    ],
-    [
-     "Miya 截图读数",
-     "https://www.tiktok.com/search?q=capcut%20champagne%20birthday%20template",
-     "For You 推送版 1.53 万赞 / 9,539 分享（截图 10-27 读数）"
-    ]
-   ],
-   "kx": "「人生节点大片」模板库：生日 / 毕业 / 升职，一张照片一键出片；直播间可做好友生日提醒 + 一键生成祝福视频绑礼物",
-   "rx": [
-    [
-     "5 月教程爆款 A",
-     "https://www.tiktok.com/@eg3bx1/video/7641869552766291213",
-     "@eg3bx1 · 230 万 播放 · 05-20"
-    ],
-    [
-     "5 月教程爆款 B",
-     "https://www.tiktok.com/@ujyh8807goflj00891/video/7642374898052041998",
-     "@ujyh8807goflj00891 · 240 万 播放 · 05-21"
-    ],
-    [
-     "本周仍在发的新教程",
-     "https://www.tiktok.com/@kisfg0uvr4/video/7700987988892732705",
-     "@kisfg0uvr4 · 7,233 播放 · 10-26（长尾）"
-    ]
-   ],
-   "thumb": "assets/live/champagne.webp"
   },
   {
    "k": "toctoc",
@@ -1301,7 +1023,7 @@
    "why": "动作只有几拍、哪儿都能跳；从法国传到美国、德国、波兰，大学宿舍走廊版 4,500 万播放，AI 猫和 AI 角色 Jean Philanthrope 版又推了一波",
    "pm": "老歌 + 极简动作 = 跨语言的全球舞；真人群舞、AI 宠物、AI 角色三条线同时跑",
    "kx": "「多人接龙舞」玩法：直播间或群聊里每人录一段同款单脚跳敲门，自动拼成走廊排队群舞；宠物照片可生成 AI 同款",
-   "hot": "2026-09-24 起（法国宪兵官方号下场，法媒报道传到美德）；10-06 宿舍走廊版爆；11-06→11-13 宿舍版又涨 350 万播放",
+   "hot": "2026-09-24 起（法国宪兵官方号下场，法媒报道传到美德）；10-06 宿舍走廊版爆；11-13→11-20 宿舍版又涨 280 万播放（5,350 万→5,630 万）",
    "hs": "2026-09-24",
    "sd": "2026-10-06",
    "src": "https://jumponthetrend.app/trends/toc-toc-dance-ai-trend/",
@@ -1312,12 +1034,12 @@
     "label": "宿舍走廊群舞"
    },
    "st": {
-    "pl": 53500000,
-    "lk": 6400000,
-    "sh": 384300,
-    "cm": 22500,
+    "pl": 56300000,
+    "lk": 6700000,
+    "sh": 403800,
+    "cm": 24400,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@4thfloorboys/video/7693363127001435422"
    },
    "rx": [
@@ -1347,6 +1069,68 @@
    "thumb": "assets/live/toctoc.webp"
   },
   {
+   "k": "aimoe",
+   "n": "DeepSeek / Claude / GPT 拟人 二创",
+   "p": [
+    "B站"
+   ],
+   "ai": 1,
+   "what": "把 AI 模型画成角色：DeepSeek 是蓝发「大肥鱼」鲸鱼娘，Claude 橙发、GPT 白发；网友给她们写剧情、翻唱、做新番",
+   "why": "人人每天在用的 AI 有了脸和性格；「DeepSeek 崩了」这类真实事件立刻变成剧情素材",
+   "kx": "让用户给自己常用的 AI 助手捏形象、定人设，再生成角色短剧或表情包；AI 产品本身也可以 IP 化运营",
+   "pm": "用户会给工具「立人设」：情感连接比功能说明更容易传播",
+   "hot": "「大肥鱼」形象约 2026-07 起流行，9 月中旬起 B站二创密集；11-13→11-20 代表视频几乎停涨（514.9 万→516.3 万），「人是猫」翻唱仍涨 17.7 万；已取消置顶",
+   "hs": "2026-09-14",
+   "sd": "2026-10-15",
+   "src": "https://news.qq.com/rain/a/20261009A0ARW600",
+   "m": {
+    "t": "bili",
+    "id": "BV1uaJy6ZE9P",
+    "o": "https://www.bilibili.com/video/BV1uaJy6ZE9P/",
+    "label": "DeepSeek 崩了的那天",
+    "v": 1
+   },
+   "st": {
+    "pl": 5163075,
+    "lk": 214627,
+    "sh": 2509,
+    "cm": 4316,
+    "plat": "B站",
+    "rd": "2026-11-20",
+    "u": "https://www.bilibili.com/video/BV1uaJy6ZE9P/"
+   },
+   "rx": [
+    [
+     "大肥鱼翻唱《人是猫》",
+     "https://www.bilibili.com/video/BV1fYpn6SEk9/",
+     "B站 @星落落_oi · 426.9 万 播放 · 10-11"
+    ],
+    [
+     "和其他角色「面基」",
+     "https://www.bilibili.com/video/BV1cJaB6dEg5/",
+     "B站 @小陈的脚凑凑的 · 236.6 万 播放 · 10-01"
+    ],
+    [
+     "DS × Claude 新番风短片",
+     "https://www.bilibili.com/video/BV191Yr6bEYy/",
+     "B站 @黑猫勇者 · 62.8 万 播放 · 09-14"
+    ]
+   ],
+   "vir": [
+    [
+     "腾讯新闻：拟人形象投票，鲸鱼娘约 314.5 万票",
+     "https://news.qq.com/rain/a/20261009A0ARW600",
+     "10-09"
+    ],
+    [
+     "vgover：Claude × DeepSeek 二创走红海外",
+     "https://www.vgover.com/news/241494",
+     "10-19"
+    ]
+   ],
+   "thumb": "assets/live/aimoe.webp"
+  },
+  {
    "k": "fruitnovela",
    "n": "AI 水果连续剧「Fruit Novelas」",
    "p": [
@@ -1356,7 +1140,7 @@
    "what": "香蕉、草莓、菠萝变成西语肥皂剧角色，AI 生成连载短剧，每集结尾留悬念",
    "why": "老套路剧情 × 低成本 3D 角色；西语 / 英语区十几个账号同时连载，粉丝按集催更",
    "pm": "AI 把连载短剧的生产成本压到接近零；让人回来看的是悬念，不是制作",
-   "hot": "2026-09 中旬起火西语区，多账号日更；10-26 这一集 11-06→11-13 从 180 万涨到 260 万",
+   "hot": "2026-09 中旬起火西语区，多账号日更；10-26 这一集 11-13→11-20 从 260 万涨到 310 万（+19%）",
    "hs": "2026-09-13",
    "sd": "2026-10-26",
    "src": "https://lightreel.ai/blogs/whats-trending-on-tiktok",
@@ -1367,12 +1151,12 @@
     "label": "@rayitoons 最新一集"
    },
    "st": {
-    "pl": 2600000,
-    "lk": 265200,
-    "sh": 6309,
-    "cm": 1139,
+    "pl": 3100000,
+    "lk": 325300,
+    "sh": 7758,
+    "cm": 1469,
     "plat": "TikTok",
-    "rd": "2026-11-13",
+    "rd": "2026-11-20",
     "u": "https://www.tiktok.com/@rayitoons/video/7701113457629826326"
    },
    "vir": [
@@ -1387,17 +1171,17 @@
     [
      "另一账号的全剧情版",
      "https://www.tiktok.com/@aifuritstory3/video/7684993236980616478",
-     "@aifuritstory3 · 86.5 万 播放 · 09-13"
+     "@aifuritstory3 · 88.7 万 播放 · 09-13"
     ],
     [
      "二创账号连载",
      "https://www.tiktok.com/@meowverse0811/video/7689464030066445590",
-     "@meowverse0811 · 78.1 万 播放 · 09-25"
+     "@meowverse0811 · 82.3 万 播放 · 09-25"
     ],
     [
      "英语区账号版",
      "https://www.tiktok.com/@tutti.frutti0682/video/7695033130721250582",
-     "@tutti.frutti0682 · 65.9 万 播放 · 10-10"
+     "@tutti.frutti0682 · 66.3 万 播放 · 10-10"
     ]
    ],
    "thumb": "assets/live/fruitnovela.webp"

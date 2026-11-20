@@ -1,0 +1,206 @@
+{
+ "id": "2026-W48",
+ "range": "2026-11-23 ~ 11-27",
+ "start": "2026-11-23",
+ "end": "2026-11-27",
+ "status": "本周更新中",
+ "patterns": [
+  {
+   "t": "节日合拍把身边的人拉进镜头",
+   "d": "Deck the Halls「妈妈加入」版一周 1,470 万→2,120 万（+44%），情侣版 730 万→1,120 万；动作越简单，妈妈和另一半越容易下场。二头肌比心、走廊换位舞本周也还在涨",
+   "ex": [
+    "xmasdance",
+    "shoulder",
+    "bicep",
+    "hophop"
+   ]
+  },
+  {
+   "t": "情侣专属的文案对齐和蒙太奇",
+   "d": "My Moon My Man 用 FINNEAS 翻唱，把「my moon, my maaaaaaan」拉过两张照片或一段情侣片段；Virlo 本周仅蒙太奇格式就有 667 位创作者（新出现），单条最高 1,510 万播放",
+   "ex": [
+    "mymoon",
+    "shoulder"
+   ]
+  },
+  {
+   "t": "一句台词音频 + 一行处境字幕",
+   "d": "「While they're out partying btw」Virlo 本周 299 位创作者、比上周 +162%，Dude Perfect 版一周 680 万→1,130 万，另有 11-17 一条打到 3,080 万。新进的 SNL「He wanna pay full price」也是同一结构；8th Avenue 一条跟拍一周 290 万→530 万",
+   "ex": [
+    "partying",
+    "fullprice",
+    "smoothie",
+    "buddhist"
+   ]
+  },
+  {
+   "t": "真猫真反应还在加量",
+   "d": "「伸手摸猫」代表视频一周 420 万→560 万，橘猫版 160 万→570 万（+256%）。Virlo 统计新创作者在减少，但已有爆款还在涨；AI 唱歌猫仍在长尾加量",
+   "ex": [
+    "strangercat",
+    "iwly"
+   ]
+  },
+  {
+   "t": "AI 角色连载比单条更耐久",
+   "d": "水果肥皂剧 10-26 这一集一周再涨 19%（260 万→310 万），走红已超 6 周仍在更新。AI 拟人代表视频几乎停涨，但「人是猫」翻唱还加了 17.7 万播放",
+   "ex": [
+    "fruitnovela",
+    "aimoe"
+   ]
+  },
+  {
+   "t": "名场面和简单对局还在涨",
+   "d": "Toc Toc 宿舍版一周再加 280 万（5,350 万→5,630 万）；Bulin 47 +10%；石头剪刀布 1,300 万→1,650 万，姐妹版 620 万→980 万；Talk to Me Doja 和 iPhone Kupi 是本周补进的可跟跳格式",
+   "ex": [
+    "toctoc",
+    "rps",
+    "bulin47",
+    "doja"
+   ]
+  }
+ ],
+ "change": {
+  "up": [
+   [
+    "开期时仍在涨：圣诞睡衣舞",
+    "xmasdance"
+   ],
+   [
+    "While they're partying",
+    "partying"
+   ],
+   [
+    "My Moon My Man 情侣蒙太奇",
+    "mymoon"
+   ],
+   [
+    "肩扛镜自拍",
+    "shoulder"
+   ]
+  ],
+  "down": [
+   [
+    "开期时新创作者已在减少：伸手摸猫",
+    "strangercat"
+   ],
+   [
+    "But you're not a Buddhist",
+    "buddhist"
+   ]
+  ],
+  "note": "开期沿用 W47 定稿（11-20）时的 21 条实时和读数。圣诞舞和情侣格式预计继续，下周五复核已超 6 周但仍在涨的 Toc Toc、水果连载、唱歌白猫、Bulin 47，以及取消置顶后的大长今、AI 拟人；iPhone Kupi 到下周五约 5 周，看长尾是否还在加量。"
+ },
+ "log": [
+  "11-20 开期：沿用 W47 定稿时的 21 条实时条目。"
+ ],
+ "thumbs": {
+  "fullprice": "assets/weeks/2026-W48/fullprice.webp",
+  "shoulder": "assets/weeks/2026-W48/shoulder.webp",
+  "mymoon": "assets/weeks/2026-W48/mymoon.webp",
+  "doja": "assets/weeks/2026-W48/doja.webp",
+  "smoothie": "assets/weeks/2026-W48/smoothie.webp",
+  "buddhist": "assets/weeks/2026-W48/buddhist.webp",
+  "strangercat": "assets/weeks/2026-W48/strangercat.webp",
+  "declined": "assets/weeks/2026-W48/declined.webp",
+  "partying": "assets/weeks/2026-W48/partying.webp",
+  "rps": "assets/weeks/2026-W48/rps.webp",
+  "xmasdance": "assets/weeks/2026-W48/xmasdance.webp",
+  "bicep": "assets/weeks/2026-W48/bicep.webp",
+  "hophop": "assets/weeks/2026-W48/hophop.webp",
+  "kupi": "assets/weeks/2026-W48/kupi.webp",
+  "bbywow": "assets/weeks/2026-W48/bbywow.webp",
+  "bulin47": "assets/weeks/2026-W48/bulin47.webp",
+  "janggeum": "assets/weeks/2026-W48/janggeum.webp",
+  "iwly": "assets/weeks/2026-W48/iwly.webp",
+  "toctoc": "assets/weeks/2026-W48/toctoc.webp",
+  "aimoe": "assets/weeks/2026-W48/aimoe.webp",
+  "fruitnovela": "assets/weeks/2026-W48/fruitnovela.webp"
+ },
+ "cards": {
+  "fullprice": {
+   "n": "「He wanna pay full price」SNL 台词",
+   "s": "Pay full price"
+  },
+  "shoulder": {
+   "n": "肩扛镜自拍",
+   "s": "肩扛镜自拍"
+  },
+  "mymoon": {
+   "n": "「My Moon My Man」情侣蒙太奇",
+   "s": "My Moon My Man"
+  },
+  "doja": {
+   "n": "「Talk to Me Doja」害羞摇摆舞",
+   "s": "Talk to Me Doja"
+  },
+  "smoothie": {
+   "n": "「I saw you on 8th Avenue drinking a smoothie」",
+   "s": "8th Avenue 台词"
+  },
+  "buddhist": {
+   "n": "「But you're not a Buddhist」台词对口型",
+   "s": "Not a Buddhist"
+  },
+  "strangercat": {
+   "n": "「Human Nature」伸手摸猫",
+   "s": "伸手摸猫"
+  },
+  "declined": {
+   "n": "「Wdym my card's been declined?」变美图集",
+   "s": "Card declined 变美"
+  },
+  "partying": {
+   "n": "「While they're out partying btw」",
+   "s": "While they're partying"
+  },
+  "rps": {
+   "n": "石头剪刀布抢食挑战",
+   "s": "猜拳抢食"
+  },
+  "xmasdance": {
+   "n": "「Deck the Halls」圣诞睡衣双人舞",
+   "s": "圣诞睡衣双人舞"
+  },
+  "bicep": {
+   "n": "「Bicep heart」二头肌比心",
+   "s": "二头肌比心"
+  },
+  "hophop": {
+   "n": "「Hop hop hop」走廊换位舞",
+   "s": "Hop hop hop 换位"
+  },
+  "kupi": {
+   "n": "「iPhone Kupi」折叠手机舞",
+   "s": "iPhone Kupi 舞"
+  },
+  "bbywow": {
+   "n": "「Bby Wow Guy」派对 STAFF 舞",
+   "s": "STAFF 舞"
+  },
+  "bulin47": {
+   "n": "Bulin 47 街头即兴",
+   "s": "Bulin 47"
+  },
+  "janggeum": {
+   "n": "大长今「长今，你在汤里放了什么？」",
+   "s": "大长今问汤"
+  },
+  "iwly": {
+   "n": "唱 Akon 的 AI 白猫",
+   "s": "唱歌白猫"
+  },
+  "toctoc": {
+   "n": "「Toc Toc」单脚跳敲门舞",
+   "s": "敲门舞"
+  },
+  "aimoe": {
+   "n": "DeepSeek / Claude / GPT 拟人 二创",
+   "s": "AI 拟人"
+  },
+  "fruitnovela": {
+   "n": "AI 水果连续剧「Fruit Novelas」",
+   "s": "水果肥皂剧"
+  }
+ }
+}
